@@ -24,13 +24,6 @@
 <br>
 well to be exact- a shit ton there is ALOT new compared to V3.9 for starters alot of bug fixes 
 <br>
-```
-fix #1: Fixed install bug in the file where it would root the download file or not download the necessary content 
-
-fix #2: Fixed after ecvery tool or definitoon is ran it will ask you if you would like to finish the the main menu again 
-
-fix #3: Fixed where mon0 wasnt an interface or couldnt be updated/Activated to where PHY could disable, add, and enable mon0/wlan interfaces
-```
 
 <br>
 
@@ -302,77 +295,11 @@ use std::thread;
 <br>
 # different types of menu's
 <br>
-<h2> menu 1 </h2>
-
 ```
-                                          Detected Os ->  Linux
-Using Current CPU =>  < XAuthenticAMD>
-                                           [1] Rouge AP 
-                                           [2] Deauth 
-                                           [3] Port Scanner 
-                                           [A] Web Port Scan 
-                                           [4] Flooder 
-                                           [5] DHCMP ATK 
-                                           [6] Check Connection 
-                                           [7] WHOIS Domain 
-                                           [8] More 
-                                           [9] Start Interface 
-                                           [01] Start Interface [Iw dev for fake AP]
-                                           [02] Stop Interface [iw dev managed mode]
-                                           [0] Exit 
-                                      >>> 
+fix #1: Fixed install bug in the file where it would root the download file or not download the necessary content 
 
+fix #2: Fixed after ecvery tool or definitoon is ran it will ask you if you would like to finish the the main menu again 
 
-```
-<h2> menu 2 </h2>
-```
-
-                                           [1] Wifi Scanner 
-                                           [2] Web App Fuzzer 
-                                           [3] SQLI Tester 
-                                           [B] XSSI Tester 
-                                           [A] About (for windows input 99)
-                                           [4] README
-                                           [9] <- Back
-                                           [g] More ->
-                                      >>>
-
-
-```
-<br>
-<h2> menu 3 </h2>
-<br>
-```
-Warning | PHPI and SQLI are very old scripts that may or may not work, goodluck
-                                           [x3] Ajax Spider with whois -> THIS IS VERY BUGGY 
-                                           [x4] Ajax Spider without whois
-                                           [1]  PHP injection 
-                                           [2]  SQL injection 
-                                           [5]  XSS injection 
-                                           [G0] SSH injection | Possession 
-                                           [3]  Google Dork a domain 
-                                           [B]  MOAB OSINT Domain 
-                                           [8]  Run OSINT on the HTML of a complex URL
-                                           [C]  View and open my webisite 
-                                           [9]  <- Back
-                                           [?]  Extra ->  
-                                      >>> 
-
-
-```
-<br>
-<h2> menu 5 </h2>
-<br>
-```
-                                           [1]Phone OSINT
-                                           [2]Phone OSINT (US ONLY)  
-                                           [3]User-Search 
-                                           [4]IP Tracer
-                                           [5]Discord OSINT framework
-                                           [6]Mine IP Cameras
-                                           [7]Mine Twitter Chats
-                                           [g]FTP and more -> 
-                                           [8] <- back 
-                                      >>> 
+fix #3: Fixed where mon0 wasnt an interface or couldnt be updated/Activated to where PHY could disable, add, and enable mon0/wlan interfaces
 ```
 
