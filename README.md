@@ -1,14 +1,13 @@
-```
-hello
-```
-<br>
-
-
 # whats new 
 
-<br>
-well to be exact- a shit ton there is ALOT new compared to V3.9 for starters alot of bug fixes 
-<br>
+```
+BUG FIXES 
+
+install bug -> Sometimes the install file will error out and also wont install the needed libs
+
+802.11 errors -> when you use the fake access point make sure the script is in root to prevent other issues such as the card failing and saying it can not be activated go to the main menu and activate the card with PHY-Dev
+
+```
 
 <br>
 
