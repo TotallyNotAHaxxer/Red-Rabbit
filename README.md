@@ -295,11 +295,4 @@ use std::thread;
 <br>
 # different types of menu's
 <br>
-```
-fix #1: Fixed install bug in the file where it would root the download file or not download the necessary content 
-
-fix #2: Fixed after ecvery tool or definitoon is ran it will ask you if you would like to finish the the main menu again 
-
-fix #3: Fixed where mon0 wasnt an interface or couldnt be updated/Activated to where PHY could disable, add, and enable mon0/wlan interfaces
-```
 
