@@ -27,7 +27,6 @@
 | Shell         | Grep, wget, godorking, osint, etc       |
 | Batch         | Viruses, payloads, bombs,               |
 | Assembly      | geting auth cpu and writing data to file|
-|---------------|-----------------------------------------|
 
 
 # whats new 
