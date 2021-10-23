@@ -596,6 +596,21 @@ def Warnings()
     end
 end
 
+
+def ret()
+    print "Return to the main menu? Y/n >>> "
+    i = gets.chomp
+    if i == 'Y'
+        main()
+        menu()
+    end
+    if i == 'n'
+        puts "[+] Exiting...."
+        exit!
+    end
+end
+
+
 def lic()
     system("cd license-etc ; cat LICENSE")
 end
@@ -674,21 +689,27 @@ def osimen
     opt = gets.chomp
     if opt == 'g' 
         ftpmen()
+        ret()
     end
     if opt == '8'
         fourthmen()
+        ret()
     end
     if opt == '7'
         system("cd osing-modules ; python3 twitter.py")
+        ret()
     end
     if opt == '6'
         system("cd osing-modules ; python3 camera.py")
+        ret()
     end
     if opt == '5'
         system("cd osing-modules ; cd DIS-Sniper ; python3 main.py")
+        ret()
     end
     if opt == '4'
         system("cd osing-modules ; python3 ip.py ")
+        ret()
     end
     if opt == '3'
         puts """
@@ -705,9 +726,11 @@ def osimen
         print "Number [US] >>> "
         num = gets.chomp 
         system("cd osing-modules ; chmod +x ./phone-us.sh ; ./phone-us.sh --num #{num} --csv")
+        ret()
     end
     if opt == '1'
         system("cd osing-modules ; python3 num.py ")
+        ret()
     end
 end
 
@@ -726,30 +749,38 @@ def fourthmen()
     if thin == 'X9' or thin == 'x9'
         CS(1)
         osimen()
+        ret()
     end
     if thin == 'X8'
         CS(1)
         system("cd brow ; cd DBROWSER-V2 ; python3 main.py")
+        ret()
     end
     if thin == 'X7'
         print "Service >>> "
         ser = gets.chomp
         system("sudo service start #{ser}")
+        ret()
     end
     if thin == 'X'
         thirdmen()
+        ret()
     end
     if thin == '1'
         Warnings()
+        ret()
     end
     if thin == '2'
         uses()
+        ret()
     end
     if thin == '5'
         wenotlib()
+        ret()
     end
     if thin == '3'
         lic()
+        ret()
     end
 end
 
@@ -789,37 +820,48 @@ def thirdmen()
         print "ssh device pass >>> "
         pass = gets.chomp
         system("cd ssh-sploit ; ruby ssh-sploit.rb #{dev} #{ip} #{pass}")
+        ret()
     end
     if thin == 'x4'
         ajaxwitho()
+        ret()
     end
     if thin == 'x3'
         ajax()
+        ret()
     end
     if thin == '?'
         fourthmen()
+        ret()
     end
     if thin == '1'
         phpipl()
+        ret()
     end
     if thin == '2'
         sqli22pl()
+        ret()
     end
     if thin == '5'
         xssi()
+        ret()
     end
     if thin == '3'
         godork()
+        ret()
     end
     if thin == '8'
         goyl()
+        ret()
     end
     if thin == '9'
         CS(1)
         extra()
+        ret()
     end
     if thin == 'B'
         moab()
+        ret()
     end
     if thin == 'C' or thin == 'c'
         puts "--------------What browser do you use?-----------------------".colorize(:yellow)
@@ -857,6 +899,7 @@ def extra()
    end
    if input == '99'
     wincat()
+    ret()
    end
    if input == '3'
     puts '[+] Starting Script...'.colorize(:red)
@@ -897,10 +940,12 @@ end
    if input == 'A'
     puts '[+] Catting file'.colorize(:yellow)
     system("cat read.txt")
+    ret()
    end
    if input == '2' # file sharing server web app socket fuzzer
     puts '[+] Running Fuzzer'.colorize(:blue)
     file_fuzz()
+    ret()
    end
    if input == '9' #leave 
     puts '{+} Going back...'.colorize(:red)
@@ -911,6 +956,7 @@ end
    if input == '1'
     puts '[+] Starting Monitor....'.colorize(:yellow)# wifi discovery
     system("sudo python3 wifi.py ")
+    ret()
    end
 end
 
@@ -1031,7 +1077,7 @@ end
     
 
 def runcpu()
-    system("cd asm ; nasm -f elf32 -o core.o core.asm ; ld -m elf_i386 -o core core.o ; ./core ")
+    system("nasm -f elf32 -o core.o core.asm ; ld -m elf_i386 -o core core.o ; ./core ")
 end
 
 def rouge
@@ -1114,28 +1160,34 @@ def menu()
     if input == '8'
         print"\x1b[H\x1b[2J\x1b[3J"
         extra()
+        ret()
     end
     if input == '7'
         puts '[-] Running...'.colorize(:red)
         whois()
+        ret()
     end
     if input == '6'
         puts 'Testing.....'
         system("cd injection ; perl test.pl")
+        ret()
     end
     if input == '1' # case input acting up use == instead 
         sleep 2
         puts '[+] Loading....'
-        rouge() # rouge acess point 
+        rouge() # rouge acess point
+        ret()
     end
     if input == '2'
         puts '[+] Loading....'
         sleep 1 
-        deauth() # deauthentication 
+        deauth() # deauthentication
+        ret()
     end
     if input == '3'
         puts '[+] Loading....'
         hostscan()
+        ret()
     end
     if input == '4'
         puts '[+] Loading.....'.colorize(:red)
@@ -1150,10 +1202,12 @@ def menu()
         print("Target Addr    ~~> " )
         target = gets.chomp
         system("cd injection ; sudo perl flood.pl #{spoof} #{target}")
+        ret()
     end
     if input == '5'
         puts '[+] Loading.....'
         system("sudo python3 DHCMP.py")
+        ret()
     end
     if input == '0'
         puts '[-] Exiting'
@@ -1164,6 +1218,7 @@ def menu()
         puts 'Starting option....'
         sleep 1 
         webscan()
+        ret()
     end
 end
 
@@ -1191,3 +1246,4 @@ def check
 end
 main()
 menu()
+
