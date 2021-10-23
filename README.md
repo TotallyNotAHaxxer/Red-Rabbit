@@ -286,3 +286,12 @@ use std::thread;
 
 # for more information and images 
 `run ruby main.rb then go to the next menu until you find |view my website| which will load the idnex.html file < the mispell is intentional > `
+<br>
+<br>
+<br>
+<br>
+# different types of menu's
+
+<h2> menu 1 </h2>
+
+fff
