@@ -1,0 +1,113 @@
+menu #4 
+-------------------------------- 
+includes 
+
+phone osint 
+phone osint US 
+user search 
+IP tracer 
+Discord osint framework
+Mine Ip Cameras
+mine twitter chats 
+
+
+
+-----------------------
+Phone osint 
+
+uses: python3 
+libs: Phonenumbers, colorama, tabulate 
+
+what it does: gives basic info on a phone number 
+output
+| State or Country   | Supplier   |
+|--------------------|------------|
+| Region or  ;       |            |
+
+
+-------------------------
+phone osint US 
+
+this is alot better of a tracer it will give city, state, address, number, npaxx and others 
+
+uses: shell script
+libs: none 
+errors: null
+
+what it will output
+{} NUMBER          --->  number 
+ NPA-NXX           --->  npanxx
+ Block             --->  A
+ Exchange          --->  exchange location
+ Region            --->  region
+ Switch            --->  PTSLFLMADS0
+ OCN               --->  9417 BELLSOUTH TELECOMM INC DBA SOUTHERN BELL TEL & TEL 
+ LATA              --->  
+ Switch Name: 
+ Switch Type: 
+────────────────────────────────────────────────
+ STREE ADDR        ---> fill
+ CITY  ADDR        ---> fill
+ ZIP   ADDR        ---> fill
+ CARRIER           ---> fill
+ Building CLLI     --->  fill
+ Exchanges Served  ---> fill 
+ GPS               ---> 27
+ MAP LINK          ---> link
+ Cyber BG Check    ---> 0 results for (772) 807-0932
+ No Info Here      --->fill
+ Family Info       --->fill 
+
+[*] Script completed [*]
+
+
+-----------------------
+user-search
+
+will search 80 websites for a user 
+
+written in: shell
+
+what does it do: searches a inputted username, this is broken in the script
+
+--------------------------
+discord osint framework
+
+this is a big one lol 
+basically for fun 
+
+language: shell, python
+
+basic menu
+
+▓█████▄  ██▓  ██████  ▄████▄   ▒█████   ██▀███  ▓█████▄      ██████  ███▄    █  ██▓ ██▓███  ▓█████  ██▀███
+▒██▀ ██▌▓██▒▒██    ▒ ▒██▀ ▀█  ▒██▒  ██▒▓██ ▒ ██▒▒██▀ ██▌   ▒██    ▒  ██ ▀█   █ ▓██▒▓██░  ██▒▓█   ▀ ▓██ ▒ ██▒
+░██   █▌▒██▒░ ▓██▄   ▒▓█    ▄ ▒██░  ██▒▓██ ░▄█ ▒░██   █▌   ░ ▓██▄   ▓██  ▀█ ██▒▒██▒▓██░ ██▓▒▒███   ▓██ ░▄█ ▒
+░▓█▄   ▌░██░  ▒   ██▒▒▓▓▄ ▄██▒▒██   ██░▒██▀▀█▄  ░▓█▄   ▌     ▒   ██▒▓██▒  ▐▌██▒░██░▒██▄█▓▒ ▒▒▓█  ▄ ▒██▀▀█▄
+░▒████▓ ░██░▒██████▒▒▒ ▓███▀ ░░ ████▓▒░░██▓ ▒██▒░▒████▓    ▒██████▒▒▒██░   ▓██░░██░▒██▒ ░  ░░▒████▒░██▓ ▒██▒
+ ▒▒▓  ▒ ░▓  ▒ ▒▓▒ ▒ ░░ ░▒ ▒  ░░ ▒░▒░▒░ ░ ▒▓ ░▒▓░ ▒▒▓  ▒    ▒ ▒▓▒ ▒ ░░ ▒░   ▒ ▒ ░▓  ▒▓▒░ ░  ░░░ ▒░ ░░ ▒▓ ░▒▓░
+ ░ ▒  ▒  ▒ ░░ ░▒  ░ ░  ░  ▒     ░ ▒ ▒░   ░▒ ░ ▒░ ░ ▒  ▒    ░ ░▒  ░ ░░ ░░   ░ ▒░ ▒ ░░▒ ░      ░ ░  ░  ░▒ ░ ▒░
+ ░ ░  ░  ▒ ░░  ░  ░  ░        ░ ░ ░ ▒    ░░   ░  ░ ░  ░    ░  ░  ░     ░   ░ ░  ▒ ░░░          ░     ░░   ░
+   ░     ░        ░  ░ ░          ░ ░     ░        ░             ░           ░  ░              ░  ░   ░
+ ░                   ░                           ░
+    
+                                                                                         Version 1.0
+                                                                                              Authors ~~> Scare Sec Hackers
+────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Running   Node ~~> Ghost-Angel         Running Public IPA => 73
+ USERTOKEN AUTH ~~> Afsrgsrgsg8s1284rwef8s          
+ Running WEBURL ~~>  https://www.discord.com
+                                           ┌∩┐(◣ _ ◢)┌∩┐ 
+──────────────────────────────────────────────────────────────────────────────────────────────────────────|
+| [1] Snipe Codes        | [2] Run OSINT on a Server      | [3] Send a message                            |
+| [4] Sniff ID's         | [5] Spam A Server              | [6] Spam Messages                             |
+| [7] Update SYS!        | [8] Run OSINT on a Person      | [9]                                           |
+| [10]Spam GIFS          | [11] Spam Undescribable links  | [12] Read About ME!                           |
+─────────────────────────────────────────────NETWORKING AND SYS───────────────────────────────────────────|
+| [A] Check Response     | [C] Check IPA                  | [E] Check Internet Speeds                     |
+| [B] Get response code  | [D] Scan Your Network          | [F] Check Interfaces                          |
+──────────────────────────────────────────────────────────────────────────────────────────────────────────|
+>> 
+
+it can do alot and its alot to explain lol
+

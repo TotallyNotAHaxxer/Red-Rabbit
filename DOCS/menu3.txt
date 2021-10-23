@@ -1,0 +1,152 @@
+this menu requires the following options 
+
+Ajax spider with whois tracer 
+Ajax spider without whois tracer
+PHP injection 
+SQL injection 
+XSS injection 
+SSH injection and posession
+Google dorking a domain 
+MOAB osint a domain 
+run osint on the html of a complex URL
+View and open my website 
+
+
+
+------------------------------ Topic : web exploitation 
+
+Warnings: sometimes in the whois file ruby will error out this is because the URl found is false and does not have a registry 
+
+Ajax spider with whois
+
+What lang: Python3
+what libs: logging, sys, os, colorama, dattime, threading, pyfiglet, json, webbrowser, urllib, BS4, requests 
+what does it do: will go through a URL and web hosts Server and grab every single URL thats possible and traces 
+Ajax spider without whois 
+same thing as above however it is not as buggy and does silence the whois parsing 
+
+
+---------------------------------
+PHP Injection
+
+Uses: perl, cpan as the installer, LW3, libwhisker, net/http go
+langmain: perl 
+
+what does it do: is supposed to inject a PHP vulnerability, howveer this is a very old script handed down from a old team, member of our group, this most likely wont work on 
+modern servers or databases even indexes, 
+
+errors: Parsing incorrect, will sometimes freez and not move, will throw eceptions, connection to host is broken, and arguments will break 
+
+----------------------------------
+SQL injection
+uses: perl
+libs: libwhisker, net/http, ANSICOLOR, LW2
+
+what does it do: supposed to inject every single part of a SQL server that is `MySQL v5.x` anything below or above will NOT WORK, like the above code it is a very old script 
+that has been ued alot with older servers but will break
+
+errors: Parsing wont work, cant grab the server, connection will break, url test will fail, args get loose, and a few other bugs in the script
+
+----------------------
+XSS injection 
+
+uses: python3 
+libs: requests, os, threading, sys, time, datetime, colorama, bs4, urllib, 
+
+what does it do: will run through a list of about 3,000+ XSS payloads test every single payload and return all the values 
+
+bugs? there relly arent alot just a warning the formmatting can be very bad 
+
+------------------
+Google dorking 
+
+uses: bash
+
+what it does: simple google dorking method written like vulncher without live payloads and URl formatting 
+
+
+----------------
+MOAB OSINT 
+
+uses: Go, Perl, Ruby, Python, Shell, Assembly (core)
+
+libs: 
+____________________________________________________________________________
+ruby   | tty-spinner, colorize, net/http, open-uri, etc                     | 
+python |requests, os, threading, sys, time, datetime, colorama, bs4, urllib |
+perl   |ANSICOLOR, net/http, LW2, libwhisker                                |
+bash   | None                                                               |
+go     |Faith/Color, net/http, IO, fmt, runtime, time, net/url, re, goquery |
+-------|--------------------------------------------------------------------|
+
+what can it do? 
+
+it can do alot of shit really ill give half of the stuff it can do since there is alot 
+
+
+-______________________________________________________________________________________________________________________________
+type 
+name 
+organization 
+address 
+street 
+city 
+zip
+country 
+country code 
+phone 
+fax 
+email 
+url'
+created on 
+updated on 
+date 
+server 
+location 
+cookie
+cache-control 
+response time for x 
+x connection hash 
+content 
+content length 
+domain 
+experies 
+accept 
+server 
+location 
+cache control 
+content length
+connection
+query 
+scheme 
+main port 
+response code 
+xframe 
+IPV6
+server IP
+name servers
+hostname 
+then will crawl subdomains 
+google dork urls
+port scan 
+host scan 
+grab server response 
+x headers 
+response headers 
+html notes 
+X html notes
+URL's of the domain 
+URL's within the html file
+fragments 
+path
+sub path
+url to domain to other 
+etc
+
+
+=============================
+view and open my website
+
+uses; html, css, js
+
+runs website
