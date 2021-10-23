@@ -32,6 +32,25 @@
 | Assembly      | geting auth cpu and writing data to file|
 
 
+# whats new 
+
+<br>
+well to be exact- a shit ton there is ALOT new compared to V3.9 for started 
+<br>
+resp =response connection <br>
+| bug fixes     | What was the issue                      |
+| ------------- | ----------------------------------------|
+| Install.sh    | was not installing correctly fixed      |
+| no men retuirn| no return function when script finished |
+| Wireless card | Wasnt operating on mon0 added phy exec  |
+| no threading  | added Speed, threading, error handeling |
+| slow in resp  | would wait to long,sleep methods deleted|
+| fixed recon   | added Grep, wget, godorking, spawns, etc|
+| Batch         | added more ssh Viruses, payloads, bombs |
+| fixed Assembly| was not adding the proper dir, compilesr|
+
+
+
 What is red rabbit? <br>
 
 red rabbit is a exploitation, osint, virus, recon, and hacking script developed with many languages and built for speed to aid hackers in everyday attacks like XSSI, XSSI testing, SQLI testing, PHPI, testing and learning about rouge acess points, file dumping, FTP, running people osint, ajaz spiders and more<br> 
