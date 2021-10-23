@@ -17,16 +17,16 @@
 
 ```
 <br>
-| Languages     | Why the lang                            |
-| ------------- | ----------------------------------------|
-| Python3       | Easy write for some scripts             |
-| Perl          | using the open syntax for Injection     |
-| Go-lang       | Speed and Read abilities,also format    |
-| Rust          | Speed, mobility, and error handeling    |
-| Ruby          | as a main file derivitive from rube-ster|
-| Shell         | Grep, wget, godorking, osint, etc       |
-| Batch         | Viruses, payloads, bombs,               |
-| Assembly      | geting auth cpu and writing data to file|
+| Languages     | Why the lang                            |<br>
+| ------------- | ----------------------------------------|<br>
+| Python3       | Easy write for some scripts             |<br>
+| Perl          | using the open syntax for Injection     |<br>
+| Go-lang       | Speed and Read abilities,also format    |<br>
+| Rust          | Speed, mobility, and error handeling    |<br>
+| Ruby          | as a main file derivitive from rube-ster|<br>
+| Shell         | Grep, wget, godorking, osint, etc       |<br>
+| Batch         | Viruses, payloads, bombs,               |<br>
+| Assembly      | geting auth cpu and writing data to file|<br>
 
 
 # whats new 
