@@ -284,6 +284,12 @@ use std::sync::mpsc::{Sender, channel};
 use std::thread;
 
 
+
+#parrot recon in red rabbit in action scraping parrot-pentest.com
+<img src="out.png"</img>
+
+
+
 # for more information and images 
 `run ruby main.rb then go to the next menu until you find |view my website| which will load the idnex.html file < the mispell is intentional > `
 <br>
