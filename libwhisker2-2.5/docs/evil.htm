@@ -1,0 +1,109 @@
+<html><body>
+
+This is an example of an evil HTML file, intended to screw up non-robust 
+HTML parsers.  It's used as a test for LW::html_find_tags().  So let's get 
+started...
+
+<p>
+<script language="javascript">
+document.writeln("Do not parse <this> or <that> tag!");
+document.writeln("<!-- no comments! Do not stop! /script>");
+</script>
+
+<!-- overzealous -->
+
+<<a href=http://localhost/">link</a></a>
+
+<form method=post action=/script>
+<input	type=text	value=work?>
+<input type=text value="Don't use <blink> 
+	anywhere">
+<input value="Continue -->" 
+type="submit">
+
+<!--
+Don't stop - -> and -- and -> and <!--
+stopped?
+--> show <!-- nope -->
+
+Some parsers < a href="/blank">skip this</a>
+This is <i><b>also a variable case</i</b>
+
+<a href="/blah>bold?</ a><b/>">link?</a>
+
+<a href=/blah">yes?</a>">link?</a>
+
+</body></html>
+
+
+<!-- Intended/valid results (according to RFP):
+
+1. None of the tags in the script section should be considered valid
+
+2. 'link' is an ahref to preferably http://localhost/, however
+	even Netscape makes it http://localhost"
+
+3. form tag properly exist only to ensure input elements show
+	up in browsers
+
+4. input tag should show 'work?' in box.  Tabs used to fool parsers
+	hellbent on spaces only
+
+5. second input should have 'Don't use <blink> anywhere' in the 
+	box.  Some parsers might pull the <blink> out as a separate
+	tag.
+
+6. Of course, the parser needs to handle the whitespace separating 
+	the elements of the input tag.
+
+7. The submit button must have caption of 'Continue - ->'. (space
+	added so this properly parses)  Parser shouldn't stop at the >
+
+8. The parser should skip all the crap within the comments.
+	'stopped?' should not appear.  'show' should appear, and
+	'nope' should not.
+
+9. The < a href...> tag is a crapshoot.  Netscape skips it.
+
+10. Many parsers signal the start of a tag to be the end of another,
+	so both the </b> and </i> tags could be found.  Libwhisker
+	does not (tag is set to /b</i)
+
+11. the link should have an href to '/blah>bold?</ a><b/>'
+
+12. the last ahref should href to preferably /blah, but perhaps
+	/blah".  The yes? should be linked, and the link? should
+	not be.
+
+
+So I hope that tag processing goes through the following 18/19 tags:
+
+<html>
+<body>
+<script language="javascript">
+</script>
+<p>
+<a href=http://localhost/">
+</a>
+</a>
+<form method=post action=/blah>
+<input type=text value="work?">
+<input type=text value="Don't use <blink> anywhere">
+<input value="Continue - ->" type="submit">
+< a href="/blank">    [NOTE: THIS IS OPTIONAL]
+<i>
+<b>
+</i</b>
+</a>
+<a href="/blah>bold?</ a><b/>">
+</a>
+<a href=/blah">
+</a>
+</a>
+</body>
+</html>
+
+
+
+-->
+

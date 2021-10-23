@@ -1,0 +1,98 @@
+Libwhisker 2.4 cookie handling
+------------------------------------------------------
+
+This document serves to convey how Libwhisker treats the receiving, handling,
+and creation of HTTP cookies.
+
+First a brief bit of history.  The original cookie proposal was made by
+Netscape.  Their proposed cookie implementation is often dubbed "version 0".
+It provides a very simple cookie handling mechanism that practically all
+servers, browser, and proxies support.  Then came along RFC 2109, which
+created version 1 cookies while still being backwards-compatible with
+version 0.  The particular additions of RFC 2109 were the addition of extra
+attributes and the manner in which the Cookie header is returned to the server.
+Next came RFC 2965, which still uses version 1 cookies but now allows a
+server to send a Set-Cookie2 header.  A few additional attributes were defined.
+RFC 2965 is still backwards-compatible with RFC 2109, which means it's still
+backwards-compatible with version 0 cookies (somewhat).
+
+In order to be the most widely compatible, Libwhisker mostly uses a version 0
+approach to cookie handling.  However, Libwhisker does make some attempts
+to parse certain version 1 attributes in offer more granular cookie support.
+Libwhisker also uses some of the later RFC suggestions on how to handle
+corner-cases.
+
+So, here's a laundry list of Libwhisker's exact cookie handling functionality:
+
+- Cookies are received from a Set-Cookie or Set-Cookie2 response header 
+(libwhisker does not internally distinguish between the two)
+
+- Set-Cookie[2] headers with multiple cookie values separated by commas are
+NOT supported; only the first cookie will be extracted/parsed
+
+- Cookies are created in a version 0 format, using the Cookie request
+header, and having one or more non-quoted name=value pairs separated by 
+semicolons; the format specified in RFCs 2109 and 2965 is not used
+
+- Libwhisker understands and acts upon the Domain, Path, Max-Age, and Secure
+cookie attributes
+
+- Libwhisker accepts and parses cookie attribue values which use surrounding
+quotes (e.g. 'foo="bar"')
+
+- Non-processed cookie attributes are permanently discarded and not available
+through the Libwhisker $jar or the cookie processing functions; if you wish
+to analyze all the cookie attributes (including those ignored by Libwhisker),
+then you will have to manually process the cookie values
+
+- Only a Max-Age attribute value of 0 (zero) is interpreted, which results in the
+cookie being immediately deleted; additional handling of the Max-Age attribute
+is not implemented
+
+- There is no Cookie expires/timeout handling done at any point, except the
+immediate deletion of a cookie if Max-Age=0
+
+- Contrary to the RFCs, Libwhisker allows cookie names to start with a '$'
+character, to allow for additional flexibility in testing; normally this is
+not allowed, as names beginning with '$' acquired special meaning as of RFC
+2109
+
+- While Libwhisker does not specifically disallow any characters in cookie
+names or values, use of the characters '=', ';', and '"' can cause unexpected
+processing anomalies or silent application failures
+
+- Empty cookie names are not allowed, and the parsing will abort if one is seen
+
+- If a cookie doesn't specify a domain attribute, then the default host name
+is used; if the default hostname doesn't have a leading dot, then strict hostname 
+matching only (no partial/sub domain matches) is performed; otherwise partial/sub
+domain matching is performed; IP addresses always use strict hostname matching
+only
+
+- If a cookie specifies an empty-string for the domain attribute, then it is
+treated like it didn't specify a domain attribute
+
+- Non-name values are terminated at the first whitespace, comma, or semicolon
+character encountered, or the end of the string; any remaining data between
+the point of termination and the next semicolon is discarded (e.g. the string
+"foo=bar baz;" will result in 'foo' with a value of 'bar')
+
+- If the cookie doesn't specify a domain attribute, and a default host name
+is not explicitly provided by the parent application, then the cookie will match 
+all domain names (and the domain name value will be undefined)
+
+- If a cookie specfies a domain attribute, but the domain attribute doesn't
+include a leading dot, then the RFC 2965 rule of adding a leading dot is used
+
+- Multi-level domain matches are not allowed, so ".foo.com" will match on
+"a.foo.com", but not "a.b.foo.com"; in order for "a.b.foo.com" to match,
+there needs to be a domain definition for ".b.foo.com"
+
+- If a cookie doesn't specify a path attribute, then a default value of '/'
+is used
+
+- If a cookie specifies a path attribute but it is not absolute (doesn't start
+with '/'), then the default value of '/' is used instead
+
+- Per RFC 2965, successive duplicate attribute values are ignored (so a
+cookie with "foo=A; foo=B; foo=C" will result in a 'foo' value of 'A')

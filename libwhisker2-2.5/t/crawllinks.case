@@ -1,0 +1,45 @@
+HTTP/1.0 200 OK
+Connection: close
+Server: TestServer/1.0
+Description: basic lineup of links for crawl test
+
+<!-- some of these are out of context and/or blatantly faked -->
+<html>
+<head profile="23.html">
+<body background="00.html">
+<!-- base tag is useful, but it would technically change the meaning
+     of links in the page, so we'll skip it -->
+<a href="01.html">foo</a>
+<applet codebase="02.html" archive="03.html" code="04.html">
+</applet>
+<bgsound src="05.html">
+<area href="06.html">
+<blockquote cite="07.html">
+<del cite="08.html">
+<embed src="09.html" pluginspage="10.html">
+<form action="11.html">
+</form>
+<!-- frame -->
+<iframe src="12.html" longdesc="13.html">
+<ilayer background="14.html">
+<img src="15.html" lowsrc="16.html" longdesc="17.html" usemap="18.html">
+<input src="19.html" usemap="20.html">
+<ins cite="21.html">
+<isindex action="22.html">
+<!-- head, above, uses 23.html -->
+<layer background="24.html" src="25.html">
+<link href="26.html">
+<object codebase="27.html" data="28.html" archive="29.html" usemap="30.html">
+</object>
+<q cite="31.html">
+<script src="32.html"></script>
+<table background="33.html">
+<th background="34.html">
+<tr><td background="35.html">
+</td></tr></table>
+<xmp href="36.html">
+</body></html>
+
+<frameset rows="*">
+	<frame src="37.html" longdesc="38.html">
+</frameset>

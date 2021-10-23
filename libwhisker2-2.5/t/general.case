@@ -1,0 +1,5 @@
+HTTP/1.1 200 OK
+Connection: close
+Server: MyServer/1.0
+
+<html><body>This is a test response</body></html>

@@ -1,0 +1,174 @@
+-------------------------------------------------------------------
+               Libwhisker official release v2.4
+-------------------------------------------------------------------
+
+What is Libwhisker:
+
+Libwhisker is a Perl module geared specificly for HTTP testing.
+Libwhisker has a few design principles:
+
+- Portable: runs with 0 changes on Unix, Windows, etc (100% Perl)
+- Flexible: designed with a 'no rules' approach
+- Contained: designed to not require external modules when possible
+- Localized: does not require installation to use
+
+
+-------------------------------------------------------------------
+  README README README README README README README README README
+-------------------------------------------------------------------
+
+"How do I run/use Libwhisker?"
+
+Libwhisker is not a program to run.  It's a library for people to
+make programs with.  There is nothing to 'run' in Libwhisker.  If
+you're looking for a CGI scanner (whisker), you're in the wrong
+place.  Whisker is separate from Libwhisker.
+
+
+-------------------------------------------------------------------
+               Information on Libwhisker library
+-------------------------------------------------------------------
+
+Libwhisker's 'no rules' approach:
+
+Since the intent of this library is to use it in testing, fuzzing, 
+and quality assurance situations, odds are the library will need to 
+be capable of handling protocol malformities and other wackiness.  
+Many existing Perl libraries are not flexible when you try to break 
+the protocol--they assume you want to make a legitimate request.
+Libwhisker, on the other hand, is designed to not impose any rules
+on the software, thus allowing it to do whatever you really want it
+to do, including stuff not normally considered 'legal' or 'sane'
+by RFC/protocol definition.
+
+-------------------------------------------------------------------
+
+What Libwhisker can do for you:
+
+Do you have a demonstration program, application, or exploit that
+interacts over HTTP?  Well, using Libwhisker means your program:
+
+- Can communicate over HTTP 0.9, 1.0, and 1.1
+- Can use persistant connections (keep-alives)
+- Has proxy support
+- Has anti-IDS support
+- Has SSL support
+- Can receive chunked encoding
+- Has nonblock/timeout support built in (platform-dependant...)
+- Has basic and NTLM authentication support (both server and proxy)
+
+That way you don't have to code it all yourself--use Libwhisker
+and all those features are transparently available automatically.
+So call now, operators are standing by.
+
+-------------------------------------------------------------------
+
+Why not use other perl modules?
+
+Libwhisker actually combines the functionality LWP, URI, HTML::Parser,
+MIME::Base64, and a handful of other modules into a single file that is
+approximately 105k (when POD is stripped).
+
+One of the annoyances of LWP et. al. is that they require local system
+installation before they can be used--and that installation sometimes
+requires compilation of C code files.  This can be a problem if you have a
+system that lacks a compiler (commercial unix platforms, Windows, etc),
+and it also makes portability very difficult.  Libwhisker is 100% native
+Perl, so no additional compilers are necessary.  It's one single 105k text
+file (i.e. very portable), which doesn't have to actually be
+installed--just put it in the same directory as your perl script and go!  
+And since Libwhisker doesn't require external modules to work**, that means
+you should be good to go with a perl binary, the LW2.pm file, and your perl
+script--nothing else needed!  Great for those 'security audit' situations
+where installing an entire perl distribution on a target system is out of
+the question...
+
+Of course, that doesn't mean that you shouldn't use LWP.  Just keep in
+mind that LWP (and other modules, in general) were written to follow
+proper RFC protocols.  This is fine and dandy; but if you're writing
+exploits, sometimes you need to purposefully break some aspect of the
+protocol, and typically the published Perl modules don't provide the
+capabilities to do this.
+
+And lastly, Libwhisker has been benchmarked against LWP--and it's been
+found to be almost three times as fast.
+
+** you do need a local Socket.pm for your system to use any of the network
+   functionality; however, if you don't have Socket support, you can still
+   use the Libwhisker utility/parsing functions without problem.
+
+-------------------------------------------------------------------
+
+Note to Libwhisker 1.x users:
+
+Libwhisker 2.0 is *not* backwards-compatible with Libwhisker 1.x. A few
+things were moved around and renamed.  Changing 'use LW' to 'use LW2' in
+your programs is not enough--you may need to make code changes to your
+program.  See the 'CHANGES' file.
+
+However, there is now a 'bridge' LW.pm module in the compat/ directory,
+which will use LW2 (libwhisker 2.x) functions to emulate the LW
+(libwhisker 1.x) functionality.  This should allow programs written to
+use LW (libwhisker 1.x) to use LW2 (libwhisker 2.x) without any changes.
+You can have the compatibility bridge automatically installed by using
+the 'install_lw1' Makefile.pl command.
+
+-------------------------------------------------------------------
+
+How to use Libwhisker:
+
+Use the included api_demo.pl script to see how to make a basic request
+using the library.  Otherwise, there is embedded POD documentation
+for most of the functions within LW2.pm.
+
+You should be able to use the LW2.pm by including it in the 
+same directory as the script that requires it.  Otherwise run
+"perl Makefile.pl install" to install it into your local perl 
+module site directory.
+
+To use SSL support, you will need Net::SSLeay or Crypt::SSLeay, as
+well as OpenSSL installed.  Libwhisker will still work without any 
+of them, you just won't have any SSL support.  And technically 
+Libwhisker will still work without Socket support, but it's very 
+limited then.  Crypt::SSLeay (also known as Net::SSL) is available
+precompiled for the Windows ActiveState package; Unix platforms
+should use Net::SSLeay, which has many more features than Net::SSL.
+
+-------------------------------------------------------------------
+
+Libwhisker is under the GPL.
+
+That means it's free for use and redistribution under the terms of
+the GNU Public License (version 2).  A copy is included with the
+development source distribution, or from http://www.gnu.org/
+
+If you wish to (re)use Libwhisker code in a commercial product, or
+distribute it with a commercial product, please contact me at
+rfp@wiretrip.net.
+
+-------------------------------------------------------------------
+
+Tested platforms:
+
+Libwhisker has been successfully ran on:
+- Linux, using perl 5.004 and higher
+- ActiveState Perl for Windows, based on perl 5.6.x and 5.005
+- Sun Solaris, perl 5.004 and higher
+- SGI IRIX, perl 5.004 and higher
+
+Libwhisker does *not* run with perl 5.003 and earlier.  There were
+too many bugs in 5.003 which would require too many workarounds to
+accomodate while still maintaining minimal code size and speed.
+
+-------------------------------------------------------------------
+
+Feedback about Libwhisker:
+
+Send it to me directly at rfp@wiretrip.net (please use the word
+'libwhisker' in the subject), or toss it out on the
+whisker-devel mailing list, whisker-devel@lists.sourceforge.net.
+You can subscribe by going to the mailing list section at
+http://sourceforge.net/projects/whisker/
+
+-------------------------------------------------------------------
+

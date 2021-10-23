@@ -1,0 +1,9 @@
+forceclose=1/stallend=1
+HTTP/1.1 200 OK
+Server: TestServer/1.0
+Content-Length: 50
+Connection: keep-alive
+MD5Sum: fdf8e0b51b41d1d013969eb988f5a43c
+Description: seemingly kept alive but actually closes to trigger retry
+
+<html><body>This is a test response</body></html>

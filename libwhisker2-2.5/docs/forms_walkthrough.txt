@@ -1,0 +1,362 @@
+Libwhisker 2.x forms walkthrough
+---------------------------------------------------------------------------
+
+This document discusses and demonstrates how to use the form parsing
+functionality contained in Libwhisker 2.x.  This document assumes a
+Libwhisker 2.x version of at least 2.2.
+
+First and foremost, using the Libwhisker forms function requires a
+comfortable working knowledge of Perl anonymous structures and
+references. I recommend reading the first chapter of "Advanced Perl
+Programming" by O'Reilly to brush up on your anonymous data storage and
+reference concepts.
+
+Alright, let's start.
+
+---------------------------------------------------------------------------
+
+Libwhisker stores all form data in a hash.  Let's call this hash %FORM
+for now.  The keys of the %FORM hash are one of three things:
+
+- The name of the element, as specified by 'name="..."' attribute
+
+- The value "unknown#" (where # is an incrementing number starting at 0)
+	for any elements which do not specify a 'name="..."' attribute
+
+- The value "\0" (NULL) for the <form> tag data
+
+
+Let's look at an example form, and see how this maps:
+
+<form method="POST" action="/test.cgi">
+<input type="text" name="first-input" value="one">
+<input type="text" name="second-input" value="two">
+<input type="text" value="three">
+<input type="checkbox" name="first-check" value="mycheck">
+<input type="radio" name="the-radio" value="1">
+<input type="radio" name="the-radio" value="2">
+<input type="radio" name="the-radio" value="3">
+<textarea name="areatext">my text</textarea>
+<input type="submit">
+</form>
+
+
+If we were to pass this form data to the Libwhisker, the resulting hash
+would look like:
+
+$FORM = (
+	"\0" => ..., 		# data for <form> tag
+
+	"first-input" => ...,	# data for first input/text tag with 
+				# value 'one'
+
+	"second-input" => ...,  # data for second input/text tag with 
+				# value 'two'
+
+	"unknown0" => ...,	# data for third input/text tag with 
+				# value 'three'
+
+	"first-check" => ...,	# data for first checkbox with value 
+				# 'mycheck'
+
+	"the-radio" => ...,	# data for all the radio boxes named 
+				# 'the-radio'
+
+	"areatext" => ...,	# data for the first textarea tag
+
+	"unknown1" => ...	# data for first input/submit tag
+);
+
+Right now we're not concerned with the actual data being stored--we're
+only focusing on the hash key names.  The notable highlights to point
+out:
+
+- The form data is under the key "\0" (NULL)
+
+- Since no 'name=""' attribute was given for the third input/text and
+	the input/submit elements, they were assigned names of 
+	"unknown0" and "unknown1", respectively
+
+- Elements which use multiple tags under the same name (select/option,
+	radio, etc) all appear under a single entry of that name; in 
+	this case, the three "the-radio" radio buttons will all be 
+	contained under a single "the-radio" hash key
+
+Methodically parsing a Libwhisker form structure is a simple matter of
+first handling the special key "\0", and then iterating over the hash
+and handling each key (except "\0") as necessary.
+
+---------------------------------------------------------------------------
+
+Let's move on to the next level of storage.  For every key in the %FORM
+hash, Libwhisker creates an anonymous array.  This array contains one
+entry for every tag with the given name.  For many entries, which will
+lead to an array with only a single entry; however there will likely be
+many entries for radio buttons and select/options.  There will also be
+multiple entries for tags having the same name.
+
+Let's look at another example form:
+
+<form method="POST" action="/test.cgi">
+<input type="text" name="first-input" value="one">
+<input type="text" value="two">
+<input type="radio" name="the-radio" value="1">
+<input type="radio" name="the-radio" value="2">
+<select name="the-select">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select>
+<input type="submit">
+</form>
+
+If we were to pass this form data to the Libwhisker, the resulting hash
+would look like:
+
+$FORM = (
+	"\0" => ...,   		# data for the <form> tag, to be discussed
+				#  later
+
+	"first-input" => [
+			...	# data for the first input box with value
+				# "one"
+			],
+
+	"unknown0" => [
+			...	# data for the second input box with value
+				# "two"
+			],
+
+	"the-radio" => [
+			...,	# data for radio box with value "1"
+			...	# data for radio box with value "2"
+			],
+
+	"the-select" => [
+			...,	# data for the <select> tag
+			...,	# data for <option> with value "1"
+			...,	# data for <option> with value "2"
+			...,	# data for <option> with value "3"
+			...	# data for the </select> tag
+			],
+
+	"unknown1" => [
+			...	# data for the first submit element
+			]
+);
+
+
+Note: At this point, the 'data' stored for each element (represented by
+'...') is still arbitrary and will be discussed later.  Right now, we're
+just looking at how many sets of data are stored.
+
+Some highlights to note from this hash dump:
+
+- The "\0" key does not follow the same format as the rest of the keys
+	(it is not a reference to an anonymous array); the "\0" key 
+	should always be processed by itself, and skipped for all other 
+	element processing
+
+- The "first-input", "unknown0", and "unknown1" keys have anonymous
+	arrays with only a single element of data
+  
+- The "the-radio" key is an anonymous array of two data elements, one
+	for each encountered radio box
+	
+- The "the-select" key is an anonymous array with a data set that
+	contains an entry for the <select> tag, entries for each 
+	<option> tag, and then a final entry for the </select> tag
+
+
+Hopefully this is still easy to understand thus far.  All elements of
+the same name are put under the same hash key.  The hash key points to
+an anonymous array which contains one entry for each tag/element
+encountered for that given element name.
+
+There is a corner case worth noting. Imagine the following HTML:
+
+<form method="POST" action="/foo.cgi">
+<input name="bar" type="text">
+<textarea name="bar"></textarea>
+<input name="bar" type="checkbox">
+<input name="bar" type="submit">
+</form>
+
+The tricky thing here is that all the elements are named "bar".  How
+this is actually interpreted/handled is browser dependant; however,
+Libwhisker handles it by creating a single hash key "bar" and putting
+all the elements in the anonymous array, like so:
+
+$FORM = (
+	"\0" => ...,		# data for <form> tag
+	"bar" => [
+		...,	# data for input/text
+		...,	# data for textarea
+		...,	# data for checkbox
+		...	# data for submit
+		]
+);
+
+It should now be easy to see how multiple elements are stored under a
+single key.  Let's move on.
+
+---------------------------------------------------------------------------
+
+Up until this point, we've been using '...' as a placeholder for the tag
+data.  It's time now for us to define exactly what this is.
+
+All tags/elements, except for the "\0" <form> entry, have a set of data
+associated with them.  This set of data takes the form of an anonymous
+array.  The anonymous array has three entries: the type of the tag, the
+value of the tag, and a reference to an anonymous array containing
+additional tag attributes (we will discuss this a bit later, below).
+
+Thus a 'data set' looks like:
+
+		[ $type, $value, [ <attribs> ] ]
+		
+First we'll discuss the $type.  This is a string value of 'select',
+'/select', 'option', 'textarea', or an input value of the form
+'input-?', where '?' is the actual input type (such as "input-submit",
+"input-text", "input-checkbox", etc.).  One important thing to note: the
+'input-?' value uses the value specified by the 'type' attribute, with
+no sanity checking or case adjustment. E.g.:
+
+<input type="text">		# type is "input-text"
+<input type="TEXT">		# type is "input-TEXT"
+<input type="foobar">		# type is "input-foobar"
+<input type="foo Bar bAZ">	# type is "input-foo Bar bAZ"
+
+When processing the $type, you should always lowercase the value and
+then compare it to valid known types.
+
+The next data set entry is the $value.  This is simply the value of the
+tag/element, or undef if the tag/element doesn't have a value attribute
+or when a value doesn't otherwise apply.  The actual value contained in
+$value can vary depending on the specific HTML tag being parsed.  Let's
+do a quick run-through of possible values:
+
+---- <input type="text"> ----
+
+The value will be data in the 'value="..."' attribute; if a value
+attribute doesn't exist, then the value will be undef.
+
+<input type="text" value="foobar">	# $value equals "foobar"
+<input type="text" value="">		# $value equals ""
+<input type="text">			# $value is undef
+
+---- <input type="hidden"> ----
+
+This is identical to input/text.
+
+---- <input type="radio"> ----
+
+This is identical to input/text; however, in order for radio boxes to
+work, you generally always need a value attribute.  The trick here is
+that there will be one data set for every radio box encountered, meaning
+every possible value will be enumerated.  You can tell which one is
+actually selected by default by looking at the optional attributes
+(discussed later).
+
+---- <input type="checkbox"> ----
+
+Checkboxes don't necessary need a value in order to work; the browser
+will typically submit a value of 'on' or '1' if the box is checked and a
+value is not specified.  Therefore many times you'll find the value to
+be undef, but if a value attribute is specified, then the value will be
+set accordingly. Like the radio box, you can tell if the box is checked
+by consulting the optional attributes (again, discussed later).
+
+---- <input type="submit"> ----
+
+Submit buttons may or may not have an actual value assigned to them.  In
+general, it's the same as input/text.
+
+---- <textarea> ----
+
+The value is set to the data contained between the <textarea> and
+corresponding closing </textarea> tags.  If the area between the tags is
+empty, then the value will be an empty string ("").  If a <textarea> tag
+is found without a matching closing </textarea> tag, then the value will
+be undef.
+
+---- <select>/<option> ----
+
+The values of <select> and </select> will always be undef, since these
+tags do not carry any actual value.  The values of subsequent <option>
+tags will be saved.  If the <option> tag has a 'value="..."' attribute,
+then $value will be set to the specified value.  If there is no value
+attribute, then $value will be set to the text immediately after the
+option tag, up to but not including the first '<' character, with all
+"\r" and "\n" characters removed.
+
+----
+
+Now that $type and $data are defined, we should move onto  [attribs].  
+All additional tag attributes are stored in an anonymous array in 
+'attribute="value"' string pairs (unless the attribute doesn't have a 
+value, in which case the array will contain a string of just 
+'attribute'.  This is probably easier understood by an example:
+
+<input type="radio" name="myradio" value="1" selected onchange="foo();">
+
+The parsing of the above input tag will result in a %FORM entry like:
+
+$FORM = {
+
+	'myradio' = [
+
+			[ 	'input-radio',	# type
+				'1',		# value	
+
+				[		# attributes anon array
+					'onchange="foo();"',
+					'selected'
+				]
+			]
+		]
+}
+
+
+Note: the order of the attributes appearing in the attribute array will
+*NOT* necessarily appear in the same order specified in the tag.
+
+Based on the above example, it should now be clear how you would check 
+to see if a checkbox, radio box, or option is checked/selected--you 
+would enumerate through the attribute array and looked for 
+'checked'/'selected'.
+
+We still need to address the special "\0" for the <form> key.  The 
+format for this:
+
+	[ $name, $method, $action, [ <attributes> ] ]
+
+The values are:
+
+	$name		The name of the form specified by the 'name='
+			attribute.  The value will be undef if no name
+			is given.
+
+	$method		The method of the form specified by the 
+			'method=' attribute; undef if not specified
+
+	$action		The action of the form specified by the 
+			'action=' attribute; undef if not specified
+
+	[ <attributes> ]	Anonymous array of attributes identical
+				to normal tags (see above).
+
+For the most part, these values should be pretty self-explainitory.
+
+
+---------------------------------------------------------------------------
+
+Now that we know how things are stored, you can look at the form_demo1.pl
+and form_demo2.pl scripts in the tarball /scripts/ directory.
+
+Form_demo1.pl is a basic script which walks through the forms structure
+and describes the form elements.  Form_demo2.pl is a script which will
+convert/rewrite all form inputs into editable input-text and textarea 
+elements.
+
+Enjoy!

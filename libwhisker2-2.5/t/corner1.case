@@ -1,0 +1,7 @@
+keepalive=1
+HTTP/1.1 200 OK
+Connection: keep-alive
+Connection: close
+Content-Length: 5
+
+abcde
