@@ -27,6 +27,7 @@
 | Shell         | Grep, wget, godorking, osint, etc       |
 | Batch         | Viruses, payloads, bombs,               |
 | Assembly      | geting auth cpu and writing data to file|
+|---------------|-----------------------------------------|
 
 
 # whats new 
@@ -34,18 +35,6 @@
 <br>
 well to be exact- a shit ton there is ALOT new compared to V3.9 for started 
 <br>
-| bug fixes     | What was the issue                      |
-| ------------- | ----------------------------------------|
-| Install.sh    | was not installing correctly fixed      |
-| no men retuirn| no return function when script finished |
-| Wireless card | Wasnt operating on mon0 added phy exec  |
-| no threading  | added Speed, threading, error handeling |
-| slow in resp  | would wait to long,sleep methods deleted|
-| fixed recon   | added Grep, wget, godorking, spawns, etc|
-| Batch         | added more ssh Viruses, payloads, bombs |
-| fixed Assembly| was not adding the proper dir, compilesr|
-
-
 
 What is red rabbit? <br>
 
