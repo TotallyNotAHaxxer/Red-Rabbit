@@ -5,7 +5,7 @@
    \ \  __<   \ \  __\   \ \ \/\ \ \ \  __<   \ \  __ \  \ \  __<   \ \  __<   \ \ \  \/_/\ \/ 
     \ \_\ \_\  \ \_____\  \ \____-  \ \_\ \_\  \ \_\ \_\  \ \_____\  \ \_____\  \ \_\    \ \_\ 
      \/_/ /_/   \/_____/   \/____/   \/_/ /_/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_/ 
-        V 3.0                                 Red Rabbit               Scare_Sec Hackers
+        V 4.0                                 Red Rabbit               Scare_Sec Hackers
                                                
                                                ((`\
                                             ___ \\ '--._
@@ -17,22 +17,21 @@
 
 ```
 <br>
-| Languages     | Why the lang                            |<br>
-| ------------- | ----------------------------------------|<br>
-| Python3       | Easy write for some scripts             |<br>
-| Perl          | using the open syntax for Injection     |<br>
-| Go-lang       | Speed and Read abilities,also format    |<br>
-| Rust          | Speed, mobility, and error handeling    |<br>
-| Ruby          | as a main file derivitive from rube-ster|<br>
-| Shell         | Grep, wget, godorking, osint, etc       |<br>
-| Batch         | Viruses, payloads, bombs,               |<br>
-| Assembly      | geting auth cpu and writing data to file|<br>
 
 
 # whats new 
 
 <br>
-well to be exact- a shit ton there is ALOT new compared to V3.9 for started 
+well to be exact- a shit ton there is ALOT new compared to V3.9 for starters alot of bug fixes 
+<br>
+```
+fix #1: Fixed install bug in the file where it would root the download file or not download the necessary content 
+
+fix #2: Fixed after ecvery tool or definitoon is ran it will ask you if you would like to finish the the main menu again 
+
+fix #3: Fixed where mon0 wasnt an interface or couldnt be updated/Activated to where PHY could disable, add, and enable mon0/wlan interfaces
+```
+
 <br>
 
 What is red rabbit? <br>
