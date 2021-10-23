@@ -314,9 +314,7 @@ Using Current CPU =>  < XAuthenticAMD>
 
 
 ```
-<br>
 <h2> menu 2 </h2>
-<br>
 ```
 
                                            [1] Wifi Scanner 
