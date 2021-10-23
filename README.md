@@ -19,4 +19,60 @@ PHPI, SQLI, XSSI, Ajax crawl, ajaz crawl + whois, whois, domain dorker, payload,
 <br>
 
 
+# installs and other 
+`git clone https://github.com/ArkAngeL43/Red-Rabbit-V4 ; chmod +x ./install.sh ; ./install.sh ; `
 
+# warnings and proper install upon entering<br>
+when you use this script when it comes to wireless attacks that use packet gen like <br>
+`fake ap`<br>
+`Deauthenticaton`<br>
+`ftp login captures`<br>
+then you will need to run the main file as root like this 
+
+```
+Using Current CPU =>  < XAuthenticAMD>
+                                           [1] Rouge AP 
+                                           [2] Deauth 
+                                           [3] Port Scanner 
+                                           [A] Web Port Scan 
+                                           [4] Flooder 
+                                           [5] DHCMP ATK 
+                                           [6] Check Connection 
+                                           [7] WHOIS Domain 
+                                           [8] More 
+                                           [9] Start Interface  [aircrack-ng suit]
+                                           [01] Start Interface [Iw dev for fake AP]
+                                           [02] Stop Interface [iw dev managed mode]
+                                           [0] Exit 
+                                      >>> 
+
+
+```
+
+you will need to run 01, then rerun the file MAKE SURE YOU HAVE MON0 as a INTERFACE 802.11
+
+further notes about this secition 
+<br>
+there will be some errors with the fake AP sometimes it will not spawn this might be because of your network card 
+<br>
+also when you do option 01 this uses phy dev to erase wlan0 and start a mon0 card, this will be permanant until you chose to stop the interface using 02 ONTOP of that this will also ruin some bluetooth connections if the card is weak, if you do not have a second interface or an extra adapter this will also ruin connections on calls or anything else you may be doing until the script is done, unless its another hacking tool<br>
+<br> 
+
+# issues and errors within the script<br>  
+<br>
+802.11 packetgen utils and wireless cards<br>
+<br>
+sometimes you wont be able to activate the interface well check the following <br> 
+when you started the script and your card were you root?<br>
+when you ran the script again after enabling were you root when doing so?<br>
+<br>
+
+whois domain <br>
+<br>
+there is no issue with the script itself it just depends on what domain your targeting, during whois parsing the thing can get stuck and sometimes will not register properly, i prefer using MOAB-OSINT in menu 3 of the script 
+
+SQLI perl module<br>
+
+the PHPI, SQLI, and LW3 module are all perl scripts, this will require some heafty syntaxing. sometimes when you run the PHP script it will error out, i still have not figured out why <br>
+<br>
+the SQLI script will say "failed to fetch" then the parsed url with query strings, this is probobly because the url isnt being parsed correctly/inputted or the server is not MySQL V5.x or it can be older or even younger, this module ONLY SUPPORTS `MySQL V5.x`<br>
