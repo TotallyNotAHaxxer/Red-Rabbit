@@ -76,3 +76,24 @@ SQLI perl module<br>
 the PHPI, SQLI, and LW3 module are all perl scripts, this will require some heafty syntaxing. sometimes when you run the PHP script it will error out, i still have not figured out why <br>
 <br>
 the SQLI script will say "failed to fetch" then the parsed url with query strings, this is probobly because the url isnt being parsed correctly/inputted or the server is not MySQL V5.x or it can be older or even younger, this module ONLY SUPPORTS `MySQL V5.x`<br>
+<br>
+issues with LW2 and Libwhisker 
+<br>
+sometimes it will say there is an error in the libwhisker but it shouldnt be an issue, its more of a bug than an issue
+<br>
+# SCRIPTS USED INSIDE OF RED RABBIT 
+
+`before i go on i want to note that 99% of the scripts are all my scripts asides people like rip, parrot, or some other freinds helped me build `
+`scripts like ; LW2, LIBWHISKER, PERL6 and even the php script ( eevn though i fixed 90% of it ) are not mine, i do not claim ownership for these modules or scripts`
+injection/exploitation/dne enumeration
+-----------
+PHPI      -> phpi.pl
+SQLI      -> sqli.pl
+XSSI      -> xssi.py
+port      -> scanner.rs
+port web  -> port.rb 
+ssh sploit-> ssh-sploit | main.rb 
+MOAB OSI  -> moab.sh/go.mod.go.sum.main.go.banner.go.regex.go others 
+
+
+
