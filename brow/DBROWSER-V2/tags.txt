@@ -1,0 +1,44 @@
+#tags for html 
+
+
+
+< meta -=charset"" > = character encoding usuallt UTF-8
+
+<meta> = metadata structure and element 
+
+<title> = body 
+
+<h1> = subtitle 
+
+b = text 
+
+<p> = paragraph 
+
+</tr> = Tbael row element 
+
+</th> = header cell for table
+
+</td> = Table Data Cell element
+
+<p style ="background-color:black;"> == sets background color of a given text or word within the P tag or praragraph tag 
+
+<table style="background-color:#070000"> ==> BG color of a table 
+
+#changing H2 color 
+<h2 class="red-text" style="color: red;">My belifes twards hackers protecting civilians</h2>
+
+<button class="tablinks" onclick="OpenCity(event, ' American')" id ="defualtOpen">American</button> ==> this adds a button to the webpage you are amking 
+
+  <link href="mystyle.css" rel="stylesheet" type="text/css" ====>> this will link a css file in the folder 
+
+<table style="background-color:#33475b"> ======> sets a background color 
+
+  <link href="mystyle.css" rel="stylesheet" type="text/css" =======> this links a file or a css for colors, backgrounds or jsut over all style 
+
+<img src="LINK OR JPEG, PNG, RTC, file" alt="Simply Easy Learning" width="200" height="80"> =====> image 
+
+ALWAYS END FILE WITH 
+
+
+  </body>
+</html>     

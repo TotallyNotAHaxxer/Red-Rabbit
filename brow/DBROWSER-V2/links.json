@@ -1,0 +1,19 @@
+{
+    "prints" : [
+        "|------------Supported links for text bar-------------------",
+        "|http://www.google.com | https://youtube.com                |",
+        "|https://www.shodan.io/| https://null-byte.wonderhowto.com/ |",
+        "|https://github.com    | https://dnsleaktest.com            |",
+        "|https://parrotsec.org/| https://www.kali.org/              |",
+        "|https://www.aircrack-ng.org/                               |",
+        "|https://owasp.org/www-project-zap/                         |",
+        "|https://www.torproject.org/                                |",
+        "|https://torchbrowser.com/                                  |",
+        "|https://brave.com     | https://discord.com                |",
+        "|https://www.hackthebox.eu/                                 |",
+        "|https://tryhackme.com/                                     |",
+        "|https://pypi.org/                                          |",
+        "|https://www.geeksforgeeks.org/                             |",
+        "|___________________________________________________________|"
+    ]
+}
