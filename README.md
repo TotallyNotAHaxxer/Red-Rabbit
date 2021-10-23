@@ -85,15 +85,17 @@ sometimes it will say there is an error in the libwhisker but it shouldnt be an 
 
 `before i go on i want to note that 99% of the scripts are all my scripts asides people like rip, parrot, or some other freinds helped me build `
 `scripts like ; LW2, LIBWHISKER, PERL6 and even the php script ( eevn though i fixed 90% of it ) are not mine, i do not claim ownership for these modules or scripts`
-injection/exploitation/dne enumeration
------------
-PHPI      -> phpi.pl
-SQLI      -> sqli.pl
-XSSI      -> xssi.py
-port      -> scanner.rs
-port web  -> port.rb 
-ssh sploit-> ssh-sploit | main.rb 
-MOAB OSI  -> moab.sh/go.mod.go.sum.main.go.banner.go.regex.go others 
+some of the main and most used
+-----------<br>
+PHPI      -> phpi.pl<br>
+SQLI      -> sqli.pl<br>
+XSSI      -> xssi.py<br> 
+port      -> scanner.rs<br>
+port web  -> port.rb <br>
+ssh sploit-> ssh-sploit | main.rb <br>  
+MOAB OSI  -> moab.sh/go.mod.go.sum.main.go.banner.go.regex.go others <br>
+<br>
+
 
 
 
