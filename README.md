@@ -287,9 +287,11 @@ use std::thread;
 
 # parrot recon in red rabbit in action scraping parrot-pentest.com
 <img src="out.png" alt="pr recon" width="500" height="600">
-
-
-
+<br>
+<br>
+<br>
+# DNS recon on average attempt
+<img src="dns.png" alt="homies">
 # for more information and images 
 `run ruby main.rb then go to the next menu until you find |view my website| which will load the idnex.html file < the mispell is intentional > `
 <br>
