@@ -16,10 +16,7 @@
                                        -----------------
 
 ```
-
-
-
-
+<br>
 | Languages     | Why the lang                            |
 | ------------- | ----------------------------------------|
 | Python3       | Easy write for some scripts             |
@@ -37,7 +34,6 @@
 <br>
 well to be exact- a shit ton there is ALOT new compared to V3.9 for started 
 <br>
-resp =response connection <br>
 | bug fixes     | What was the issue                      |
 | ------------- | ----------------------------------------|
 | Install.sh    | was not installing correctly fixed      |
