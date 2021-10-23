@@ -285,8 +285,8 @@ use std::thread;
 
 
 
-#parrot recon in red rabbit in action scraping parrot-pentest.com
-<img src="out.png"</img>
+# parrot recon in red rabbit in action scraping parrot-pentest.com
+<img src="out.png" alt="pr recon" width="500" height="600">
 
 
 
