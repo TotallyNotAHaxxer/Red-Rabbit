@@ -1,3 +1,4 @@
+#edited script from before
 import time 
 import scapy.all as scapy
 from scapy.all import Ether, IP, UDP, BOOTP, DHCP, sendp, RandMAC, conf
