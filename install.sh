@@ -14,3 +14,7 @@ cpan install ; sudo cpan Term::ANSIColor ; cpan Term::ANSIColor ; cd libwhisker2
 echo "[+] Running go installs"
 echo '.............................................................................................................................'
 go get github.com/logrusorgru/aurora ; go get github.com/PuerkitoBio/goquery ; go get golang.org/x/net/html 
+clear 
+echo " <+> IF THERE ARE ANY BUGS OR INSTALLS DID NOT WORK PROPERLY WITH THE SCRIPTS "
+exho " <+> PLEASE CONTACT ME HERE, OR ON INSTAGRAM @bushido_security_re43p3r AND SCREEN SHOT THE TROUBLES AND SEND " 
+exho " <+> THANK YOU FOR INSTALLATION AND TOOL USAGE " 
