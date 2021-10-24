@@ -301,23 +301,7 @@ i am currently working on automating the perl open functionw ith LW2 to open and
 # why perl? instead of python, ruby, etc
 `
 i chose perl because perl handels well with networking and connections, and its standard "open" functions allows you to both parse, return, and throw errors in a servers query. i also found it alot better than something like the ruby SQLI i wrote because selenium just- kinda sucks on the end when it comes to injection or xss hunters since it can be very buggy and requires ALOT of threading, error handeling, exception handeling, and returningvalues, i did try it for a bit it just didnt work as well as the perl on did or the python3 xssi.py script for automating xssi`
- 
 
-# parrot recon in red rabbit in action scraping parrot-pentest.com
-<img src="out.png" alt="pr recon" width="500" height="600">
-<br>
-<br>
-<br>
-# DNS recon on average attempt
-<img src="dns.png" alt="homies">
-# for more information and images 
-`run ruby main.rb then go to the next menu until you find |view my website| which will load the idnex.html file < the mispell is intentional > `
-<br>
-<br>
-<br>
-<br>
-# different types of menu's
-<br>
 `
                                           Detected Os ->  Linux
 Using Current CPU =>  < XAuthenticAMD>
@@ -336,4 +320,15 @@ Using Current CPU =>  < XAuthenticAMD>
                                            [0] Exit 
 
 `
+
+
+# parrot recon in red rabbit in action scraping 
+# parrot-pentest.com
+<img src="out.png" alt="pr recon" width="500" height="600">
+<br>
+<br>
+<br>
+# DNS recon on average attempt
+<img src="dns.png" alt="homies">
+<br>
 
