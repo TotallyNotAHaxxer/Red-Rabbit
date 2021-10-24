@@ -292,7 +292,16 @@ use std::process;
 use std::sync::mpsc::{Sender, channel};
 use std::thread;
 
+# why are injection scripts buggy or using older servers 
+`
+i am currently working on automating the perl open functionw ith LW2 to open and or work correctly to support a shit ton of servers however with my little knowledge of perl it will be complicated <br>
 
+PHPI reallt is just an example to show you that most things are vulnerable and can be automated, however ive been able to use this once before in the smallest of leaks, sometimes its better to release it than it is to keep it and never add it, if it helped me it can sure help others `
+
+# why perl? instead of python, ruby, etc
+`
+i chose perl because perl handels well with networking and connections, and its standard "open" functions allows you to both parse, return, and throw errors in a servers query. i also found it alot better than something like the ruby SQLI i wrote because selenium just- kinda sucks on the end when it comes to injection or xss hunters since it can be very buggy and requires ALOT of threading, error handeling, exception handeling, and returningvalues, i did try it for a bit it just didnt work as well as the perl on did or the python3 xssi.py script for automating xssi`
+ 
 
 # parrot recon in red rabbit in action scraping parrot-pentest.com
 <img src="out.png" alt="pr recon" width="500" height="600">
