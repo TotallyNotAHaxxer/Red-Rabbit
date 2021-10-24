@@ -293,10 +293,10 @@ use std::sync::mpsc::{Sender, channel};
 use std::thread;
 
 # why are injection scripts buggy or using older servers 
-`
+```
 i am currently working on automating the perl open functionw ith LW2 to open and or work correctly to support a shit ton of servers however with my little knowledge of perl it will be complicated <br>
 
-PHPI reallt is just an example to show you that most things are vulnerable and can be automated, however ive been able to use this once before in the smallest of leaks, sometimes its better to release it than it is to keep it and never add it, if it helped me it can sure help others `
+PHPI reallt is just an example to show you that most things are vulnerable and can be automated, however ive been able to use this once before in the smallest of leaks, sometimes its better to release it than it is to keep it and never add it, if it helped me it can sure help others ```
 
 # why perl? instead of python, ruby, etc
 `
