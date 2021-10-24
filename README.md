@@ -152,72 +152,6 @@ hostname
 then will crawl subdomains 
 
 
-9, 01, 02 --------------
-
-Activate interface with aircrack suit 
-
-stop interface using IWDEV 
-
-start interface using IWDEV
-
-
-
-================================== POSSIBLE ERRORS ==========================
------------------------------------------------
-with roge ap sometimes you will get the error 
-
-unable to activate interface: -8, mon0 (PCAPRUB::PCAPRUBError)
-
-try running 'sudo ruby main.rb' as this part requires root 
-
-if it still can not activate interface do run the file as root then do 01 to start the interface
-
-------------------------------------------------------
-whois
-
-sometimes youll get the name server issues where whois can not parse the domain
-that is not a script issue it just can not parse it properly 
-
-if you have a weird domain name i suggest you using 
-
-MOAB-OSINT in mneu 3 
-
-
-
-
-
-you will need to run 01, then rerun the file MAKE SURE YOU HAVE MON0 as a INTERFACE 802.11
-
-further notes about this secition 
-<br>
-there will be some errors with the fake AP sometimes it will not spawn this might be because of your network card 
-<br>
-also when you do option 01 this uses phy dev to erase wlan0 and start a mon0 card, this will be permanant until you chose to stop the interface using 02 ONTOP of that this will also ruin some bluetooth connections if the card is weak, if you do not have a second interface or an extra adapter this will also ruin connections on calls or anything else you may be doing until the script is done, unless its another hacking tool<br>
-<br> 
-
-# issues and errors within the script<br>  
-<br>
-802.11 packetgen utils and wireless cards<br>
-<br>
-sometimes you wont be able to activate the interface well check the following <br> 
-when you started the script and your card were you root?<br>
-when you ran the script again after enabling were you root when doing so?<br>
-<br>
-
-whois domain <br>
-<br>
-there is no issue with the script itself it just depends on what domain your targeting, during whois parsing the thing can get stuck and sometimes will not register properly, i prefer using MOAB-OSINT in menu 3 of the script 
-
-SQLI perl module<br>
-
-the PHPI, SQLI, and LW3 module are all perl scripts, this will require some heafty syntaxing. sometimes when you run the PHP script it will error out, i still have not figured out why <br>
-<br>
-the SQLI script will say "failed to fetch" then the parsed url with query strings, this is probobly because the url isnt being parsed correctly/inputted or the server is not MySQL V5.x or it can be older or even younger, this module ONLY SUPPORTS `MySQL V5.x`<br>
-<br>
-issues with LW2 and Libwhisker 
-<br>
-sometimes it will say there is an error in the libwhisker but it shouldnt be an issue, its more of a bug than an issue
-<br>
 # SCRIPTS USED INSIDE OF RED RABBIT 
 
 `before i go on i want to note that 99% of the scripts are all my scripts asides people like rip, parrot, or some other freinds helped me build `
@@ -409,24 +343,6 @@ i am currently working on automating the perl open functionw ith LW2 to open and
 i chose perl because perl handels well with networking and connections, and its standard "open" functions allows you to both parse, return, and throw errors in a servers query. i also found it alot better than something like the ruby SQLI i wrote because selenium just- kinda sucks on the end when it comes to injection or xss hunters since it can be very buggy and requires ALOT of threading, error handeling, exception handeling, and returningvalues, i did try it for a bit it just didnt work as well as the perl on did or the python3 xssi.py script for automating xssi`
 
 `
-                                          Detected Os ->  Linux
-Using Current CPU =>  < XAuthenticAMD>
-                                           [1] Rouge AP 
-                                           [2] Deauth 
-                                           [3] Port Scanner 
-                                           [A] Web Port Scan 
-                                           [4] Flooder 
-                                           [5] DHCMP ATK 
-                                           [6] Check Connection 
-                                           [7] WHOIS Domain 
-                                           [8] More 
-                                           [9] Start Interface 
-                                           [01] Start Interface [Iw dev for fake AP]
-                                           [02] Stop Interface [iw dev managed mode]
-                                           [0] Exit 
-
-`
-
 
 # parrot recon in red rabbit in action scraping 
 # parrot-pentest.com
