@@ -17,6 +17,9 @@
                                       {_\______\-'\__\_\
                                        -----------------
 
+                                        framework for hackers written by hackers 
+                                        "Hackers empower Hackers" ~ MHT
+                                        written from 75% ruby ( there is more ruby, it says perl since LW2...)
 
 ```
 
