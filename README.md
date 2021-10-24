@@ -318,4 +318,22 @@ i chose perl because perl handels well with networking and connections, and its 
 <br>
 # different types of menu's
 <br>
+`
+                                          Detected Os ->  Linux
+Using Current CPU =>  < XAuthenticAMD>
+                                           [1] Rouge AP 
+                                           [2] Deauth 
+                                           [3] Port Scanner 
+                                           [A] Web Port Scan 
+                                           [4] Flooder 
+                                           [5] DHCMP ATK 
+                                           [6] Check Connection 
+                                           [7] WHOIS Domain 
+                                           [8] More 
+                                           [9] Start Interface 
+                                           [01] Start Interface [Iw dev for fake AP]
+                                           [02] Stop Interface [iw dev managed mode]
+                                           [0] Exit 
+
+`
 
