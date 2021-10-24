@@ -62,6 +62,9 @@ then you will need to run the main file as root like this
 
 
 # different menus and tools (only half)
+
+```
+
 option 1 : Fake Acess point
 
 this will spawn a fake access point using a ruby lib called packet gen note 
@@ -150,7 +153,7 @@ server IP
 name servers
 hostname 
 then will crawl subdomains 
-
+```
 
 # SCRIPTS USED INSIDE OF RED RABBIT 
 
