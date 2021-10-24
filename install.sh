@@ -1,60 +1,16 @@
-echo '----------------------Installing Requirements--------------------------'
-sudo apt-get install perl 
-sudo apt-get install cpan 
-sudo apt-get install ruby 
-sudo apt-get install python3 
-sudo apt-get install go-lang 
-sudo apt-get install golang 
-sudo apt-get instal
-sudo gem install net-ssh
-gem install net-ssh 
-sudo gem install whois whois-parser
-sudo gem install httparty
-sudo gem install openssl
-sudo gem install optparse  
-pip3 install twint 
-pip install twint
-sudo apt-get install libpcap-dev
-pip install scapy 
-pip install ipaddress
-sudo gem install colorize 
-sudo gem install open-uri 
-sudo gem install packetgen 
-sudo apt-get install libpcap-dev
-gem install colorize
-gem install open-uri
-gem install packetgen
-sudo pip install scapy
-sudo pip install ipaddress
-cpan install
-cpan install Term::ANSIColor
-sudo cpan install 
-sudo cpan Term::ANSIColor
-go get golang.org/x/net/html 
-sudo apt-get upgrade 
-echo '[+] making perl mod'
-cd build-and-libs ; cd libwhisker2-2.5 ; sudo perl Makefile.pl install 
-go get golang.org/x/net/html
-sudo apt-get install docker 
-sudo apt-get update 
-git clone  https://github.com/mackwic/colored.git
-cd colored 
-docker build -t colored_image .
-docker run --rm -it -v "$PWD":/src -u `id -u`:`id -g` colored_image /bin/bash -c "cargo build"
-echo 'testing'
-docker run --rm -it -v "$PWD":/src -u `id -u`:`id -g` colored_image /bin/bash -c "cargo test"
-go get github.com/logrusorgru/aurora
-go get github.com/PuerkitoBio/goquery
-pip install colorama 
-pip install requests 
-sudo apt-get install json 
-pip install scapy 
-pip install speedtest 
-sudo apt-get install ssh 
-sudo apt-get install sshfs
-sudo apt-get install json 
-pip3 install speedtest 
-pip install speedtest 
-pip install webbrowser 
-pip3 install webbrowser 
-pip install urllib3
+echo "[+] Installing Gems"
+echo '.............................................................................................................................'
+sudo gem install tty-spinner ; sudo gem install httparty ; sudo gem install colorize ; sudo gem install whois whois-parser ; sudo gem install net-ssh ; sudo gem install optparse ; sudo gem install open-uri ; sudo gem install openssl ; sudo gem install packetgen ; sudo apt install libpcap-dev ; sudo apt install ssh 
+#pip3 and third party python modules
+echo "[+] Installing Python modules"
+echo '.............................................................................................................................'
+pip3 install ipaddress ; pip3 install tabulate ; pip3 install scapy ; pip3 install bs4 ; pip3 install colorama ; pip install urllib3 ; pip install pyqt5-tools ; pip install PyQt5 ; pip install PyQt5-sip ; pip install pyqt5 ; pip install PyQt-builder ; sudo apt-get install libssl-dev ; pip3 install webbrowser ; pip3 install pyfiglet ;  pip3 install discord ; pip install discord ; pip3 install httpx ; pip install httpx ; pip3 install phonenumbers ; pip install phonenumbers ; pip3 install twint 
+#perl
+#update cpan and run mods 
+echo "[+] Running Cpan installs and perl mods"
+echo '.............................................................................................................................'
+cpan install ; sudo cpan Term::ANSIColor ; cpan Term::ANSIColor ; cd libwhisker2-2.5 ; sudo perl Makefile.pl install ; cpan install HTTP::Tiny 
+#golang 
+echo "[+] Running go installs"
+echo '.............................................................................................................................'
+go get github.com/logrusorgru/aurora ; go get github.com/PuerkitoBio/goquery ; go get golang.org/x/net/html 
