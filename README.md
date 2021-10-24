@@ -1,3 +1,28 @@
+# who?
+
+```
+
+    ______     ______     _____     ______     ______     ______     ______     __     ______  
+   /\  == \   /\  ___\   /\  __-.  /\  == \   /\  __ \   /\  == \   /\  == \   /\ \   /\__  _\ 
+   \ \  __<   \ \  __\   \ \ \/\ \ \ \  __<   \ \  __ \  \ \  __<   \ \  __<   \ \ \  \/_/\ \/ 
+    \ \_\ \_\  \ \_____\  \ \____-  \ \_\ \_\  \ \_\ \_\  \ \_____\  \ \_____\  \ \_\    \ \_\ 
+     \/_/ /_/   \/_____/   \/____/   \/_/ /_/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_/ 
+        V 4.0                                 Red Rabbit               Scare_Sec Hackers
+                                               
+                                               ((`\
+                                            ___ \\ '--._
+                                         .'`   `'    o  )
+                                         /    \   '. __.'
+                                       _|    /_  \ \_\_
+                                      {_\______\-'\__\_\
+                                       -----------------
+
+
+```
+
+
+
+
 # whats new 
 
 ```
@@ -7,6 +32,11 @@ install bug -> Sometimes the install file will error out and also wont install t
 
 802.11 errors -> when you use the fake access point make sure the script is in root to prevent other issues such as the card failing and saying it can not be activated go to the main menu and activate the card with PHY-Dev
 
+whois -> sometimes when you would parse a domain whois will error out, this is not because of the tool it is due to the fact whois parser is very specific and is very sensativ
+
+SQLI -> considering the SQLI is written in perl from like idk 2003 its a very old script and is very very VERY specific this script will not work on modern day SQL servers, ONLY MySQL V 5.x no older and no younger, but fixed alot of the bugs where it would not run and just freez
+
+PHPI -> this one i really do not know how it works, a very old freind gave it to me, had me fix it up, but even we both dont know how it parses, however sometimes the PHP index and request will be only MANUAL INJECTION and can not be injection automates, fixed the error exit status
 ```
 
 <br>
