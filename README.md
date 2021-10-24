@@ -65,6 +65,8 @@ then you will need to run the main file as root like this
 
 ```
 
+MENU #1 THIS IS SOME OF THE QUARTER MAIN MENU
+
 option 1 : Fake Acess point
 
 this will spawn a fake access point using a ruby lib called packet gen note 
@@ -153,6 +155,54 @@ server IP
 name servers
 hostname 
 then will crawl subdomains 
+
+#MENU 2 THIS IS AGAIN SOME OF THE FEWER THINGS IN THIS SCR
+
+what does this menu have 
+
+wifi scanner 
+web app fuzzer 
+SQLI tester 
+XSSI tester 
+about 
+readme
+
+wifi scanner- - - - -- - - - -- -- --
+will scan the local area for networks ( best to use sudo)
+uses: python3 
+modules: scapy, pandas, tabulate, colorama 
+
+web application fuzzer ----------
+
+this is a fuzzing script for file sharing servers 
+
+uses: ruby 
+libs: packetgen
+what it does: gives you the buff maxium take in for a file server 
+
+SQLI Tester -----------------
+
+will test if a URL is injectable based on server errors
+
+uses: python3 
+libs: colorama, pprint, urllib, BS4
+
+errors: URL not parsed correctly or invalid 
+fix: make sure the url is what you need it to be however the URL must be https httpa http etc cannot be www 
+
+
+XSSI Tester ----------------
+
+will test if a url is XSS injectable if it is then it will return the post request with a standard get and request form factors 
+
+uses: python3 
+libs: colorama, pprint, urllib, bs4, requests,
+
+about -----
+
+lol cmon 
+
+
 ```
 
 # SCRIPTS USED INSIDE OF RED RABBIT 
