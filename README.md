@@ -288,6 +288,7 @@ simply for faster current network host identification
 ====================
 why rust IP sniffing?
 ====================
+RUSE IS NOT BEING USED BUT IS A FOLDER, RUST LANG IS NOT NEEDED EVEN THEN BY DEFUALT MOST LINUX SYSEMS USE RUST
 
 rust is really fast and a really good language compared to golang 
 sure golang is built from assembly but rust over all is faster 
