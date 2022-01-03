@@ -1,8 +1,12 @@
 #!/bin/bash
-
+sudo apt-get update && apt-get upgrade -y && clear
+echo "[+] Installing ruby"
+sudo apt install ruby -y && clear
 echo "[+] Installing Gems"
 echo '.............................................................................................................................'
 sudo gem install tty-spinner ; sudo gem install httparty ; sudo gem install colorize ; sudo gem install whois whois-parser ; sudo gem install net-ssh ; sudo gem install optparse ; sudo gem install open-uri ; sudo gem install openssl ; sudo gem install packetgen ; sudo apt install libpcap-dev ; sudo apt install ssh 
+echo "[+] Installing python "
+sudo apt install python3 -y && clear
 #pip3 and third party python modules
 echo "[+] Installing Python modules"
 echo '.............................................................................................................................'
@@ -13,10 +17,12 @@ echo "[+] Running Cpan installs and perl mods"
 echo '.............................................................................................................................'
 cpan install ; sudo cpan Term::ANSIColor ; cpan Term::ANSIColor ; cd libwhisker2-2.5 ; sudo perl Makefile.pl install ; cpan install HTTP::Tiny 
 #golang 
+echo "[+] installing golang "
+sudo apt install golang -y && clear
 echo "[+] Running go installs"
 echo '.............................................................................................................................'
 go get github.com/logrusorgru/aurora ; go get github.com/PuerkitoBio/goquery ; go get golang.org/x/net/html 
 clear 
 echo " <+> IF THERE ARE ANY BUGS OR INSTALLS DID NOT WORK PROPERLY WITH THE SCRIPTS "
-echo " <+> PLEASE CONTACT ME HERE, OR ON INSTAGRAM @bushido_security_re43p3r AND SCREEN SHOT THE TROUBLES AND SEND " 
+echo " <+> PLEASE CONTACT ME HERE, OR ON INSTAGRAM @Totally_not_a_hacker_femboy AND SCREEN SHOT THE TROUBLES AND SEND " 
 echo " <+> THANK YOU FOR INSTALLATION AND TOOL USAGE " 
