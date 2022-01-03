@@ -6,7 +6,7 @@ echo "[+] Installing Gems"
 echo '.............................................................................................................................'
 sudo gem install tty-spinner ; sudo gem install httparty ; sudo gem install colorize ; sudo gem install whois whois-parser ; sudo gem install net-ssh ; sudo gem install optparse ; sudo gem install open-uri ; sudo gem install openssl ; sudo gem install packetgen ; sudo apt install libpcap-dev ; sudo apt install ssh 
 echo "[+] Installing python "
-sudo apt install python -y && clear
+sudo apt install python3 -y && clear
 #pip3 and third party python modules
 echo "[+] Installing Python modules"
 echo '.............................................................................................................................'
