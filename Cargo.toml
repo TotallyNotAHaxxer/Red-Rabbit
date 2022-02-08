@@ -1,6 +1,0 @@
-[package]
-name = "ip_sniffer"
-version = "0.1.0"
-authors = ["ArkAngel43"]
-
-[dependencies]
