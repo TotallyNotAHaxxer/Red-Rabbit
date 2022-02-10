@@ -1,0 +1,6 @@
+/hello
+/admin
+/whatever
+/names
+/docs
+/go
