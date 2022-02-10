@@ -91,8 +91,8 @@ ________________________________________________________________________________
 |-> ghosted    | Run the ghosted os deletion shell [https://github.com/ArkAngeL43/Ghosted] |Working |
 |-> tor-magic  | Run http analyzation on headers using tor                                 |Working |
 |-> LDAP-i     | Inject a LDAP server and try to blindly grab user credentials             |Working |
-|-> sha-1      | Generate a SHA-1 hash                                                     |Working |
-|-> sha-2      | Generate a sha-2 hash                                                     |Working |
+|-> sha1       | Generate a SHA-1 hash                                                     |Working |
+|-> sha2       | Generate a sha-2 hash                                                     |Working |
 |-> ceaser     | Use the caesar cipher method to generate a password                       |Working |
 |-> basic-shod | Run a basic shodan search on a host or search term                        |Working |
 |-> port-shod  | Run a basic SHODAN scan to find the ports of a host                       |Working |
