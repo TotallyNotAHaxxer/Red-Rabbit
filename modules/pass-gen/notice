@@ -1,0 +1,32 @@
+use strict;
+use warnings;
+use Getopt::Std;
+use feature 'say';
+use Tk();
+
+my $mw = Tk::MainWindow->new();
+my $datetime = localtime(); 
+
+
+my %opts = (
+    w => "WARNING: ERROR: FATAL: AN ERROR OCCURED DURING THE GENERATION CODE BLOCK, NOTE THAT USING ANY NUMBER GREATER THAN 100 IS ILLEGAL AND WILL RESULT IN A ERROR/EXIT CODE OF 1 PLEASE TRY A NUMBER LESS THAN 100 I.E 16"         
+);
+getopt('f:w:', \%opts);
+
+my $mainopt = $opts{f};
+
+
+sub gui_warn() { 
+	my $answer = $mw->messageBox(
+		-icon => 'question',
+        -type => 'yesno',
+		-title => 'RR5 warning OUT-SUB-SHOWDIALOG-ERR',
+		-message => "WARNING: DURING RUN OF RR5: RUBY: MAIN: =>  $opts{w} \n\nTIME OF ERROR => $datetime",
+        -height => '200',
+        -width => '200',
+        -background => 'blue'
+	);
+    $mw->MainLoop();
+}
+
+gui_warn();
