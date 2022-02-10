@@ -1,3 +1,0 @@
-NUKE-AJAX: URL [  1  ] http://www.google.com
-NUKE-AJAX: URL [  1  ] http://maps.google.com/maps?hl=en&tab=wl
-NUKE-AJAX: URL [  1  ] http://www.google.com/imghp?hl=en&tab=wi
