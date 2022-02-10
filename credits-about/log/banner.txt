@@ -1,0 +1,2924 @@
+ ______     ______     _____     ______     ______     ______     ______     __     ______  
+/\  == \   /\  ___\   /\  __-.  /\  == \   /\  __ \   /\  == \   /\  == \   /\ \   /\__  _\ 
+\ \  __<   \ \  __\   \ \ \/\ \ \ \  __<   \ \  __ \  \ \  __<   \ \  __<   \ \ \  \/_/\ \/ 
+ \ \_\ \_\  \ \_____\  \ \____-  \ \_\ \_\  \ \_\ \_\  \ \_____\  \ \_____\  \ \_\    \ \_\ 
+  \/_/ /_/   \/_____/   \/____/   \/_/ /_/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_/ 
+
+                                               ((`\
+                                            ___ \\ '--._
+                                        .'`   `'    o  )
+                                        /    \   '. __.'
+                                      _|    /_  \ \_\_
+                                     {_\______\-'\__\_\
+-----------------------------------------------------------------------------------
+                                    _____ ____ _____
+                                   /    /      \    \ with the power of ruby
+                                 /____ /_________\____\        i become stronger
+                                 \    \          /    /                 and stronger 
+                                    \  \        /  /
+                                       \ \    / /
+                                         \ \/ /
+                                           \/
+--------------------------------------------------------------------------------------------
+Dev's -> ArkAngeL43
+
+Contributions -> S12 security, parrotassassin15
+
+
+Special thank you to parrotassassin15 a great contribution to the red rabbit project and script 
+
+for not only mentioning, but putting it out there and helping me with one of the few scripts but 
+
+most powerful automation scripts in red rabbit 
+
+______________________ABOUT_____________________________________________________________
+|check parrot recon  	 => https://github.com/parrotassassin15/parrot-recon          |
+|parrots github      	 => https://github.com/parrotassassin15                       |
+|parrot-CTF's            => https://parrot-ctfs.com/                                  |
+|and parrot pentest LLC  => https://parrot-pentest.com/                               |
+|parrot's instagram      => https://www.instagram.com/parrotassassin15                |
+|-------------------------------------------------------------------------------------|
+|OTHER Contributions
+|
+| Check out Mindfucker on instagram ( totally not one of my most favorited hackers )
+| a big thank you to him for showing a massive support and getting me to where i am today with
+| helping me get the [ Red-Rabbit ] project out there
+|  
+| Instagram => https://instagram.com/mindfuckerrrr
+|
+|
+| another special thank you for shouting out [ Red-Rabbit ] is going to be AEP3X and for the 
+| massive support along the road of the project
+|
+| Instagram => https://instagram.com/llllap3xllll
+|
+|
+|
+| the third shoutout will be the developer of the tor sockets and as well as ARPING with ruby 
+|
+| this amazing souls name is going to be rip.meep :D a very very good ruby and C cyber weapons 
+|
+| developer who helped with the creation of ARP in ruby with the program [ WAPTOOLS ] and gotor
+| 
+| as these programs gave me a very easy in with SSID finding without sucky preformace :D
+|
+| github => https://github.com/ripmeep
+| instagram => https://instagram.com/rip.meep
+| 
+| 
+|
+| the fifth amazing contribution will go to spookey_sec [ he may not believe it but he gave me alot 
+|
+| of help and ideas with this project in general and in general is a decent handed guy who helped spread 
+| 
+| the word of the red-rabbit project ]
+|
+| Github => https://github.com/SpookySec
+| 
+| Instagram => https://instagram.com/spooky_sec
+|
+|
+|
+| to the old code for the FTP brute forcing module 
+|
+|https://github.com/bad6e
+|
+|
+|
+
+==============================
+MODULE 1 CHAPTER 1 -> HISTORY|
+==============================
+
+[1]  Hello there! anonymous user, i wanted to let you in on what Red-Rabbit (RR) truly is and
+[2] 
+[3]  the true history behind this script, you might have alot of questions like, what led the dev
+[4] 
+[5]  here to write this script single handedly or something like how did this script become a thing 
+[6] 
+[7]  and why ruby or why go as a sub language?
+[9]
+[10] first lets revire what languages this script is written out of 
+
+
+[B0] -> Main script    -> Ruby 
+[B1] -> Sub scripts    -> Golang
+[B2] -> Older scripts  -> Perl/Python .2%
+
+why ruby as a main script or go as a sub language?
+-------------------------------------------------
+
+well, first before i choose sides let me be honest with you, i always liked Python
+
+in fact it was one of the very first programming languages i actually learned, however
+
+over time and coming across languages like R, Fortran, C, Assembly, Perl, or DOS i realized
+
+that well- there were other languages i could actually choose from that would fit me better 
+
+thus i stuck first with python and ruby. Ruby is a great language, this is a language that was 
+
+born to become a hacking language, a language to send and execute exploits extremely fast 
+
+while also having the readability/writability as python. i chose ruby cause i found it as a very
+
+very facinating language, one with potential and one that certianly has the weirder syntaxes like 
+
+my friend perl, #cpan :D. python is a good language but has its limits when it comes to ruby and 
+
+black hat/ white hat / blue hat / hacking or any other feild out there, it is just over all better.
+
+i just recently picked up on go and if you go to my github https://github.com/ArkAngeL43 you will see
+
+that at least 40 scripts are written out of golang, most being injection automation, vulnerability scanning,
+
+script generation, or hacking in general. why golang though? go is a newer more modern language 
+
+with one of the better languages for packing malware, sending attacks, readability, writability,
+
+speed, flexibility and so much more above that it is insane, while go's syntax isnt the best all the 
+
+features sure make up for that factor. I found golang as a sure held bent passion and even considered 
+
+re writting red rabbit out of pure assembly and pure golang since you can imbed both C and inline assembly 
+
+using golang. however i wanted to keep the authenticity of Red Rabbit.
+
+
+now lets move on 
+
+Where did Red rabbit come from? and what is the history behind it
+------------------------------------------------------------------
+
+The idea of making my own program that truly was my own and not just 
+
+a bunch of stollen or copy and pasted code has always been an idea ever
+
+since i picked up ruby and found out it was a better language for me and 
+
+for my requirements. when i got into ruby i purchased a book called
+
+Black Hat Ruby by # KING SABRI | @KINGSABRI who taught some quite amazing 
+
+ways to execute malicous code using ruby or make basic hacking tools and turn 
+
+them into advanced scripts that are you're own. The more i read the book the more
+
+i released and the more i decided to make a framework. on my github page about 70+
+
+repos down i have a script called Rube-Ster, which was ironically named after my rabbit.
+
+`https://github.com/ArkAngeL43/Rube-Ster.git`
+
+I used to have this rabbit named Mrs buttercup, and sometimes it would be this little thing 
+
+that she would do kinda bounce around randomly, and we called her boopster, the orgin name of 
+ 
+rubester came from the name `boop ster` however since it was written out of ruby i took the 
+
+two words and put them together ( rube - ruby ster - boopSTER) = rubester. then she died and 
+
+i made the contribution by updating the project and calling it red rabbit. keeping its true authenticity
+
+with writting it in rube, and since rubys are generaly red, thats where the red came from and rabbit 
+
+well thats obvious.
+
+|
+|
+|
+|
+og banner from Rubester 
+```
+
+    ______________________________
+    <Lets Proove these n00bs wrong| 
+    ------------------------------|
+       \ 
+        \ 
+            .--. 
+           |o_o |
+           |:_/ |
+          //   \ \ 
+         (|     | ) 
+        /'\_   _/`\ 
+        \___)=(___/
+```
+
+
+------------------------------------------------------------------------------------------------------------
+orgin DOCUMENTATION 
+
+
+NOTE ==> when you want to scan a website go into the scrape.rb file 
+go to where it shows the www.hulu.com as an example replace that 
+with the WWW link of the website, note this is a little buggy the 
+SITE MUST USE IPV4 as this is how it connects and works, working 
+on finding a library. or i might recreate in rust 
+
+
+______________________ABOUT___________________________
+well for one let m,e introduce you to Rube-rabbit
+or rubster as i like to call this framework, well  
+Rube-Rabbit is a penetration testing scanner and recon
+framework written mainly from ruby. with ruby being its 
+base it is a very fast fra,ework for port scanning or
+arp scanning the local area network (LAN). i honetsly
+built this framework to see what i could do with ruby 
+there are wya more things to come, and way more options
+coming and even being built in rube-rabbit. in the future
+there will come to be more scripts for scanning, attacking, 
+and maybe even some extra tweaks here and there 
+
+
+
+_________________NEWS/TIPS_____________________________
+Rube-Rabbit or Rubester is a very brand new pentesting 
+and ethical hacking framework meaning it is still 
+in beta and currently under development. no there
+isnt many issues or even issues ive come across so 
+far. however there are some things that make this 
+script a little bit sucky, if you want to scan a website 
+you are going to have to go into the scrape.rb ruby file
+and enter the www. websites. and the website must support
+IPAV4 (internet protocal version 4) as from my own tests
+websites with IPAV6 connections are not supported using 
+the current library, further on i will search for any 
+repos or libs i can use to port scan websites with 
+IPAV6 socks and IPV4 socks. 
+
+`````
+
+
+NOTE: see the Rube-Rabbit in the DOCUMENTATION?
+
+;)
+
+===================================================================================
+| MODULE 1, CHAPTER 2|
+|====================|
+
+
+Advanced user guide for Red-Rabbit-Version5
+
+Instalation ( working on windows compatibility )
+
+single download git 
+
+```
+git clone https://github.com/ArkAngeL43/Red-Rabbit-V5 ; chmod +x ./install.sh ; ./install.sh
+```
+
+Perl configuration for LW2
+
+when running the install file you are prompted to this 
+
+```
+CPAN.pm requires configuration, but most of it can be done automatically.
+If you answer 'no' below, you will enter an interactive dialog for each
+configuration option instead.
+
+Would you like to configure as much as possible automatically? [yes] 
+```
+
+answer yes because cpan is a very VERY old workspace and compiler for perl
+
+imagine setting up fortran95 thats how annoying perl both is to write and setup 
+
+with advanced and manual configuration
+
+
+
+
+====================================
+MODULE 2 CHAPTER 3 -> PERL INSTALLS|
+===================================|
+PERL MODULE LW2 INSTALLS |
+=========================|
+
+To install modules, you need to configure a local Perl library directory or
+escalate your privileges.  CPAN can help you by bootstrapping the local::lib
+module or by configuring itself to use 'sudo' (if available).  You may also
+resolve this problem manually if you need to customize your setup.
+
+What approach do you want?  (Choose 'local::lib', 'sudo' or 'manual')
+ [local::lib] 
+
+DO CHOOSE SUDO AS THIS IS THE BEST WAY FOR CPAN TO WORK AROUND WHEN RUNNING WITH 
+
+THIRD PARTY MODULES SUCH AS LW2
+
+
+
+
+
+thats it installs should be done 
+
+everything shouold install just fine by the time you are done run the script 
+
+AS SUDO PLEASEEE it works better, like a shit ton better than you think, especially
+
+with fake access points.
+
+
+***************************************************************
+
+Module 2.9 chapter 1 | Root/Unroot Installing
+
+***************************************************************
+
+alright lets get one thing fucking straight, i think there is something that seems 
+
+to always boggle peoples minds and confuse them, that is alaways installing a script 
+
+on linux most times this can be annoying especially if the script needs root access 
+
+luckily for you ive made this a shit ton easier than you're brain can comprehend
+
+
+i have made two .sh .bash files in the installs directory 
+
+one labled root.sh
+
+and another labeled basic.sh
+
+
+cd into the directory and chmod +x both of those files 
+
+run basic.sh without sudo and then rub root.sh with root 
+
+
+since this script was annyoing on the wireless side, i will say that well-
+
+sometimes making the script access wireless interfaces needs to be run as sudo
+
+so when you run the script as sudo and only installed via PID -0 then well- 
+
+you will have to go through the entire configuration setup again via sudo for nothing 
+
+so these two files make it alot easier to do installs both root and un root 
+
+
+boom i just saved you 12 days 
+
+
+
+
+
+
+
+
+
+
+===================================|
+MODULE 3, CHAPTER 1  -> SCRIPT HELP|
+===================================|
+
+you will be prompted then to the following output
+
+
+=================================================================================
+ ______     ______     _____     ______     ______     ______     ______     __     ______  
+/\  == \   /\  ___\   /\  __-.  /\  == \   /\  __ \   /\  == \   /\  == \   /\ \   /\__  _\ 
+\ \  __<   \ \  __\   \ \ \/\ \ \ \  __<   \ \  __ \  \ \  __<   \ \  __<   \ \ \  \/_/\ \/ 
+ \ \_\ \_\  \ \_____\  \ \____-  \ \_\ \_\  \ \_\ \_\  \ \_____\  \ \_____\  \ \_\    \ \_\ 
+  \/_/ /_/   \/_____/   \/____/   \/_/ /_/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_/ 
+
+Version 5.0                            Interactive Console                 Scare_Sec_Hackers                                                                                            
+---------------------------------------------------------------------------------------------
+                                               ((`\
+                                            ___ \\ '--._
+                                        .'`   `'    o  )
+                                        /    \   '. __.'
+                                      _|    /_  \ \_\_
+                                     {_\______\-'\__\_\
+
+					[ + ] FTP module loaded
+
+>  
+
+
+
+================================================================================
+
+for more information and executable commands type help/commands/command/-h/COMMANDS/HELP
+
+============================================================================================
+
+COMMAND LIST 
+
+|-----------|---------------------------------------------------------------------------------------------------
+|-> ajax-wo | Ajax spider without whois for every url scanned                           | STAT:  working|
+|-> ajax-NK | Ajax spider NUCLEAR aka a over powered crawler                            | STAT:  working|
+|-> ajax-wu | Ajax spider with whois for every url scanned   UNSTABLE                   | STAT:  working| 
+|-> whois   | Get information on a domain such as nameservers                           | STAT:  working|
+|-> xss-t   | Test a URL for XSS vulnerabilities                                        | STAT:  working|
+|-> sql-t   | Test a URL for possible SQLI vulnerabilities                              | STAT:  working|
+|-> deauth0 | Run a deauthentication attack against a network                           |
+|-> fake-ap | Spawn fake 802.11 access points                                           |
+|-> ns-s    | Net scan your local network                                               |
+|-> FTP-b   | Brute force a FTP server                                                  |
+|-> SSH-b   | Brute force a SSH server                                                  |
+|-> SMTP-b  | Brute force a SMTP email                                                  |
+|-> ARP-s   | Arp spoof a client or network                                             |
+|-> DNS-s   | DNS spoof a network                                                       |
+|-> MITM    | Run a beta MITM attack                                                    |
+|-> port-r  | Run a port scanning tool in ruby                                          |
+|-> port-g  | Run a port scanning tool in Golang                                        | 
+|-> d-g     | Domain information grabber [ basic ]                                      |
+|-> F-dns   | Forward DNS lookup                                                        |
+|-> d-o     | Full domain OSINT                                                         |
+|-> URL-r   | Full URL recon                                                            |
+|-> HTML-r  | Recon of a HTML file or HTML page in a website                            |
+|-> r-dns   | Reverse DNS lookup                                                        |
+|-> ip-t    | Trace an IP                                                               |
+|-> PNT     | Phone number tracer                                                       |
+|-> PNT-U   | Phone number tracer US numbers only                                       |
+|-> GAO     | Github account osint                                                      |
+|-> CF      | Mine IPA's for cameras                                                    |
+|-> SSH-p   | SSH possession                                                            |
+|-> SSH-i   | Inject SSH files into a host                                              |
+|-> dm-b    | Route domain name connections to the loopback                             |
+|-> p-r     | Run parrot recon pentest automation                                       |
+|-> FTP-C   | FTP credential sniffer                                                    |STAT:  working|
+|-> tcp-d   | TCP network traffic analyzer                                              |STAT:  working|
+|-> hd      | Hex dumper                                                                |STAT:  working|
+|-> DOF     | Discord OSINT Framework                                                   |
+|-> TCE     | Twitter chat extraction                                                   |
+|-> GDA     | Google dork a domain name [bash]                                          |
+|-> FTP-F   | FTP Fuzzer                                                                |
+|-> W-SSID  | Wifi SSID/BSSID finder [ python ]                                         |
+|-> W-BSSID | Wifi SSID/BSSID finder [ ruby ]                                           |
+|-> start-i | Dtart interface [ airmon ]                                                |
+|-> stop-i  | Dtop interface  [ airmon ]                                                |
+|-> si-phy  | Start interface [ phy-dev ]                                               |
+|-> s-phys  | Stop interface  [ phy-dev ]                                               |
+|-> SOAP-E  | SOAP Enumeration                                                          |
+|-> ps-deam | Get host information through a interactive deamon mode built with go      |
+|-----------|--------|------------------------------------------------------------------|
+|=> Command | Status |=> 49 active                                                      |
+|-----------|--------|------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+
+
+
+==============================================================================
+MODULE 3 -> CHAPTER 2 ( ajax spiders)
+
+
+in this script i have three types of ajax spiders ( all written in golang )
+
+first lets go over the command and beif description 
+
+|-> ajax-wo | Ajax spider without whois for every url scanned                           
+|-> ajax-NK | Ajax spider NUCLEAR aka a over powered crawler                           
+|-> ajax-wu | Ajax spider with whois for every url scanned  
+
+what is the difference between a ajax spider without whois and a ajax with WHOIS 
+
+first lets go over what these spiders do, spiders are just simple plain web crawlers asides these are not 
+
+the average web crawler they work a little bit differently- well the first option we have here ajax-wo
+
+is the more simple plain ajax spider that doesnt dig every single url it finds and rather does a basic 
+
+crawl and investigation on the URL, get the base request headers, find the server, doamin, and IP of
+
+every url it found and write it to a file called ip-out, out.txt etc a basic output will look like this
+
+````
+
+
+[>] Script Started At ->  2021-12-21 14:45:20.431218871 -0500 EST m=+0.378728587
+[*]Server IPA ->  [2607:f8b0:4008:809::2004 142.250.64.132]
+[*] Skipping....No URLs found in Copy
+
+[*] Crawling URL >>  http://www.google.com
+ ─────────────────────────Server Response─────────────────────────────
+[*] Response Status  ->  200 OK
+[*] Date Of Request  ->  Wed, 22 Dec 2021 00:45:16 GMT
+[*] Content-Encoding ->  
+[*] Content-Type     ->  text/html; charset=ISO-8859-1
+[*] Connected-Server ->  gws
+[*] X-Frame-Options  ->  SAMEORIGIN
+[*] Scheme        --->  https
+[*] Hostname      --->  www.google.com
+[*] Path in URL   --->  
+[*] Query Strings --->  
+[*] Fragments     --->  
+[*]-> Cache-Control -> [private, max-age=0]
+[*]-> Content-Type -> [text/html; charset=ISO-8859-1]
+[*]-> P3p -> [CP="This is not a P3P policy! See g.co/p3phelp for more info."]
+[*]-> Server -> [gws]
+[*]-> X-Xss-Protection -> [0]
+[*]-> X-Frame-Options -> [SAMEORIGIN]
+[*]-> Date -> [Wed, 22 Dec 2021 00:45:16 GMT]
+[*]-> Set-Cookie -> [1P_JAR=2021-12-22-00; expires=Fri, 21-Jan-2022 00:45:16 GMT; path=/; domain=.google.com; Secure NID=511=VhWDumG-Qah28PC4EBZOAxrU8Sl7yfNXlE5tD_NUZ-4RIpHLJTBaHsrbspiHuVw-0lXpHY34r_eAdXZkXOiQckO4atJ9tjkMdEx97hc3VUkqOH3cr406yG_5d3FJ_FhA04398KgVoVVyES9A09Vw_mWbQwTGnBfSOBYxMlf-JPY; expires=Thu, 23-Jun-2022 00:45:16 GMT; path=/; domain=.google.com; HttpOnly]
+[*]-> Expires -> [-1]
+──────────────────────────────────────────────────────
+[*] URL Found ->  http://www.google.com
+34
+[*] Domain Name ->  google.com
+[*] Domain IPA  ->  [2607:f8b0:4008:801::200e 142.250.189.142]
+56
+[*] Connected-Server ->  gws
+[*] Response Status  ->  200 OK
+ ──────────────────────────────────────────────────────
+````
+
+as you can see it found the URl, response, request headers, response headers, server status, domain, and even out put 
+
+the amount of bytes of data written to the file
+
+
+lets now look at the most over powered command of them all and that is ajax-NK i will have everyone note this is A VERY 
+
+UNSTABLE AND ILLEGAL SCRIPT, this goes above and beyond in terms of testing. the features it has are 
+
+getting the following information 
+=================================
+
+server, server name, server date, request headers, whois, IP6, IP4, Every URl, The HTML files, download every HTML file,
+
+admin URLs, SQL urls, the title, the domain name, the domain dig, the domain response, the tracker, and if the URl comes 
+
+across as dangerous it attempt to redirect it through the loopback and make a non private connection to the host blocking the 
+
+host from accessing your data or PC or even browser. 
+
+lets go over what it does upon entering data 
+
+
+
+first we need to look at the required input red rabbit gives us for the basic parsing
+
+when we first choose the option ajax-nk, we are prompted to the following required inputs 
+
+HTTPS-URL >
+DOMAIN    >
+BASE-HTTP >
+
+we know the basic strings, https url, domain etc but what is the base http?
+
+the bas http is just another term for a http url like this http://www.google.com is a base http url
+
+when we enter that data we are prompted for a question
+
+```
+for every url the spider finds, would you like to download the HTML page?
+```
+
+*************** WARNING ************************
+* this WILL TAKE UP ALOT OF MEMORY AND SPACE   *
+************************************************
+if you select yes then it will continue onto scraping 
+
+lets now look at an example output used 
+
+
+first we see the most common given that being 
+
+```
+[>] Script Started At ->  2021-12-21 17:35:42.015359568 -0500 EST m=+0.317608974
+[*]Server IPA ->  [2607:f8b0:4008:813::2004 172.217.15.196]
+[*] Skipping....No URLs found in Copy
+
+```
+
+this gets the target IP, and sees if you have any URL's in your notepad/copy pad
+
+then we get the stat 
+
+```
+
+[*] Crawling URL >>  http://www.google.com
+ 	─────────────────────────Server Response─────────────────────────────
+[*] Response Status  ->  200 OK
+[*] Date Of Request  ->  Wed, 22 Dec 2021 03:35:38 GMT
+[*] Content-Encoding ->  
+[*] Content-Type     ->  text/html; charset=ISO-8859-1
+[*] Connected-Server ->  gws
+[*] X-Frame-Options  ->  SAMEORIGIN
+[*] Scheme        --->  https
+[*] Hostname      --->  www.google.com
+[*] Path in URL   --->  
+[*] Query Strings --->  
+[*] Fragments     --->  
+	[  INFO  ]  P3p	 -> [CP="This is not a P3P policy! See g.co/p3phelp for more info."]
+	[  INFO  ]  Server	 -> [gws]
+	[  INFO  ]  X-Xss-Protection	 -> [0]
+	[  INFO  ]  Set-Cookie	 -> [1P_JAR=2021-12-22-03; expires=Fri, 21-Jan-2022 03:35:38 GMT; path=/; domain=.google.com; Secure NID=511=gGgqHkU6alL9mvtwZwFonTuFs7J4UHx2L3oPsCahENFR2wvMC154y2NyruMeHrd12prFIAJY1Pv20NTVfZbOP07K2MQxz6TbAWz-RfhPo4NAqefrNNui4fPMRX9FLte0OVFiMkl4O9C_Qyt55msFVAgmFPeVoValuXO3QiW8VT4; expires=Thu, 23-Jun-2022 03:35:38 GMT; path=/; domain=.google.com; HttpOnly]
+	[  INFO  ]  Date	 -> [Wed, 22 Dec 2021 03:35:38 GMT]
+	[  INFO  ]  Expires	 -> [-1]
+	[  INFO  ]  Content-Type	 -> [text/html; charset=ISO-8859-1]
+	[  INFO  ]  Cache-Control	 -> [private, max-age=0]
+	[  INFO  ]  X-Frame-Options	 -> [SAMEORIGIN]
+
+```
+
+the top in frgaments and what not parses extreme urls an exmaple is 
+
+https://www.google.com/index.php/id=1./as/diosrgdruoghedrogoedurgweffij4803895u34ID4wr3rID=13344FopR3-4-4-4-etctetctetctdt
+
+which will give everything on that basic URL in itself
+
+
+then we go to the base targeting, it will attempt to search for over 400+ admin panel URL's and parse it 
+
+
+an example as the folloqwing output will be shown 
+
+
+```
+
+ 	[  INFO  ]  ->  https://www.googleeeeeee.com/modelsearch/login.asp   IS NOT VULNERABLE
+ 	[  INFO  ]  ->  https://www.googleeeeeee.com/moderator.asp   IS NOT VULNERABLE
+ 	[  INFO  ]  ->  https://www.googleeeeeee.com/moderator/login.asp   IS VULNERABLE
+ 	[  INFO  ]  ->  https://www.googleeeeeee.com/administrator/login.asp   IS NOT VULNERABLE
+ 	[  INFO  ]  ->  https://www.googleeeeeee.com/moderator/admin.asp   IS VULNERABLE
+ 	[  INFO  ]  ->  https://www.googleeeeeee.com/controlpanel.asp   IS NOT VULNERABLE
+ 	[  INFO  ]  ->  https://www.googleeeeeee.com/user.asp   IS NOT VULNERABLE
+ 	[  INFO  ]  ->  https://www.googleeeeeee.com/admincontrol.asp   IS NOT VULNERABLE
+ 	[  INFO  ]  ->  https://www.googleeeeeee.com/adminpanel.asp   IS NOT VULNERABLE
+
+# NOTE: GOOGLE WAS NOT A MAIN CRAWL AND OUTPUT THESE ARE EXAMPLES ONLY #google please dont sue me
+
+```
+
+once done it will continue to scan for urls, for every URL found it will output the following
+
+
+```
+	[ INFO ]  FOUND DOMAIN NAME => example.com
+	[*] Scan Results for   ├ example.com (0.0.0.0.)
+	[+]			┡ 80	http
+	[+]			┡ 443	https
+	[ INFO ]  FOUND DOMAIN IP => [0000:0000:0000:0000:0000. 0.0.0.0.0]
+	[ INFO ]  FOUND SERVER => gws
+	[ INFO ]  RESPO STATUS => 200OK	[ INFO ]  FOUND URL => http://www.google.example.com.net.edu
+    [  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+ 	[  INFO  ] Server HAS PASSED ALL INJECTIONS, NOT VULNERABLE
+	[  INFO  ]  Cache-Control	 -> [private, max-age=0]
+	[  INFO  ]  X-Xss-Protection	 -> [0]
+	[  INFO  ]  Alt-Svc	 -> [h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"]
+	[  INFO  ]  Date	 -> [Wed, 22 Dec 2021 03:35:57 GMT]
+	[  INFO  ]  Expires	 -> [-1]
+	[  INFO  ]  Server	 -> [gws]
+	[  INFO  ]  X-Frame-Options	 -> [SAMEORIGIN]
+	[  INFO  ]  Set-Cookie	 -> [1P_JAR=2021-12-22-03; expires=Fri, 21-Jan-2022 03:35:57 GMT; path=/; domain=.google.com; Secure NID=511=n0swf6VjIix9VCC7a7JAYaC-0s1ylNi4rbYwK5IK7f3XGf0zoPDoyV6LiK8YdZ1Hxdlcq8MqQGR0Sk_Zpoer1LWymbYZc8I836kBnvpE75f4kWjExNnqWCLJdElygio35kSGNqV-AEu7_dybyUFcbpvlbmV4HPzL0wIPOApjwsE; expires=Thu, 23-Jun-2022 03:35:57 GMT; path=/; domain=.google.com; HttpOnly]
+	[  INFO  ]  Content-Type	 -> [text/html; charset=UTF-8]
+	[  INFO  ]  P3p	 -> [CP="This is not a P3P policy! See g.co/p3phelp for more info."]
+Title of the page:   example domain  
+64
+
+```
+
+lets walk through this output, first you have the found domain name this is the parsed domain 
+
+it will parse the domain into my own module i wrote for port scanning and port scan the domain 
+
+then get the IP6-IP4, server, host, and status following that attempt to SQL inject the host 20+ times
+
+and finally get the host information or the response/GET headers of the URL
+
+
+
+if you added the option yes of downloading all the html files in range of every url you might see something 
+
+like this 
+
+```
+AEu7_dybyUFcbpvlbmV4HPzL0wIPOApjwsE.html
+```
+
+this is the HTMl of EACH URL's HTML file you downloaded
+
+it works like this 
+
+
+go code 
+
+````
+var chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-"
+
+func shortID(length int) string {
+	ll := len(chars)
+	b := make([]byte, length)
+	rand.Read(b)
+	for i := 0; i < length; i++ {
+		b[i] = chars[int(b[i])%ll]
+	}
+	return string(b)
+}
+
+````
+
+this generates a random string, and applys it to a definition that is called in the go code under a for
+
+urls found in base url then name the file string(rune)filenamestring etc
+
+the output for the nuclear ajax is stored in 
+
+
+"""
+modules/ajax-crawlers/output
+"""
+
+
+
+
+
+
+*************************************************************************************************|
+*MODULE 4 CHAPTER 1                                                                              |
+*                                                                                                |
+* Domain and web based OSINT                                                                     |
+*************************************************************************************************|
+
+
+MODULE FOR ALL OF THE DOMAIN NAME AND URL BASED OPTIONS SUCH AS URL RECON
+
+
+commands for domain base recon
+
+whois
+xss-t
+sql-t
+port-r
+port-g
+d-g
+F-dns
+d-o
+URL-r
+HTML-r
+r-dns
+GDA
+
+
+
+lets role over the very first command, it is as simple as it sounds 
+
+whois = a simple whois name server parser written for red rabbit in pure ruby 
+
+we execute this by typing 
+
+`whois`
+
+in the input feild in RR5
+
+you will be prompted to input a domain name DO NOT USE www AS A DOMAIN NAME
+
+the following error will occure
+
+```
+Traceback (most recent call last):
+	7: from main.rb:362:in `<main>'
+	6: from main.rb:359:in `main'
+	5: from main.rb:346:in `console_main'
+	4: from main.rb:315:in `console_commands'
+	3: from main.rb:110:in `server_names'
+	2: from /var/lib/gems/2.7.0/gems/whois-parser-1.2.0/lib/whois/parser.rb:348:in `method_missing'
+	1: from /var/lib/gems/2.7.0/gems/whois-parser-1.2.0/lib/whois/parser.rb:327:in `technical_contacts'
+/var/lib/gems/2.7.0/gems/whois-parser-1.2.0/lib/whois/parser.rb:365:in `delegate_property_to_parsers': Unable to find a parser for property `technical_contacts' (Whois::AttributeNotImplemented)
+
+```
+
+THE WHOIS AND WHOIS-PARSER WILL NOT TAKE WWW URLS 
+
+every URL will have a simple domain name which can be resoluted as something like this 
+
+google.com, nasa.gov, education.edu, twitter.com etc 
+
+url stays the same, the following output will occure
+
+```
+;; Answer received from 75.75.75.75:53 (45 bytes)
+;;
+;; HEADER SECTION
+;; id = 64710
+;; qr = 1	opCode: QUERY	aa = 0	tc = 0	rd = 1
+;; ra = 1	ad = 0	cd = 0	rcode = NoError
+;; qdCount = 1	anCount = 1	nsCount = 0	arCount = 0
+
+;; QUESTION SECTION (1 record):
+;; example.com.                 IN      A       
+
+;; ANSWER SECTION (1 record):
+example.com.            66801   IN      A       93.184.216.34
+
+
+example.com.            61711   IN      A       93.184.216.34
+
+
+example.com.            86400   IN      MX      0 
+{"accept-encoding"=>["gzip;q=1.0,deflate;q=0.6,identity;q=0.3"],
+ "accept"=>["*/*"],
+ "user-agent"=>["Ruby"]}
+{"accept-ranges"=>["bytes"],
+ "age"=>["561447"],
+ "cache-control"=>["max-age=604800"],
+ "content-type"=>["text/html; charset=UTF-8"],
+ "date"=>["Wed, 22 Dec 2021 03:54:12 GMT"],
+ "etag"=>["\"3147526947\""],
+ "expires"=>["Wed, 29 Dec 2021 03:54:12 GMT"],
+ "last-modified"=>["Thu, 17 Oct 2019 07:18:26 GMT"],
+ "server"=>["ECS (mic/9AF5)"],
+ "vary"=>["Accept-Encoding"],
+ "x-cache"=>["HIT"],
+ "content-length"=>["648"],
+ "connection"=>["close"]}
+-------------------------
+[*] Response ~> 200
+[*] Checking More Connections..
+
+
+```
+
+we get the basic information as we would the ajax spiders but a bit more tracer- kinda 
+
+as you can seee you get DNS queries and records as well as answeres of the bytes being sent and data 
+
+that was sent to the domain name you input
+
+
+
+
+
+second command for WHOIS 
+
+-> Now we will look at the command `sql-t`
+
+it is a basic example kinda like sql-t this is a simple request based tester for SQLI 
+
+like many of the other scripts here it works with golang for fast and quick responses 
+
+if the URL is vulnerable it will continue to the following 
+
+```
+
+URl > http://testasp.vulnweb.com/
+ +--------------------------------------+-------------------------+
+|      http://testasp.vulnweb.com/     |   Server is vulnerable  |
++======================================+=========================+
+|                  SQL                 |           id=1          |
++--------------------------------------+-------------------------+
+|   An error | detected vulnerability  |                         |
++--------------------------------------+-------------------------+
+
+ +--------------------------------------+-------------------------+
+|      http://testasp.vulnweb.com/     |   Server is vulnerable  |
++======================================+=========================+
+|                  SQL                 |           '-'           |
++--------------------------------------+-------------------------+
+|   An error | detected vulnerability  |                         |
++--------------------------------------+-------------------------+
+
+ +--------------------------------------+-------------------------+
+|      http://testasp.vulnweb.com/     |   Server is vulnerable  |
++======================================+=========================+
+|                  SQL                 |           ' '           |
++--------------------------------------+-------------------------+
+|   An error | detected vulnerability  |                         |
++--------------------------------------+-------------------------+
+
+ +--------------------------------------+-------------------------+
+|      http://testasp.vulnweb.com/     |   Server is vulnerable  |
++======================================+=========================+
+|                  SQL                 |           '&'           |
++--------------------------------------+-------------------------+
+|   An error | detected vulnerability  |                         |
++--------------------------------------+-------------------------+
+
+ +--------------------------------------+-------------------------+
+|      http://testasp.vulnweb.com/     |   Server is vulnerable  |
++======================================+=========================+
+|                  SQL                 |           '^'           |
++--------------------------------------+-------------------------+
+|   An error | detected vulnerability  |                         |
++--------------------------------------+-------------------------+
+
+ +--------------------------------------+-------------------------+
+
+```
+
+SQLI-t wil alos start admin panel finding as a extra to add to the script to make it more 
+
+reliable per say in the vulnerability recon stages
+
+example output 
+
+```
+http://testasp.vulnweb.com/panel-administracion/admin.asp Has come back NEGATIVE
+-------------------------------------------------------------
+http://testasp.vulnweb.com/modelsearch/index.asp Has come back NEGATIVE
+-------------------------------------------------------------
+http://testasp.vulnweb.com/modelsearch/admin.asp Has come back NEGATIVE
+-------------------------------------------------------------
+http://testasp.vulnweb.com/administrator/index.asp Has come back NEGATIVE
+-------------------------------------------------------------
+http://testasp.vulnweb.com/admincontrol/login.asp Has come back NEGATIVE
+-------------------------------------------------------------
+http://testasp.vulnweb.com/adm/admloginuser.asp Has come back NEGATIVE
+-------------------------------------------------------------
+http://testasp.vulnweb.com/admloginuser.asp Has come back NEGATIVE
+-------------------------------------------------------------
+
+
+```
+
+
+now we do the same thing with the XSS-i tester 
+
+this command is 
+
+xss-t
+
+when you input the url it will ask for a payload file, if you do not have one to remember or have
+
+a very specified path for it then just type xss.txt as this is the most defualt wordlist for this script 
+
+the following output will come out on the terminal 
+
+( this part works with golang as a primary source for socket name manipulation)
+
+URL > http://testasp.vulnweb.com/showforum.asp?id=1
+XSS list > xss.txt
+[*] Socket Form -> testasp.vulnweb.com
+[*] Socket Name -> 44.238.29.244
+[*] Regexed URL -> http://testasp.vulnweb.com
+[*] Started At  : 2021-12-21 18:05:32.838428
+────────────────────────────────────────────
+[*] Gathering X-Frame request headers......
+
+[+] Response Status  ->  200 OK
+[+] Date Of Request  ->  Wed, 22 Dec 2021 04:05:40 GMT
+[+] Content-Encoding ->  
+[+] Content-Type     ->  text/html
+[+] Connected-Server ->  Microsoft-IIS/8.5
+[+] X-Frame-Options  ->  
+[+] -> Content-Length -> [3077]
+[+] -> Cache-Control -> [private]
+[+] -> Content-Type -> [text/html]
+[+] -> Server -> [Microsoft-IIS/8.5]
+[+] -> Set-Cookie -> [ASPSESSIONIDCCDACTRD=ICJKAMCBNDJEGMGNDPCFPJEF; path=/]
+[+] -> X-Powered-By -> [ASP.NET]
+[+] -> Date -> [Wed, 22 Dec 2021 04:05:40 GMT]
+
+
+then you will get the following output for parsing the URL with regex 
+
+Scheme        --->  http
+Hostname      --->  testasp.vulnweb.com
+Path in URL   --->  /showforum.asp
+Query Strings --->  id=1
+Fragments     --->  
+map[id:[1]]
+Detected Payloads in file ->  7136
+----------------------------------------------
+[+] Utilizing Defualt xss script -> xss.txt
+
+
+this will the conitnue onto test every single payload
+
+
+[+] Targeting URL -> http://testasp.vulnweb.com/showforum.asp?id=1
+[+] Time Started  -> 2021-12-21 18:05:43.948178
+[~] Testing Payload -> 1 : 'onload=alert(1)><svg/1='
+[~] Testing Payload -> 1 : '>alert(1)</script><script/1='
+[~] Testing Payload -> 1 : */alert(1)</script><script>/*
+[~] Testing Payload -> 1 : */alert(1)">'onload="/*<svg/1='
+[~] Testing Payload -> 1 : `-alert(1)">'onload="`<svg/1='
+[~] Testing Payload -> 1 : "-prompt(8)-"
+[~] Testing Payload -> 1 : '-prompt(8)-'
+[~] Testing Payload -> 1 : ";a=prompt,a()//
+[~] Testing Payload -> 1 : ';a=prompt,a()//
+[~] Testing Payload -> 1 : '-eval("window['pro'%2B'mpt'](8)")-'
+[~] Testing Payload -> 1 : "-eval("window['pro'%2B'mpt'](8)")-"
+[~] Testing Payload -> 1 : "onclick=prompt(8)>"@x.y
+[~] Testing Payload -> 1 : "onclick=prompt(8)><svg/onload=prompt(8)>"@x.y
+[~] Testing Payload -> 1 : <image/src/onerror=prompt(8)>
+[~] Testing Payload -> 1 : <img/src/onerror=prompt(8)>
+[~] Testing Payload -> 1 : <image src/onerror=prompt(8)>
+[~] Testing Payload -> 1 : <img src/onerror=prompt(8)>
+[~] Testing Payload -> 1 : <image src =q onerror=prompt(8)>
+[~] Testing Payload -> 1 : <img src =q onerror=prompt(8)>
+[~] Testing Payload -> 1 : </scrip</script>t><img src =q onerror=prompt(8)>
+[~] Testing Payload -> 1 : <svg onload=alert(1)>
+[~] Testing Payload -> 1 : "><svg onload=alert(1)//
+[~] Testing Payload -> 1 : "onmouseover=alert(1)//
+
+
+
+this usually will mean that it came back false and does not come back as correct
+
+however if the URL is vulnerable it will tabulate the output in  green as that is how you know the 
+
+url is known and or vulnerable to XSS injection
+
+
+
+the 4th and 5th command we will be looking at as a demonstartion will be 
+
+port-r port-g
+
+
+these are quiote literally the same, they are both port scanners for any form of host however 
+
+one can parse lists and work faster than the other, and one can work a bit slower while being 
+
+more accurate with results than the other and only take one host
+
+port-g is my module written in golang for automation of TCP port scanning using go it can port scan 
+
+IP's, world wide web hostnames, private hostnames, localhostnames, and lists if you have a list of hosts 
+
+you would like it to open and or read then you can specify the path ( BE SPECIFIC IT MATTERS )
+
+
+lets say we run command port-g ( port scanner golang)
+
+and we have a list of hosts called hosts.txt with the follwoing in the file 
+
+```
+0.0.0.0
+127.0.0.1
+::1
+a random IPV6 addr
+www.scanme.org
+www.hulu.com
+2607:f8b0:4008:800::2004
+some random serrver address 
+```
+the golang port scanner will rea dthe path of the file and scan every single name in there and parse the result
+
+s pretty damn fast however this can also affect the accuracy in the scanner and how fast it scans here is the list 
+
+of avalible ports it can currrently scan ( Tue 21 Dec 2021 06:14:30 PM  )
+
+````
+7:    "echo",
+20:   "ftp",
+21:   "ftp",
+22:   "ssh",
+23:   "telnet",
+25:   "smtp",
+43:   "whois",
+53:   "dns",
+67:   "dhcp",
+68:   "dhcp",
+80:   "http",
+110:  "pop3",
+123:  "ntp",
+137:  "netbios",
+138:  "netbios",
+139:  "netbios",
+143:  "imap4",
+443:  "https",
+513:  "rlogin",
+540:  "uucp",
+554:  "rtsp",
+587:  "smtp",
+873:  "rsync",
+902:  "vmware",
+989:  "ftps",
+990:  "ftps",
+1194: "openvpn",
+3306: "mysql",
+5000: "unpn",
+8080: "https-proxy",
+8443: "https-alt",
+161: "Simple Network Managment Protocol 	(SNMP)",
+162: "Simple Network Managment Protocol 	(SNMP)",
+389:   "LightWeight DIrectory Acess Protocol  (LDAP)",
+135:   "NetBIOS",
+49152: "CMS",
+65535: "CMS",
+49151: "Reserved",
+47808: "BACNET",
+44405: "Mu Online Connect Server",
+42806: "Discord",
+41797: "CSTP (Creston Secure Terminal Port)",
+41796: "CSCP (Creston Secure Control Port)",
+41795: "CTP  (Creston Terminal Port",
+41794: "CCP  (creston Control Port",
+41121: "Tentacal Server",
+40000: "SafetyNET p – a real-time Industrial Ethernet protocol",
+19812: "4D Database SQL Communication",
+19813: "4D database Client Server Communication",
+19814: "4D database DB4D Communication",
+19999: "DNP ( Distributed Network Protocal",
+19532: "SystemD-journal-gatewayd",
+19531: "SystemD-journal-remote",
+25565: "Minecraft (Java) Multiplayer Server",
+25575: "Minecraft (Java) Multiplayer Server RCON",
+23399: "Skype Server",
+22136: "FLIR Camera Resoruce Protocal",
+19302: "Google Talk/Video Communications",
+19295: "Google Talk/Video Communications",
+19294: "Google Talk/Video Communications",
+19133: "Minecraft Bedrock edition IPV6 multiplayer server",
+19132: "Minecraft Bedrock edition Multiplayer server",
+18333: "Bitcoing test network",
+16567: "BattleFeild 2 | mod ",
+````
+( NOTE: in newer versions yes more ports and services will be added)
+
+now we go to port-r which is a built in single host port scanner that scans 
+
+1-8090 ports, this is a firm medium pased port scanner that can scan single hosts
+
+despite its disability to not be able to open files and append them to the scanner 
+
+as of writing this, it can still scan accuratley with medium speed and quite decent results 
+
+
+
+************************
+Command > d-g
+
+this command is quite similar to whois accept it takes in URL's
+
+this will just render the information of a url such as 
+
+fragments, parsed URLs, domain, html info, etc etc 
+
+
+************************
+Command => F-dns
+
+Forward DNS lookup 
+
+when option is made you will be prompted to a input asking for a DNS this will be say something 
+
+like twitter or google then put 
+
+google.com 
+
+then it will return an array of IP addresses to that specified domain something like this 
+
+```
+["21.81.158.122", "102.40.90.182", "192.168.9.34"]
+```
+
+***********************
+command => r-dns 
+
+similar to fdns but reverse this will be Reverse DNS lookup ( IP to hostname )
+
+same like f-dns you are prompted to input a IP
+
+say we input something like 21.81.158.122
+
+then we will get a result similar to twitter or if a PTR is assigned it will return an array
+
+***********************
+Command => URL-r 
+
+
+this will be kinda like a whois for URL's accept once finding the domain 
+
+attempt to port scan it, find parsed queries and fragements of the URL, take and scan for 
+
+vulnerabilities then get you request headers and what not here is a sample output 
+
+[*] Socket Form -> https://www.amazon.com/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB08YX7FGZC%2F%3Fie%3DUTF8%26WDG%3Dpc_accessory_display_on_website%26dpRequestId%3DHPA0FJK30HHZX4V7XXGN%26pd_rd_r%3D23e976a4-6fb9-4e02-8641-ba206fe373fb%26pd_rd_w%3DGfMya%26pd_rd_wg%3DS3m1q%26ref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&
+[*] Socket Name -> 44.238.29.244
+[*] Regexed URL -> http://testasp.vulnweb.com
+[*] Started At  : 2021-12-21 18:05:32.838428
+────────────────────────────────────────────
+[*] Gathering X-Frame request headers......
+
+[+] Response Status  ->  200 OK
+[+] Date Of Request  ->  Wed, 22 Dec 2021 04:05:40 GMT
+[+] Content-Encoding ->  
+[+] Content-Type     ->  text/html
+[+] Connected-Server ->  Microsoft-IIS/8.5
+[+] X-Frame-Options  ->  
+[+] -> Content-Length -> [3077]
+[+] -> Cache-Control -> [private]
+[+] -> Content-Type -> [text/html]
+[+] -> Server -> [Microsoft-IIS/8.5]
+[+] -> Set-Cookie -> [ASPSESSIONIDCCDACTRD=ICJKAMCBNDJEGMGNDPCFPJEF; path=/]
+[+] -> X-Powered-By -> [ASP.NET]
+[+] -> Date -> [Wed, 22 Dec 2021 04:05:40 GMT]
+[+] 
+-------------------------- URL PARSED -------------- 
+Scheme        --->  https
+Hostname      --->  www.amazon.com
+Path in URL   --->  /AURSINC-Deauther-Wristband-Development-Wearable/dp/B08YX7FGZC/
+Query Strings --->  _encoding=UTF8&pd_rd_w=GfMya&pf_rd_p=628b38b6-dbee-442c-9e9c-e8813ea9e367&pf_rd_r=XSAEDMNF8YA0CMAFXQX1&pd_rd_r=23e976a4-6fb9-4e02-8641-ba206fe373fb&pd_rd_wg=S3m1q&ref_=pd_gw_ci_mcx_mr_hp_d
+Fragments     --->  
+-------------- URL QUERY VALS ----------------------- 
+map[_encoding:[UTF8] pd_rd_r:[23e976a4-6fb9-4e02-8641-ba206fe373fb] pd_rd_w:[GfMya] pd_rd_wg:[S3m1q] pf_rd_p:[628b38b6-dbee-442c-9e9c-e8813ea9e367] pf_rd_r:[XSAEDMNF8YA0CMAFXQX1] ref_:[pd_gw_ci_mcx_mr_hp_d]]
+[+] Scraping URLS......
+/ref=nav_logo
+/gp/customer-preferences/select-language/ref=topnav_lang?ie=UTF8&preferencesReturnUrl=%2F
+https://www.amazon.com/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB08YX7FGZC%2F%3Fie%3DUTF8%26WDG%3Dpc_accessory_display_on_website%26dpRequestId%3DHPA0FJK30HHZX4V7XXGN%26pd_rd_r%3D23e976a4-6fb9-4e02-8641-ba206fe373fb%26pd_rd_w%3DGfMya%26pd_rd_wg%3DS3m1q%26ref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&
+/gp/css/order-history?ref_=nav_orders_first
+/gp/cart/view.html?ref_=nav_cart
+/gp/site-directory?ref_=nav_em_js_disabled
+/gp/bestsellers/?ref_=nav_cs_bestsellers
+/stores/node/20648519011?channel=discovbar?field-lbr_brands_browse-bin=AmazonBasics&ref_=nav_cs_amazonbasics
+/music/unlimited?ref_=nav_cs_music
+/epicdeals?ref_=nav_cs_td_ey_dt_cr
+/gp/new-releases/?ref_=nav_cs_newreleases
+/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice
+/prime?ref_=nav_cs_primelink_nonmember
+/books-used-books-textbooks/b/?ie=UTF8&node=283155&ref_=nav_cs_books
+/gp/browse.html?node=16115931011&ref_=nav_cs_registry
+/toys/b/?ie=UTF8&node=165793011&ref_=nav_cs_toys
+/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc
+======================= GATHERING CODE =================
+
+/vdp/2745f1daa0c342edbb32f17b3491f1a7
+/vdp/f202c87f70034376b4363cab7407672a
+/vdp/e686dbd967674bbea255e11902803c17
+/vdp/04464776209c4d0180820b9e749bfbd2
+/vdp/9cca52747a8b40779c976e4fd656fcd8
+/vdp/063ca84690b444bfa5f343d6d05d4133
+/vdp/f7f1ed5affed458fbb9edcbff3679258
+/vdp/060f49a9b79b4b9399180a6af3950272
+/vdp/03a9fa5b9608477c9b83abd26fa626c2
+/vdp/4e5ca96699ef4dc29904c12a6b4a4d70
+#
+/creatorhub/video/upload?productASIN=B08YX7FGZC&referringURL=ZHAvQjA4WVg3RkdaQw%3D%3D&ref=RVSW
+javascript:void(0)
+javascript:void(0)
+javascript:void(0)
+javascript:void(0)
+javascript:void(0)
+#
+https://www.amazon.com/ospublishing/onsite-associates/info
+https://www.amazon.com/shop/info
+#sp_detail2_feedbackForm
+#
+#
+====================================================
+
+port scanning host.....
+
+< whatever ports return open >
+
+THIS MUST BE A COMPLEX URL IT CAN NOT BE A BASIC URL 
+
+URL should look something like this 
+
+https://www.amazon.com/s?k=hello&crid=3STVACWU9JYET&sprefix=hello%2Caps%2C93&ref=nb_sb_noss_2
+
+
+
+
+**************************
+Command => HTML-r
+
+HTML-r is similar to every single bit of the URL-r
+
+accept it grabs information specified in the HTML such as 
+
+URL query paramaters, fragments of a URL, domain, urls in the HTML, HTML Code notes 
+
+HTML queries, HTML tags, Most USED tags in HTML, then getting Query values, etc 
+
+a sample output would look like one above without the http response time
+
+
+
+***********************
+Command => GDA 
+
+GDA = Google dork domain 
+
+this is as well the name states, google dork a domain name with bash and get the results 
+
+when running this commnad you are prompted to input a url
+
+lets say something like https://www.vulnbedasp.com
+
+then we will get something like 
+
+https://www.google.com/vulnweb.php
+along with some others that can work with it
+
+***********************
+command => p-r
+
+i think we all know what time it is ;) thats time for parrot pentest automation
+
+this will just run parrot recon a script me ( ArkAngeL43 ) and (parrotassassin15 ) built to 
+automate recon with bash and many other tools among that, it will ask for a url, domain, and ip in case 
+
+the output is to large to show however it will run tools like sublister, go crawl, go-dork, google dorker,
+
+phinx, nmap, nicto, and some other really powerful and fast tools to make recon even better for somneone who just 
+
+wants to input a URL leave it for an hour or two then come back with a terminal filled of tastey treasure
+
+
+
+
+
+
+*************************************************************************************************|
+* MODULE 5 CHAPTER 1                                                                             |
+*                                                                                                |
+* SSH-FTP-FTPD Injection, possession, brute forcing, interfaces                                  |
+*************************************************************************************************|
+
+Description of this chapter: this chapter is apart of red rabbit that brings back some old history
+
+this contains scripts like SSH-sploit which are dedicated to take control of someones SSH port 
+
+and download a virus onto that machine as dedicated. most of this revolves around knowing the host 
+
+name and the password however in RR5 i have a SSH-Brute forcing authentication script which will 
+
+attempt to find the password and verify the hostname of the SSH as well as the port with port knocking 
+
+the main goal of SSH sploit is to send over batch and bash files all automated with a certian SSH service
+
+directly downloading the files onto that hosts pc or ssh server. 
+
+
+
+lets work on the hardest script and the longest process in RR5 this is 
+
+SSH-possession with SSH-sploit
+
+keep in mind i tried to make this as obvious and easy to use as possible 
+
+Virus sploit is built into ruby and uses pure ruby code to connect and send commands 
+
+over SSH, ofc this isnt going to be a direct console to the host this is rather 
+
+just a small script to send viruses and brute force the SSH or attempt to execute it 
+
+** WARNING: THE VIRUSES USED TO SEND TO THE VCTIMS MACHINE ARE DANGEROUS DO NOT EXECUTE 
+   THEM WHILE IN SSH SPLOIT, DO IT IN A SSH CONSOLE!!!!
+
+   YOU HAVE BEEN WARNED
+** 
+
+how do you properly run RR5 with SSh sploit 
+
+RR5 has built in 3 command line arguments that can be taken for SSH sploit this will 
+
+be run as an example, i have my rasberry pi setup with an ssh port on a class 3 IP address 
+
+of 10.0.0.90, with password123, and the name is pi 
+
+so I want to use SSH sploit in ruby to well obviously attack my rpi so i run rr5 as the following 
+
+you will not be given any message or desktop notification 
+
+we will be prompted to the RR5 terminal, all we input now is 
+
+SSH-p | Command to initate SSH possession
+
+you will be loaded to the following 
+
+````
+device name =>          | This is the device name mine is pi
+hostname    =>          | This is the IPA of the rpi
+password    =>          | This is the password to the device's SSH 
+
+````
+
+once done you are prompted to the following
+
+
+``````````
+
+ ______     ______     _____     ______     ______     ______     ______     __     ______  
+/\  == \   /\  ___\   /\  __-.  /\  == \   /\  __ \   /\  == \   /\  == \   /\ \   /\__  _\ 
+\ \  __<   \ \  __\   \ \ \/\ \ \ \  __<   \ \  __ \  \ \  __<   \ \  __<   \ \ \  \/_/\ \/ 
+ \ \_\ \_\  \ \_____\  \ \____-  \ \_\ \_\  \ \_\ \_\  \ \_____\  \ \_____\  \ \_\    \ \_\ 
+  \/_/ /_/   \/_____/   \/____/   \/_/ /_/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_/ 
+
+Version 5.0                            Interactive Console                 Scare_Sec_Hackers                                                                                            
+---------------------------------------------------------------------------------------------
+                                               ((`\
+                                            ___ \\ '--._
+                                        .'`   `'    o  )
+                                        /    \   '. __.'
+                                      _|    /_  \ \_\_
+                                     {_\______\-'\__\_\
+
+Virus-Sploit@true>
+
+`````````
+
+then we will go ahead and ask for HELP which can be typed lower or upper as 
+
+HELP || help both work
+
+you get the following 
+
+
+
+`````````````````
+
+Virus-Sploit@true>help 
+
+          ____________________________________________________________
+          |EXIT           -> Exit the script                         |
+          |SEND           -> Send all Viruses-Scripts                |
+          |SCRIPTS        -> View all the scripts and how to Execute |
+          |EXPORT DISPLAY -> Export the ssh display                  |
+          |BRUTE          -> Brute force the ssh device 
+          |CLEAR          -> Clears YOU'RE display                   |
+          |----------------------------------------------------------|
+
+
+`````````````````
+
+this will give you different options to do with ssh, when you get here you may be confused 
+
+lets look at the scripts first
+
+
+here is a list of scripts that will and can be sent/executed on the remote machine
+```````````````````
+          _____________________________________________________
+          |./damage-net.sh | disable net services             |
+          |./restart.sh    | Restart the entire device        |
+          |./remove.sh     | Removes the entire root system   | 
+          |./poweroff.sh   | Powers device off completely     |
+          |annoy.py        | will speak OS FUcked on loop     |
+          |----------------WINDOWS----------------------------|
+          |fork.bat        | forkbomb for win10               |
+          |win-1.bat       | does random things idk win-10    | 
+          |win-2.bat       | Constantly spams calc exe on loop|
+          |---------------------------------------------------|
+
+````````````````````
+
+
+now lets send them to the host machine
+
+
+````
+Virus-Sploit@true>SEND 
+[*] Sending the following scripts
+
+          [+] 1 -> ./damage-net.sh
+          [+] 2 -> ./restart.sh
+          [+] 3 -> ./remove.sh
+          [+] 4 -> ./poweroff.sh
+          [+] 5 -> annoy.py
+          [+] 6 -> fork.bat
+          [+] 7 -> win-1.bat
+          [+] 8 -> win-2.bat
+          
+[sudo] password for ArkAngeL43:
+````
+
+
+if you did not input a host or the host is not up you will get the error 
+
+that the files can not be sent or if you dont get an error and they dont show up 
+
+then it will not properly send to the remote host 
+
+in my case the files didnt exist 
+
+```
+cp: cannot stat 'damage-net.sh': No such file or directory
+cp: cannot stat 'poweroff.sh': No such file or directory
+cp: cannot stat 'restart.sh': No such file or directory
+cp: cannot stat 'remove.sh': No such file or directory
+cp: cannot stat 'annoyed.py': No such file or directory
+cp: cannot stat 'win-1.bat': No such file or directory
+cp: cannot stat 'win-2.bat': No such file or directory
+cp: cannot stat 'fork.sh': No such file or directory
+cp: cannot stat 'fork.bat': No such file or directory
+```
+
+when the files do exist you will get no output and instead at the bottom get the following msg
+
+
+```
+[+] Files sent using ssh service 
+Virus-Sploit@true>
+
+````
+
+once done you can spawn a shell to the remote host using the ssh service and
+
+then execute the following scripts on their machine that was shown above
+
+****************
+
+NOTE IF YOU NEED TO BRUTE FORCE A HOST THE FOLLOWING OPTIONS ARE SUGGESTED 
+
+SSH-B-R -> SSH brute forcing ruby 
+SSH-B-G -> SSH brute forcing ruby
+
+*****************
+
+
+well since we are here at it why not let us talk about the depths of brute forcing 
+
+out friendly family ssh server. I have two commands set here both of which are quite
+
+the same the only difference is going to be the last letter of the command, this is where 
+
+well we sacrifice performance for accuracy, both work just as fine however one can be in more 
+
+detail than the other and one might be a bit better for some people 
+
+lets start with 
+
+```
+SSH-B-G
+```
+
+
+lets say i have a SSH server i need to hack into the information is as follows 
+
+host -> bob
+wordlist -> map.txt
+IPA -> 192.178.9.0
+port -> 22
+my filepath is -> /usr/share/wordlists
+my name of the file is -> dnsmap.txt
+
+when we select the option SSH-B-G
+
+we will be prompted for the following information 
+
+host user, file path to the wordlist, ip, port number, and name of the file  
+
+the way the filepaths and execution of the go scripts are in seperate files 
+
+and have certian definitions to call them and parse arguments such as targets 
+
+and in this case wordlists as we will be brute forcing
+
+well yeah thats understood but why do we need to be VERY specific on the filepath? 
+
+well first lets go over exactly how you should use the two wordlist inputs 
+
+
+first we have the path 
+
+this needs to be specified without a \ or / after the last filename 
+
+which means it has to be inputted as 
+
+
+/usr/share/wordlists
+
+rather than 
+
+/usr/share/worldists/rockyou.txt
+
+this is because ruby takes the filepath, opens it, and copys every single 
+
+list or wordlists in there with the extension .txt and moves it to the modules 
+
+mods/bruteforcing directory where golang can finally locate and open the definite file 
+
+and the `bufio.go` modules can read the exact file properly and use it to commit the 
+
+ssh or SMTP brute forcing attacks, this is not the case with FTP.rb because the modules is 
+
+built like the class in a certian way to read those files 
+
+
+why is it needed? 
+
+as said above ruby will read and open the filepath, copy all .txt files in there 
+
+then move them to the modules/brute forcing directory where the bufio.go module 
+
+can properly read the filename and open it line for line
+
+
+so how we use it would be 
+
+
+path to worlist -> /usr/share/worldists
+
+
+then we will be prompted to be asked for something liek what is the name of the file 
+
+
+this will be inputted as follows
+
+name of the wordlist -> dnsmap.txt [ notice how we can now use .txt]
+
+this is again simply because when all input feilds are done thet will continue 
+
+to be in that modules/brute-forcing dirctory where the txt files can now be read 
+
+( WARN: YES THEY MUST BE TXT .LST FILES WILL NOT WORK CURRENTLY UNSUPORTTED)
+
+
+once done you will be prompted with the traditional red rabbit banner and information 
+
+go has parsed and recongnized 
+
+
+
+````
+
+
+ ______     ______     _____     ______     ______     ______     ______     __     ______  
+/\  == \   /\  ___\   /\  __-.  /\  == \   /\  __ \   /\  == \   /\  == \   /\ \   /\__  _\ 
+\ \  __<   \ \  __\   \ \ \/\ \ \ \  __<   \ \  __ \  \ \  __<   \ \  __<   \ \ \  \/_/\ \/ 
+ \ \_\ \_\  \ \_____\  \ \____-  \ \_\ \_\  \ \_\ \_\  \ \_____\  \ \_____\  \ \_\    \ \_\ 
+  \/_/ /_/   \/_____/   \/____/   \/_/ /_/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_/ 
+
+Version 5.0                            Interactive Console                 Scare_Sec_Hackers                                                                                            
+---------------------------------------------------------------------------------------------
+                                               ((`\
+                                            ___ \\ '--._
+                                        .'`   `'    o  )
+                                        /    \   '. __.'
+                                      _|    /_  \ \_\_
+                                     {_\______\-'\__\_\
+
+ [  INFO  ] DATA: File Byte Size   |=>  70304
+ [  INFO  ] DATA: File loaded      |=>  map.txt
+ [  INFO  ] DATA: IP address       |=>  129.0.0.12
+ [  INFO  ] DATA: Port of server   |=>  1220
+ [  INFO  ] DATA: User being used  |=>  bob
+ [  INFO  ] DATA: Timeout for AUTH |=>  300ms <- timer defualt to timeout at 300ms
+
+
+
+````
+
+
+then the attack will start
+
+
+
+````
+ [  TRY   ]   PASSWORD FAILED ->  aal
+ [  TRY   ]   PASSWORD FAILED ->  aaa
+ [  TRY   ]   PASSWORD FAILED ->  aan
+ [  TRY   ]   PASSWORD FAILED ->  aab
+ [  TRY   ]   PASSWORD FAILED ->  aac
+ [  TRY   ]   PASSWORD FAILED ->  aad
+ [  TRY   ]   PASSWORD FAILED ->  aae
+ [  TRY   ]   PASSWORD FAILED ->  aaf
+ [  TRY   ]   PASSWORD FAILED ->  aag
+ [  TRY   ]   PASSWORD FAILED ->  aah
+ [  TRY   ]   PASSWORD FAILED ->  aai
+ [  TRY   ]   PASSWORD FAILED ->  aaj
+ [  TRY   ]   PASSWORD FAILED ->  aak
+ [  TRY   ]   PASSWORD FAILED ->  aax
+ [  TRY   ]   PASSWORD FAILED ->  aam
+ [  TRY   ]   PASSWORD FAILED ->  aba
+ [  TRY   ]   PASSWORD FAILED ->  aao
+ [  TRY   ]   PASSWORD FAILED ->  aap
+ [  TRY   ]   PASSWORD FAILED ->  aaq
+ [  TRY   ]   PASSWORD FAILED ->  aar
+ [  TRY   ]   PASSWORD FAILED ->  aas
+ [  TRY   ]   PASSWORD FAILED ->  aat
+ [  TRY   ]   PASSWORD FAILED ->  aau
+ [  TRY   ]   PASSWORD FAILED ->  aav
+
+ [  TRY   ]   PASSWORD IS CORRECT -> PASSWORD12344
+ exit status 1 <- golang exiting with a status of 0
+````
+
+
+
+that does it for the first option now we move to ruby single authentication
+
+
+
+this is quite simple to understand
+
+
+```
+SSH-B-R -> SSH brute forcing ruby 
+```
+
+same as before we enter out data once prompted to the inputs 
+
+```
+
+ ______     ______     _____     ______     ______     ______     ______     __     ______  
+/\  == \   /\  ___\   /\  __-.  /\  == \   /\  __ \   /\  == \   /\  == \   /\ \   /\__  _\ 
+\ \  __<   \ \  __\   \ \ \/\ \ \ \  __<   \ \  __ \  \ \  __<   \ \  __<   \ \ \  \/_/\ \/ 
+ \ \_\ \_\  \ \_____\  \ \____-  \ \_\ \_\  \ \_\ \_\  \ \_____\  \ \_____\  \ \_\    \ \_\ 
+  \/_/ /_/   \/_____/   \/____/   \/_/ /_/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_/ 
+
+Version 5.0                            Interactive Console                 Scare_Sec_Hackers                                                                                            
+---------------------------------------------------------------------------------------------
+                                               ((`\
+                                            ___ \\ '--._
+                                        .'`   `'    o  )
+                                        /    \   '. __.'
+                                      _|    /_  \ \_\_
+                                     {_\______\-'\__\_\
+
+					[ + ] FTP module loaded
+
+> SSH-B-R 
+
+Host user   > root
+
+Filepath to wordlist > /usr/share/wordlits/dnsmap.txt
+
+Port        > 220
+
+IPA         > 129.168.9.120
+
+````
+
+once we input out data we get prompted to the following
+
+
+```
+
+ ______     ______     _____     ______     ______     ______     ______     __     ______  
+/\  == \   /\  ___\   /\  __-.  /\  == \   /\  __ \   /\  == \   /\  == \   /\ \   /\__  _\ 
+\ \  __<   \ \  __\   \ \ \/\ \ \ \  __<   \ \  __ \  \ \  __<   \ \  __<   \ \ \  \/_/\ \/ 
+ \ \_\ \_\  \ \_____\  \ \____-  \ \_\ \_\  \ \_\ \_\  \ \_____\  \ \_____\  \ \_\    \ \_\ 
+  \/_/ /_/   \/_____/   \/____/   \/_/ /_/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_/ 
+
+Version 5.0                            Interactive Console                 Scare_Sec_Hackers                                                                                            
+---------------------------------------------------------------------------------------------
+                                               ((`\
+                                            ___ \\ '--._
+                                        .'`   `'    o  )
+                                        /    \   '. __.'
+                                      _|    /_  \ \_\_
+                                     {_\______\-'\__\_\
+
+Information
+------------
+host      => 10.0.0.120
+user      => reaper
+wordlist  => /usr/share/wordlits/dnsmap.txt
+
+
+
+````
+
+
+possible errors you can get with this 
+
+
+````
+
+Traceback (most recent call last):
+	3: from ssh2.rb:62:in `<main>'
+	2: from ssh2.rb:62:in `each'
+	1: from ssh2.rb:64:in `block in <main>'
+ssh2.rb:64:in `readlines': No such file or directory @ rb_sysopen - /usr/share/wordlits/dnsmap.txt (Errno::ENOENT)
+
+
+````
+
+check your filpath name as you can see here i mispelled it to cause the error that 
+
+ruby can not open the filepath, check if it exists or if your spelling is correct 
+
+my filepath should be -> /usr/wordlists/dnsmap.txt 
+
+not !-> /usr/share/wordlits/dnsmap.txt
+
+
+error connection refused error
+
+````
+Traceback (most recent call last):
+	3: from ssh2.rb:62:in `<main>'
+	2: from ssh2.rb:62:in `each'
+	1: from ssh2.rb:64:in `block in <main>'
+ssh2.rb:64:in `port': Errno::ECONNREFUSED
+````
+
+make sure the port for the address is corect something port 22 isnt always the case 
+
+
+
+
+***************************************************************
+
+Module 5 chapter 2 | Interfaces
+
+***************************************************************
+
+
+before we start off the chapter i have to say dealing with the wireless part of red rabbit is annoying, and im sure will be for new users of the script however before we 
+
+get into the wireless part of the script such as fake access points, flooders, DHCMP, ARP, net recon, local recon, packet sniffing etc we must figure out how we will activate 
+
+the interfaces we need, i have four commands to automate the simplicity of activating your interfaces, two which stop two which start. what is the diffrence?
+
+well here are the two start commands
+
+
+start-i |-> This uses airmon-ng to activate any interface you choose, this is suggested as there isnt much that can come with the airmon command
+
+ontop of the fact airmon-ng is an amazing handeler for interface activation and deactivation, and way more stable than the next choice
+
+
+si-phy  |-> this uses phy developer to activate and add a mon0 interface which will be used for wireless radio tapping or spawining fake access points 
+
+
+
+as said above these are both decent choices and they both get the job done however it can be a bit of an issue when you use phy dev to activate the 
+
+mon0 interface, it might be better if you do this on your own time if you cant add one in the red rabbit terminal
+
+when you run red rabbit and you plan to use the wireless utilities or pentesting tools even DOS then it is highly suggested you open these in a root 
+
+terminal as it makes it alot easier and can prevent alot of issues if you do plan to use everything alot easier, you may be wondering why i am writing about 
+
+starting interfaces at it is that simple but sometimes with the PHY dev option you get the following error 
+
+```
+
+> si-phy
+command failed: Too many open files in system (-23)
+
+despite being in root
+```
+
+
+to solve this error i have a built in shell module for RR5 called 
+
+RB-Shell, this is a shell that can help you with this and attempt to fix the error so lets execute the command 
+
+when you load red rabbit ( ROOT is needed for this ) we can type RR5-RBShell
+
+when we type that and hit enter we are prompted to the following message and banner 
+
+
+```
+ ______     ______     _____     ______     ______     ______     ______     __     ______  
+/\  == \   /\  ___\   /\  __-.  /\  == \   /\  __ \   /\  == \   /\  == \   /\ \   /\__  _\ 
+\ \  __<   \ \  __\   \ \ \/\ \ \ \  __<   \ \  __ \  \ \  __<   \ \  __<   \ \ \  \/_/\ \/ 
+ \ \_\ \_\  \ \_____\  \ \____-  \ \_\ \_\  \ \_\ \_\  \ \_____\  \ \_____\  \ \_\    \ \_\ 
+  \/_/ /_/   \/_____/   \/____/   \/_/ /_/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_/ 
+
+Version 5.0                            Interactive Console                 Scare_Sec_Hackers                                                                                            
+---------------------------------------------------------------------------------------------
+                                               ((`\
+                                            ___ \\ '--._
+                                        .'`   `'    o  )
+                                        /    \   '. __.'
+                                      _|    /_  \ \_\_
+                                     {_\______\-'\__\_\
+
+
+    ********************************************************
+    * Interactive os ruby shell, for fixing script errors  *
+    * if you are here most likely you found it or ran into *
+    * an error.                                            *
+    *                                                      *
+    *                                                      *
+    *Commands: -h, help, break,                    *
+    |------------------------------------------------------|
+ROOT@RR5> 
+
+
+```
+
+when we type fix-UID-perr
+
+we will be prompted to gran the global usage of the  /proc/sys/fs/file-nr then once we are prompted to continue you are then pushed to the message 
+
+
+```
+please input what you want the new limit to be NOTE CAN NOT BE HIGHER THAN HARD LIMIT 4090 IS BEST
+```
+
+which will set the file ulimit of the system, it is suggested to be 4090
+
+once done you can type break and it will break off and bring you back to the rr5 console where you can add the mon0 interface
+
+if somehow this still doesnt work- sometimes it doesnt sometimes it does then try utilizinmg the command
+
+
+```
+sudo iw phy phy1 interface add mon0 type monitor && ifconfig mon0 up 
+```
+
+somtimes this will also not work 
+
+so some other alternatives are 
+
+```
+sudo iw dev wlan0 del ;  sudo ifconfig mon0 up 
+```
+
+Before capturing, specify the wireless LAN frequency you want to capture on. 
+You should choose the frequency based on the channels used by neighbouring access points. The frequency is given in MHz, e.g.\ channel 6 is 2437.
+
+this is good in case we need to sya capture packets, or send out 802.11 beacon frams or send out ARP request packets, it helps alot surely
+
+```
+sudo iw dev mon0 set freq 2437
+```
+
+to see the interface you can run the following command
+
+```
+iwconfig mon0
+```
+
+this will show the following 
+
+```
+mon0      IEEE 802.11bgn  Mode:Monitor  Frequency:2.437 GHz  Tx-Power=20 dBm   
+          Retry  long limit:7   RTS thr:off   Fragment thr:off
+          Power Management:on 
+```
+
+now to test if this was working we can use something like tcp dump which will show the interface works like this 
+
+```                     
+                         |interface name    |-> Write the data to a file namped .cap for capture files
+sudo    tcpdump       -i mon0 -n           -w wireless.cap 
+|       |              |
+| root  |call tcpdump  |specify interface
+```
+
+to delet the interface you can do the following 
+
+```
+sudo iw dev mon0 del
+```
+
+```
+|-> Root
+|                | specify interface
+sudo iw phy phy0 interface add wlan0 			type managed
+                           |                    |
+						   |add wlan0 back      |type monitor/managed
+```                        
+
+well if you get errors with this you can also execute the following command to fix it 
+
+```
+rfkill list
+```
+
+example output
+```
+rfkill list
+0: phy0: Wireless LAN
+	Soft blocked: yes
+	Hard blocked: no
+```
+
+command
+
+```
+rfkill unblock 0
+```
+
+** NOTE: Make sure you are using the correct interface/device. In my examples I use phy0, wlan0 and mon0. Yours may be different. **
+
+
+
+other information about selecting good cards that support monitor mode 
+
+**
+
+Sometimes finding compatible network cards/USB adapters that are cross platform with windows, linux, mac, and other os's while supporting monitor mode 
+
+are quite rare and the search can geta nnoying despite the amount of opinions shown from hundreds of other people however the linux wireless drivers page 
+
+can provide you with a quick summary of the different drivers supporting monitor mode. a good website to mention or look into would be 
+
+WikiDevi 
+
+some devices that support monitor mode with good support are atheros, intel, RalInk, broadcom 
+
+when looking for USB wireless or PCI adapters that will support your os alonmg with monitor lode it can be quite confusing so here is a list 
+
+of some decent cards
+
+USB (2014): generic brand, made by Shenzhen (pic), similar to Tenda W311MI but with attachable antenna, RaLink RT5370 (driver: rt2800usb)
+USB (2012): D-Link DWA-160 HW version A2, Atheros AR9170 (carl9170)
+USB (2011): Alfa Networks AWUS036H, Realtek 8187 (rtl8187)
+MiniPCI (2011): Intel Centrino Wireless-N 1000 (iwlwifi)
+MiniPCI (2009): Atheros (ath5k)
+PCI (2009): SMC WPCIG Atheros AR5007G (ath5k?)
+**
+
+
+
+
+***************************************************************
+
+Module 5 chapter 3 | SSH Injection automation
+
+***************************************************************
+
+
+you may be wondering what the hell do i mean by SSH injection, well long story short i just used it 
+
+to sum up `sending files over to a host using SSHF or FTPD` remotely 
+
+so lets view this option
+
+
+
+there is a file in the modules file that is filled of virus based files for both windows and bash, from the 
+
+older project ssh sploit which was a script dedicated to exploiting and posessing SSH servers then sending 
+
+the files to the host remotely allowing the user to sign on, and execute the scripts without having to 
+
+manually make their own files. here is an example of one of the file 
+
+```
+# bash file to disable the network on the system ( tested )
+sudo systemctl stop NetworkManager.service && sudo systemctl disable NetworkManager.service 
+```
+
+once sent to the server you will be able to remotely execute this file 
+
+the command 
+
+```
+SSH-i
+```
+
+will allow us to send all the current `viruses` to the ssh server and remotely execute them on the host
+
+
+running the command will prompt us to enter the SSH username and the host IP, it will then use SCP to send the files 
+
+over ssh
+
+
+
+***************************************************************
+
+Module 5 chapter 4 | Brute forcing FTP using the ruby FTP module
+
+***************************************************************
+
+What is this module, the FTP brute forcing module is ALOT like the 
+
+SSH brute forcing module the following is needed 
+
+FTP User
+FTP IPA
+FTP Port address
+Password list
+
+when you run the command `FTP-b` you will be prompted to input the username, the IPA, and the port on which the FTP sever lies, then ofc a wordlist 
+
+once done you will be prompted to the refgular RR5 banner with the following information
+
+```
+> FTP-b
+
+FTP User > user
+
+FTP Port > 21
+
+FTP IPA  > 192.168.8.120
+
+Wordlist > /usr/share/wordlists/dnsmap.txt 
+
+
+            INFO: DATA: FTP User => user
+            INFO: DATA: FTP Port => 21
+            INFO: DATA: FTP IPA  => 10.0.0.120
+            INFO: DATA: Wordlist => /usr/share/wordlists/dnsmap.txt
+
+```
+
+
+if the connection is refused the following will be outputted
+
+
+```
+ERROR: FATAL: WARN: TO EXIT PLEASE PRESS CTRL+C
+ERROR: CONNECTION REFUSED ATTEMPTED ON -> 192.168.8.120 - PORT -> 21 WITH USER -> user ON PASSWORD aaa
+ERROR: FATAL: WARN: TO EXIT PLEASE PRESS CTRL+C
+ERROR: FATAL: WARN: TO EXIT PLEASE PRESS CTRL+C
+ERROR: CONNECTION REFUSED ATTEMPTED ON -> 192.168.8.120 - PORT -> 21 WITH USER -> user ON PASSWORD aax
+```
+
+as you can see in the example, it keeps trying until the user hits CTRL+c rto exit the script 
+
+to fix this MAKE SURE THE ADDR AND PORT IS CORRECT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***************************************************************
+
+Module 6 chapter 1 | Network recon/ARP/SCANNING 
+
+***************************************************************
+
+for this module we have a few decent commands that can run network analysis on your current network
+
+
+ARP      => A ARP scanner written in go 
+port-lg  => Port scan the list from the ARP scanner in golang to recrusivly port scan hosts on the network
+i-p  	 => will grab all your local machines information like interfaces, tor sockets, node name, public IP, private IP, IP arrays etc 
+tcp-d    => A very VERY basic TCP network dumper and network analysis 
+ftp-read => A simple tool to read a PCAPNG file for FTP credentials ( see example FTP capture in captures-test)
+FTP-C    => A ftp credential network packet sniffer, this will capture amy credentials coming across a FTP server on a local network
+
+
+
+I am going to start off this module by saying, Red Rabbit as said at the very top of the documentation is a project to help security grow bigger 
+
+and to help learning pentesters or hackers understand how some tools work on the backend and despite this tool being used for alot of anti security missions 
+
+it still is in development and not everything will be its best, however it doesnt mean this tool can not be enjoyable. i hope so far the user of this script 
+
+is actually enjoying this, and is learning alot from eaither the documentation or using the script.
+
+
+Without further to do lets go 
+
+
+
+let us start out with the very basic of them all and that is the TCP dumper written in ruby 
+
+this is just a simple command but lets go through the output so it makes it easier to understand 
+
+first lets get the terms down 
+
+
+:connections => This is the incoming connection that was captured 
+:source      => This is the source of the packet 
+:destination => This is the destination address of the packet
+:count       => This is the count of the packets that came through
+
+
+lets run the command 
+
+the command for this is 
+
+`
+tcp-d
+`
+
+when we enter the command we will be prompted to answer the following, and that is what port we 
+
+would like to capture incoming network traffick on, that being this will be 443 in this example 
+
+here is the very first example output we are greeted with 
+
+
+
+````
+[09:03 AM][ INFO ] Packets captured => 1
+
+[09:03 AM][ INFO ]
+{:source=>"140.82.114.25"}
+
+
+{:connections=>[{:source=>"140.82.114.25", :destination=>"100.1.15.05", :count=>1}, {:source=>"162.159.134.234", :destination=>"192.168.9.01", :count=>1}], :count=>2, :uniq=>2}
+
+[09:03 AM][ INFO ] Packets captured => 2
+
+[09:03 AM][ INFO ]
+{:source=>"162.159.134.234"}
+
+
+{:connections=>[{:source=>"140.82.114.25", :destination=>"1.0.0.1", :count=>1}, {:source=>"162.159.134.234", :destination=>"192.168.9.01", :count=>1}, {:source=>"192.168.9.01", :destination=>"162.159.134.234", :count=>1}], :count=>3, :uniq=>3}
+
+
+````
+
+lets break this down 
+
+first we have our date and base infromation, what the source was and how much packets we have captured
+
+```
+[09:03 AM][ INFO ] Packets captured => 2
+
+[09:03 AM][ INFO ]
+{:source=>"162.159.134.234"}
+
+
+```
+
+simple information and now we get into the split array the packet sniffer gave us
+
+
+```
+{:connections=>[{:source=>"140.82.114.25", :destination=>"1.0.0.1", :count=>1}, {:source=>"162.159.134.234", :destination=>"192.168.9.01", :count=>1}, 
+{:source=>"192.168.9.01", :destination=>"162.159.134.234", :count=>1}], :count=>3, :uniq=>3}
+```
+
+we can see that there was a connection made by the source 140.82.114.25 and its destination was reaching to the IPV4 1.0.0.1 and the packet count is 1
+
+
+as said above there really is not much to this command as its a light simple TCP listener
+
+
+
+
+*************************
+Command's => FTP-C, ftp-read
+
+
+base of two commands 
+
+FTP-C => FTP credential sniffer 
+
+ftp-read => Open and read pcap files for credentials 
+
+it really doesnt go any deeper 
+
+when we input FTP-C you will geta  message that it is listening on the basic FTP port and is awaiting the capture 
+
+this will grab and sniff credentials being used to access a FTP server over the same local network, this is quite again simple 
+
+it is also the same with the command `ftp-read` accept with files, when you run the command you are prompted for a file 
+
+there is a pcapng file in `captures-test` named ftp-captured.pcapng which holds an example of FTP credentials being sniffed 
+
+when you input the file it will search that entire file for FTP credentials and you will receive the following output
+
+
+```
+192.168.100.10<CONN>192.168.100.17
+USER ftp
+192.168.100.10<CONN>192.168.100.17
+PASS ftp@123
+```
+
+this is the password and username for the FTP hostname
+
+
+
+
+
+
+
+**************************
+Command ARP
+
+
+this is a ARP tool written in golang that well- just doesnt stop arping, this is a very lightweight 
+
+fast but nice arp scanner that is quite accurate as well, while not being able to identify devices it stores 
+
+all data in a list called out.txt which is all the IP addresses that came back as true and mac addresses
+
+
+when you run this command in the terminal there is an error that can occure 
+
+```
+you do not have premissions to capture or send on this device
+```
+
+this means you are not root, please do run your terminal as admin or run as root user ex sudo ruby main.rb
+
+
+when you run the command `ARP` or lower case `arp`
+
+you will get the following output
+
+
+```
+  ______     ______     _____     ______     ______     ______     ______     __     ______  
+/\  == \   /\  ___\   /\  __-.  /\  == \   /\  __ \   /\  == \   /\  == \   /\ \   /\__  _\ 
+\ \  __<   \ \  __\   \ \ \/\ \ \ \  __<   \ \  __ \  \ \  __<   \ \  __<   \ \ \  \/_/\ \/ 
+ \ \_\ \_\  \ \_____\  \ \____-  \ \_\ \_\  \ \_\ \_\  \ \_____\  \ \_____\  \ \_\    \ \_\ 
+  \/_/ /_/   \/_____/   \/____/   \/_/ /_/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_/ 
+
+                                               ((`\
+                                            ___ \\ '--._
+                                        .'`   `'    o  )
+                                        /    \   '. __.'
+                                      _|    /_  \ \_\_
+                                     {_\______\-'\__\_\
+-----------------------------------------------------------------------------------
+                                    _____ ____ _____
+                                   /    /      \    \ with the power of ruby
+                                 /____ /_________\____\        i become stronger
+                                 \    \          /    /                 and stronger 
+                                    \  \        /  /
+                                       \ \    / /
+                                         \ \/ /
+                                           \/
+--------------------------------------------------------------------------------------------
+ [  Online  ] 			[   File in loaded  ] 
+
+				[   File out loaded  ]
+
+
+[ 1 ] STAT: Module ARP loaded 
+2021/12/24 10:12:40 [INTERFACE] ->  lo 127.0.0.1/8
+2021/12/24 10:12:40 [INTERFACE] ->  lo ::1/128
+2021/12/24 10:12:40 [INTERFACE] ->  wlan0 ip4
+2021/12/24 10:12:40 [INTERFACE] ->  wlan0 ip=range=6
+2021/12/24 10:12:40 [INTERFACE] ->  wlan0 ip=range=6
+2021/12/24 10:12:40 [INTERFACE] ->  wlan0 ip=range=6
+2021/12/24 10:12:40 [INTERFACE] ->  wlan2 ip=range=4
+2021/12/24 10:12:40 [INTERFACE] ->  wlan2 ip=range=6
+2021/12/24 10:12:40 [INTERFACE] ->  wlan2 ip=range=6
+2021/12/24 10:12:40 [INTERFACE] ->  wlan2 ip=range=6
+2021/12/24 10:12:40 interface eth1: [?] Unstable Network on card
+2021/12/24 10:12:40 interface wlan1: [?] Unstable Network on card
+2021/12/24 10:12:40 interface lo: [*] Skipping LO
+2021/12/24 10:12:40 interface eth0: [?] Unstable Network on card
+2021/12/24 10:12:40 interface mon0: [?] Unstable Network on card
+2021/12/24 10:12:40 [*] USING CURRENT NET RANGE -> ip=range=4 FOR INTERFACES -> wlan0
+2021/12/24 10:12:40 [*] USING CURRENT NET RANGE -> ip=range=4 FOR INTERFACES -> wlan2
+
+
+```
+
+
+lets first break this down by starting with the file loaded output, the file loaded output at the top is both the input and output file 
+
+
+this script works by saving the addresses in one file, copying and then finally moving to in.txt where everything is properly saved 
+
+we run the program and you will notice the directory modules/wifi will now have three files
+
+one for port scanning 
+one for general IP 
+one for MAC addresses and IP's laced together
+
+in.txt -> is where the geneal MAC AND IP's are inputted
+out.txt -> is where the general MAC and IP's are saved
+lace_ip.txt -> is where the IP addresses with no general strings are stored for listed port scanning in the option port-gl which allows
+
+golang listed port scanning for quicker and more responsive recon
+
+
+lets now talk about the stat and interface load before the arp starts 
+
+
+the [INTERFACE] tag specified that the interfaces and arp module has been loaded, this will gather all of your 
+
+interface informatiopn IP6-IP4 and tell you what will be used and if there is a err on the network card obviously 
+
+the tag ip=range=6 will not be there as that is just a placeholder for my example network addresses as the real output 
+
+will show ranges of IP6-4 addresses like this 
+
+
+```
+2021/12/24 10:12:40 [INTERFACE] ->  wlan2 0.0.0.0/98
+2021/12/24 10:12:40 [INTERFACE] ->  wlan2 ffff:ffff:fff:ff:fff:ffff:ffff/90
+
+```
+
+you sometimes will get the warning message 
+
+SKIPPING LO, this means it will not use the loopback interface as a way to send out ARP requests and will instead skip onto the next card 
+
+sometimes you will also recieve this error ( despite the ARP still conitnueing on)
+
+
+```
+MASK TO LARGE this means that 
+
+if your interface addr.Mask[0] != 0xff || addr.Mask[1] != 0xff
+
+then it will become to large for it to range from 
+```
+
+
+other warning messages can occure such as 
+
+
+Unstable Network on card
+
+this will mean that
+
+the address on that card side came back nil/null/empty and it is considered unstable as a network, however this will not cause a major issue 
+
+it just simply means the program wasnt able to identify it properly
+
+
+once we are done we can now look at the terminal to see everything it picked up 
+
+
+````
+$ example output 
+
+
+IP-ADDR =>   ip4 Has MAC ADDR of =>    ff:ff:ff:ff:ff:ff
+[+] IP-ADDR => ip4 Has MAC ADDR of =>   ff:ff:ff:ff:ff:ff
+|[+] IP-ADDR =>  ip4 Has MAC ADDR of => ff:ff:ff:ff:ff:ff
+[+] IP-ADDR =>  ip4 Has MAC ADDR of =>  ff:ff:ff:ff:ff:ff
+[+] IP-ADDR =>  ip4 Has MAC ADDR of =>  ff:ff:ff:ff:ff:ff
+[+] IP-ADDR =>  ip4 Has MAC ADDR of =>  ff:ff:ff:ff:ff:ff
+[+] IP-ADDR =>  ip4 Has MAC ADDR of =>  ff:ff:ff:ff:ff:ff
+[+] IP-ADDR =>  ip4 Has MAC ADDR of =>  ff:ff:ff:ff:ff:ff
+[+] IP-ADDR =>  ip4 Has MAC ADDR of =>  ff:ff:ff:ff:ff:ff
+[+] IP-ADDR =>  ip4 Has MAC ADDR of =>  ff:ff:ff:ff:ff:ff
+[+] IP-ADDR =>  ip4 Has MAC ADDR of =>  ff:ff:ff:ff:ff:ff
+/[+] IP-ADDR => ip4 Has MAC ADDR of =>  ff:ff:ff:ff:ff:ff
+[+] IP-ADDR =>  ip4 Has MAC ADDR of =>  ff:ff:ff:ff:ff:ff
+
+````
+
+** NOTE: SOME ADDRESSES WILL REPEAT THIS IS DUE TO THE FACT IT CONSTANTLZY SENDS OUT ARP REUQESTS AND LISTENS FOR A CTRL+C HANGUP **
+** EXPECT SOME HOSTNAMES TO HAVE THE SAME MAC ADDRESS AND THE SAME IP THIS IS ONLY BCEAUSE OF RE LOOP AND SCANNING                **
+
+
+once you think you are finished arping and you are confident the scanner has fully scanned the network, then press CTRL+C which will exit the program
+
+when we are completely out of the program we can run the following command to view all the information saved to the files 
+
+````
+cat modules/out.txt ; cat modules/lace_ip.txt
+
+````
+
+which will again give us all captured information
+
+
+once back into the RR5 main script we can run the command
+
+````
+port-lg 
+````
+
+to list scan every single host in the arp output file, this will recrusivly scan every single hostname saved in the file 
+
+and output the ports 
+
+lets go through out output file as an example 
+
+
+
+out.txt
+
+````
+0.0.0.0
+10.0.0.1
+10.0.0.120
+10.0.0.90
+10.0.0.80
+
+````
+
+
+enter the command port-lg and the following will output 
+
+
+````
+
+ [  Online  ] 			[   File in loaded  ]
+
+				[   File out loaded  ]
+____________Hosts in file_________________
+[ 1 ] File ->  lace_ip.txt
+[ 2 ] Are these hosts correct? 
+
+0.0.0.0
+10.0.0.1
+10.0.0.120
+10.0.0.90
+10.0.0.80
+
+n=No | Y=yes|
+> 
+
+
+````
+
+if yes then something like the following will output and be shown 
+
+
+````
+[  10.0.0.29 ]
+
+	[*] Scan Results for   ├ 10.0.0.29 (10.0.0.29)
+	[+]			┡ 22	ssh
+[  10.0.0.1 ]
+
+	[*] Scan Results for   ├ 10.0.0.1 (10.0.0.1)
+	[+]			┡ 80	http
+	[+]			┡ 53	dns
+	[+]			┡ 443	https
+[  10.0.0.215 ]
+
+	[*] Scan Results for   ├ 10.0.0.215 (10.0.0.215)
+[  10.0.0.254 ]
+
+	[*] Scan Results for   ├ 10.0.0.254 (10.0.0.254)
+[  10.0.0.1 ]
+
+	[*] Scan Results for   ├ 10.0.0.1 (10.0.0.1)
+	[+]			┡ 53	dns
+	[+]			┡ 80	http
+	[+]			┡ 443	https
+[  10.0.0.29 ]
+
+	[*] Scan Results for   ├ 10.0.0.29 (10.0.0.29)
+	[+]			┡ 22	ssh
+[  10.0.0.70 ]
+
+	[*] Scan Results for   ├ 10.0.0.70 (10.0.0.70)
+	[+]			┡ 80	http
+	[+]			┡ 8080	https-proxy
+	[+]			┡ 139	netbios
+
+`````
+
+this will as said above port scan every single host in that file
+
+even if the host is repeated, then it will actually ensure it scanned 
+
+as much ports as possible for it. as said about a few chapters above but lets repeate 
+
+you can scan all possible ports in this list seen down below 
+
+
+7:    "echo",
+20:   "ftp",
+21:   "ftp",
+22:   "ssh",
+23:   "telnet",
+25:   "smtp",
+43:   "whois",
+53:   "dns",
+67:   "dhcp",
+68:   "dhcp",
+80:   "http",
+110:  "pop3",
+123:  "ntp",
+137:  "netbios",
+138:  "netbios",
+139:  "netbios",
+143:  "imap4",
+443:  "https",
+513:  "rlogin",
+540:  "uucp",
+554:  "rtsp",
+587:  "smtp",
+873:  "rsync",
+902:  "vmware",
+989:  "ftps",
+990:  "ftps",
+1194: "openvpn",
+3306: "mysql",
+5000: "unpn",
+8080: "https-proxy",
+8443: "https-alt",
+161: "Simple Network Managment Protocol 	(SNMP)",
+162: "Simple Network Managment Protocol 	(SNMP)",
+389:   "LightWeight DIrectory Acess Protocol  (LDAP)",
+135:   "NetBIOS",
+49152: "CMS",
+65535: "CMS",
+49151: "Reserved",
+47808: "BACNET",
+44405: "Mu Online Connect Server",
+42806: "Discord",
+41797: "CSTP (Creston Secure Terminal Port)",
+41796: "CSCP (Creston Secure Control Port)",
+41795: "CTP  (Creston Terminal Port",
+41794: "CCP  (creston Control Port",
+41121: "Tentacal Server",
+40000: "SafetyNET p – a real-time Industrial Ethernet protocol",
+19812: "4D Database SQL Communication",
+19813: "4D database Client Server Communication",
+19814: "4D database DB4D Communication",
+19999: "DNP ( Distributed Network Protocal",
+19532: "SystemD-journal-gatewayd",
+19531: "SystemD-journal-remote",
+25565: "Minecraft (Java) Multiplayer Server",
+25575: "Minecraft (Java) Multiplayer Server RCON",
+23399: "Skype Server",
+22136: "FLIR Camera Resoruce Protocal",
+19302: "Google Talk/Video Communications",
+19295: "Google Talk/Video Communications",
+19294: "Google Talk/Video Communications",
+19133: "Minecraft Bedrock edition IPV6 multiplayer server",
+19132: "Minecraft Bedrock edition Multiplayer server",
+18333: "Bitcoing test network",
+16567: "BattleFeild 2 | mod ",
+
+
+
+
+
+
+***********************************
+command => ns-s
+
+this one is actually just arping with interactive port scanning of every host it finds
+
+as above in the ARP command however just with again a port scanning mechanisim to it here is an example
+
+
+
+
+````
+
+IP-ADDR =>   ip4 Has MAC ADDR of =>    ff:ff:ff:ff:ff:ff
+
+
+[  ip4 ]
+
+	[*] Scan Results for   ├ ip4 (ip4)
+	[+]			┡ 22	ssh
+
+
+
+[+] IP-ADDR => ip4 Has MAC ADDR of =>   ff:ff:ff:ff:ff:ff
+
+[  ip4 ]
+
+	[*] Scan Results for   ├ ip4 (ip4)
+	[+]			┡ 22	ssh
+  [+]     | 443 http-proxy 
+
+|[+] IP-ADDR =>  ip4 Has MAC ADDR of => ff:ff:ff:ff:ff:ff
+
+
+````
+
+
+
+
+************************************************************************************
+
+Module 7 | DNS/Networking BSSID/SSID scouting, Deauth, and fake access points 
+
+************************************************************************************
+
+Chapter 1: DNS Loopback
+------------------------
+
+
+in RR5 i have a command set named dm-b which stands for domain blocker, this takes a file 
+
+of hosts ex: www.example.com and attempts to block them and loop the conections through your 
+
+loopback to make it sure that this website can not access your computer, while also blocking 
+
+you from accessing it as well
+
+
+i imagine this one can be quite confusing but in the RR5 main file there is a file labeled 
+
+config-files, this is the configuration file path for every single tool that needs a configuration file
+
+in that filepath there is a file labeled `blacklist.txt` this is the file where you will store 
+
+all the hostnames you want to block `note only websites can be written as of now, currently adding support`
+
+lets say i wanted to block the website `www.scanme.org` from my computer and not allow myself to make a connection 
+
+between my pc and the server on the other side 
+
+i would simply edit this txt file with the name 
+
+
+````
+www.scanme.com 
+````
+
+save it then run RR5 followed by the command dm-b
+
+** NOTE: you can use your own filepath, this is just an easier in for the tool and instead of making 
+
+  or creating your own its best to have it pre setup **
+
+
+lets make an example for further inspection of how this works without confusion 
+
+so i have my home directory and in that dir rr5 lays here is what i will input when the script asks me for a filepath
+
+
+/home/user/RR5/config-files/blacklist.txt
+
+it prevents the error 
+
+
+````
+2021/12/25 19:55:17 open config-files/blacklist.txt: no such file or directory
+````
+
+despite you being in the RR5 filepath dring execution, simply cause each tool is stored in its own topic 
+
+and filepath which can not be opened if the script has it names /modules when the filepath is /config if you 
+
+generally get what i am saying it is easier to work around this.
+
+
+
+
+Chapter 2: BSSID/SSID scouting
+------------------------------
+
+as i have explained before the wireless part of this project was quite long 
+
+however good news for you is this means the documentation will be long and in detail :D
+
+
+so first, in RR5 there are 3 commands for SSID/BSSID scouting 
+
+G-BSSID 
+W-SSID 
+
+
+now you may be asking wtf is the diffrence truth is the language barrier, for those reading who do keep a long tab both in 
+
+my discord server, on my instaram, or even on my github know that i have been trying as hard as possible to deprecate perl
+
+c, assembly, and the worst of all python. so to replace all of those languages and annoying installs i decided to use golang 
+
+a great, fast, easy to use, writeable and descriptive language overall. however for some tools like the wireless tools i had 
+
+to still keep python instead of ruby, i have found that the python run give more information and runs possibly the best than all 3 
+
+
+first lets go through the golang file 
+
+
+what are the pros and cons about this one? ( g-bssid )
+===========================================
+
+
+pros : it writes to a file, it is fast, it changes channels and shows the channel of each BSSID it caught, it logs errors 
+
+and it activates your interface 
+
+
+cons : it can end up repeating BSSID's it already discovered given its under a for loop, data is sparse and not in much details
+
+
+simply we run this command 
+
+G-BSSID to activate the script and tool you will get the something like the following example output
+
+
+````
+
+   _________BSSID________CHAN____
+ 1 | 	 ff:ff:ff:ff:ff:ff -67
+ 2 | 	 ff:ff:ff:ff:ff:ff -75
+ 3 | 	 ff:ff:ff:ff:ff:ff -90
+ 4 | 	 ff:ff:ff:ff:ff:ff -31
+ 5 | 	 ff:ff:ff:ff:ff:ff -51
+ 6 | 	 ff:ff:ff:ff:ff:ff -53
+ 7 | 	 ff:ff:ff:ff:ff:ff -79
+ 8 | 	 ff:ff:ff:ff:ff:ff -45
+ 9 | 	 ff:ff:ff:ff:ff:ff -31
+10 | 	 ff:ff:ff:ff:ff:ff -56
+11 | 	 ff:ff:ff:ff:ff:ff -76
+12 | 	 ff:ff:ff:ff:ff:ff -57
+13 | 	 ff:ff:ff:ff:ff:ff -35
+
+````
+
+
+and it will appear and disappear, you will also notice in the filepath 
+
+modules/wifi the files ion/out.txt appear, this has the same concept for one of the 
+
+network recon scripts, the in/out file stores the BSSID, however the con about this is sometimes 
+
+this file can have repeated BSSID's which isnt too bad of a thing but too a new user not seeing any form 
+
+of SSID or ID it can get quite confusing 
+
+here is a tip 
+
+
+look out for the last two or first integers of the bssid, if it repeats twice then it was repeated and is the same
+
+
+
+what are the pros and cons about the W-SSID ( the python one )
+============================================
+
+
+pros : well for one it has a way more neater output, it tables the output, it changes channels, it has a SSID finder.
+
+it shows the time elapsed, it gets the encryption level etc 
+
+
+cons : it doesnt write to a file, some SSID's dont show up, sometimes the wireless interface wont work, 
+
+sometimes the SSID will be hidden and show 0 output.
+
+
+
+lets talk about this in way more depth, we will run the command W-SSID and we will be prompted to anser the following 
+
+what card you want to activate ( please activate your interface before hand and in the input type interfacename with mon0 at the end 
+
+example wlan0mon
+)
+
+this is because the input is a little glitchy and just is wacky. anyway the output will look something like this 
+
+
+
+````
+[Time Elapsed > ]2021-12-25 20:21:04.650333
++-------------------------------------------------------------------------------------------------+
+|                               Networks Within Length of Interface                               |
++-------------------------------------------------------------------------------------------------+
+|                                              SSID dBm_Signal Channel                     Crypto |
+| BSSID                                                                                           |
+| ff:ff:ff:ff:ff:ff                          <ssid>        -61       1                 {WPA2/PSK} |
+| ff:ff:ff:ff:ff:ff                          <ssid>        -38       6                 {WPA2/PSK} |
+| ff:ff:ff:ff:ff:ff                                        -41       6                 {WPA2/PSK} |
+| ff:ff:ff:ff:ff:ff                                        -36       6  {WPA2/802.1X, WPA/802.1X} |
++-------------------------------------------------------------------------------------------------|
+
+````
+
+
+
+*******************************************
+command fake-ap
+
+ah where the fuck do i start with this one XD, this one was and even today is a pain in the ass 
+
+this is exactly what it is a fake access point, it doesnt do nothing special iots kinda for fun and
+
+general demonstration for learning penetration testers who are getting into the wifi feild but 
+
+this one can give you issues hence why there is documentation about it 
+
+so if you didnt read the documentation or the FULL entire thing, i wrote a section dedicated just to 
+
+the wireless commands in this scripts to well- help people out with the understanding and usaged of 
+
+certian interfaces, interface types, interface ch's and interface modes, here i will be explain what 
+
+is possibly the worst most annoying type of interface mode you can set 
+
+
+ever heard of monitor mode also known as RFMON? well its a certian mode for interfaces that allows wireless 
+
+controllers to monitor network traffic which can be used for BSSID scanning, Network discovery, deauthentication attacks, and 
+
+in this case Fake SSID's or Fake Access Points (F_AP) 
+
+well this fake access point program needs a interface that needs monitor mode on an interface 
+
+there are a few ways to do this one dumb ass boring annoying way and one decent way
+
+the decent way is by using RR5's built in automation for airmon-ng and activating interfaces
+
+the bitchy way is 
+
+using iw dev to do it 
+
+
+to do this as explained its a very annoying process ( PLEASE GOD JUST INSTALL AIRMON ), if you are lucky 
+
+you will get this right the first time, if you get this wrong then you are- gonna go through hell.
+
+
+to do this you MUST be in a root terminal if not then congrats your going through more hell of premission denied statements 
+
+anwyway the command is 
+
+```
+ iw phy phy1 interface add mon0 type monitor && ifconfig mon0 up
+```
+
+this will be the interface you use `mon0` for this if you didnt use airmon-ng
+
+
+now lets actually get to using the tool
+
+
+so when we run the tool we will get the following output

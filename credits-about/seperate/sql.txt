@@ -1,0 +1,81 @@
+second command for WHOIS 
+
+-> Now we will look at the command `sql-t`
+
+it is a basic example kinda like sql-t this is a simple request based tester for SQLI 
+
+like many of the other scripts here it works with golang for fast and quick responses 
+
+if the URL is vulnerable it will continue to the following 
+
+```
+
+URl > http://testasp.vulnweb.com/
+ +--------------------------------------+-------------------------+
+|      http://testasp.vulnweb.com/     |   Server is vulnerable  |
++======================================+=========================+
+|                  SQL                 |           id=1          |
++--------------------------------------+-------------------------+
+|   An error | detected vulnerability  |                         |
++--------------------------------------+-------------------------+
+
+ +--------------------------------------+-------------------------+
+|      http://testasp.vulnweb.com/     |   Server is vulnerable  |
++======================================+=========================+
+|                  SQL                 |           '-'           |
++--------------------------------------+-------------------------+
+|   An error | detected vulnerability  |                         |
++--------------------------------------+-------------------------+
+
+ +--------------------------------------+-------------------------+
+|      http://testasp.vulnweb.com/     |   Server is vulnerable  |
++======================================+=========================+
+|                  SQL                 |           ' '           |
++--------------------------------------+-------------------------+
+|   An error | detected vulnerability  |                         |
++--------------------------------------+-------------------------+
+
+ +--------------------------------------+-------------------------+
+|      http://testasp.vulnweb.com/     |   Server is vulnerable  |
++======================================+=========================+
+|                  SQL                 |           '&'           |
++--------------------------------------+-------------------------+
+|   An error | detected vulnerability  |                         |
++--------------------------------------+-------------------------+
+
+ +--------------------------------------+-------------------------+
+|      http://testasp.vulnweb.com/     |   Server is vulnerable  |
++======================================+=========================+
+|                  SQL                 |           '^'           |
++--------------------------------------+-------------------------+
+|   An error | detected vulnerability  |                         |
++--------------------------------------+-------------------------+
+
+ +--------------------------------------+-------------------------+
+
+```
+
+SQLI-t wil alos start admin panel finding as a extra to add to the script to make it more 
+
+reliable per say in the vulnerability recon stages
+
+example output 
+
+```
+http://testasp.vulnweb.com/panel-administracion/admin.asp Has come back NEGATIVE
+-------------------------------------------------------------
+http://testasp.vulnweb.com/modelsearch/index.asp Has come back NEGATIVE
+-------------------------------------------------------------
+http://testasp.vulnweb.com/modelsearch/admin.asp Has come back NEGATIVE
+-------------------------------------------------------------
+http://testasp.vulnweb.com/administrator/index.asp Has come back NEGATIVE
+-------------------------------------------------------------
+http://testasp.vulnweb.com/admincontrol/login.asp Has come back NEGATIVE
+-------------------------------------------------------------
+http://testasp.vulnweb.com/adm/admloginuser.asp Has come back NEGATIVE
+-------------------------------------------------------------
+http://testasp.vulnweb.com/admloginuser.asp Has come back NEGATIVE
+-------------------------------------------------------------
+
+
+```

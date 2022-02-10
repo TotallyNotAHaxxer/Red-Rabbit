@@ -1,0 +1,60 @@
+  ______ _______ ______       ______ _______ ______  ______  _____ _______     _    _
+ |_____/ |______ |     \ ___ |_____/ |_____| |_____] |_____]   |      |    ___  \  / 
+ |    \_ |______ |_____/     |    \_ |     | |_____] |_____] __|__    |          \/  
+
+
+in RR5 i have a command set named dm-b which stands for domain blocker, this takes a file 
+
+of hosts ex: www.example.com and attempts to block them and loop the conections through your 
+
+loopback to make it sure that this website can not access your computer, while also blocking 
+
+you from accessing it as well
+
+
+i imagine this one can be quite confusing but in the RR5 main file there is a file labeled 
+
+config-files, this is the configuration file path for every single tool that needs a configuration file
+
+in that filepath there is a file labeled `blacklist.txt` this is the file where you will store 
+
+all the hostnames you want to block `note only websites can be written as of now, currently adding support`
+
+lets say i wanted to block the website `www.scanme.org` from my computer and not allow myself to make a connection 
+
+between my pc and the server on the other side 
+
+i would simply edit this txt file with the name 
+
+
+````
+www.scanme.com 
+````
+
+save it then run RR5 followed by the command dm-b
+
+** NOTE: you can use your own filepath, this is just an easier in for the tool and instead of making 
+
+  or creating your own its best to have it pre setup **
+
+
+lets make an example for further inspection of how this works without confusion 
+
+so i have my home directory and in that dir rr5 lays here is what i will input when the script asks me for a filepath
+
+
+/home/user/RR5/config-files/blacklist.txt
+
+it prevents the error 
+
+
+````
+2021/12/25 19:55:17 open config-files/blacklist.txt: no such file or directory
+````
+
+despite you being in the RR5 filepath dring execution, simply cause each tool is stored in its own topic 
+
+and filepath which can not be opened if the script has it names /modules when the filepath is /config if you 
+
+generally get what i am saying it is easier to work around this.
+

