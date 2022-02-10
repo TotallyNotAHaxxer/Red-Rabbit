@@ -1,0 +1,481 @@
+<!-- literally a copy and paste from the deamon module -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Database information (BETA)</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<style>
+    body {
+      margin: 0;
+    }
+    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 25%;
+      background-color: #000;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+    }
+    
+    li a {
+      display: block;
+      color: #000;
+      padding: 8px 16px;
+      text-decoration: none;
+      background-color: blueviolet;
+    }
+    
+    li a.active {
+      background-color: red;
+      color: purple;
+    }
+    
+    li a:hover:not(.active) {
+        color: purple;
+        background: #2196f3;
+        box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+        transition-delay: .2s;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <ul>
+      <li><a href="">Welcome</a></li>
+      <li><a href="">To</a></li>
+      <li><a href="">The</a></li>
+      <li><a href="">Red Rabbit 5</a></li>
+      <li><a href="">Interactive</a></li>
+      <li><a href="">Documentation Web Interface</a></li>
+    </ul>
+<style>
+body { 
+  background-image: url('7115637.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+p {
+    color: red;
+}
+
+
+
+.about {
+    background-color: #fff;
+}
+
+.about p {
+    background-color: aqua;
+
+}
+
+.body2{
+    margin: 0;
+    padding: 0;
+    display:-webkit-inline-box;
+    justify-content: center;
+    align-items: baseline;
+    min-height: 100vh;
+    background: black;
+    font-family: sans-serif;
+}
+a
+{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.styleheader {
+    background: linear-gradient(blue, pink);
+
+}
+
+.btn{
+  background: #5E5DF0;
+  border-radius: 999px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+ .social {
+    position: relative;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    display: inline-block;
+    filteR: invert(1);
+    margin-right: 20px;
+    transform: scale(0.5);
+    transition: 0.5s;
+    background-color: #fff;
+}
+
+.social li a:hover {
+    transform: scale(0.5) translateY(-15px);
+}
+
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 12px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+
+
+
+a span {
+  position: absolute;
+  display: block;
+}
+
+
+html, body, .container {
+    height: 95%;
+    width: 100%;
+    text-align: center;
+}
+.container {
+    display: table;
+    vertical-align: center;
+}
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: center;
+}	
+
+#loginDialog {
+    box-shadow: 0px 0px 6px #ccc;
+    border: solid 1px #ddd; /* border since no drop shadow in ie7 */
+    background-color: black;
+    padding: 40px 45px;
+    text-align: center;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+input[type=submit].btn {
+    border-radius: 0;
+    font-size: 12px;
+    line-height: 1.42857143;
+    letter-spacing: 1px;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+
+    color: #fff;
+    background-color: red;
+    background-image: none;
+    border-color: #8faba4;
+    border: none;
+    display: block;
+    width: 122px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 40px;
+    *padding: 15px 22px;
+    -webkit-appearance: none;
+}
+
+input[type=submit].btn:hover {
+    background-color: black;
+    border-color: blue;
+}
+
+
+input[type=text], input[type=password] {
+    width: 310px;
+    *width: 285px; /* ie7 hack */
+    display: block;
+    margin: 15px 0 0 0;
+    padding: 15px;
+    background: black;
+    border: solid 1px #ddd;
+    color: #666;
+    
+    box-shadow: 0px 0px 10px #bbb;
+}
+
+a, a img {border: none; text-decoration: none;}
+
+p {color: #004442; text-align: center; position: relative; top: 120px;}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+color:    #666;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #666;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #666;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #666;
+}
+</style>
+<style media="screen">
+  *,
+*:before,
+*:after{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+body{
+background-color: #080710;
+}
+.background{
+width: 430px;
+height: 520px;
+position: absolute;
+transform: translate(-50%,-50%);
+left: 50%;
+top: 50%;
+}
+.background .shape{
+height: 200px;
+width: 200px;
+position: absolute;
+border-radius: 50%;
+}
+.shape:first-child{
+background: linear-gradient(
+    #1845ad,
+    #23a2f6
+);
+left: -80px;
+top: -80px;
+}
+.shape:last-child{
+background: linear-gradient(
+    to right,
+    #ff512f,
+    #f09819
+);
+right: -30px;
+bottom: -80px;
+}
+form{
+height: 665px;
+width: 425px;
+background-color: rgba(255,255,255,0.13);
+position: absolute;
+transform: translate(-50%,-50%);
+top: 50%;
+left: 50%;
+border-radius: 15px;
+backdrop-filter: blur(10px);
+border: 2px solid rgba(255,255,255,0.1);
+box-shadow: 0 0 40px rgba(8,7,16,0.6);
+padding: 50px 35px;
+}
+form.h2 {
+  background-color: blue;
+}
+form *{
+font-family: 'Poppins',sans-serif;
+color: #ffffff;
+letter-spacing: 0.5px;
+outline: none;
+border: none;
+}
+form h3{
+font-size: 32px;
+font-weight: 500;
+line-height: 42px;
+text-align: center;
+}
+
+label{
+display: block;
+margin-top: 30px;
+font-size: 16px;
+font-weight: 500;
+}
+input{
+display: block;
+height: 60px;
+width: 100%;
+background-color: rgba(255,255,255,0.07);
+border-radius: 10px;
+padding: 0 10px;
+margin-top: 8px;
+font-size: 14px;
+font-weight: 300;
+}
+::placeholder{
+color: #e5e5e5;
+}
+button{
+margin-top: 50px;
+width: 100%;
+background-color: #ffffff;
+color: #080710;
+padding: 15px 0;
+font-size: 18px;
+font-weight: 600;
+border-radius: 5px;
+cursor: pointer;
+}
+.social{
+margin-top: 30px;
+display: flex;
+}
+.social div{
+background: red;
+width: 150px;
+border-radius: 3px;
+padding: 5px 10px 10px 5px;
+background-color: rgba(255,255,255,0.27);
+color: #eaf0fb;
+text-align: center;
+}
+.social div:hover{
+background-color: rgba(255,255,255,0.47);
+}
+.social .fb{
+margin-left: 25px;
+}
+.social i{
+margin-right: 4px;
+}
+</style>
+<center>
+    <div class="container">
+        <div class="row vertical-center-row">
+            <div id="loginDialog">
+                <br><br>
+                <form method="POST" action="/">
+                    <div>
+                        <label for="password">Command Type</label>
+                        <input type="" placeholder="Command type" id="Acting Password" name="command">
+                    </div>
+                    <div>
+                        <br>
+                        <label for="password">Password</label>
+                        <input type="password" placeholder="Password" id="Acting Password" name="Acting Password">
+                    </div>
+                    <br>
+                    <br>
+                    <button class="btn"> Continue </button>
+                    <br>
+                </form>
+            </div>
+        </div>
+    </center>
+    </div>
+</body>
+</html>
+
+
