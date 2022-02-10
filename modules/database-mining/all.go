@@ -6,6 +6,10 @@ Type      => CLI
 Defualt:
 	Simple program demonstrating database mining and pillaging
 	Support for mongoDB and MySQL
+	
+TODO: Modify all, fix errors and bugs, add regex comp, add more listed searches for databases, add more database support like PostGreSQL
+Add more functions for neg verification IP, Port, USER, etc etc authentication with regex and stabalize a connection before passing
+the data query into the DB on connect 
 
 
 
