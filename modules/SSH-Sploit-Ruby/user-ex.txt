@@ -1,0 +1,10 @@
+#hydra -L <path to username wordlist> -P <path to password wordlist> <IP> ssh
+
+username
+root
+root1
+root2
+user1
+user2
+user3
+
