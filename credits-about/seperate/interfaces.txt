@@ -1,0 +1,201 @@
+
+
+before we start off the chapter i have to say dealing with the wireless part of red rabbit is annoying, and im sure will be for new users of the script however before we 
+
+get into the wireless part of the script such as fake access points, flooders, DHCMP, ARP, net recon, local recon, packet sniffing etc we must figure out how we will activate 
+
+the interfaces we need, i have four commands to automate the simplicity of activating your interfaces, two which stop two which start. what is the diffrence?
+
+well here are the two start commands
+
+
+start-i |-> This uses airmon-ng to activate any interface you choose, this is suggested as there isnt much that can come with the airmon command
+
+ontop of the fact airmon-ng is an amazing handeler for interface activation and deactivation, and way more stable than the next choice
+
+
+si-phy  |-> this uses phy developer to activate and add a mon0 interface which will be used for wireless radio tapping or spawining fake access points 
+
+
+
+as said above these are both decent choices and they both get the job done however it can be a bit of an issue when you use phy dev to activate the 
+
+mon0 interface, it might be better if you do this on your own time if you cant add one in the red rabbit terminal
+
+when you run red rabbit and you plan to use the wireless utilities or pentesting tools even DOS then it is highly suggested you open these in a root 
+
+terminal as it makes it alot easier and can prevent alot of issues if you do plan to use everything alot easier, you may be wondering why i am writing about 
+
+starting interfaces at it is that simple but sometimes with the PHY dev option you get the following error 
+
+```
+
+> si-phy
+command failed: Too many open files in system (-23)
+
+despite being in root
+```
+
+
+to solve this error i have a built in shell module for RR5 called 
+
+RB-Shell, this is a shell that can help you with this and attempt to fix the error so lets execute the command 
+
+when you load red rabbit ( ROOT is needed for this ) we can type RR5-RBShell
+
+when we type that and hit enter we are prompted to the following message and banner 
+
+
+```
+ ______     ______     _____     ______     ______     ______     ______     __     ______  
+/\  == \   /\  ___\   /\  __-.  /\  == \   /\  __ \   /\  == \   /\  == \   /\ \   /\__  _\ 
+\ \  __<   \ \  __\   \ \ \/\ \ \ \  __<   \ \  __ \  \ \  __<   \ \  __<   \ \ \  \/_/\ \/ 
+ \ \_\ \_\  \ \_____\  \ \____-  \ \_\ \_\  \ \_\ \_\  \ \_____\  \ \_____\  \ \_\    \ \_\ 
+  \/_/ /_/   \/_____/   \/____/   \/_/ /_/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_/ 
+
+Version 5.0                            Interactive Console                 Scare_Sec_Hackers                                                                                            
+---------------------------------------------------------------------------------------------
+                                               ((`\
+                                            ___ \\ '--._
+                                        .'`   `'    o  )
+                                        /    \   '. __.'
+                                      _|    /_  \ \_\_
+                                     {_\______\-'\__\_\
+
+
+    ********************************************************
+    * Interactive os ruby shell, for fixing script errors  *
+    * if you are here most likely you found it or ran into *
+    * an error.                                            *
+    *                                                      *
+    *                                                      *
+    *Commands: -h, help, break,                    *
+    |------------------------------------------------------|
+ROOT@RR5> 
+
+
+```
+
+when we type fix-UID-perr
+
+we will be prompted to gran the global usage of the  /proc/sys/fs/file-nr then once we are prompted to continue you are then pushed to the message 
+
+
+```
+please input what you want the new limit to be NOTE CAN NOT BE HIGHER THAN HARD LIMIT 4090 IS BEST
+```
+
+which will set the file ulimit of the system, it is suggested to be 4090
+
+once done you can type break and it will break off and bring you back to the rr5 console where you can add the mon0 interface
+
+if somehow this still doesnt work- sometimes it doesnt sometimes it does then try utilizinmg the command
+
+
+```
+sudo iw phy phy1 interface add mon0 type monitor && ifconfig mon0 up 
+```
+
+somtimes this will also not work 
+
+so some other alternatives are 
+
+```
+sudo iw dev wlan0 del ;  sudo ifconfig mon0 up 
+```
+
+Before capturing, specify the wireless LAN frequency you want to capture on. 
+You should choose the frequency based on the channels used by neighbouring access points. The frequency is given in MHz, e.g.\ channel 6 is 2437.
+
+this is good in case we need to sya capture packets, or send out 802.11 beacon frams or send out ARP request packets, it helps alot surely
+
+```
+sudo iw dev mon0 set freq 2437
+```
+
+to see the interface you can run the following command
+
+```
+iwconfig mon0
+```
+
+this will show the following 
+
+```
+mon0      IEEE 802.11bgn  Mode:Monitor  Frequency:2.437 GHz  Tx-Power=20 dBm   
+          Retry  long limit:7   RTS thr:off   Fragment thr:off
+          Power Management:on 
+```
+
+now to test if this was working we can use something like tcp dump which will show the interface works like this 
+
+```                     
+                         |interface name    |-> Write the data to a file namped .cap for capture files
+sudo    tcpdump       -i mon0 -n           -w wireless.cap 
+|       |              |
+| root  |call tcpdump  |specify interface
+```
+
+to delet the interface you can do the following 
+
+```
+sudo iw dev mon0 del
+```
+
+```
+|-> Root
+|                | specify interface
+sudo iw phy phy0 interface add wlan0 			type managed
+                           |                    |
+						   |add wlan0 back      |type monitor/managed
+```                        
+
+well if you get errors with this you can also execute the following command to fix it 
+
+```
+rfkill list
+```
+
+example output
+```
+rfkill list
+0: phy0: Wireless LAN
+	Soft blocked: yes
+	Hard blocked: no
+```
+
+command
+
+```
+rfkill unblock 0
+```
+
+** NOTE: Make sure you are using the correct interface/device. In my examples I use phy0, wlan0 and mon0. Yours may be different. **
+
+
+
+other information about selecting good cards that support monitor mode 
+
+**
+
+Sometimes finding compatible network cards/USB adapters that are cross platform with windows, linux, mac, and other os's while supporting monitor mode 
+
+are quite rare and the search can geta nnoying despite the amount of opinions shown from hundreds of other people however the linux wireless drivers page 
+
+can provide you with a quick summary of the different drivers supporting monitor mode. a good website to mention or look into would be 
+
+WikiDevi 
+
+some devices that support monitor mode with good support are atheros, intel, RalInk, broadcom 
+
+when looking for USB wireless or PCI adapters that will support your os alonmg with monitor lode it can be quite confusing so here is a list 
+
+of some decent cards
+
+USB (2014): generic brand, made by Shenzhen (pic), similar to Tenda W311MI but with attachable antenna, RaLink RT5370 (driver: rt2800usb)
+USB (2012): D-Link DWA-160 HW version A2, Atheros AR9170 (carl9170)
+USB (2011): Alfa Networks AWUS036H, Realtek 8187 (rtl8187)
+MiniPCI (2011): Intel Centrino Wireless-N 1000 (iwlwifi)
+MiniPCI (2009): Atheros (ath5k)
+PCI (2009): SMC WPCIG Atheros AR5007G (ath5k?)
+**

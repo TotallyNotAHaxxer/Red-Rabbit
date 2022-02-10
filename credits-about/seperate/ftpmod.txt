@@ -1,0 +1,36 @@
+this module is for FTP brute forcing and is very very simple to understand, just 
+
+like the SSH brute forcing, you will need a wordlist, a host, a port, and a username
+
+when you use the command FTP-b you will be prompted for the following 
+
+FTP user 
+FTP port 
+FTP IPA 
+Wordlist you want to use 
+
+this is all the information that is needed, note the wordlist is better off if it is
+
+in the RR5 directory but if you have it outside or in another directory note you will have
+
+to specify its specific path ex
+
+/usr/share/worldists/rockyou.txt
+
+or 
+
+/home/ruser/Desktop/name/files/filenames/wordlists/rockyou.txt
+
+~ works as well
+
+as said there really isnt much to this module other than what is needed and its over all usage 
+
+if something does happen where the connection is refused then you will get the output
+
+```
+FATAL: WARN: TO EXIT PLEASE PRESS CTRL+C
+CONNECTION REFUSED ATTEMPTED ON -> #{ipa} - PORT -> #{po} WITH USER -> #{user} ON PASSWORD #{line}
+```
+
+if else it will continue to brute force and you will get live updates about it as well
+

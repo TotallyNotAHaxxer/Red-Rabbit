@@ -1,0 +1,5 @@
+command => deauth0 
+
+now this one is a bit annoying sometimes but simple, like most of the wireless tools 
+
+in RR5 you will need 

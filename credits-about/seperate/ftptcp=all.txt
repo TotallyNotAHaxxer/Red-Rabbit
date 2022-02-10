@@ -1,0 +1,128 @@
+ _____       _     _____     _   _   _ _       _____ ___ 
+| __  |___ _| |___| __  |___| |_| |_|_| |_ ___|  |  |  _|
+|    -| -_| . |___|    -| .'| . | . | |  _|___|  |  |_  |
+|__|__|___|___|   |__|__|__,|___|___|_|_|      \___/|___|
+---------------------------------------------------------------------------------
+
+I am going to start off this module by saying, Red Rabbit as said at the very top of the documentation is a project to help security grow bigger 
+
+and to help learning pentesters or hackers understand how some tools work on the backend and despite this tool being used for alot of anti security missions 
+
+it still is in development and not everything will be its best, however it doesnt mean this tool can not be enjoyable. i hope so far the user of this script 
+
+is actually enjoying this, and is learning alot from eaither the documentation or using the script.
+
+
+Without further to do lets go 
+
+
+
+let us start out with the very basic of them all and that is the TCP dumper written in ruby 
+
+this is just a simple command but lets go through the output so it makes it easier to understand 
+
+first lets get the terms down 
+
+
+:connections => This is the incoming connection that was captured 
+:source      => This is the source of the packet 
+:destination => This is the destination address of the packet
+:count       => This is the count of the packets that came through
+
+
+lets run the command 
+
+the command for this is 
+
+`
+tcp-d
+`
+
+when we enter the command we will be prompted to answer the following, and that is what port we 
+
+would like to capture incoming network traffick on, that being this will be 443 in this example 
+
+here is the very first example output we are greeted with 
+
+
+
+````
+[09:03 AM][ INFO ] Packets captured => 1
+
+[09:03 AM][ INFO ]
+{:source=>"140.82.114.25"}
+
+
+{:connections=>[{:source=>"140.82.114.25", :destination=>"100.1.15.05", :count=>1}, {:source=>"162.159.134.234", :destination=>"192.168.9.01", :count=>1}], :count=>2, :uniq=>2}
+
+[09:03 AM][ INFO ] Packets captured => 2
+
+[09:03 AM][ INFO ]
+{:source=>"162.159.134.234"}
+
+
+{:connections=>[{:source=>"140.82.114.25", :destination=>"1.0.0.1", :count=>1}, {:source=>"162.159.134.234", :destination=>"192.168.9.01", :count=>1}, {:source=>"192.168.9.01", :destination=>"162.159.134.234", :count=>1}], :count=>3, :uniq=>3}
+
+
+````
+
+lets break this down 
+
+first we have our date and base infromation, what the source was and how much packets we have captured
+
+```
+[09:03 AM][ INFO ] Packets captured => 2
+
+[09:03 AM][ INFO ]
+{:source=>"162.159.134.234"}
+
+
+```
+
+simple information and now we get into the split array the packet sniffer gave us
+
+
+```
+{:connections=>[{:source=>"140.82.114.25", :destination=>"1.0.0.1", :count=>1}, {:source=>"162.159.134.234", :destination=>"192.168.9.01", :count=>1}, 
+{:source=>"192.168.9.01", :destination=>"162.159.134.234", :count=>1}], :count=>3, :uniq=>3}
+```
+
+we can see that there was a connection made by the source 140.82.114.25 and its destination was reaching to the IPV4 1.0.0.1 and the packet count is 1
+
+
+as said above there really is not much to this command as its a light simple TCP listener
+
+
+
+
+*************************
+Command's => FTP-C, ftp-read
+
+
+base of two commands 
+
+FTP-C => FTP credential sniffer 
+
+ftp-read => Open and read pcap files for credentials 
+
+it really doesnt go any deeper 
+
+when we input FTP-C you will geta  message that it is listening on the basic FTP port and is awaiting the capture 
+
+this will grab and sniff credentials being used to access a FTP server over the same local network, this is quite again simple 
+
+it is also the same with the command `ftp-read` accept with files, when you run the command you are prompted for a file 
+
+there is a pcapng file in `captures-test` named ftp-captured.pcapng which holds an example of FTP credentials being sniffed 
+
+when you input the file it will search that entire file for FTP credentials and you will receive the following output
+
+
+```
+192.168.100.10<CONN>192.168.100.17
+USER ftp
+192.168.100.10<CONN>192.168.100.17
+PASS ftp@123
+```
+
+this is the password and username for the FTP hostname

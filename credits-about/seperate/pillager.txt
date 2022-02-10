@@ -1,0 +1,56 @@
+ ______     ______     _____     ______     ______     ______     ______     __     ______  
+/\  == \   /\  ___\   /\  __-.  /\  == \   /\  __ \   /\  == \   /\  == \   /\ \   /\__  _\ 
+\ \  __<   \ \  __\   \ \ \/\ \ \ \  __<   \ \  __ \  \ \  __<   \ \  __<   \ \ \  \/_/\ \/ 
+ \ \_\ \_\  \ \_____\  \ \____-  \ \_\ \_\  \ \_\ \_\  \ \_____\  \ \_____\  \ \_\    \ \_\ 
+  \/_/ /_/   \/_____/   \/____/   \/_/ /_/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_/ 
+
+Version 5.0                            Interactive Console                 Scare_Sec_Hackers                                                                                            
+---------------------------------------------------------------------------------------------
+                                               ((`\
+                                            ___ \\ '--._
+                                        .'`   `'    o  )
+                                        /    \   '. __.'
+                                      _|    /_  \ \_\_
+                                     {_\______\-'\__\_\
+
+
+Command => fp-pillage 
+
+type => CLI
+
+
+What does it do?
+
+This command pillages a filesystem using regex to search for a certian topic when you run the command you will be prompted with 
+
+RR5> fp-pillage
+ EX: Admin, Name, hashes, passwords etc
+Enter a REGEX name > 
+
+the regex name refers to the string you want regex to search for, say we have a filesystem we need to search that is large 
+
+this consists of the root filesystem but we want to find ALL files with the name admin we will use 
+
+admin as a string argument to the input box, then we are asked to input a filepath to searh in this case 
+
+we will search the root filesystem
+
+once down filling out the filpath we instantly get a major scroll of all the filepaths found thast uses the word `admin`
+
+SNIP >>>>>>>>>>
+
+````
+ FOUND FILEPATH -> /usr/share/beef-xss/extensions/admin_ui/media/images/default/form/exclamation.gif
+ FOUND FILEPATH -> /usr/share/beef-xss/extensions/admin_ui/media/images/default/form/radio.gif
+ FOUND FILEPATH -> /usr/share/beef-xss/extensions/admin_ui/media/images/default/form/search-trigger.gif
+ FOUND FILEPATH -> /usr/share/beef-xss/extensions/admin_ui/media/images/default/form/search-trigger.psd
+ FOUND FILEPATH -> /usr/share/beef-xss/extensions/admin_ui/media/images/default/form/text-bg.gif
+ FOUND FILEPATH -> /usr/share/beef-xss/extensions/admin_ui/media/images/default/form/trigger-tpl.gif
+ FOUND FILEPATH -> /usr/share/beef-xss/extensions/admin_ui/media/images/default/form/trigger.gif
+ FOUND FILEPATH -> /usr/share/beef-xss/extensions/admin_ui/media/images/default/form/trigger.psd
+ FOUND FILEPATH -> /usr/share/beef-xss/extensions/admin_ui/media/images/default/gradient-bg.gif
+ FOUND FILEPATH -> /usr/share/beef-xss/extensions/admin_ui/media/images/default/grid
+ FOUND FILEPATH -> /usr/share/beef-xss/extensions/admin_ui/media/images/default/grid/arrow-left-white.gif
+````
+
+

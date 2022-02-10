@@ -1,0 +1,1 @@
+perl pop -w "ERROR during runtime of RR5 main.rb, perl message => User MUST be root for this command to be executed, please run me as, sudo ruby main.rb"

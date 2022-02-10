@@ -1,0 +1,81 @@
+______________                   _____            ________                                      
+___  __ \__  /______________________(_)___  __    __  ___/______________   _____________________
+__  /_/ /_  __ \  _ \  __ \_  __ \_  /__  |/_/    _____ \_  _ \_  ___/_ | / /  _ \_  ___/_  ___/
+_  ____/_  / / /  __/ /_/ /  / / /  / __>  <      ____/ //  __/  /   __ |/ //  __/  /   _(__  ) 
+/_/     /_/ /_/\___/\____//_/ /_//_/  /_/|_|______/____/ \___//_/    _____/ \___//_/    /____/  
+                                           _/_____/   
+
+
+
+
+pheonix servers, well you may be asking what is this? phoenix servers is basically a 
+
+secondary host written out of Golang, R, and PostGreSQL that will host localhost servers 
+
+web interfaces, and more. this was a personal project for me. a little back story here for you\
+
+
+over time i started hating platforms, this was because of how truly vulnerable every single 
+
+one was, so in order to trust my passwords are safe where i can both modify and change them 
+
+all through a simple automatoion process, i built my own database built using GOlang and PostGreSQL
+
+this was first a command line interface only tool, could not be modified, it was a few thousand lines 
+
+and the data was hard coded into the script, meaning you had to manually create the SQL files and change the 
+
+data to re insert values. it wasnt up until december i decided to remake everything out of Golang, C, asm, R, 
+
+HTML/CSS/SCSS PostGreSQL, and SQL to where you can not only insert new data, but delete and drop tables 
+
+this database isnt like any other, its advanced go code and very very safe standards for hashing make it 
+
+a pretty script in itself, i honestly do not touch much pride in my work ( pun intended touch ) but, when it 
+
+comes to scripts like RR5 and Pheonix-DB/Servers i do take alot of pride in those.
+
+
+you may be asking me couldnt someone just hack into your network and log onto the server?
+
+
+truth about that is it only starts when my machine runs, and the machine it runs on is pure CLI SSH
+
+i have two passwords one for root which remains of a 15 character password, one for my SSH, then when you 
+
+launch the CLI it is sent over or the disp is exported to my main machine, when you enter or log onto the local 
+
+host port, you will automatically get a message that a user has logged in or not logged in yet but accessed the 
+
+local host server, once done you must enter a 16 key hash that is randomly generated and sent to a personal what 
+
+i like to call `data dumping` server, every time the script start, that random password is written and known by the server 
+
+for the next login, so when you execute a command you will also need that randomly generated password to access those tables 
+
+( some i made you had to be root to access them as well )
+
+the topology of the server is kinda weird, but it made me feel 100000% safer than what say someting like google does 
+
+
+i always went by the general idea if you can create it more secure or better do it, so i did. im not saying 
+
+my server is unhackable cause nothing is, however when a person has control over their data it makes it alot 
+
+more safer and secure from cyber attacks. speaking on hashing and passwords this is a simple 
+
+demo of what my hashing topology looks like for the server `pheonix servers`
+
+
+````
+
+Password randomyl generated -> Hashed -> reverse the hash -> generate a hash based off that reversed hash|
+                                                                                                         |
+                                        Send to the discord server  <=  Reverse the reverse reversed hash|
+````
+
+pretty intriguing right? anyway thats the small breif history of pheonix servers 
+
+there is no company or brand name its kinda just a name i made for it given the effort and thought put into it
+
+

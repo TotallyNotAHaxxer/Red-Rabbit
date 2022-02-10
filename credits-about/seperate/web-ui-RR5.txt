@@ -1,0 +1,265 @@
+ ______     ______     _____     ______     ______     ______     ______     __     ______  
+/\  == \   /\  ___\   /\  __-.  /\  == \   /\  __ \   /\  == \   /\  == \   /\ \   /\__  _\ 
+\ \  __<   \ \  __\   \ \ \/\ \ \ \  __<   \ \  __ \  \ \  __<   \ \  __<   \ \ \  \/_/\ \/ 
+ \ \_\ \_\  \ \_____\  \ \____-  \ \_\ \_\  \ \_\ \_\  \ \_____\  \ \_____\  \ \_\    \ \_\ 
+  \/_/ /_/   \/_____/   \/____/   \/_/ /_/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_/ 
+
+                                               ((`\
+                                            ___ \\ '--._
+                                        .'`   `'    o  )
+                                        /    \   '. __.'
+                                      _|    /_  \ \_\_
+                                     {_\______\-'\__\_\
+-----------------------------------------------------------------------------------
+                                    _____ ____ _____
+                                   /    /      \    \ with the power of ruby
+                                 /____ /_________\____\        i become stronger
+                                 \    \          /    /                 and stronger 
+                                    \  \        /  /
+                                       \ \    / /
+                                         \ \/ /
+                                           \/
+--------------------------------------------------------------------------------------------
+
+
+RR5 is powered by
+        ````
+______________                   _____            ________                                      
+___  __ \__  /______________________(_)___  __    __  ___/______________   _____________________
+__  /_/ /_  __ \  _ \  __ \_  __ \_  /__  |/_/    _____ \_  _ \_  ___/_ | / /  _ \_  ___/_  ___/
+_  ____/_  / / /  __/ /_/ /  / / /  / __>  <      ____/ //  __/  /   __ |/ //  __/  /   _(__  ) 
+/_/     /_/ /_/\___/\____//_/ /_//_/  /_/|_|______/____/ \___//_/    _____/ \___//_/    /____/  
+        
+`````
+
+
+RR5 has had a DRASTIC AND VERY MASSIVE overhaul compared to version 4 for those who are 
+
+in my discord server and or keep up with the news, you would know that i had plans to make 
+
+new commands, make more commands, patch ALOT of bugs, add better error handeling, deprecate 
+
+the many many languages, make the install files easily, make it as cross platform as i could,
+
+make a web UI, a GUI, a script fix console, a interactive console, and add configuration files for 
+
+new types of crawlers, shodan API's, Metasploit API's, Discord scripts, and SO much more. and well 
+
+if you are new then yeah those are most or some of the changes i was supposed to make to this project 
+
+in which i tried my best. So lets move onto the web UI documentation. there are two types of web UI's 
+
+for RR5, one for Documentation of RR5 which takes a DEEP dive into the commands and how to properly use 
+
+RR5's console, and other etc stuff some people personally asked me to add. then we have the actuall web UI 
+
+Version of RR5, this one works a bit weirder since everything is made a bit differently. as of right now 
+
+my Golang skills are a bit ouch when it comes to backend web development and working with frontend hence why 
+
+in the readme file somewhere i state that it is prefered to use the CLI version of this script instead of the WebUI
+
+the WebUI is only suggested for documentation, 1 being the fact that command line documentation is VERY very messy,
+
+2 being the web UI is very very much more organized with much more commands, 3 being that its just over all easier to read
+
+and use. 
+
+
+Why not use the WebUI version of RR5, well for one lets start out with what this exactly is 
+
+so the whole point in the web interaction interfaces were to make RR5 and over all general and easy 
+
+to use /advanced script for upcoming penetration testers. turns out its a bit more wacky and harder to understand 
+
+when you execute the command `RR5-admin-deamon` you will be prompted to the following output
+
+
+````
+
+
+	
+______________                   _____            ________                                      
+___  __ \__  /______________________(_)___  __    __  ___/______________   _____________________
+__  /_/ /_  __ \  _ \  __ \_  __ \_  /__  |/_/    _____ \_  _ \_  ___/_ | / /  _ \_  ___/_  ___/
+_  ____/_  / / /  __/ /_/ /  / / /  / __>  <      ____/ //  __/  /   __ |/ //  __/  /   _(__  ) 
+/_/     /_/ /_/\___/\____//_/ /_//_/  /_/|_|______/____/ \___//_/    _____/ \___//_/    /____/  
+                                           _/_____/                                             
+            See command pheonix servers to learn about this service/server
+------------------------------------------------------------------------------------------------
+	
+ 		[  INFO  ] GET STAT PASSED |=>  200
+ 		[  INFO  ] INITIATING SERVER
+ 		[  INFO  ] SERVER URL http://localhost:8080
+
+````
+
+
+this will bring you to the terminal output and have the URL of where the server is, first 
+
+i will have you note you MUST run RR5 as root this is due to the secondary web server running on 
+
+port 80, and for some reason you have to be root when binding port 80 but not 8080 however eaither 
+
+or it is highly suggested that you run the script RR5 as root 
+
+`sudo ruby main.rb`
+
+
+now when we get into the localhost server you are prompted to a small menu with 
+
+a white background, a black box, and a welcome banner on the left hand side, the input 
+
+will ask you for two thinks 
+
+
+````
+command type
+
+acting password
+````
+
+now this is where documentation comes in handy ESPECIALLY WITH THE WEB UI's, the way i set 
+
+this up with go certianly isnt the best and yes in the future i will update this and make it better
+
+but the command type lets you input the type of topic it will be, there are a few topics allowed such ass the following 
+
+
+```
+system 
+host=scan
+host=listscan
+host=dig
+host=get
+```
+
+(Note: password for the scripts UI is " RR5-Admin " you only have one try and if the authentication for the server 
+
+password failed you will be forced to exit the script and try again/restart the server)
+
+
+lets take the easiest input to understand and try to describe it the best i can 
+
+so first the backend of the script works by taking the post request of the inital server 
+
+and based off of that response ( if it is in query ) then it will generate the required HTML file and go file
+
+to run the server and your results, in this case the `system` command type will grab your system 
+
+information, generate a HTML file, and give you the proper command to look at the information 
+
+here is an example 
+
+
+our input feild and data is as follows 
+
+
+````
+Command type => system 
+Acting password => RR5-Admin
+````
+
+make sure to watch the terminal output, as your web UI will just quit
+
+you're web UI or browser will give you the following output on the top left of the 
+
+screen
+
+````
+system RR5-Admin
+
+````
+
+but out terminal output will say the following
+
+
+````
+ 		[  INFO  ] GET STAT PASSED |=>  200
+ 		[  INFO  ] INITIATING SERVER
+ 		[  INFO  ] SERVER URL https://localhost :8080
+ 		[  INFO  ] GET STAT  |=>  active
+ 		[  INFO  ] GET STAT  |=>  200
+ 		[  INFO  ] GET STAT  |=>  active
+ 		[  INFO  ] GET STAT  |=>  200
+ 		[  INFO  ] AUTHENTICATION PASSED
+
+ Gathering data 
+   cd RR5_host ; sudo go run main.go
+```
+
+
+so i know this kinda ignores the whole idea of `easy usage` but it gives decent output 
+
+of at least organizing the output, screenshot demos are in the github README file
+
+
+now ctrl+c out and then use the command 
+
+```
+cd RR5_host ; sudo go run main.go
+```
+
+this will be your results file outputted onto the web UI that was generated.
+
+i know you are probobly wondering why not make it to where it doesnt have to 
+
+generate or the user has to manually run the file, this is because i do not 
+
+know how to build a proper MUX-REST API using mux with golang, YET anyway 
+
+and plus i found this way a bit more interesting. and well tbh this is the 
+
+first time ive gotten interested into ANY form of web UI at all with any language 
+
+the most ive gotten is building a GUI that took HTML files as a view XDDDD
+
+anyway yeah when you do that you will get the output that the file server is now 
+
+running and binded to port 80, so open your browser then type 
+
+localhost:80
+
+you should get your proper results there, if there is something that goes wrong 
+
+or a bug you find or a way you think it can be improoved let me know, i will be 
+
+very happy to make the change to it.
+
+
+****************** TESTIGN AND RUNTIME NOTES FOR PRE GENERATED HTML ************************
+
+I will be gracious enough to let you know that there are certian browsers that work well with this 
+
+i tested the following browsers for generating and running both localhost servers 
+
+Firefox
+Brave 
+Chrome 
+Chromium
+
+
+Firefox out of all browsers were preforming the best, on both brave and chrome the 
+
+issue i had was it would still pre generate other results on port 8080 even though the 
+
+server was not showing up as binded on the TCP listen func, nor servering or running on 8080
+
+it seems as if when running localhost servers brave isnt the best espescially SQL, as even 
+
+outside of RR5 i have had issues running web interfaces and UI's on ports 443, 8080, 80
+
+and despite 80 being http, brave will redirect it to HTTPS causing the browser error that 
+
+```
+connection to peer was reset and disconnected
+```
+
+despite running http://localhost:80 or localhost:80/localhost:8080 etc
+
+
+so just god save yourself more time and use Firefox, if you really have to 
+
+resort to other browsers its fine but dont expect the best output quality
+
+

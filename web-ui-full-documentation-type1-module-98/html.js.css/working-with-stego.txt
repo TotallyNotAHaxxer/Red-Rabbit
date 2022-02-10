@@ -1,0 +1,170 @@
+working with steganograhy in perl/RR5
+
+
+so this is exactly like the RR5 script where you can generate 
+QR codes with a list of URL's and without a list of URL's
+i told you about the basic data of the table but not what the full 
+thing was or what it actually did
+
+this command is still in development as i am learning binary formats and 
+data reading with perl/go, and as i advance i will eventually add 
+finding the binary offsets and the headers and verifying or identifying 
+what file is which by using regex to search for and match the binary headers
+
+however this one is a bit different, instead of hex dumping QR codes and basic 
+image formats like .png then we can use this tool to dump any file
+
+the command we will be using is EXIF
+
+this command will alow us to gather basic data on a image file 
+and dump it into a table format 
+
+now simply im going to use a file called bear.jpg
+
+just a simple picture of a bear
+
+when we run the command EXIF we are asked for the path mind 
+is my home dir with the filename bear.jpg
+when we run that and hit enter we ghet the following output
+
+
+                                                    =--_
+                                         .-""""""-.     |* _)
+                                        /          \   /  /
+                                       /            \_/  /
+           _                          /|                /
+       _-'"/\                        / |    ____    _.-"            _
+    _-'   (  '-_            _       (   \  |\  /\  ||           .-'".".
+_.-'       '.   `'-._   .-'"/'.      "   | |/ /  | |/        _-"   (   '-_
+             '.      _-"   (   '-_       \ | /   \ |     _.-'       )     "-._
+           _.'   _.-'       )     "-._    ||\\   |\\  '"'        .-'
+         '               .-'          `'  || \\  ||))
+   __  _  ___  _ ____________ _____  ___ _|\ _|\_|\\/ _______________  ___   _
+                       c  c  " c C ""C  " ""  "" ""
+                   c       C
+              C        C
+                   C
+    C     c
+
+
+Powered 
+      By
+        /$$$$$$$                     /$$
+        | $$__  $$                   | $$
+        | $$  \ $$ /$$$$$$   /$$$$$$ | $$
+        | $$$$$$$//$$__  $$ /$$__  $$| $$
+        | $$____/| $$$$$$$$| $$  \__/| $$
+        | $$     | $$_____/| $$      | $$
+        | $$     |  $$$$$$$| $$      | $$
+        |__/      \_______/|__/      |__/
+
+--------------------------------------------------------------------------------
+Project Designed for the RR5 or Red Rabbit Version 5 offensive security framework 
+[ INFO ]  Chcking if /home/reaper/Downloads/bg.jpg exists 
+
+[ INFO ]  File /home/reaper/Downloads/bg.jpg exists 
+
+┌─────────────╥───────────────────┬────────────────────────────┐
+│ Data Number ║ Data              │After DATA EXIF             │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║EncodingProcess    │Baseline DCT, Huffman coding│
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║XResolution        │             96             │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║ResolutionUnit     │           inches           │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║ImageHeight        │            1080            │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║Directory          │   /home/reaper/Downloads   │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║ExifToolVersion    │            12.30           │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║FileSize           │           239 KiB          │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║FileModifyDate     │  2022:01:24 20:14:05-05:00 │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║MIMEType           │         image/jpeg         │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║FileType           │            JPEG            │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║ColorComponents    │              3             │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║FileAccessDate     │  2022:01:24 20:14:05-05:00 │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║ImageSize          │          1920x1080         │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║YCbCrSubSampling   │      YCbCr4:2:0 (2 2)      │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║BitsPerSample      │              8             │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║JFIFVersion        │            1.01            │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║ImageWidth         │            1920            │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║Megapixels         │             2.1            │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║FilePermissions    │         -rw-r--r--         │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║FileTypeExtension  │             jpg            │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║FileName           │           bg.jpg           │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║FileInodeChangeDate│  2022:01:24 20:14:12-05:00 │
+├─────────────╫───────────────────┼────────────────────────────┤
+│1            ║YResolution        │             96             │
+└─────────────╨───────────────────┴────────────────────────────┘
+
+| IGNORE THIS, idk why its there
+[ WARN ] GENERAL: EXIF DATA COLLECTED: QR CODE GENERATED
+
+so first we have the same table as when we generated 
+the QR codes but lets go through the table 
+
+what are the constant '1's in the same rows and columns 
+
+well simple, it tells if a value returns true or false like here
+it checks if the file information is true or not
+
+
+: perl code example :
+
+my $file = "/usr/test/file1.txt";
+my (@description, $size);
+if (-e $file) {
+   push @description, 'binary' if (-B _);
+   push @description, 'a socket' if (-S _);
+   push @description, 'a text file' if (-T _);
+   push @description, 'a block special file' if (-b _);
+   push @description, 'a character special file' if (-c _);
+   push @description, 'a directory' if (-d _);
+   push @description, 'executable' if (-x _);
+   push @description, (($size = -s _)) ? "$size bytes" : 'empty';
+}
+
+END_____:
+
+if this is eq to the description or form -d, -e etc etc then it will 
+format and push the description bool value into the table format function
+
+then you have COL #2 which is named data 
+
+this si the general data, here you will get the following
+
+║EncodingProcess
+║XResolution
+║ResolutionUnit
+║ImageHeight
+║ImageSize
+║ImageWidth
+║FileAccessDate
+║FileSize
+║FileType
+║FileInodeChangeDate│
+etc etc 
+
+this will chnage via file but its pretty easy to understand the base of this 
+data, when RR 5.5 comes out i will be adding a binary image injection to really
+truly impliment data steganograhy with go, i will allow a method in perl to use the 
+base functions like in the bianry scanner, to scan and read thr data, and pass it 
+back to the go file which will finally give you the option to inject the image or view 
+the hidden data at a certian offset in image formats like JPEG Certificate's

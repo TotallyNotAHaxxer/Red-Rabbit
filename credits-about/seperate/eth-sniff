@@ -1,0 +1,291 @@
+holy fuck this is a big one, alright lets get to it 
+
+
+
+
+       ,|                             _______  _________  ___  ___  _______   ________                 ________  ___  ___  ________  ________  ___  __ 
+     / ;                             |\  ___ \|\___   ___\\  \|\  \|\  ___ \ |\   __  \               |\   ____\|\  \|\  \|\   __  \|\   __  \|\  \|\  \ 
+    /  \                             \ \   __/\|___ \  \_\ \  \\\  \ \   __/|\ \  \|\  \  ____________\ \  \___|\ \  \\\  \ \  \|\  \ \  \|\  \ \  \/  /|_
+   : ,'(                              \ \  \_|/__  \ \  \ \ \   __  \ \  \_|/_\ \   _  _\|\____________\ \_____  \ \   __  \ \   __  \ \   _  _\ \   ___  \ 
+   |( `.\                              \ \  \_|\ \  \ \  \ \ \  \ \  \ \  \_|\ \ \  \\  \\|____________|\|____|\  \ \  \ \  \ \  \ \  \ \  \\  \\ \  \\ \  \ 
+   : \  `\       \.                     \ \_______\  \ \__\ \ \__\ \__\ \_______\ \__\\ _\                ____\_\  \ \__\ \__\ \__\ \__\ \__\\ _\\ \__\\ \__\
+    \ `.         | `.                    \|_______|   \|__|  \|__|\|__|\|_______|\|__|\|__|              |\_________\|__|\|__|\|__|\|__|\|__|\|__|\|__| \|__|
+     \  `-._     ;   \                                                                                   \|_________|       
+      \     ``-.'.. _ `._               [ Scare_Sec_Hacker's]            |___|____________|_
+       `. `-.            ```-...__                                       |___|____________|_|------.
+        .'`.        --..          ``-..____	                             |   |            |        . Network
+      ,'.-'`,_-._            ((((   <o.   ,'							                             .     Forensics
+           `' `-.)``-._-...__````  ____.-'                                                         .           Made
+               ,'    _,'.--,---------'                                                                            Easy
+           _.-' _..-'   ),'
+          ``--''        `     `
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Command => eth-sniff
+
+
+Defualt => Listen for specific network packet response types like IP, TCP, HTTPS, etc 
+
+
+what is this? 
+
+This is probobly one of the more larger go scripts i have that RR5 runs, it is a very simple 
+
+but user friendly programs, and easy to explain. this is a very simple Packet capture analysis 
+
+command line application meant to capture certian packets through a filter, there is alot to this 
+
+tool so let me break it down first by arguments needed when running the proper commmand 
+
+when we execute the command `eth-sniff`
+
+we will be prompted to input a Interface, BPF, and a type of packet to listen for 
+
+here is an example of my information 
+
+
+i want to listen on interface ETH0, for IP packets, with the Berkly Packet Filter set to 443
+
+when i impliment the information into the inputs RR5 asks me for then you will be redirected 
+
+to the following example output
+
+
+
+
+       ,|                             _______  _________  ___  ___  _______   ________                 ________  ___  ___  ________  ________  ___  __ 
+     / ;                             |\  ___ \|\___   ___\\  \|\  \|\  ___ \ |\   __  \               |\   ____\|\  \|\  \|\   __  \|\   __  \|\  \|\  \ 
+    /  \                             \ \   __/\|___ \  \_\ \  \\\  \ \   __/|\ \  \|\  \  ____________\ \  \___|\ \  \\\  \ \  \|\  \ \  \|\  \ \  \/  /|_
+   : ,'(                              \ \  \_|/__  \ \  \ \ \   __  \ \  \_|/_\ \   _  _\|\____________\ \_____  \ \   __  \ \   __  \ \   _  _\ \   ___  \ 
+   |( `.\                              \ \  \_|\ \  \ \  \ \ \  \ \  \ \  \_|\ \ \  \\  \\|____________|\|____|\  \ \  \ \  \ \  \ \  \ \  \\  \\ \  \\ \  \ 
+   : \  `\       \.                     \ \_______\  \ \__\ \ \__\ \__\ \_______\ \__\\ _\                ____\_\  \ \__\ \__\ \__\ \__\ \__\\ _\\ \__\\ \__\
+    \ `.         | `.                    \|_______|   \|__|  \|__|\|__|\|_______|\|__|\|__|              |\_________\|__|\|__|\|__|\|__|\|__|\|__|\|__| \|__|
+     \  `-._     ;   \                                                                                   \|_________|       
+      \     ``-.'.. _ `._               [ Scare_Sec_Hacker's]            |___|____________|_
+       `. `-.            ```-...__                                       |___|____________|_|------.
+        .'`.        --..          ``-..____	                             |   |            |        . Network
+      ,'.-'`,_-._            ((((   <o.   ,'							                             .     Forensics
+           `' `-.)``-._-...__````  ____.-'                                                         .           Made
+               ,'    _,'.--,---------'                                                                            Easy
+           _.-' _..-'   ),'
+          ``--''        `
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++--------------+------------------------------------+------------------------+--------------------------+-----------------+---------------------+
+|    Interface |                           FilePath |         Capture Filter |    Berkley Packet Filter |    Is user root |    Is root required |
++==============+====================================+========================+==========================+=================+=====================+
+|         eth0 |    modules/sniifed_ftp_go_other_bg |    Defualt Capture ALL |                      443 |            true |                true |
++--------------+------------------------------------+------------------------+--------------------------+-----------------+---------------------+
+
+ [ETHER_RABBIT] DATA:   18:10:31   USER ONLINE, CONTINUING CAPTURE
+ [ETHER_RABBIT] DATA:   18:10:31   LISTENING USING BPF STD FILTER ->  443
+
+
+the first thing you notice is going to be the table data, this shows us the following user data 
+
+If user is root 
+does it need root 
+our interface we are listening on 
+the filepath of the script 
+the capture filter 
+and the Berkly Packet Filter (BPF) 
+
+this is all simple to understand, given this tool isnt as nearly close as fast as wireshark 
+we can still see some decent formatted data, an example is here i captured a IP packet 
+
+
+
+
+````
+[ETHER_RABBIT] D-CHAIN <10.0.0.1>----<224.0.0.1> 
+
+
+IP-Protocal |=>  UDP
+Length      |=>  68
+IP-ID       |=>  0
+IP-Flags    |=>  DF
+Frag-Offset |=>  0
+TTL         |=>  64
+Checksum    |=>  12403
+IHL         |=>  5
+Version     |=>  4
+------------|-----------------------------------------------------
+########################################################################################################
+
+ PACKET: 82 bytes, wire length 82 cap length 82 @ 2022-01-22 18:11:27.846195 -0500 EST
+- Layer 1 (14 bytes) = Ethernet	{Contents=[..14..] Payload=[..68..] SrcMAC=some:mac:address DstMAC=ff:ff:ff:ff:ff:ff EthernetType=IPv4 Length=0}
+- Layer 2 (20 bytes) = IPv4	{Contents=[..20..] Payload=[..48..] Version=4 IHL=5 TOS=0 Length=68 Id=0 Flags=DF FragOffset=0 TTL=64 Protocol=UDP Checksum=12403 SrcIP=some.ip.v.4 DstIP=255.255.255.255 Options=[] Padding=[]}
+- Layer 3 (08 bytes) = UDP	{Contents=[..8..] Payload=[..40..] SrcPort=9487 DstPort=9478 Length=48 Checksum=30664}
+- Layer 4 (40 bytes) = Payload	40 byte(s)
+ 
+
+````
+
+lets break this down, first we have ETHER RABBIT information which is pointing its a dynamic chain 
+
+and telling us the source ip address is 10.0.0.1 and the destination address is 244.0.0.1
+
+<10.0.0.0>----<0.0.0.0> 
+  | SrcIP         | DstIP
+
+
+then we get details about the ETH/IP packet 
+
+IP-Protocal |=>  ICMPv4
+Length      |=>  36
+IP-ID       |=>  62364
+IP-Flags    |=>  
+Frag-Offset |=>  0
+TTL         |=>  1
+Checksum    |=>  56186
+IHL         |=>  5
+Version     |=>  4
+
+
+the IP protocal is Internet Protocal version 4
+the length of the message was 36 bytes
+the IP packet ID is 62364
+the fragmentation offset was 0
+the TTL was 1
+the checksum was 56186
+the IHL was 5
+and the version of the IPADDR was IPv4
+
+
+
+here is another example, this time i wanted to listen for ALL forms of layers that 
+
+are supported in this script
+
+so when it prompts us for a filter we will skip it and just press enter
+
+when we let the program run for a few seconds sometimes it can be up to a minute 
+
+we can instantly get the following 
+
+
+
+````
+    ,|                                _______  _________  ___  ___  _______   ________                 ________  ___  ___  ________  ________  ___  __ 
+     / ;                             |\  ___ \|\___   ___\\  \|\  \|\  ___ \ |\   __  \               |\   ____\|\  \|\  \|\   __  \|\   __  \|\  \|\  \ 
+    /  \                             \ \   __/\|___ \  \_\ \  \\\  \ \   __/|\ \  \|\  \  ____________\ \  \___|\ \  \\\  \ \  \|\  \ \  \|\  \ \  \/  /|_
+   : ,'(                              \ \  \_|/__  \ \  \ \ \   __  \ \  \_|/_\ \   _  _\|\____________\ \_____  \ \   __  \ \   __  \ \   _  _\ \   ___  \ 
+   |( `.\                              \ \  \_|\ \  \ \  \ \ \  \ \  \ \  \_|\ \ \  \\  \\|____________|\|____|\  \ \  \ \  \ \  \ \  \ \  \\  \\ \  \\ \  \ 
+   : \  `\       \.                     \ \_______\  \ \__\ \ \__\ \__\ \_______\ \__\\ _\                ____\_\  \ \__\ \__\ \__\ \__\ \__\\ _\\ \__\\ \__\
+    \ `.         | `.                    \|_______|   \|__|  \|__|\|__|\|_______|\|__|\|__|              |\_________\|__|\|__|\|__|\|__|\|__|\|__|\|__| \|__|
+     \  `-._     ;   \                                                                                   \|_________|       
+      \     ``-.'.. _ `._               [ Scare_Sec_Hacker's]            |___|____________|_
+       `. `-.            ```-...__                                       |___|____________|_|------.
+        .'`.        --..          ``-..____	                             |   |            |        . Network
+      ,'.-'`,_-._            ((((   <o.   ,'							                             .     Forensics
+           `' `-.)``-._-...__````  ____.-'                                                         .           Made
+               ,'    _,'.--,---------'                                                                            Easy
+           _.-' _..-'   ),'
+          ``--''        `
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++--------------+------------------------------------+------------------------+--------------------------+-----------------+---------------------+
+|    Interface |                           FilePath |         Capture Filter |    Berkley Packet Filter |    Is user root |    Is root required |
++==============+====================================+========================+==========================+=================+=====================+
+|         eth0 |    modules/sniifed_ftp_go_other_bg |    Defualt Capture ALL |                      443 |            true |                true |
++--------------+------------------------------------+------------------------+--------------------------+-----------------+---------------------+
+
+ [ETHER_RABBIT] DATA:   16:54:06   USER ONLINE, CONTINUING CAPTURE
+ [ETHER_RABBIT] DATA:   16:54:06   LISTENING USING BPF STD FILTER ->  443
+ [ETHER_RABBIT] DATA:      16:54:06   ETHERNET PACKET PICKED UP 
+ [ETHER_RABBIT] DATA:      16:54:06   SOURCE MAC ADDR =>  some mac
+ [ETHER_RABBIT] DATA:      16:54:06   DST    MAC ADDR =>  some mac
+ [ETHER_RABBIT] DATA:      16:54:06   ETHER NET TYPE  =>  IPv6
+ 
+[ETHER_RABBIT] PKT_INF:   16:54:06  PACKET LAYERS
+ [ETHER_RABBIT] PKT_INF:   16:54:06  LAYER ->  Ethernet
+ [ETHER_RABBIT] PKT_INF:   16:54:06  LAYER ->  IPv6
+ [ETHER_RABBIT] PKT_INF:   16:54:06  LAYER ->  ICMPv6
+ [ETHER_RABBIT] PKT_INF:   16:54:06  LAYER ->  ICMPv6RouterAdvertisement
+  WARN: FLag.EMPTY <NILL> 
+########################################################################################################PACKET: 174 bytes, wire length 174 cap length 174 @ 2022-01-23 16:54:09.381788 -0500 EST
+- Layer 1 (14 bytes) = Ethernet	{Contents=[..14..] Payload=[..160..] SrcMAC=somemac DstMAC= EthernetType=IPv6 Length=0}
+- Layer 2 (40 bytes) = IPv6	{Contents=[..40..] Payload=[..120..] Version=6 TrafficClass=0 FlowLabel=0 Length=120 NextHeader=ICMPv6 HopLimit=255 SrcIP=fe80::9e34:26ff:fe74:d4fc DstIP=ff02::1 HopByHop=nil}
+- Layer 3 (04 bytes) = ICMPv6	{Contents=[134, 0, 104, 29] Payload=[..116..] TypeCode=RouterAdvertisement Checksum=26653 TypeBytes=[]}
+- Layer 4 (116 bytes) = ICMPv6RouterAdvertisement	{Contents=[..116..] Payload=[] HopLimit=64 Flags=192 RouterLifetime=180 ReachableTime=0 RetransTimer=0 Options=[ICMPv6Option(Unknown(25): 0x00000001518020010558feed0000000000000000000120010558feed00000000000000000002), ICMPv6Option(PrefixInfo:2601:589:8001:be00::/64:true:true:83h20m1s:83h20m1s), ICMPv6Option(Unknown(24): 0x0000000000b400000000000000000000000000000000), ICMPv6Option(SourceAddress:9c:34:26:74:d4:fc)]}
+########################################################################################################
+
+
+[ETHER_RABBIT] DATA:      16:54:06   INTERNET PROTOCAL VERSION 4 LAYER PICKED UP!
+[ETHER_RABBIT] D-CHAIN <10.0.0.55>----<255.255.255.255> 
+
+IP-Protocal |=>  UDP
+Length      |=>  68
+IP-ID       |=>  0
+IP-Flags    |=>  DF
+Frag-Offset |=>  0
+TTL         |=>  64
+Checksum    |=>  12403
+IHL         |=>  5
+Version     |=>  4
+------------|-----------------------------------------------------
+ 
+[ETHER_RABBIT] PKT_INF:   16:54:06  PACKET LAYERS
+ [ETHER_RABBIT] PKT_INF:   16:54:06  LAYER ->  Ethernet
+ [ETHER_RABBIT] PKT_INF:   16:54:06  LAYER ->  IPv4
+ [ETHER_RABBIT] PKT_INF:   16:54:06  LAYER ->  UDP
+ [ETHER_RABBIT] PKT_INF:   16:54:06  LAYER ->  Payload
+  WARN: FLag.EMPTY <NILL> 
+########################################################################################################PACKET: 82 bytes, wire length 82 cap length 82 @ 2022-01-23 16:54:57.574793 -0500 EST
+- Layer 1 (14 bytes) = Ethernet	{Contents=[..14..] Payload=[..68..] SrcMAC=some mac DstMAC=ff:ff:ff:ff:ff:ff EthernetType=IPv4 Length=0}
+- Layer 2 (20 bytes) = IPv4	{Contents=[..20..] Payload=[..48..] Version=4 IHL=5 TOS=0 Length=68 Id=0 Flags=DF FragOffset=0 TTL=64 Protocol=UDP Checksum=12403 SrcIP=10.0.0.55 DstIP=255.255.255.255 Options=[] Padding=[]}
+- Layer 3 (08 bytes) = UDP	{Contents=[..8..] Payload=[..40..] SrcPort=9487 DstPort=9478 Length=48 Checksum=30664}
+- Layer 4 (40 bytes) = Payload	40 byte(s)
+````
+
+
+
+as you can see here we first get the WARN < WARN: FLag.EMPTY <NILL> > which indicated in RR5
+
+We skipped the input for packet filtering / specific listening such as TCP, IP, SYN....etc
+
+we can also tell wether or not we filled the flag by the table, if the Capture filter 
+
+!= ( does not = ) tcp, ip, application, eth then it will come out with a msg saying
+
+```
+Defualt Capture ALL
+```
+
+if you wanted to you can also use the tool i made ether shark ( the net capture ) to dump 
+
+.pcapng files, which then in uses the command < dump-pcap > which all we do is input the path to 
+
+the file and get an output similar to below 
+
+
+```
+    ,|                                _______  _________  ___  ___  _______   ________                 ________  ___  ___  ________  ________  ___  __ 
+     / ;                             |\  ___ \|\___   ___\\  \|\  \|\  ___ \ |\   __  \               |\   ____\|\  \|\  \|\   __  \|\   __  \|\  \|\  \ 
+    /  \                             \ \   __/\|___ \  \_\ \  \\\  \ \   __/|\ \  \|\  \  ____________\ \  \___|\ \  \\\  \ \  \|\  \ \  \|\  \ \  \/  /|_
+   : ,'(                              \ \  \_|/__  \ \  \ \ \   __  \ \  \_|/_\ \   _  _\|\____________\ \_____  \ \   __  \ \   __  \ \   _  _\ \   ___  \ 
+   |( `.\                              \ \  \_|\ \  \ \  \ \ \  \ \  \ \  \_|\ \ \  \\  \\|____________|\|____|\  \ \  \ \  \ \  \ \  \ \  \\  \\ \  \\ \  \ 
+   : \  `\       \.                     \ \_______\  \ \__\ \ \__\ \__\ \_______\ \__\\ _\                ____\_\  \ \__\ \__\ \__\ \__\ \__\\ _\\ \__\\ \__\
+    \ `.         | `.                    \|_______|   \|__|  \|__|\|__|\|_______|\|__|\|__|              |\_________\|__|\|__|\|__|\|__|\|__|\|__|\|__| \|__|
+     \  `-._     ;   \                                                                                   \|_________|       
+      \     ``-.'.. _ `._               [ Scare_Sec_Hacker's]            |___|____________|_
+       `. `-.            ```-...__                                       |___|____________|_|------.
+        .'`.        --..          ``-..____	                             |   |            |        . Network
+      ,'.-'`,_-._            ((((   <o.   ,'							                             .     Forensics
+           `' `-.)``-._-...__````  ____.-'                                                         .           Made
+               ,'    _,'.--,---------'                                                                            Easy
+           _.-' _..-'   ),'
+          ``--''        `
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++--------------+------------------------------------+------------------------+--------------------------+-----------------+---------------------+
+|    Interface |                           FilePath |         Capture Filter |    Berkley Packet Filter |    Is user root |    Is root required |
++==============+====================================+========================+==========================+=================+=====================+
+|         eth0 |    modules/sniifed_ftp_go_other_bg |    Defualt Capture ALL |                      443 |            true |                true |
++--------------+------------------------------------+------------------------+--------------------------+-----------------+---------------------+
+
+ [ETHER_RABBIT] DATA:   17:01:40   USER ONLINE, CONTINUING CAPTURE
+ [ETHER_RABBIT] DATA:   17:01:40   LISTENING USING BPF STD FILTER ->  443
+PACKET: 74 bytes, wire length 74 cap length 74 @ 2019-06-20 07:28:49 -0400 EDT
+- Layer 1 (14 bytes) = Ethernet	{Contents=[..14..] Payload=[..60..] SrcMAC=5c:c5:d4:8d:2f:89 DstMAC=5c:c5:d4:8d:2f:89 EthernetType=IPv4 Length=0}
+- Layer 2 (20 bytes) = IPv4	{Contents=[..20..] Payload=[..40..] Version=4 IHL=5 TOS=0 Length=60 Id=24507 Flags=DF FragOffset=0 TTL=64 Protocol=TCP Checksum=37268 SrcIP=192.168.100.10 DstIP=192.168.100.17 Options=[] Padding=[]}
+- Layer 3 (40 bytes) = TCP	{Contents=[..40..] Payload=[] SrcPort=41994 DstPort=21(ftp) Seq=3232910223 Ack=0 DataOffset=10 FIN=false SYN=true RST=false PSH=false ACK=false URG=false ECE=false CWR=false NS=false Window=64240 Checksum=34485 Urgent=0 Options=[..5..] Padding=[]}
+
+````
+
