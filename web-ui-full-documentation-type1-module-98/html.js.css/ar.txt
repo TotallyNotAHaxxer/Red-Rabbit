@@ -1,0 +1,563 @@
+
+
++==============================================================================================+
++    _______   _______   _______          _______                       __                     +
++    |       \ |       \ |       \        |       \                     |  \                   +
++    | $$$$$$$\| $$$$$$$\| $$$$$$$        | $$$$$$$\  ______    ______  | $$                   +
++    | $$__| $$| $$__| $$| $$____  ______ | $$__/ $$ /      \  /      \ | $$                   +
++    | $$    $$| $$    $$| $$    \|      \| $$    $$|  $$$$$$\|  $$$$$$\| $$                   +
++    | $$$$$$$\| $$$$$$$\ \$$$$$$$\\$$$$$$| $$$$$$$ | $$    $$| $$   \$$| $$                   +
++    | $$  | $$| $$  | $$|  \__| $$       | $$      | $$$$$$$$| $$      | $$                   +
++    | $$  | $$| $$  | $$ \$$    $$       | $$       \$$     \| $$      | $$                   +
++     \$$   \$$ \$$   \$$  \$$$$$$         \$$        \$$$$$$$ \$$       \$$                   +
++                                                                                              +
++                                                                                              +
++                                                                                              +
++                                                                                              +
++                                                     ___._                                    +
++                                                   .'  <0>'-.._                               +
++                                                  /  /.--.____")                              +
++                                                 |   \   __.-'~                               +
++                                                 |  :  -'/                                    +
++                                                /:.  :.-'                                     +
++__________                                     | : '. |                                       +
++'--.____  '--------.______       _.----.-----./      :/                                       +
++        '--.__            `'----/       '-.      __ :/                                        +
++              '-.___           :           \   .'  )/                                         +
++                    '---._           _.-'   ] /  _/                                           +
++                         '-._      _/     _/ / _/                                             +
++                             \_ .-'____.-'__< |  \___                                         +
++                               <_______.\    \_\_---.7                                        +
++                              |   /'=r_.-'     _\\ =/                                         +
++                          .--'   /            ._/'>                                           +
++                        .'   _.-'                                                             +
++                       / .--'                                                                 +
++                      /,/                                                                     +
++                      |/`)                                                                    +
++                      'c=,                                                                    +
++==============================================================================================+
+
+Command type   => QR=nolist 
+Command type 2 => QR=list
+
+These two commands are similar accept one accepts a list and the other does not 
+
+these commands allow you to both mass generate QR codes EXTREMELY fast while also 
+gathering the EXIF data and embed URL's inside of the QR Code
+
+
+The first command is command type QR=nolist this takes a URL as an accepting argument 
+now given RR5 is a very per say diverse script using many languages i didnt want to just 
+single out perl and use rust, my inital plan for RR5 was to elimnate over 90% of the languages 
+that were in here that could easily be written in another language that i knew such as 
+in this example perl, this script is written out of Perl 5.10.0 as its brother is written in 
+RAKU ( perl 6.0.0), to chomp down the main languages i re wrote alot of my personal scripts as well 
+as the ones in RR5 using perl. ( sorry had to clear that up)
+
+
+anyway, when you ru n the command type #1 QR=nolist then you will be 
+prompted to follow or input a URL, just input a random one of a malicous one 
+if you want, this works with ANY links, it could be google, malware, youtube, or a ip logger
+fuck even a fishing page if you'd like
+
+once you are done you get the following output
+
+
+
+#########################################
+ Testing URL ~~> https://www.google.com
+#########################################
+[ INFO ]  URL turned with a 200 REQUEST during GET FRAME 
+
+
+	[ INFO ] WARNING: FATAL: => main.png SEEMS TO ALREADY EXIST BEFORE GENERATION...
+
+	[ INFO ] WARNING: FATAL: => GENERATING NEW AND RANDOM FILENAME TO PREVENT EXIT CODE 1...
+
+	[ INFO ] WARNING: NEW STRING NAME => EDA295F7.png
+sleeping for 5 seconds....
+[ INFO ]  Chcking if main.png exists 
+
+[ INFO ]  File main.png exists 
+
+┌─────────────╥───────────────────┬─────────────────────────┐
+│ Data Number ║ Data              │After DATA EXIF          │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileModifyDate     │2022:01:12 21:57:27-05:00│
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileName           │        main.png         │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║ExifToolVersion    │          12.30          │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║ImageWidth         │           185           │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║ImageSize          │         185x185         │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileInodeChangeDate│2022:01:12 21:57:27-05:00│
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileAccessDate     │2022:01:12 17:52:28-05:00│
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║Filter             │        Adaptive         │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║Directory          │            .            │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║BitDepth           │           16            │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║MIMEType           │        image/png        │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║Interlace          │      Noninterlaced      │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileSize           │       1362 bytes        │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileTypeExtension  │           png           │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FilePermissions    │       -rw-r--r--        │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║Megapixels         │          0.034          │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileType           │           PNG           │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║ImageHeight        │           185           │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║Compression        │     Deflate/Inflate     │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║ColorType          │     RGB with Alpha      │
+└─────────────╨───────────────────┴─────────────────────────┘
+[ WARN ] GENERAL: EXIF DATA COLLECTED: QR CODE GENERATED
+
+
+ Dir of QR code is modules/perl/modules/QR-GEN/main.png
+
+
+okay woah pretty large output, lets break this down
+
+first i would like to let you know the table is ALOT more formatted via 
+terminal,. just didnt work as so with the html XD
+
+Firs we see the following output
+
+
+#########################################
+ Testing URL ~~> https://www.google.com
+#########################################
+[ INFO ]  URL turned with a 200 REQUEST during GET FRAME 
+
+
+	[ INFO ] WARNING: FATAL: => main.png SEEMS TO ALREADY EXIST BEFORE GENERATION...
+
+	[ INFO ] WARNING: FATAL: => GENERATING NEW AND RANDOM FILENAME TO PREVENT EXIT CODE 1...
+
+	[ INFO ] WARNING: NEW STRING NAME => EDA295F7.png
+sleeping for 5 seconds....
+[ INFO ]  Chcking if main.png exists 
+
+[ INFO ]  File main.png exists 
+
+
+this will be the most noticeable because it blinks and it annoys you 
+( PS: thats the point)
+
+anyway it will first test the URL if it is both real, matches with REGEX
+and response with a code of 200, if it does then it will keep going, then 
+in the script i have a defualt barcode name which will be 
+main.png
+
+if this exists it will generate a new one
+
+	[ INFO ] WARNING: NEW STRING NAME => EDA295F7.png
+
+this one here, this will be the PNG BARCODE that was generated for you
+
+
+the table is a bunch of EXIF data about the barcode to tell you 
+the type of file, the format, the size the general data and if you 
+can see the EMBEDDED URL when you hex dump it or view its OFFSET
+
+
+then at the end you get the DIR
+
+
+ Dir of QR code is modules/perl/modules/QR-GEN/main.png
+
+
+
+---
+
+Fucking finally we can move on to the listed file technique
+
+this one will generate barcodes EXTREMELY FAST, so the output 
+WILL BE MESSY, you have been warned
+
+when you run the command type # 2 aka 
+
+QR=list
+
+
+then you will be asked for a file of URL's
+take our file as an example
+
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+google.com
+..... a whole bunch of random GOOGLE links totalling 100+ URLS
+
+now i dont like to say my scripts are fast but to process this 
+amount of URLS, inject them into barcodes, change and generate names of barcodes 
+save the output, hex dump it, format the data into a table, and test the hex string, 
+ip string, desig string etc etc etc is pretyy fucking fast, i tested this on a file of 
+1000+ urls and hosts it generated 1000+ barcodes in under a few seconds XDDDD it toom 4.5 seconds 
+maybe thats my system but shit thats fast 
+
+anyway when we throw the path of URLS into the name we will get the output as the following
+
+
++==============================================================================================+
++    _______   _______   _______          _______                       __                     +
++    |       \ |       \ |       \        |       \                     |  \                   +
++    | $$$$$$$\| $$$$$$$\| $$$$$$$        | $$$$$$$\  ______    ______  | $$                   +
++    | $$__| $$| $$__| $$| $$____  ______ | $$__/ $$ /      \  /      \ | $$                   +
++    | $$    $$| $$    $$| $$    \|      \| $$    $$|  $$$$$$\|  $$$$$$\| $$                   +
++    | $$$$$$$\| $$$$$$$\ \$$$$$$$\\$$$$$$| $$$$$$$ | $$    $$| $$   \$$| $$                   +
++    | $$  | $$| $$  | $$|  \__| $$       | $$      | $$$$$$$$| $$      | $$                   +
++    | $$  | $$| $$  | $$ \$$    $$       | $$       \$$     \| $$      | $$                   +
++     \$$   \$$ \$$   \$$  \$$$$$$         \$$        \$$$$$$$ \$$       \$$                   +
++                                                                                              +
++                                                                                              +
++                                                                                              +
++                                                                                              +
++                                                     ___._                                    +
++                                                   .'  <0>'-.._                               +
++                                                  /  /.--.____")                              +
++                                                 |   \   __.-'~                               +
++                                                 |  :  -'/                                    +
++                                                /:.  :.-'                                     +
++__________                                     | : '. |                                       +
++'--.____  '--------.______       _.----.-----./      :/                                       +
++        '--.__            `'----/       '-.      __ :/                                        +
++              '-.___           :           \   .'  )/                                         +
++                    '---._           _.-'   ] /  _/                                           +
++                         '-._      _/     _/ / _/                                             +
++                             \_ .-'____.-'__< |  \___                                         +
++                               <_______.\    \_\_---.7                                        +
++                              |   /'=r_.-'     _\\ =/                                         +
++                          .--'   /            ._/'>                                           +
++                        .'   _.-'                                                             +
++                       / .--'                                                                 +
++                      /,/                                                                     +
++                      |/`)                                                                    +
++                      'c=,                                                                    +
++==============================================================================================+
+
+#########################################
+ Testing URL ~~> 
+
+#########################################
+
+[ INFO ] DATA: WARN: im not sure about this response stat if its good or bad?
+
+[ INFO ] DATA: WARN: NAME: WEBSITE => 
+ IS EMBEDED IN IMAGE => 2FF8ED91.png STAT: QR CODE GENERATED......[ INFO ]  Chcking if 2FF8ED91.png exists 
+
+[ INFO ]  File 2FF8ED91.png exists 
+
+┌─────────────╥───────────────────┬─────────────────────────┐
+│ Data Number ║ Data              │After DATA EXIF          │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║Directory          │            .            │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileModifyDate     │2022:02:06 21:30:48-05:00│
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║Interlace          │      Noninterlaced      │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileSize           │        861 bytes        │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║Filter             │        Adaptive         │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileInodeChangeDate│2022:02:06 21:30:48-05:00│
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║ImageHeight        │           145           │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║ImageWidth         │           145           │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║Compression        │     Deflate/Inflate     │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileTypeExtension  │           png           │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║Megapixels         │          0.021          │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║BitDepth           │           16            │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileType           │           PNG           │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║MIMEType           │        image/png        │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║ImageSize          │         145x145         │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileAccessDate     │2022:02:06 21:30:48-05:00│
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║ExifToolVersion    │          12.30          │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileName           │      2FF8ED91.png       │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║ColorType          │     RGB with Alpha      │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FilePermissions    │       -rw-r--r--        │
+└─────────────╨───────────────────┴─────────────────────────┘
+[ WARN ] GENERAL: EXIF DATA COLLECTED: QR CODE GENERATED
+
+
+#########################################
+ Testing URL ~~> google.com
+
+#########################################
+
+[ INFO ] DATA: WARN: im not sure about this response stat if its good or bad?
+
+[ INFO ] DATA: WARN: NAME: WEBSITE => google.com
+ IS EMBEDED IN IMAGE => EDA440D9.png STAT: QR CODE GENERATED......[ INFO ]  Chcking if EDA440D9.png exists 
+
+[ INFO ]  File EDA440D9.png exists 
+
+┌─────────────╥───────────────────┬─────────────────────────┐
+│ Data Number ║ Data              │After DATA EXIF          │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║MIMEType           │        image/png        │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileType           │           PNG           │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║Megapixels         │          0.021          │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║BitDepth           │           16            │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║ColorType          │     RGB with Alpha      │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FilePermissions    │       -rw-r--r--        │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileName           │      EDA440D9.png       │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║ImageSize          │         145x145         │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileAccessDate     │2022:02:06 21:30:48-05:00│
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║ExifToolVersion    │          12.30          │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileInodeChangeDate│2022:02:06 21:30:48-05:00│
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║ImageHeight        │           145           │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║Filter             │        Adaptive         │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileSize           │        882 bytes        │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileModifyDate     │2022:02:06 21:30:48-05:00│
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║Interlace          │      Noninterlaced      │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║Directory          │            .            │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║FileTypeExtension  │           png           │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║Compression        │     Deflate/Inflate     │
+├─────────────╫───────────────────┼─────────────────────────┤
+│1            ║ImageWidth         │           145           │
+└─────────────╨───────────────────┴─────────────────────────┘
+[ WARN ] GENERAL: EXIF DATA COLLECTED: QR CODE GENERATED
+
+
+#########################################
+ Testing URL ~~> google.com
+
+#########################################
+
+[ INFO ] DATA: WARN: im not sure about this response stat if its good or bad?
+
+[ INFO ] DATA: WARN: NAME: WEBSITE => google.com
+ IS EMBEDED IN IMAGE => 6F95645E.png STAT: QR CODE GENERATED......[ INFO ]  Chcking if 6F95645E.png exists 
+
+[ INFO ]  File 6F95645E.png exists 
+
+
+
+-----
+
+WOAH WOAH WOAH TIGER CHILLLLLLLLLLLLLLLLLLLLL 
+
+i gotta dig the fuck deep into this before you get confused 
+fuck im a developer of this script i literally made this from 
+scratch and i get confused XD
+
+okay well, first we see the standard banner and tables
+
+and some output bugs
+
+
+okay so the first thing i am going to explain will be the difference 
+in the output, sometimes it will generate URL's and PNG's so fast it 
+really wont be able to 100% test them ( but its affective in generation )
+
+
+[ INFO ] DATA: WARN: im not sure about this response stat if its good or bad?
+
+[ INFO ] DATA: WARN: NAME: WEBSITE => google.com
+ IS EMBEDED IN IMAGE => EDA440D9.png STAT: QR CODE GENERATED......[ INFO ]  Chcking if EDA440D9.png exists 
+
+
+
+as you can see in the first row it gave the warning that the URL could 
+not be tested or was requested so fast the server gave the request an error
+
+now after that a unqie thing i like about the way i designed it is you 
+can tell what URL has what PNG, these are all randomly generated and can not 
+be parsed with the URL name since forematting wouldnt work since i formatted 
+the data output and input as the following
+
+  my @cols = qw/Data/;
+                push @cols,
+                    +{
+                    title => "After DATA EXIF",
+                    align => "center",
+                    };
+                my $sep = \'│';
+                
+                my $major_sep = \'║';
+                my $tb        = Text::Table->new( $sep, " Data Number ", $major_sep,
+                    ( map { +( ( ref($_) ? $_ : " $_ " ), $sep ) } @cols ) );
+                
+                my $num_cols = @cols;
+
+                # load table 
+                foreach (keys %$infofinalgen) {
+                    $tb->load( [1, $_,    $$infofinalgen{$_}] );
+                    #print "\033[37m[ \033[34mEXIT DATA \033[37m] \033[32m $_ => $$info{$_}\n";
+                }
+
+
+                my $make_rule = sub {
+                    my ($args) = @_;
+                
+                    my $left      = $args->{left};
+                    my $right     = $args->{right};
+                    my $main_left = $args->{main_left};
+                    my $middle    = $args->{middle};
+                
+                    return $tb->rule(
+                        sub {
+                            my ( $index, $len ) = @_;
+                
+                            return ( '─' x $len );
+                        },
+                        sub {
+                            my ( $index, $len ) = @_;
+                
+                            my $char = (
+                                ( $index == 0 )             ? $left
+                                : ( $index == 1 )             ? $main_left
+                                : ( $index == $num_cols + 1 ) ? $right
+                                :                               $middle
+                            );
+                
+                            return $char x $len;
+                        },
+                    );
+                };
+
+That is a simple part of the script which takes args in 
+and formats them into the table while also matching it with the input 
+of the EXIF and the naming of the file
+
+now so when the URL is done and injected or created with the barcode 
+it will tell you what URL was imbedded into which named file 
+this makes it easier for you to filter out which barcode 
+you truly want to send
+
+we also get the same table telling us that the data of the image was
+pulled and parsed into the data table 
+
+# thanks for the perl docuentation i was able to learn about the 
+# text table code shown here
+
+
+
+                # ASCII TC LOAD FLOOR
+                my $start_rule = $make_rule->(
+                    {
+                        left      => '┌',
+                        main_left => '╥',
+                        right     => '┐',
+                        middle    => '┬',
+                    }
+                );
+                
+                # ASCII TC LOAD CENTER
+                my $mid_rule = $make_rule->(
+                    {
+                        left      => '├',
+                        main_left => '╫',
+                        right     => '┤',
+                        middle    => '┼',
+                    }
+                );
+                
+                # ASCII TC LOAD ROOF
+                my $end_rule = $make_rule->(
+                    {
+                        left      => '└',
+                        main_left => '╨',
+                        right     => '┘',
+                        middle    => '┴',
+                    }
+
+
+So- thanks yall XD
+
+once done the perl is imediatly going to check if the file exists
+and if it does it will continue and move on if not it will output an error
+but keep going, 
+
+NOTE: QR CODE LIST GENERATION CAN BE VERY VERY INACCURATE WHEN IT COMES TO 
+MAKING CONSTANT REQUESTS AND GENERATING FILES, FILES OR PNG BARCODES MAY OVER 
+WRITE EACH OTHER WITHOUT USER KNOWING DUE TO THE CHANCES OF THE SAME STRING 
+GENERATING AS A NAME
+

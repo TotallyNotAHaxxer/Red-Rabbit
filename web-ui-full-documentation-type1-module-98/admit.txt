@@ -1,0 +1,229 @@
+in this mess of a project i decided to add two modules for myself and this script 
+
+one written in ruby the other written in go, so to add a little twist to red rabbit 
+
+i decided to include the SHODAN API and work with the GO MSF API to get sessions
+
+
+in the offical RR5 path main where you load RR5's main file you have a file named 
+
+config-files when you open it you see the follwoing
+
+shodan-API-KEY.txt
+blacklist.txt
+popcommands.txt
+token.conf
+
+the one we will be paying attention to will be the following two 
+
+shodan-API-KEY.txt
+
+blacklist.txt 
+
+
+in RR5 there are a few command for shodan which render the following
+
+|-> basic-shod | Run a basic shodan search on a host or search term                        |Working |
+|-> port-shod  | Run a basic SHODAN scan to find the ports of a host                       |Working |
+|-> acc-shod   | Get basic information on youe shodan API                                  |Working |
+|-> hon-shod   | Test the probability of a ip address being a honeypot                     |Working |
+|-> asy-shod   | Use async to grab the probability of an IP being a honeypot [shodan]      |Working |
+
+
+these commands all use the SHODAN API KEY .txt file to load ill show you why here 
+
+in the modules shodan.rb i have this chunk here
+
+
+module Shodan_Main
+    # start by reading the config-files for a shodan API key
+    # For more information on the SHODAN module please turn to the 12 index of the offical RR5 documentation
+    # chap -> shodanz
+    # basic search
+    def Shodan_Main.Basic_search(host, api_key)
+        api = Shodanz.client.new(key: "#{api_key}")
+        res = api.host_search("#{host}")
+        puts "Current results -> #{res['total']}"
+        res['matches'].each do |result|
+            puts "IP: #{result['ip_str']}"
+            puts result['data'] + "\n"
+        end
+    end
+
+
+
+this chunk takes the following as arguments 
+
+( host, api_key )
+
+these are called in the main rr5 list like this
+
+            api_ = File.open("config-files/shodan-API-KEY.txt")
+            key_ = api_.read
+            puts "Key => #{key_}"
+            Shodan_Main.get_api("#{key_}")
+
+this presets the main file as the path to the SHODAN API config file
+
+when you want to use the shodan modules simply open up the empty txt file
+
+you will see this 
+
+
+
+# set key here make sure to completely remove this line
+
+
+completely remove this line and input your key at the very top of the file 
+
+the file should look like this 
+
+
+aexamplerandomapikeshodan
+
+in this case that will be your API KEY
+
+once done save the file in the same directory and re run the commands, now you are all 
+set to go with the files and the proper information to run the shodan modules
+
+shodan module usage is declared on the other end
+
+
+
+NOW lets move to the other configuration file, blacklist.txt, this isnt a 100% needed 
+
+of a file but this is used for the command 
+
+dm-b
+
+this is a simple domain blocker, basically you input a bunch of hosts in a filename 
+
+you cha use this configuration but if you dont want to you are prompted to 
+
+
+
+If you are having trouble understanding please
+                refer to the documentation, module 7 chapter 1 
+                for further instructions
+_____________________________________________
+Please enter the path of the config file > 
+
+Filepath > 
+
+
+
+which will allow you to open a file say /usr/share/wordlists/hosts.txt
+
+which in hosts.txt we have 
+
+www.google.com
+www.hulu.com
+www.caleb.com
+www.example.com
+
+once we enter the filepath or have the blacklist.txt file inputted and filled out we can now 
+
+hit enter 
+
+
+when you hit enter and the file is real you will get an extrmely large output like this 
+
+
+
+Filepath > /home/reaper/Desktop/RR5/config-files/blacklist.txt
+_________________________________________________
+|System Name             |=> Linux
+|Node/System Name        |=> XE43P3R
+|System Current Version  |=> #1 SMP Debian 5.14.9-9parrot1 (2021-10-26)
+|Release Version         |=> 5.14.0-9parrot1-amd64
+|Machine ARCH            |=> x86_64
+|CPU is                  |=> AMD Ryzen 7 3700X 8-Core Processor             
+
+
+
+ Script started blocking At:
+_______________________________________
+|Current Year        | 2022
+|Current Month       | February
+|Current Day         |  7
+|Current Hour        | 19
+|Current Minute      | 10
+|Current Second      | 29
+|Current Nanosecond  | 860602118
+|____________________|__________________
+ 
+
+
+  ______________HOSTS IN FILE__________________
+ | 1 | www.google.com
+ | 2 | www.hulu.com
+ 
+[ ? ] Connection was established? was host down or blocked?
+ 
+[ * ] STAT: Trying TCP dialup again ->  &{{0xc000024380}}
+ 
+[ ? ] Connection was established? was host down or blocked?
+ 
+[ * ] STAT: Trying TCP dialup LAST TIME ->  &{{0xc0005a8380}}
+ 
+[ ? ] Connection was established? was host down or blocked? ->  &{{0xc000024800}}
+ 
+[ ? ] Connection was established? was host down or blocked?
+ 
+[ * ] STAT: Trying TCP dialup again ->  &{{0xc00052e180}}
+ 
+[ ? ] Connection was established? was host down or blocked?
+ 
+[ * ] STAT: Trying TCP dialup LAST TIME ->  &{{0xc00052e380}}
+ 
+[ ? ] Connection was established? was host down or blocked? ->  &{{0xc00052e580}}
+
+
+
+
+first lets break this down, when we frst enter we get host information 
+
+the hosts in the file and the time the script started, now what this script is tying to do 
+
+is trying to write the hosts to your etc/hosts file and block them by making a private connection 
+
+and formatting pre written templates which will parse correctly in a way to the file to direct 
+
+all domain connections in that file to the loopback which will give your browser the error 
+
+
+this connection is not private
+
+
+if all is red then this means good, it will first make a GET request to the host before hand 
+
+if it checks as a URL it will write it to the file, and check again, if you get the MSG 
+
+
+[ ? ] Connection was established? was host down or blocked? ->  &{{0xc000024800}}
+
+
+this means that the file was written to correctly and host was blocked correctly
+
+
+
+
+
+
+
+Working with the matasploit API to gather current and running sessions 
+
+
+i will say this ones a bit buggy but simple, when you do run the comamnd MSF_Session
+
+you WILL NEED TO HAVE EXPORTED THE SESSION USER/HOST AND PASS LOCAL ENVIROMENT VARIABLES
+
+like this
+
+EXPORT MSFHOST
+EXPORT MSFPASS
+
+
+once done you will get a simple output showing how much jobs there are running as said above 
+
+this is still currently in development be patient XD
