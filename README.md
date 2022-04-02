@@ -1,3 +1,91 @@
+<h1>MAJOR UPDATE COMING SOON, ALOT OF TOOLS HAVE BEEN DEPRECATED PLEASE WAIT FOR VERSION 6 to COME OUT BEFORE USING AS A TOOL, THIS IS UNDERGOING MAJOR CHANGES IN CODE BLOCKS</h1>
+
+<h2> FIXES LIST FOR VERSION 6.0 COMING OUT SDOON! </h2>
+
+```
+---- so summing up everything thats new here is a small list 
+Code is more robust 
+Code is more responsive 
+Code is more specific 
+Error messages are more specific 
+Files are more organized
+Added json and .db files for more list reading 
+Added optional command line flags 
+Added Graphical User Interfaces for all perl like tools 
+Added Classes and Modules for ruby files making for a faster response time and easy manipulation
+Added better and more organized / detailed output 
+Added more digital forensics tools
+Added WEBP, PNG, JPG, JPEG, GIF, BMP, MP4 audio injection 
+Added more utilities for web exploitation 
+Added more utilities for wifi hacking 
+Added a better system of automation 
+Added color and output modules 
+Replaced main.rb with main.go 
+Replaced 90% of scripts from python, r, asm to golang 
+Replaced function types
+Fixed enviroment errors 
+Fixed CPU conflict
+Fixed hardware Resource take ups 
+Fixed console error in catching statements 
+Fixed large and confusing output when SIG KILL is triggered
+Fixed large and confusing output when SIG CTRL is triggered
+Fixed large and confusing output when ruby files will error out 
+Fixed a large amount of panic errors in the ARP functions 
+Fixed panic errors or runtime errors during arp sessions 
+Fixed Compatibility issues 
+Fixed language install issues 
+Fixed library compatability issues, everything is now raw or ported through golang and perl which most are standard 
+Fixed horrible install files 
+Fixed sessions 
+Fixed the issue with the root error GUI popping up, now script MUST be run as root 
+Fixed the output glitch 
+Fixed the in development scripts 
+Fixed the input errors you would get 
+Fixed input 
+Fixed errors when entering the wrong command, if you enter the wrong command this time it wont do anything
+Fixed format errors 
+Fixed color format issues 
+Fixed /b characters which when large output would happen a noise would be called from the terminal
+[10:24 PM]
+Fixed Corrupted output errors, when users got mass input some would corrupt and become special characters in a way 
+Fixed unicode bugs 
+Fixed WebUI errors 
+Fixed WebUI Messages and formatting bugs 
+Fixed FILESERVER Issues with logging output and switching the url response 
+Fixed Go files which had warnings in them such as function unused 
+Fixed Output errors with tracers or osint utilities 
+Replaced python with perl
+Added more robust ruby modules to make sure code is safe and flexible 
+Added a perl console for fixing issues or automating cleanup and installs 
+Added makefile for install of libwhisker and OFSL ( Offensive Secrurity Perl Module RR6 ) to the root paths 
+Added more manipulation and control over what wordlists and files can be used 
+Added more robust and advanced code to the PNG injection library 
+Added the use of OUI or Mac Vendor lists 
+Added OUI identification during ARP, PORT, or Single recon sessions 
+Updated the use of SQL Injection tools 
+Updated the help menus to allow users the control over what format it is (JSON, TXT, etc)
+Updated the file to hold flags for output, if the display setting is landscape output will be fixed to that 
+Updated the commands list 
+Updated the command output and description 
+Updated the fields 
+Added better recon tools 
+Ported Exploits from C to Go 
+Ported Past ruby code into Go 
+Ported Past Python code into ruby or go 
+Eliminated the use of python 
+Eliminated the use of everything being automated by system commands
+Eleminated the use of horrid modules 
+Eliminated the use of modules that could have been rewritten
+Eliminated bar code generation module, the developers have no fixed the errors in the library yet
+Eliminated over done scripts or over bloated files 
+Eliminated junk files 
+Eliminated unused chunk's of code 
+Added better functions 
+Cut down on the amount of hardware needs for the script
+Cut down on the use of large amounts of output that is not needed 
+```
+
+
 ```
  ____       ______     _____     ______     ______     ______     ______     __     ______  
 /\  == \   /\  ___\   /\  __-.  /\  == \   /\  __ \   /\  == \   /\  == \   /\ \   /\__  _\ 
