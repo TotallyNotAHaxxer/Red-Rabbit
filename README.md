@@ -84,9 +84,6 @@ Added better functions
 Cut down on the amount of hardware needs for the script
 Cut down on the use of large amounts of output that is not needed 
 ```
-<a href="https://visitcount.itsvg.in">
-  <img src="https://visitcount.itsvg.in/api?id=Red-Rabbit-V4=Visitors&color=6&icon=5&pretty=true" />
-</a>
 
 ```
  ____       ______     _____     ______     ______     ______     ______     __     ______  
