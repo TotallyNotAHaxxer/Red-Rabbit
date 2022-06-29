@@ -1,0 +1,785 @@
+{
+    "United_States_Phone_Codes_And_Regions": [
+        {
+            "Phone_Dialcode": "772",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Florida",
+            "State_of_Number_Short": "FL",
+            "City_of_number": "Port Saint Lucie"
+        },
+        {
+            "Phone_Dialcode": "205",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Alabama",
+            "State_of_Number_Short": "AL",
+            "City_of_number": "Butler, Birmingham, Clanton, Hamilton, Jasper, Pell City and Tuscaloosa"
+        },
+        {
+            "Phone_Dialcode": "251",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Alabama",
+            "State_of_Number_Short": "AL",
+            "City_of_number": "Mobile County"
+        },
+        {
+            "Phone_Dialcode": "256",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Alabama",
+            "State_of_Number_Short": "AL",
+            "City_of_number": "North Alabama"
+        },
+        {
+            "Phone_Dialcode": "334",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Alabama",
+            "State_of_Number_Short": "AL",
+            "City_of_number": "southeastern Alabama"
+        },
+        {
+            "Phone_Dialcode": "659",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Alabama",
+            "State_of_Number_Short": "AL",
+            "City_of_number": "Butler, Birmingham, Clanton, Hamilton, Jasper, Pell City and Tuscaloosa"
+        },
+        {
+            "Phone_Dialcode": "938",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Alabama",
+            "State_of_Number_Short": "AL",
+            "City_of_number": "North AlabamA"
+        },
+        {
+            "Phone_Dialcode": "603",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New Hampshire",
+            "State_of_Number_Short": "NH",
+            "City_of_number": "No belonged city | Unable to get city information"
+        },
+        {
+            "Phone_Dialcode": "907",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Alaska",
+            "State_of_Number_Short": "AL",
+            "City_of_number": "No belonged city | Unable to get city information"
+        },
+        {
+            "Phone_Dialcode": "201",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New Jersey",
+            "State_of_Number_Short": "NJ",
+            "City_of_number": "State Number | northeastern New Jersey"
+        },
+        {
+            "Phone_Dialcode": "551",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New Jersey",
+            "State_of_Number_Short": "NJ",
+            "City_of_number": "State Number | North New Jersey"
+        },
+        {
+            "Phone_Dialcode": "609",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New Jersey",
+            "State_of_Number_Short": "NJ",
+            "City_of_number": "Southeast New Jersey"
+        },
+        {
+            "Phone_Dialcode": "640",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New Jersey",
+            "State_of_Number_Short": "NJ",
+            "City_of_number": "Central New Jersey"
+        },
+        {
+            "Phone_Dialcode": "732",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New Jersey",
+            "State_of_Number_Short": "NJ",
+            "City_of_number": "Middlesex, Somerset, and Union counties in Northern and Central New Jersey, and Monmouth and northern Ocean counties on the New Jersey Shore."
+        },
+        {
+            "Phone_Dialcode": "848",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New Jersey",
+            "State_of_Number_Short": "NJ",
+            "City_of_number": "River, Perth Amboy, Sayreville"
+        },
+        {
+            "Phone_Dialcode": "856",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New Jersey",
+            "State_of_Number_Short": "NJ",
+            "City_of_number": "southwestern part of the U.S. state of New Jersey"
+        },
+        {
+            "Phone_Dialcode": "862",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New Jersey",
+            "State_of_Number_Short": "NJ",
+            "City_of_number": "northernmost part of the U.S. state of New Jersey"
+        },
+        {
+            "Phone_Dialcode": "908",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New Jersey",
+            "State_of_Number_Short": "NJ",
+            "City_of_number": "northern part of the U.S. state of New Jersey"
+        },
+        {
+            "Phone_Dialcode": "973",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New Jersey",
+            "State_of_Number_Short": "NJ",
+            "City_of_number": "Newmark New Jersey"
+        },
+        {
+            "Phone_Dialcode": "623",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Arizona",
+            "State_of_Number_Short": "AZ",
+            "City_of_number": "Assumed (98%) Probability [ Maricopa County ] | Possibly > Avondale, Buckeye, El Mirage, Glendale, Goodyear, Litchfield Park, New River, Peoria, Phoenix, Sun City (+West), Surprise, Tolleson, Youngtown (20%)"
+
+        },
+        {
+            "Phone_Dialcode": "928",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Arizona",
+            "State_of_Number_Short": "AZ",
+            "City_of_number": "northern, eastern, and western portions of Arizona"
+        },
+        {
+            "Phone_Dialcode": "602",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Arizona",
+            "State_of_Number_Short": "AZ",
+            "City_of_number": "most of the city of Phoenix"
+        },
+        {
+            "Phone_Dialcode": "520",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Arizona",
+            "State_of_Number_Short": "AZ",
+            "City_of_number": "Tucson"
+        },
+        {
+            "Phone_Dialcode": "480",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Arizona",
+            "State_of_Number_Short": "AZ",
+            "City_of_number": "Phoenix"
+        },
+        {
+            "Phone_Dialcode": "505",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New Mexico",
+            "State_of_Number_Short": "NM",
+            "City_of_number": "Albuquerque, New Mexico"
+        },
+        {
+            "Phone_Dialcode": "575",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New Mexico",
+            "State_of_Number_Short": "NM",
+            "City_of_number": "Albuquerque, Santa Fe, Farmington, and Gallup metropolitan and micropolitan areas"
+        },
+        {
+            "Phone_Dialcode": "479",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Arkansas",
+            "State_of_Number_Short": "AK",
+            "City_of_number": "cities of Bentonville, Fort Smith, Fayetteville, Rogers, Siloam Springs and Springdale"
+        },
+        {
+            "Phone_Dialcode": "501",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Arkansas",
+            "State_of_Number_Short": "AK",
+            "City_of_number": "central Arkansas Little Rock"
+        },
+        {
+            "Phone_Dialcode": "870",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Arkansas",
+            "State_of_Number_Short": "AK",
+            "City_of_number": "southern, eastern, and most of northern Arkansas"
+        },
+        {
+            "Phone_Dialcode": "212",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "New York City"
+        },
+        {
+            "Phone_Dialcode": "315",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "YK",
+            "City_of_number": "Syracuse"
+        },
+        {
+            "Phone_Dialcode": "332",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "New York City"
+        },
+        {
+            "Phone_Dialcode": "347",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "five boroughs of New York City which includes the Bronx, Brooklyn, Queens, Staten Island, and a few parts of the Manhattan area."
+        },
+        {
+            "Phone_Dialcode": "516",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "Nassau County"
+        },
+        {
+            "Phone_Dialcode": "518",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "covers all or part of 17 counties in eastern upstate New York"
+        },
+        {
+            "Phone_Dialcode": "585",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "Rochester"
+        },
+        {
+            "Phone_Dialcode": "607",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "Southern Tier borders Pennsylvania"
+        },
+        {
+            "Phone_Dialcode": "631",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "Long Island"
+        },
+        {
+            "Phone_Dialcode": "646",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "Manhattan"
+        },
+        {
+            "Phone_Dialcode": "680",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "Syracuse, Auburn or Watertown"
+        },
+        {
+            "Phone_Dialcode": "716",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "Buffalo"
+        },
+        {
+            "Phone_Dialcode": "718",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "Brooklyn, queens, and statan islands"
+        },
+        {
+            "Phone_Dialcode": "838",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "north eastern most part of upstate new york"
+        },
+        {
+            "Phone_Dialcode": "845",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "Mid-Hudson and Catskill regions"
+        },
+        {
+            "Phone_Dialcode": "914",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "Westchester County, New York"
+        },
+        {
+            "Phone_Dialcode": "917",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "all of New York City's five boroughs"
+        },
+        {
+            "Phone_Dialcode": "929",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "Marble Hill section of Manhattan"
+        },
+        {
+            "Phone_Dialcode": "934",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "New York",
+            "State_of_Number_Short": "NY",
+            "City_of_number": "Suffolk County, New York on Long Island."
+        },
+        {
+            "Phone_Dialcode": "340",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "U.S Virgin Islands",
+            "State_of_Number_Short": "US-VI",
+            "City_of_number": "This number is set to the specific island and no city"
+        },
+        {
+            "Phone_Dialcode": "787",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Puerto Rico",
+            "State_of_Number_Short": "PR",
+            "City_of_number": "Puerto Rico"
+        },
+        {
+            "Phone_Dialcode": "939",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Puerto Rico",
+            "State_of_Number_Short": "PR",
+            "City_of_number": "Puerto Rico"
+        },
+        {
+            "Phone_Dialcode": "671",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Guam",
+            "State_of_Number_Short": "",
+            "City_of_number": "Guam"
+        },
+        {
+            "Phone_Dialcode": "684",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "American Samoa",
+            "State_of_Number_Short": "Samoa",
+            "City_of_number": "Samoa"
+        },
+        {
+            "Phone_Dialcode": "307",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Wyoming",
+            "State_of_Number_Short": "WY",
+            "City_of_number": "serves the entire U.S. state of Wyoming"
+        },
+        {
+            "Phone_Dialcode": "702",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Nevada",
+            "State_of_Number_Short": "NV",
+            "City_of_number": "Las Vegas, Nevada"
+        },
+        {
+            "Phone_Dialcode": "725",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Nevada",
+            "State_of_Number_Short": "NV",
+            "City_of_number": "lark County, including Las Vegas, in the U.S. state of Nevada"
+        },
+        {
+            "Phone_Dialcode": "775",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Nevada",
+            "State_of_Number_Short": "NV",
+            "City_of_number": "cities in this area code include Reno, Carson City, Elko and Pahrump."
+        },
+        {
+            "Phone_Dialcode": "308",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Nebraska",
+            "State_of_Number_Short": "NE",
+            "City_of_number": "western Nebraska"
+        },
+        {
+            "Phone_Dialcode": "402",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Nebraska",
+            "State_of_Number_Short": "NE",
+            "City_of_number": "covers almost the entire eastern half of Nebraska"
+        },
+        {
+            "Phone_Dialcode": "531",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Nebraska",
+            "State_of_Number_Short": "NA",
+            "City_of_number": "eastern Nebraska"
+        },
+        {
+            "Phone_Dialcode": "406",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Montana",
+            "State_of_Number_Short": "MT",
+            "City_of_number": "The entire state of Montana"
+        },
+        {
+            "Phone_Dialcode": "314",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Missouri",
+            "State_of_Number_Short": "MO",
+            "City_of_number": "Number code occupies MAINLY ( St. Louis) EXTRA -> Overland, Bridgeton, Florissant, Webster Groves, Creve Coeur, Kirkwood and Sappington"
+        },
+        {
+            "Phone_Dialcode": "417",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Missouri",
+            "State_of_Number_Short": "MO",
+            "City_of_number": "cities of Branson, Carl Junction, Carthage, Joplin, Lebanon, Neosho, Nixa, Ozark, Springfield, and West Plains"
+        },
+        {
+            "Phone_Dialcode": "573",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Missouri",
+            "State_of_Number_Short": "MO",
+            "City_of_number": "most of the eastern half of Missouri outside the immediate St. Louis area"
+        },
+        {
+            "Phone_Dialcode": "636",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Missouri",
+            "State_of_Number_Short": "MO",
+            "City_of_number": "serves east-central Missouri, mainly the western suburbs of St. Louis"
+        },
+        {
+            "Phone_Dialcode": "660",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Missouri",
+            "State_of_Number_Short": "MO",
+            "City_of_number": "northern and western part of the U.S. state of Missouri"
+        },
+        {
+            "Phone_Dialcode": "816",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Missouri",
+            "State_of_Number_Short": "MO",
+            "City_of_number": "Kansas City"
+        },
+        {
+            "Phone_Dialcode": "228",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Mississippi",
+            "State_of_Number_Short": "MS",
+            "City_of_number": "the Gulf Coast in the U.S. state of Mississippi"
+        },
+        {
+            "Phone_Dialcode": "601",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Mississippi",
+            "State_of_Number_Short": "MS",
+            "City_of_number": "Jackson, Mississippi"
+        },
+        {
+            "Phone_Dialcode": "662",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Mississippi",
+            "State_of_Number_Short": "MS",
+            "City_of_number": "northern half of Mississippi, including the six counties that are part of the Memphis metro area."
+        },
+        {
+            "Phone_Dialcode": "769",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Mississippi",
+            "State_of_Number_Short": "MS",
+            "City_of_number": "central and southern Mississippi, excluding the three counties of the Gulf Coast."
+        },
+        {
+            "Phone_Dialcode": "218",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Minnesota",
+            "State_of_Number_Short": "MN",
+            "City_of_number": "the northern part of the U.S. state of Minnesota"
+        },
+        {
+            "Phone_Dialcode": "320",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Minnesota",
+            "State_of_Number_Short": "MN",
+            "City_of_number": "most of central Minnesota, excluding the Twin Cities metro"
+        },
+        {
+            "Phone_Dialcode": "507",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Minnesota",
+            "State_of_Number_Short": "MN",
+            "City_of_number": "southern fifth of Minnesota, including cities such as Rochester, Mankato, Worthington, Fairmont, Albert Lea, Northfield, and Austin"
+        },
+        {
+            "Phone_Dialcode": "612",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Minnesota",
+            "State_of_Number_Short": "MN",
+            "City_of_number": "Located in Hennepin County in the central part of Minnesota, area code 612 also covers the cities of Richfield, Fort Snelling and St. Anthony"
+        },
+        {
+            "Phone_Dialcode": "651",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Minnesota",
+            "State_of_Number_Short": "MN",
+            "City_of_number": "Saint Paul, Minnesota"
+        },
+        {
+            "Phone_Dialcode": "763",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Minnesota",
+            "State_of_Number_Short": "MN",
+            "City_of_number": "northwestern suburbs of Minneapolis-St. Paul, Minnesota, including cities such as Plymouth, Maple Grove, and Brooklyn Park."
+        },
+        {
+            "Phone_Dialcode": "952",
+            "Country_Code_I": "US",
+            "Country_Currency": "USD",
+            "Country_Lang": "English",
+            "Country_Code_Full": "United States of America",
+            "State_of_Number": "Minnesota",
+            "State_of_Number_Short": "MN",
+            "City_of_number": "southwestern suburbs of Minneapolis-St. Paul in the U.S. state of Minnesota"
+        }
+    ]
+}
