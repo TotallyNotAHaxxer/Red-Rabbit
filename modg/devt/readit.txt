@@ -1,0 +1,8 @@
+devt file directory: Meant for developers and testers 
+
+This directory will test most command line utils and report the 
+status and state, this includes mainly running utils or file checking 
+modules, by outputting example files and making sure everything works 
+as is, this should be mandatory on install / make
+
+dev code -> <<198>> in that format will output
