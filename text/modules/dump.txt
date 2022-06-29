@@ -1,0 +1,22 @@
+  ┌────┳────────────────────┳─────────────────────────────────────────────────────────────────────────┐
+  │ C  ┃ dump bootsec info  ┃ Dump your bootsec filename info                                         │ 
+  │ C  ┃ dump file info     ┃ Dump normal file inforomation on a file                                 │
+  │ C  ┃ dump file info     ┃ Dump normal file inforomation on a file                                 │
+  │ C  ┃ dump file binary   ┃ Dump a given file into a hex/binary like output                         │
+  │ C  ┃ dump pe info       ┃ Dump a PE/DLL file and get all of its general information and sections  │
+  │ C  ┃ dump image metadata┃ Dump an image's metadata                                                │
+  │ C  ┃ dump pcap dot11    ┃ Dump all BSSID's, SSID's, and macs in a DOT11 pcap file                 │
+  │ C  ┃ dump pcap ftp      ┃ Dump all found FTP username and passwords / credentials in a PCAP file  │
+  │ C  ┃ dump pcap ospf     ┃ Dump all found OSPF authentication bytes in a PCAP/CAP file             │
+  │ C  ┃ dump pcap smtp     ┃ Dump all authentication/users/passwords in a normal SMTP PCAP/CAP file  │
+  │ C  ┃ dump pcap smtppa   ┃ Dump all AUTH PLAIN logins made in a pcap file                          │
+  │ C  ┃ dump pcap smtpe    ┃ Dump all email chats, users, and bodies in a PCAP file                  │
+  │ C  ┃ dump pcap sipa     ┃ Dump all users and passwords for SIP authentication in a PCAP file      │
+  │ C  ┃ dump pcap sipok    ┃ Dump all +OK or OK responses in a SIP PCAP/CAP                          │
+  │ C  ┃ dump pcap sipin    ┃ Dump all INVITES in a SIP PCAP/CAP file                                 │
+  │ C  ┃ dump pcap sipreg   ┃ Dump all Registers made in a SIP PCAP/CAP file                          │
+  │ C  ┃ dump pcap sippg    ┃ Dump all POST and GET requests made in a SIP PCAP/CAP file              │
+  │ C  ┃ dump pcap imaplogn ┃ Dump all IMAP logins made in a IMAP PCAP/CAP file                       │
+  │ C  ┃ dump pcap custom   ┃ Dump your own custom filters in any PCAP file self output               │
+  │ C  ┃ dump pcap          ┃ Dump all packets in a PCAP/CAP file UNFORMATTED                         │
+  └───────────────────────────────────────────────────────────────────────────────────────────────────┘

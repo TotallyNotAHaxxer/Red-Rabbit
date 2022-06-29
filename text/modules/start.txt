@@ -1,0 +1,8 @@
+  ┌────┳────────────────────┳─────────────────────────────────────────────────────────────────────────┐
+  │ C  ┃ start http server  ┃ Start the local red rabbit user dashboard and coumentation server :5501 │
+  │ C  ┃ start ssh tunel    ┃ Start a SSH tunnel on a remote host, given local addr and port          │
+  │ C  ┃ start listen bind  ┃ Start a bind shell on a given address and port to listen for connection │
+  │ C  ┃ start listen tcp   ┃ Start a tcp shell on a given address and port to listen for connection  │
+  │ C  ┃ start def interface┃ Start the defualt interface based on OS detection as monitor mode       │
+  │ C  ┃ start cus interface┃ Start a interface into monitor mode with a given interface name or addr │
+  └───────────────────────────────────────────────────────────────────────────────────────────────────┘

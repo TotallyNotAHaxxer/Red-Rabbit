@@ -1,0 +1,39 @@
+  ┌────┳────────────────────┳─────────────────────────────────────────────────────────────────────────┐
+  │ C  ┃ search scan        ┃ Get all resolved hosts based on the first three octets of an IP (0.0.0) │
+  │ C  ┃ search subdomains  ┃ Get all subdomains based on a subdomain list from a given domain        │
+  │ C  ┃ search head        ┃ Get the headers of a URL                                                │
+  │ C  ┃ search redirect    ┃ Check if a target URL will redirect you via status code                 │
+  │ C  ┃ search ns          ┃ Get the name servers of a domain name                                   │
+  │ C  ┃ search mx          ┃ Get all the MX records from a domain name                               │
+  │ C  ┃ search waf         ┃ Get all blocked services based on a payload ex (<script>alert()<script>)│
+  │ C  ┃ search port        ┃ Get all protocals, types, services, etc on a single port number offline │
+  │ C  ┃ search port l      ┃ Get all protocals, types, services, etc on a list of ports      offline │
+  │ C  ┃ search port live   ┃ Get all ports on a specified host (EX: 10.0.0.1)                        │
+  │ C  ┃ search port llive  ┃ Get all active ports on a LIST of hosts (EX: Hostwordlist.txt)          │
+  │ C  ┃ search port custom ┃ Get all ports on a host using custom YAML configuration files           │
+  │ C  ┃ search endpoint    ┃ Get the endpoint of a URL                                               │
+  │ C  ┃ search ip          ┃ Get all hostnames of an IP address                                      │
+  │ C  ┃ search txt         ┃ Get all TXT records of a domain name                                    │
+  │ C  ┃ search hostname    ┃ Get the hostname of an IP                                               │
+  │ C  ┃ search cname       ┃ Get the CNAME records of a domain name                                  │
+  │ C  ┃ search srv         ┃ Get the SRV of a domain name                                            │
+  │ C  ┃ search robots      ┃ Get the robots.txt from a given URL                                     │
+  │ C  ┃ search urls        ┃ Get all URLS, IPAS, Domain names, and servers of a URL that is crawled  │
+  │ C  ┃ search banner      ┃ Get the banner of a hostname by making a TCP dial                       │
+  │ C  ┃ search server      ┃ Get the server of a domain name or URL                                  │
+  │ C  ┃ search ipa         ┃ Get the IP Address of a URL                                             │ 
+  │ C  ┃ search route       ┃ Get the route or run a traceroute scan on a domain/url/host             │
+  │ C  ┃ search admin       ┃ Scan the URL for admin panels or admin access                           │
+  │ C  ┃ search sqli        ┃ Scan the URL for SQL injection vulnerabilities                          │
+  │ C  ┃ search lfi         ┃ Scan the URL for LFI vulnerabilities                                    │
+  │ C  ┃ search sig         ┃ Scan a unknown file to try and find its filetype                        │
+  │ C  ┃ search filepath    ┃ Scan a filepath for a certian file                                      │
+  │ C  ┃ search archive     ┃ Scan a JPG image for a archive file and try to unzip it                 │
+  │ C  ┃ search geo         ┃ Scan a JPG/JPEG file for a GEO location                                 │
+  │ C  ┃ search methods *   ┃ Scan through multiple request methods to see what a URL will accept     │ 
+  │ C  ┃ search httpmethod *┃ Print out a list of every HTTP method used in search methods *          │
+  │ C  ┃ search knoxss custo┃ `search knoxss custom` scan for xss using the custom api config file    │ 
+  │ C  ┃ search xss knoxl   ┃ Test all urls in a list for xss vulnerabilities using the KNOXSS API    │ 
+  │ C  ┃ search xss knoxss  ┃ Test a url for xss vulnerabilities using the KOXSS API                  │ 
+  │ C  ┃ search phpbb       ┃ Scan the URL for the version of PHPBB                                   │
+  └───────────────────────────────────────────────────────────────────────────────────────────────────┘

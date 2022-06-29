@@ -1,0 +1,23 @@
+  ┌────┳────────────────────┳─────────────────────────────────────────────────────────────────────────┐
+  │ C  ┃ parse burp targets ┃ Parse a list of urls and targets to produce a burp suite config file    │
+  │ C  ┃ parse config       ┃ Parse the api database to see what API keys you have set in the config  │
+  │ C  ┃ parse xmln host    ┃ Parse a NMAP XML file to find the scanned host                          │
+  │ C  ┃ parse xmln service ┃ Parse a NMAP XML file to find info on all ports and their services      │
+  │ C  ┃ parse xmln ports   ┃ Parse a NMAP XML file to find all scanned ports and their state         │
+  │ C  ┃ parse xmln hostn   ┃ Parse a NMAP XML file to find all hostnames in the scan                 │
+  │ C  ┃ parse xmln porti   ┃ Parse a NMAP XML file to find all ports and their information           │
+  │ C  ┃ parse xmln runs    ┃ Parse a NMAP XML file to find the runtime and exit status of nmap       │
+  │ C  ┃ parse xmln hosts   ┃ Parse a NMAP XML file to find all the scanned number of hosts           │
+  │ C  ┃ parse xmln hosth   ┃ Parse a NMAP XML file to find all info in the host hint section         │
+  │ C  ┃ parse xmln verbose ┃ Parse a NMAP XML file to find settings for the verbose tag              │
+  │ C  ┃ parse xmln debug   ┃ Parse a NMAP XML file to find settings for the debugging tag            │
+  │ C  ┃ parse xmln times   ┃ Parse a NMAP XML file to find times of the script                       │
+  │ C  ┃ parse xmln scaninf ┃ Parse a NMAP XML file to find all scan information                      │
+  │ C  ┃ parse xmln *       ┃ Parse a NMAP XML file and run all xmln options for output               │
+  │ C  ┃ parse scope        ┃ Parse a burp scope json file to match with hosts in a url like urls.txt │
+  │ C  ┃ parse data IP4     ┃ Parse through an entire file to find all IPv4 addresses used            │
+  │ C  ┃ parse data IP6     ┃ Parse through an entire file to find all IPv6 addresses used            │
+  │ C  ┃ parse data email   ┃ Parse through an entire file to find all email addresses used           │
+  │ C  ┃ parse data mac     ┃ Parse through an entire file to find all MAC addresses used             │
+  │ C  ┃ parse data custom  ┃ Parse through an entire file with a custom regex string to pillage data │
+  └───────────────────────────────────────────────────────────────────────────────────────────────────┘

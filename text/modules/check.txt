@@ -1,0 +1,24 @@
+  ┌────┳────────────────────┳─────────────────────────────────────────────────────────────────────────┐
+  │ C  ┃ check cpanel vuln  ┃ Check if the version of cpanel you are using is vulnerable              │
+  │ C  ┃ check proton ip    ┃ Check if a IP address belongs to a proton mail IP server                │
+  │ C  ┃ check proton email ┃ Check if a email address belongs to a proton mail account               │
+  │ C  ┃ check cloudflare ip┃ Check if a given IPv6 or IPv4 address belongs to the cloudflare CIDRs   │
+  │ C  ┃ check cloudfront ip┃ Check if a given IPv6 or IPv4 address belongs to the cloudfront CIDRs   │
+  │ C  ┃ check mcafe ip     ┃ Check if a given IPv6 or IPv4 address belongs to the Mcafe CIDRs        │
+  │ C  ┃ check aws ip       ┃ Check if a given IPv6 or IPv4 address belongs to the AWS CIDRs          │
+  │ C  ┃ check azure ip     ┃ Check if a IP address belongs to the azure cloud addr prexix list       │
+  │ C  ┃ check myip         ┃ Check for your public IP address                                        │
+  │ C  ┃ check number       ┃ Check a number hash EX(+381-##-###-####) and try to get information     │
+  │ C  ┃ check number us    ┃ Check a number code EX(320) and get city, state, currency etc           │
+  │ C  ┃ check number be    ┃ Check a number hash EX(+32(2)###-##-##) and get city, country etc info  │
+  │ C  ┃ trace number us    ┃ Check a US number for information and data                              │
+  │ C  ┃ check IP           ┃ Check to look for general information of an IP, EG: Country, code       │
+  │ C  ┃ check github user  ┃ Check to look for information on a github user, EG: Bio, Location etc   │
+  │ C  ┃ check github star  ┃ Check to find all stargazers on a given users repo and info of gazers   │
+  │ C  ┃ check github foll  ┃ Check to find all information on followers on a certian github user     │
+  │ C  ┃ check github orgr  ┃ Check to find all organization repositories that are public             │
+  │ C  ┃ check github usero ┃ Check to find all organizations that the user is tied to by a git user  │
+  │ C  ┃ check github usere ┃ Check to find all user events based on a given github username          │
+  │ C  ┃ check github orge  ┃ Check to find all organization events based on an organization name     │
+  │ C  ┃ check github repos ┃ Check to find all repos and repo information of a given github username │
+  └───────────────────────────────────────────────────────────────────────────────────────────────────┘

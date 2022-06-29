@@ -1,0 +1,277 @@
+ ┌────┳────────────────────┳─────────────────────────────────────────────────────────────────────────┐
+  │ C  ┃ help verified      ┃ View all verified and working commands                                  │
+  │ C  ┃ commands/h         ┃ View this help menu, sjowing general info                               │
+  │ C  ┃ help flags         ┃ View all descriptions of flags                                          │
+  │ C  ┃ help advanced      ┃ View all commands with advanced usages and examples                     │
+  │ C  ┃ help search        ┃ View all commands for the search module                                 │
+  │ C  ┃ help inject        ┃ View all commands for the stegonography module                          │
+  │ C  ┃ help parse         ┃ View all commands for the file parsing module                           │
+  │ C  ┃ help encode        ┃ View all commands for the text encoding module                          │
+  │ C  ┃ help utils         ┃ View all commands for the utilities and etc modules                     │
+  │ C  ┃ help brute         ┃ View all commands for the brute forcing modules                         │
+  │ C  ┃ help dump          ┃ View all commands for the file dumping modules                          │
+  │ C  ┃ help ping          ┃ View all commands for the network discovery modules                     │
+  │ C  ┃ help sniff         ┃ View all commands for the network / 802.11 sniffing module              │
+  │ C  ┃ help check         ┃ View all commands for the OSINT / verification modules                  │
+  │ C  ┃ help commands      ┃ View all general commands and descriptions                              │
+  │ C  ┃ help all           ┃ View all general commands and descriptions from config files            │
+  │ C  ┃ script settings    ┃ View all settings/flag values that was used                             │
+  │ C  ┃ clear              ┃ Clear terminal output                                                   │
+  │ C  ┃ cls                ┃ Clear terminal output                                                   │
+  │ C  ┃ exit               ┃ Exit the script                                                         │
+  │ C  ┃ time               ┃ Get script time                                                         │
+  │ C  ┃ stalk mac          ┃ Trace the OUI of a single mac, only one mac can be checked at a time    │
+  │ C  ┃ stalk oui          ┃ Trace the OUI of every single mac in a list of macs                     │
+  │ C  ┃ stalk hosts        ┃ Trace all hosts on a network given the first 3 octets (10.0.0)          │
+  │ C  ┃ stalk hosts2       ┃ Trace all hosts on a network given the first 2 octets (10.0.)           │
+  │ C  ┃ make GET           ┃ make a GET request to a given URL and                                   │
+  │ C  ┃ make POST          ┃ make a POST request with custom data to a given URL and output body     │
+  │ C  ┃ make PUT           ┃ make a PUT request with custom data to a given URL and  output body     │
+  │ C  ┃ stalk hosts2       ┃ Trace all hosts on a network given the first 2 octets (10.0.)           │
+  │ C  ┃ stalk hosts2       ┃ Trace all hosts on a network given the first 2 octets (10.0.)           │
+  │ C  ┃ search scan        ┃ Get all resolved hosts based on the first three octets of an IP (0.0.0) │
+  │ C  ┃ search head        ┃ Get the headers of a URL                                                │
+  │ C  ┃ fetch titles       ┃ Get the direct title of a website                                       │
+  │ C  ┃ fetch documents    ┃ Get all documents on the page (paths only)                              │
+  │ C  ┃ fetch links        ┃ Get all links found in the HTML page                                    │
+  │ C  ┃ fetch proxy4       ┃ Get a list of SOCKS4 proxys and save them to a file                     │
+  │ C  ┃ fetch proxy5       ┃ Get a list of SOCKS5 proxys and save them to a file                     │
+  │ C  ┃ fetch http         ┃ Get a list of HTTP proxys without SSL and save them to a file           │
+  │ C  ┃ fetch httpssl      ┃ Get a list of HTTP proxys WITH SSL and save them to a file              │
+  │ C  ┃ fetch https        ┃ Get a list of HTTPS proxys without SSL and save them to a file          │
+  │ C  ┃ fetch httpsssl     ┃ Get a list of HTTPS proxys WITH SSL and save them to a file             │
+  │ C  ┃ search redirect    ┃ Check if a target URL will redirect you via status code                 │
+  │ C  ┃ search subdomains  ┃ Get all subdomains based on a subdomain list from a given domain        │
+  │ C  ┃ search ns          ┃ Get the name servers of a domain name                                   │
+  │ C  ┃ search mx          ┃ Get all the MX records from a domain name                               │
+  │ C  ┃ search waf         ┃ Get all blocked services based on a payload ex (<script>alert()<script>)│
+  │ C  ┃ search envf        ┃ Check if targets in a given host list has a .env endpoint to it         │
+  │ C  ┃ search env         ┃ Check if a single target has a .env file located in the header          │
+  │ C  ┃ search port        ┃ Get all protocals, types, services, etc on a single port number offline │
+  │ C  ┃ search port l      ┃ Get all protocals, types, services, etc on a list of ports      offline │
+  │ C  ┃ search port live   ┃ Get all ports on a specified host (EX: 10.0.0.1)                        │
+  │ C  ┃ search phpbb       ┃ Scan the URL for the version of PHPBB                                   │
+  │ C  ┃ search port llive  ┃ Get all active ports on a LIST of hosts (EX: Hostwordlist.txt)          │
+  │ C  ┃ search port custom ┃ Get all ports on a host using custom YAML configuration files           │
+  │ C  ┃ search endpoint    ┃ Get the endpoint of a URL                                               │
+  │ C  ┃ search ip          ┃ Get all hostnames of an IP address                                      │
+  │ C  ┃ search txt         ┃ Get all TXT records of a domain name                                    │
+  │ C  ┃ search hostname    ┃ Get the hostname of an IP                                               │
+  │ C  ┃ search cname       ┃ Get the CNAME records of a domain name                                  │
+  │ C  ┃ search srv         ┃ Get the SRV of a domain name                                            │
+  │ C  ┃ search robots      ┃ Get the robots.txt from a given URL                                     │
+  │ C  ┃ search urls        ┃ Get all URLS, IPAS, Domain names, and servers of a URL that is crawled  │
+  │ C  ┃ search banner      ┃ Get the banner of a hostname by making a TCP dial                       │
+  │ C  ┃ search server      ┃ Get the server of a domain name or URL                                  │
+  │ C  ┃ search ipa         ┃ Get the IP Address of a URL                                             │ 
+  │ C  ┃ search route       ┃ Get the route or run a traceroute scan on a domain/url/host             │
+  │ C  ┃ search admin       ┃ Scan the URL for admin panels or admin access                           │
+  │ C  ┃ search sqli        ┃ Scan the URL for SQL injection vulnerabilities                          │
+  │ C  ┃ search lfi         ┃ Scan the URL for LFI vulnerabilities                                    │
+  │ C  ┃ search sig         ┃ Scan a unknown file to try and find its filetype                        │
+  │ C  ┃ search filepath    ┃ Scan a filepath for a certian file                                      │
+  │ C  ┃ search archive     ┃ Scan a JPG image for a archive file and try to unzip it                 │
+  │ C  ┃ search geo         ┃ Scan a JPG/JPEG file for a GEO location                                 │
+  │ C  ┃ search methods *   ┃ Scan through multiple request methods to see what a URL will accept     │ 
+  │ C  ┃ search httpmethod *┃ Print out a list of every HTTP method used in search methods *          │
+  │ C  ┃ search knoxss custo┃ `search knoxss custom` scan for xss using the custom api config file    │ 
+  │ C  ┃ search xss knoxl   ┃ Test all urls in a list for xss vulnerabilities using the KNOXSS API    │ 
+  │ C  ┃ search xss knoxss  ┃ Test a url for xss vulnerabilities using the KOXSS API                  │ 
+  │ C  ┃ inject zip         ┃ Inject a ZIP file / Archive file into a JPG/JPEG image                  │
+  │ C  ┃ inject gif         ┃ Inject a given payload into a GIF image                                 │
+  │ C  ┃ inject jpg         ┃ Inject a given payload into a JPG/JPEG image                            │
+  │ C  ┃ inject webp        ┃ Inject a given payload into a WEBP image                                │
+  │ C  ┃ inject png         ┃ Inject a given payload into a PNG image                                 │
+  │ C  ┃ inject bmp         ┃ Inject a given payload into a BMP image                                 │
+  │ C  ┃ inject payload     ┃ Inject a given payload into a URL to parse it into the headers          │
+  │ C  ┃ inject payloadl    ┃ Inject a given payload into a URL from a list of URLS to parse payloads │
+  │ C  ┃ inject payloadul   ┃ Inject a given payload list into a URL to parse it into the headers     │
+  │ C  ┃ dump bootsec info  ┃ Dump your bootsec filename info                                         │ 
+  │ C  ┃ dump file info     ┃ Dump normal file inforomation on a file                                 │
+  │ C  ┃ dump file info     ┃ Dump normal file inforomation on a file                                 │
+  │ C  ┃ dump pe info       ┃ Dump a PE/DLL file and get all of its general information and sections  │
+  │ C  ┃ dump image metadata┃ Dump an image's metadata                                                │
+  │ C  ┃ dump png meta      ┃ Dump all offsets, chunks, and information on a given PNG file           │
+  │ C  ┃ dump pcap dot11    ┃ Dump all BSSID's, SSID's, and macs in a DOT11 pcap file                 │
+  │ C  ┃ dump pcap ftp      ┃ Dump all found FTP username and passwords / credentials in a PCAP file  │
+  │ C  ┃ dump pcap ospf     ┃ Dump all found OSPF authentication bytes in a PCAP/CAP file             │
+  │ C  ┃ dump pcap smtp     ┃ Dump all authentication/users/passwords in a normal SMTP PCAP/CAP file  │
+  │ C  ┃ dump pcap smtppa   ┃ Dump all AUTH PLAIN logins made in a pcap file                          │
+  │ C  ┃ dump pcap smtpe    ┃ Dump all email chats, users, and bodies in a PCAP file                  │
+  │ C  ┃ dump pcap sipa     ┃ Dump all users and passwords for SIP authentication in a PCAP file      │
+  │ C  ┃ dump pcap sipok    ┃ Dump all +OK or OK responses in a SIP PCAP/CAP                          │
+  │ C  ┃ dump pcap sipin    ┃ Dump all INVITES in a SIP PCAP/CAP file                                 │
+  │ C  ┃ dump pcap sipreg   ┃ Dump all Registers made in a SIP PCAP/CAP file                          │
+  │ C  ┃ dump pcap sippg    ┃ Dump all POST and GET requests made in a SIP PCAP/CAP file              │
+  │ C  ┃ dump pcap images   ┃ Dump all and download all images that have been found inside of a pcap  │
+  │ C  ┃ dump pcap imaplogn ┃ Dump all IMAP logins made in a IMAP PCAP/CAP file                       │
+  │ C  ┃ dump pcap custom   ┃ Dump your own custom filters in any PCAP file self output               │
+  │ C  ┃ dump pcap          ┃ Dump all packets in a PCAP/CAP file UNFORMATTED                         │
+  │ C  ┃ ping udp           ┃ Send out UDP pakcets to ping all living hosts                           │
+  │ C  ┃ ping tcp           ┃ Send out TCP packets to ping all living hosts                           │
+  │ C  ┃ ping syn           ┃ Send out SYN packets to ping all living hosts                           │
+  │ C  ┃ ping icmp          ┃ Send out ICMP packets to ping all living hosts                          │
+  │ C  ┃ ping arp           ┃ Send out ARP packets to identify living hosts by MAC and IP             │
+  │ C  ┃ crack sha1 list    ┃ Brute force all SHA1 hashes in a list                                   │
+  │ C  ┃ crack sha256 list  ┃ Brute force all SHA256 hashes in a list                                 │
+  │ C  ┃ crack md5 list     ┃ Brute force all MD5 hashes in a list                                    │
+  │ C  ┃ crack sha1 single  ┃ Brute force a single SHA1 hash                                          │
+  │ C  ┃ crack sha256 single┃ Brute force a single SHA256 hash                                        │
+  │ C  ┃ crack md5 single   ┃ Brute force a single MD5 hashes                                         │
+  │ C  ┃ encode md5         ┃ Encode a string in a MD5 hash                                           │
+  │ C  ┃ encode sha1        ┃ Encode a string in a SHA1 hash                                          │
+  │ C  ┃ encode sha256      ┃ Encode a string in a SHA256 hash                                        │
+  │ C  ┃ encode sha512      ┃ Encode a string in a SHA512 hash                                        │
+  │ C  ┃ encode base64      ┃ Encode a string in a BASE64 string                                      │
+  │ C  ┃ encode base32      ┃ Encode a string in a BASE32 string                                      │
+  │ C  ┃ encode md5  list   ┃ Convert all passwords in a wordlist MD5 hashes                          │
+  │ C  ┃ encode sha1 list   ┃ Convert all passwords in a wordlist into SHA1 hashes                    │
+  │ C  ┃ encode sha256 list ┃ Convert all passwords in a wordlist into SHA256 hashes                  │
+  │ C  ┃ encode sha512 list ┃ Convert all passwords in a wordlist into SHA512 hashes                  │
+  │ C  ┃ encode base64 list ┃ Convert all passwords in a wordlist into base64 strings                 │
+  │ C  ┃ encode base32 list ┃ Convert all passwords in a wordlist into base32 strings                 │
+  │ C  ┃ encode rot13       ┃ Encode a string in ROT13                                                │
+  │ C  ┃ encode HMAC        ┃ Encode a string with a key in HMAC                                      │
+  │ C  ┃ run RR6 GUI        ┃ Run the RR6 GUI for image injection, OUI tracing and more               │
+  │ C  ┃ run RR6 scan gui   ┃ Run the RR6 scan GUI for network recon                                  │
+  │ C  ┃ Brute SMTP         ┃ Brute force SMTP services and emails                                    │
+  │ C  ┃ Brute HTTP auth    ┃ Brute force HTTP authentication threaded option                         │
+  │ C  ┃ Brute SSH          ┃ Brute force SSH Servers and usernames                                   │
+  │ C  ┃ Brute FTP          ┃ Brute force FTP servers and usernames                                   │
+  │ C  ┃ Brute HTTPA        ┃ Brute force HTTP plain authentication                                   │
+  │ C  ┃ Brute Telnet       ┃ Brute force TELNET servers using std auth                               │ 
+  │ C  ┃ Brute Cpan         ┃ Brute force Cpanel servers using std auth                               │ 
+  │ C  ┃ Brute psql         ┃ Brute force PostGreSQL servers using a wordlist                         │ 
+  │ C  ┃ Brute mysql        ┃ Brute force MySQL servers using a wordlist                              │ 
+  │ C  ┃ Brute mongo        ┃ Brute force Mongo servers using a wordlist                              │ 
+  │ C  ┃ Brute ZIP          ┃ Brute force ZIP files with a given thread count, wordlist, and ZIP file │ 
+  │ C  ┃ sniff interfaces   ┃ Scan for interfaces on the current machine                              │ 
+  │ C  ┃ sniff iface info * ┃ Scan for interfaces on the current machine and grab and output card info│ 
+  │ C  ┃ sniff iface info   ┃ Scan for all information on a certian interface on the current system   │ 
+  │ C  ┃ sniff interface ip ┃ Scan for all information on a certian interface based on a given IP     │  
+  │ C  ┃ sniff tcp          ┃ Sniff all incoming TCP packets that are picked up                       │ 
+  │ C  ┃ sniff ip           ┃ Sniff all IP packets that are picked up                                 │ 
+  │ C  ┃ sniff dhcp         ┃ Sniff all DHCP packets that come through                                │ 
+  │ C  ┃ sniff application  ┃ Sniff all application like packets like Multicast Query Response        │ 
+  │ C  ┃ sniff ethernet     ┃ Sniff all Ethernet packets that are picked up on a interface            │
+  │ C  ┃ sniff ssid         ┃ Sniff all networks nearby by parsing dot11 beacon requests              │
+  │ C  ┃ sniff probe        ┃ Sniff all data of a network by parsing all incoming dot11 probe requests│
+  │ C  ┃ sniff 802raw       ┃ Sniff all dot11 packets, and all layers without formatting              │
+  │ C  ┃ sniff discovery    ┃ Sniff all networks nearby and get info like RSSI, BSSID, OUI, MAC, SSID │
+  │ C  ┃ check cpanel vuln  ┃ Check if the version of cpanel you are using is vulnerable              │
+  │ C  ┃ check proton ip    ┃ Check if a IP address belongs to a proton mail IP server                │
+  │ C  ┃ check IP           ┃ Check to look for general information of an IP, EG: Country, code       │
+  │ C  ┃ check github user  ┃ Check to look for information on a github user, EG: Bio, Location etc   │
+  │ C  ┃ check github star  ┃ Check to find all stargazers on a given users repo and info of gazers   │
+  │ C  ┃ check github foll  ┃ Check to find all information on followers on a certian github user     │
+  │ C  ┃ check github orgr  ┃ Check to find all organization repositories that are public             │
+  │ C  ┃ check github usero ┃ Check to find all organizations that the user is tied to by a git user  │
+  │ C  ┃ check github usere ┃ Check to find all user events based on a given github username          │
+  │ C  ┃ check github orge  ┃ Check to find all organization events based on an organization name     │
+  │ C  ┃ check github repos ┃ Check to find all repos and repo information of a given github username │
+  │ C  ┃ check proton email ┃ Check if a email address belongs to a proton mail account               │
+  │ C  ┃ check cloudflare ip┃ Check if a given IPv6 or IPv4 address belongs to the cloudflare CIDRs   │
+  │ C  ┃ check cloudfront ip┃ Check if a given IPv6 or IPv4 address belongs to the cloudfront CIDRs   │
+  │ C  ┃ check mcafe ip     ┃ Check if a given IPv6 or IPv4 address belongs to the Mcafe CIDRs        │
+  │ C  ┃ check aws ip       ┃ Check if a given IPv6 or IPv4 address belongs to the AWS CIDRs          │
+  │ C  ┃ check azure ip     ┃ Check if a IP address belongs to the azure cloud addr prexix list       │
+  │ C  ┃ check myip         ┃ Check for your public IP address                                        │
+  │ C  ┃ check number       ┃ Check a number hash EX(+381-##-###-####) and try to get information     │
+  │ C  ┃ check number us    ┃ Check a number code EX(320) and get city, state, currency etc           │
+  │ C  ┃ check number be    ┃ Check a number hash EX(+32(2)###-##-##) and get city, country etc info  │
+  │ C  ┃ trace number us    ┃ Check a US number for information and data                              │
+  │ C  ┃ parse burp targets ┃ Parse a list of urls and targets to produce a burp suite config file    │
+  │ C  ┃ parse config       ┃ Parse the api database to see what API keys you have set in the config  │
+  │ C  ┃ parse xmln host    ┃ Parse a NMAP XML file to find the scanned host                          │
+  │ C  ┃ parse xmln service ┃ Parse a NMAP XML file to find info on all ports and their services      │
+  │ C  ┃ parse xmln ports   ┃ Parse a NMAP XML file to find all scanned ports and their state         │
+  │ C  ┃ parse xmln hostn   ┃ Parse a NMAP XML file to find all hostnames in the scan                 │
+  │ C  ┃ parse xmln porti   ┃ Parse a NMAP XML file to find all ports and their information           │
+  │ C  ┃ parse xmln runs    ┃ Parse a NMAP XML file to find the runtime and exit status of nmap       │
+  │ C  ┃ parse xmln hosts   ┃ Parse a NMAP XML file to find all the scanned number of hosts           │
+  │ C  ┃ parse xmln hosth   ┃ Parse a NMAP XML file to find all info in the host hint section         │
+  │ C  ┃ parse xmln verbose ┃ Parse a NMAP XML file to find settings for the verbose tag              │
+  │ C  ┃ parse xmln debug   ┃ Parse a NMAP XML file to find settings for the debugging tag            │
+  │ C  ┃ parse xmln times   ┃ Parse a NMAP XML file to find times of the script                       │
+  │ C  ┃ parse xmln scaninf ┃ Parse a NMAP XML file to find all scan information                      │
+  │ C  ┃ parse xmln *       ┃ Parse a NMAP XML file and run all xmln options for output               │
+  │ C  ┃ parse scope        ┃ Parse a burp scope json file to match with hosts in a url like urls.txt │
+  │ C  ┃ parse data IP4     ┃ Parse through an entire file to find all IPv4 addresses used            │
+  │ C  ┃ parse data IP6     ┃ Parse through an entire file to find all IPv6 addresses used            │
+  │ C  ┃ parse data email   ┃ Parse through an entire file to find all email addresses used           │
+  │ C  ┃ parse data mac     ┃ Parse through an entire file to find all MAC addresses used             │
+  │ C  ┃ parse data custom  ┃ Parse through an entire file with a custom regex string to pillage data │
+  │ C  ┃ utils ghosted      ┃ Run the ghosted OS shell for resetting, deleting drives                 │
+  │ C  ┃ utils blocker l    ┃ Run the DNS blocker and block a list of hosts from making a connection  │
+  │ C  ┃ utils blocker s    ┃ Run the DNS blocker and block a single host from making a connection    │
+  │ C  ┃ utils blocker fix  ┃ Run the OS module to repair/reset the hosts file after writing to file  │
+  │ C  ┃ utils verify mac   ┃ Verify a MAC address with regex to test the macs quality                │
+  │ C  ┃ utils verify email ┃ Verify a Email address with regex to test the emails quality            │
+  │ C  ┃ utils verify IP4   ┃ Verify a IPv4 address with regex to test the IP Addresses quality       │
+  │ C  ┃ utils verify IP6   ┃ Verify a IPv6 address with regex to test the IP6 Addresses quality      │
+  │ C  ┃ utils verify h:p   ┃ Verify a host and port with regex to test the host:port quality         │
+  │ C  ┃ utils verify host  ┃ Verify a hostname address with regex to test the hosts quality          │
+  │ C  ┃ utils gen emailmail┃ Scrape a website for emails and parse it into a maltego like body report│
+  │ C  ┃ utils gen linkmail ┃ Scrape a website all links / hrefs and parse it into a maltego body     │
+  │ C  ┃ utils verify host  ┃ Verify a hostname address with regex to test the hosts quality          │
+  │ C  ┃ utils gen JPG      ┃ Generate a map / GPS image based on the geo location of a JPG image     │
+  │ C  ┃ utils gen map      ┃ Generate a map / GPS image based on the LAT and LON of a input          │
+  │ C  ┃ utils gz uncompress┃ Uncompress a GZIP file or folder, this is experimental so watch out     │
+  │ C  ┃ utils unzip        ┃ Unzip every file in a zipped file and output to a proper directory      │
+  │ C  ┃ utils build gmapl  ┃ Build a google maps link with a lat (lattitude) and lon (longitude)     │
+  │ C  ┃ utils gen AES      ┃ Encrypt a string with a assigned or given AES key length must be 32     │
+  │ C  ┃ utils dec AES      ┃ Decrypt a string or message in a filename with a given filename         │
+  │ C  ┃ utils encf AES     ┃ Encrypt a given text file with a AES key or string of length 32         │
+  │ C  ┃ utils decf AES     ┃ Decrypt a given text file with a AES key or string of length 32         │
+  │ C  ┃ utils gen rjpg     ┃ Generate a random jpg image with random settings and configurations     │
+  │ C  ┃ utils gen xxe php  ┃ Generate a XXE Entity template based on a PHP command                   │
+  │ C  ┃ utils gen xxe soap ┃ Generate a XXE Entity template based on a SOAP XXE template and command │
+  │ C  ┃ utils gen xxe base ┃ Generate a XXE Entity template based on BASE64 Encoded data             │
+  │ C  ┃ utils gen xxe inj  ┃ Generate a normal XXE template with a normal entity                     │
+  │ C  ┃ utils gen xxe xinc ┃ Generate a XXE Entity template based on XINC                            │
+  │ C  ┃ utils deface htm   ┃ Deface all html files and htm files in a given directory or location    │
+  │ C  ┃ utils test binary  ┃ Check if a binary file is vulnerable to any form of ENV vulnerabilities │
+  │ C  ┃ utils msfsessions  ┃ Attempt to gather all of your MSF sessions by local and OS variables    │
+  │ C  ┃ utils tor stat     ┃ Attempt to check if SOCKS5 is up and running or ready for use           │
+  │ C  ┃ utils tor get      ┃ Attempt to download a file from a url with the SOCKS5 proxy             │
+  │ C  ┃ ssh check          ┃ Check to see if a SSH server on a host is alive                         │
+  │ C  ┃ ssh transfer       ┃ Attempt transfer a file to the ssh server                               │
+  │ C  ┃ ssh auth           ┃ Check to see if a username and password will be authenticated           │
+  │ C  ┃ ssh auth key       ┃ Check to see if a ssh key will be authenticated with a user and pass    │
+  │ C  ┃ ssh exec           ┃ Execute a command over an ssh server with a simple login, user and pass │
+  │ C  ┃ ssh auth config    ┃ Attempt to login to a server with the settings in the SSH yaml file     │
+  │ C  ┃ ssh dial config    ┃ Attempt to ping a server with the current settings in the ssh yaml file │
+  │ C  ┃ ssh check config   ┃ Attempt to check the connection on a server with the config YAML file   │
+  │ C  ┃ ssh start shell    ┃ Get a SSH shell on a remote server using a private key and username     │
+  │ C  ┃ db ping mongo      ┃ Attempt to ping a MongoDB database running on a remote server           │
+  │ C  ┃ db ping mysql      ┃ Attempt to ping a MySQL   database running on a remote server           │
+  │ C  ┃ db ping postgres   ┃ Attempt to ping a PostGreSQL database running on a remote server        │
+  │ C  ┃ db ping mssql      ┃ Attempt to ping a MS-SQL database running on a remote server            │
+  │ C  ┃ db auth mysql      ┃ Attempt to auth a password and user on a local mysql sql server         │
+  │ C  ┃ db auth postgres   ┃ Attempt to auth a password and user on a local postgre sql server       │
+  │ C  ┃ start http server  ┃ Start the local red rabbit user dashboard and coumentation server :5501 │
+  │ C  ┃ start ssh tunel    ┃ Start a SSH tunnel on a remote host, given local addr and port          │
+  │ C  ┃ start listen bind  ┃ Start a bind shell on a given address and port to listen for connection │
+  │ C  ┃ start listen tcp   ┃ Start a tcp shell on a given address and port to listen for connection  │
+  │ C  ┃ start def interface┃ Start the defualt interface based on OS detection as monitor mode       │
+  │ C  ┃ start cus interface┃ Start a interface into monitor mode with a given interface name or addr │
+  │ C  ┃ stop def interface ┃ Stop a interface that may be in monitor mode using ip link              │
+  │ C  ┃ api layerus config ┃ Use the apilayer API to lookup US numbers with custom config            │
+  │ C  ┃ api layerbe config ┃ Use the apilayer API to lookup BE/Belgium numbers with custom config    │
+  │ C  ┃ api whoisx config  ┃ Use the WHOIS XML API to lookup a website, with custom config           │
+  │ C  ┃ api layerus        ┃ Use the apilayer API to lookup US numbers                               │
+  │ C  ┃ api layerbe        ┃ Use the apilayer API to lookup BE/Belgium numbers                       │
+  │ C  ┃ api whoisxml       ┃ Use the WHOIS XML API to lookup a website                               │
+  │ C  ┃ api grab config    ┃ grab all custom placed username, passwords, and api keys                │
+  │ C  ┃ engine ogoogle     ┃ Scrape google for infromation given a search query                      │
+  │ C  ┃ engine otwitter    ┃ Scrape google for information on a given twitter search query           │
+  │ C  ┃ engine ofacebook   ┃ Scrape google for infromation on a given facebook search query          │
+  │ C  ┃ engine olinkedin   ┃ Scrape google for infromation on a given linkedin search query          │
+  │ C  ┃ engine tcve        ┃ Scrape a govenrment cyber security databases for info on a cve with tor │
+  │ C  ┃ engine cve         ┃ Scrape a govenrment cyber security databases for info on a given cve    │
+  │ C  ┃ engine shodanh     ┃ Scrape shodan for information on a given hostname or query              │
+  │ C  ┃ atk fuzz           ┃ Attempt to fuzz a network service or application to test its buf limit  │
+  │ C  ┃ atk timestamp      ┃ Attempt to change the permissions of a given file or folder by ID       │
+  │ C  ┃ atk permission     ┃ Attempt to change the timestamp on a given file or folder               │
+  │ C  ┃ atk dnsspoof       ┃ Attempt to spoof and poison a given targets dns through ARP spoofing    │
+  └───────────────────────────────────────────────────────────────────────────────────────────────────┘

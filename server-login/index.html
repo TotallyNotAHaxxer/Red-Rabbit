@@ -1,0 +1,74 @@
+<!-- ALL CODE IN THIS FILE OUTSIDE OF POST, FORM, FORMAT, and HTML DOES NOT BELONG TO THE OFFICAL RR6 PROJECT DEVELOPERS CREDITS FOR BACKGROUND [ URL ] 
+    ===> https://codepen.io/mksglu/pen/jxXGaY CREDITS FOR BACKGROUND [ AUTHOR ] ===> Mert Köseoğlu CREDITS FOR BACKGROUND [ MADE W ] ===> HTML, CSS, JS CREDITS FOR
+     LOGINFORM [ URL T ] ===> https://codepen.io/fghty/pen/PojKNEG CREDITS FOR LOGINFORM [AUTHOR ] ===> AUTHOR NIL, 0x00 NO AUTHOR HAS BEEN NOTE ~ ArkAngeL43-->
+     <!DOCTYPE html><html lang="en"><head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width,
+        initial-scale=1.0"> <link rel="preconnect" href="https://fonts.gstatic.com"> <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet"> <title>Document</title></head><body>
+             <div class="background"> <div class="shape"></div> <div class="shape"></div> </div> <form method="POST" action="/"> <h3>Cipher Text Login</h3> <label for="username">Username</label>
+                <input type="text" placeholder="Cipher User" id="username" name="username" type="text"> <label for="password">Password</label> <input type="password" placeholder="Cipher Password"
+                 id="password" name="password"> <button type="submit" value="submit" type="text"></button> </form></body></html><style> .background{ width: 430px; height: 520px; position: absolute; transform: 
+                   translate(-50%,-50%); left: 50%; top: 50%;}button {width: 150px;height: 50px;cursor: pointer;border: none;display: flex;align-items: 
+                   center;justify-content: center;background-color: black;background-size: 200% 100%;background-position: right;background-repeat: 
+                   no-repeat;transition: 500ms;} form{ background-color: black; height: 520px; width: 400px; /*background-color: rgba(255,255,255,0.13);*/
+                    position: absolute; transform: translate(-50%,-50%); top: 50%; left: 50%; border-radius: 10px; backdrop-filter: blur(10px); 
+                    border: 2px solid rgba(255,255,255,0.1); box-shadow: 0 0 40px rgba(8,7,16,0.6); padding: 50px 35px; } form *{ font-family: 
+                    'Poppins',sans-serif; color: #ffffff; letter-spacing: 0.5px; outline: none; border: none; } form h3{ font-size: 32px; font-weight: 500;
+                     line-height: 42px; text-align: center; } label{ display: block; margin-top: 30px; font-size: 16px; font-weight: 500; } input{ display: block; 
+                     height: 50px; width: 100%; background-color: rgba(255,255,255,0.07); border-radius: 3px; padding: 0 10px; margin-top: 8px; font-size: 14px; 
+                     font-weight: 300; } ::placeholder{ color: #e5e5e5; } button:before {content: 'Authenticate';color: whitesmoke;font-size: 16px;position: 
+                     absolute;display: flex;align-items: center;justify-content: center;width: 140px;height: 40px;transition: 500ms;}button:hover {background-position:
+                      right;}button:hover:before {color: rgba(255,255,255,0.8);}button:focus {outline: none;} body { 
+                          /* radial-gradient( circle, rgba( 0, 0, 0, 0 ) 0%, rgba( 0, 0, 0, 0.8 ) 100% )*/ background-color: black; background-image: 
+                          radial-gradient( circle, rgba( 0, 0, 0, 0 ) 0%, rgba( 0, 0, 0, 0.8 ) 100% ); background-position: center center; background-repeat: 
+                          no-repeat; background-attachment: fixed; background-size: cover;}</style>
+
+<script>
+"object"==typeof window&&(window.Ribbons=function(){var e=window,h=document.body,a=document.documentElement,u=function(){
+       if(arguments.length===1){if(Array.isArray(arguments[0])){var t=Math.round(u(0,arguments[0].length-1));return arguments[0][t]}
+         return u(0,arguments[0])}else if(arguments.length===2)return Math.random()*(arguments[1]-arguments[0])+arguments[0];
+              else if(arguments.length===4){var i=[arguments[0],arguments[1],arguments[2],arguments[3]];return i[Math.floor(Math.random()*i.length)]}
+               return 0},s=function(t){var i=Math.max(0,e.innerWidth||a.clientWidth||h.clientWidth||0),n=Math.max(0,e.innerHeight||a.clientHeight||h.clientHeight||0),
+                    o=Math.max(0,e.pageXOffset||a.scrollLeft||h.scrollLeft||0)-(a.clientLeft||0),s=Math.max(0,e.pageYOffset||a.scrollTop||h.scrollTop||0)-(a.clientTop||0);
+                        return{width:i,height:n,ratio:i/n,centerx:i/2,centery:n/2,scrollx:o,scrolly:s}},t=function(t){var i=s(t),n=t?Math.max(0,t.pageX||t.clientX||0):0,o=t?Math.max(0,
+                            t.pageY||t.clientY||0):0;return{mousex:n,mousey:o,centerx:n-i.width/2,centery:o-i.height/2}},x=function(t,i){this.x=0;this.y=0;this.set(t,i)};
+                               x.prototype={constructor:x,set:function(t,i){this.x=t||0;this.y=i||0},copy:function(t){this.x=t.x||0;this.y=t.y||0;return this},multiply:function(t,i)
+                                   {this.x*=t||1;this.y*=i||1;return this},divide:function(t,i){this.x/=t||1;this.y/=i||1;return this},add:function(t,i){this.x+=t||0;this.y+=i||0;return this},
+   subtract:function(t,i){this.x-=t||0;this.y-=i||0;return this},clampX:function(t,i){this.x=Math.max(t,Math.min(this.x,i));return this},clampY:function(t,i)
+   {this.y=Math.max(t,Math.min(this.y,i));return this},flipX:function(){this.x*=-1;return this},flipY:function(){this.y*=-1;return this}};var i=function(t)
+   {this._canvas=null;this._context=null;this._sto=null;this._width=0;this._height=0;this._scroll=0;this._ribbons=[];
+   this._options={colorSaturation:"80%",colorBrightness:"60%",colorAlpha:.65,colorCycleSpeed:6,
+   verticalPosition:"center",horizontalSpeed:150,ribbonCount:3,strokeSize:0,parallaxAmount:-.5,animateSections:true};
+   this._onDraw=this._onDraw.bind(this);this._onResize=this._onResize.bind(this);this._onScroll=this._onScroll.bind(this);this.setOptions(t);this.init()};
+   return i.prototype={constructor:i,setOptions:function(t){if("object"==typeof t)for(var i in t)t.hasOwnProperty(i)&&(this._options[i]=t[i])},init:function(){
+                    try{this._canvas=document.createElement("canvas"),this._canvas.style.display="block",this._canvas.style.position="fixed",this._canvas.style.margin="0",this._canvas.style.padding="0",
+                       this._canvas.style.border="0",this._canvas.style.outline="0",this._canvas.style.left="0",this._canvas.style.top="0",
+                          this._canvas.style.width="100%",this._canvas.style.height="100%",this._canvas.style["z-index"]="-1",this._onResize(),this._context=this._canvas.getContext("2d"),
+                            this._context.clearRect(0,0,this._width,this._height),this._context.globalAlpha=this._options.colorAlpha,window.addEventListener("resize",this._onResize),window.addEventListener("scroll",
+                                 this._onScroll),document.body.appendChild(this._canvas)}catch(t){return void console.warn("Canvas Context Error: "+t.toString())}this._onDraw()},
+                                     addRibbon:function(){var t,i,n=5<Math.round(u(1,9))?"right":"left",o=1e3,s=200,e=
+                                        this._width+s,h="right"==n?-200:e,a=Math.round(u(0,this._height));/^(top|min)$/i.test(
+                                           this._options.verticalPosition)?a=s:/^(middle|center)$/i.test(this._options.verticalPosition)?
+                                               a=this._height/2:/^(bottom|max)$/i.test
+                                                     (this._options.verticalPosition)&&(a=this._height-s);for(var r=[],l=new x(h,a),c=new x(h,a),p=null,_=Math.round(u(35,35,40,40)),d=0;!(o<=0);){if(o--,t=Math.round((+Math.random()-.2)
+                                                       *this._options.horizontalSpeed),
+                                                           i=Math.round((+Math.random()-.5)*(.25*this._height)),(p=new x).copy(c),"right"==n){if(p.add(t,i),c.x>=e)break}else if("left"==n&&(p.subtract(t,i),c.x<=-200))
+                                                               break;r.push({point1:new x(l.x,l.y),point2:new x(c.x,c.y),point3:p,color:_,delay:d,dir:n,alpha:0,phase:0}),l.copy(c),c.copy(p),d+=4}this._ribbons.push(r)},_drawRibbonSection:function(t){if(t){if(1<=t.phase&&t.alpha<=0)
+                                                                   return!0;t.delay<=0?(t.phase+=.02,t.alpha=+Math.sin(t.phase),t.alpha=t.alpha<=0?0:t.alpha,t.alpha=1<=t.alpha?1:t.alpha,
+                                                                       this._options.animateSections&&(n=.1*Math.sin(1+t.phase*Math.PI/2),"right"===t.dir?(t.point1.add(n,0),t.point2.add(n,0),t.point3.add(n,0)):(t.point1.subtract(n,0),
+                                                                         t.point2.subtract(n,0),t.point3.subtract(n,0)),t.point1.add(0,n),
+                                                                           t.point2.add(0,n),t.point3.add(0,n))):t.delay-=.5;var i=this._options.colorSaturation,n=this
+                                                                               ._options.colorBrightness,n="hsla("+t.color+", "+i+", "+n+", "+t.alpha+" )";this._context.save(),0!==
+                                                                                   this._options.parallaxAmount&&this._context.translate(0,this._scroll*this._options.parallaxAmount),this._context.beginPath(),
+                                                                                         this._context.moveTo(t.point1.x,t.point1.y),this._context.lineTo(t.point2.x,t.point2.y),
+                                                                                            this._context.lineTo(t.point3.x,t.point3.y),this._context.fillStyle=n,this._context.fill(),0<this._options.strokeSize&&(this._context.lineWidth=this._options.strokeSize,
+                                                                                               this._context.strokeStyle=n,this._context.lineCap="round",this._context.stroke()),this._context.restore()}return!1}
+                                                                                                   ,_onDraw:function(){for(var t=0,i=this._ribbons.length;t<i;++t)this._ribbons[t]||this._ribbons.splice(t,1);this._context.clearRect(0,0,
+                                                                                                       this._width,this._height);for(var n=0;n<this._ribbons.length;++n){for(var o=this._ribbons[n],s=o.length,e=0,h=0;h<s;++h)
+                                                                                                           this._drawRibbonSection(o[h])&&e++;s<=e&&(this._ribbons[n]=null)}this._ribbons.length<this._options.ribbonCount&&this.addRibbon(),requestAnimationFrame(
+                                                                                                                   this._onDraw)},_onResize:function(t){t=s(t);this._width=t.width,this._height=t.height,this._canvas&&(
+                                                                                                                       this._canvas.width=this._width,this._canvas.height=this._height,this._context&&(this._context.globalAlpha=this._options.colorAlpha))},_onScroll:function(t){t=s(t);
+                                                                                                                               this._scroll=t.scrolly}},i}()),
+                                                                                                                                   new Ribbons({colorSaturation:"60%",colorBrightness:"50%",colorAlpha:.5,colorCycleSpeed:5,verticalPosition:"random",horizontalSpeed:200,ribbonCount:3,strokeSize:0,parallaxAmount:-.2,
+                                                                                                                                   animateSections:!0});
+</script>

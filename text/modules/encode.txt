@@ -1,0 +1,16 @@
+  ┌────┳────────────────────┳─────────────────────────────────────────────────────────────────────────┐
+  │ C  ┃ encode md5         ┃ Encode a string in a MD5 hash                                           │
+  │ C  ┃ encode sha1        ┃ Encode a string in a SHA1 hash                                          │
+  │ C  ┃ encode sha256      ┃ Encode a string in a SHA256 hash                                        │
+  │ C  ┃ encode sha512      ┃ Encode a string in a SHA512 hash                                        │
+  │ C  ┃ encode base64      ┃ Encode a string in a BASE64 string                                      │
+  │ C  ┃ encode base32      ┃ Encode a string in a BASE32 string                                      │
+  │ C  ┃ encode md5  list   ┃ Convert all passwords in a wordlist MD5 hashes                          │
+  │ C  ┃ encode sha1 list   ┃ Convert all passwords in a wordlist into SHA1 hashes                    │
+  │ C  ┃ encode sha256 list ┃ Convert all passwords in a wordlist into SHA256 hashes                  │
+  │ C  ┃ encode sha512 list ┃ Convert all passwords in a wordlist into SHA512 hashes                  │
+  │ C  ┃ encode base64 list ┃ Convert all passwords in a wordlist into base64 strings                 │
+  │ C  ┃ encode base32 list ┃ Convert all passwords in a wordlist into base32 strings                 │
+  │ C  ┃ encode rot13       ┃ Encode a string in ROT13                                                │
+  │ C  ┃ encode HMAC        ┃ Encode a string with a key in HMAC                                      │
+  └───────────────────────────────────────────────────────────────────────────────────────────────────┘

@@ -1,0 +1,8 @@
+  ┌────┳────────────────────┳─────────────────────────────────────────────────────────────────────────┐
+  │ C  ┃ crack sha1 list    ┃ Brute force all SHA1 hashes in a list                                   │
+  │ C  ┃ crack sha256 list  ┃ Brute force all SHA256 hashes in a list                                 │
+  │ C  ┃ crack md5 list     ┃ Brute force all MD5 hashes in a list                                    │
+  │ C  ┃ crack sha1 single  ┃ Brute force a single SHA1 hash                                          │
+  │ C  ┃ crack sha256 single┃ Brute force a single SHA256 hash                                        │
+  │ C  ┃ crack md5 single   ┃ Brute force a single MD5 hashes                                         │
+  └───────────────────────────────────────────────────────────────────────────────────────────────────┘

@@ -1,0 +1,11 @@
+  ┌────┳────────────────────┳─────────────────────────────────────────────────────────────────────────┐
+  │ C  ┃ inject zip         ┃ Inject a ZIP file / Archive file into a JPG/JPEG image                  │
+  │ C  ┃ inject gif         ┃ Inject a given payload into a GIF image                                 │
+  │ C  ┃ inject jpg         ┃ Inject a given payload into a JPG/JPEG image                            │
+  │ C  ┃ inject webp        ┃ Inject a given payload into a WEBP image                                │
+  │ C  ┃ inject png         ┃ Inject a given payload into a PNG image                                 │
+  │ C  ┃ inject bmp         ┃ Inject a given payload into a BMP image                                 │
+  │ C  ┃ inject payload     ┃ Inject a given payload into a URL to parse it into the headers          │
+  │ C  ┃ inject payloadl    ┃ Inject a given payload into a URL from a list of URLS to parse payloads │
+  │ C  ┃ inject payloadul   ┃ Inject a given payload list into a URL to parse it into the headers     │
+  └───────────────────────────────────────────────────────────────────────────────────────────────────┘

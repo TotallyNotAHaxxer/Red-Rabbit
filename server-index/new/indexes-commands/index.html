@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> RR6 ADMIN DASHBOARD | Documentation Server LO </title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='fas fa-rabbit'></i>
+      <span class="logo_name">Red Rabbit</span>
+    </div>
+      <ul class="nav-links">
+          <li>
+          <a href="/server-index/new/indexes" class="active">
+            <i class='bx bx-ghost'></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.github.com/ArkAngeL43" class="inactive">
+            <i class='bx bxl-gitlab' ></i>
+            <span class="links_name">Github</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://discord.gg/fEWXZyEzSe" class="inactive">
+            <i class='bx bxl-discord' ></i>
+            <span class="links_name">Discord</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/new/indexes-errors" class="inactive">
+            <i class='bx bxs-error-alt'></i>
+            <span class="links_name">Error Documentation</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/old" class="inactive">
+            <i class='bx bxs-vial' ></i>
+            <span class="links_name">Old Documentation</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/new/indexes-flags" class="inactive">
+            <i class='bx bxs-flag-alt'></i>
+            <span class="links_name">Flags Documentation</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/new/indexes-about" class="inactive">
+            <i class='bx bx-cube'></i>
+            <span class="links_name">About</span>
+          </a>
+        </li>
+        
+        <li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <div class="ascii_art">
+                               ______           __        ______         __     __     __ __          _____                                         __          __   __              
+                              |   __ \.-----.--|  |______|   __ \.---.-.|  |--.|  |--.|__|  |_ ______|     \.-----.----.--.--.--------.-----.-----.|  |_.---.-.|  |_|__|.-----.-----.
+                              |      <|  -__|  _  |______|      <|  _  ||  _  ||  _  ||  |   _|______|  --  |  _  |  __|  |  |        |  -__|     ||   _|  _  ||   _|  ||  _  |     |
+                              |___|__||_____|_____|      |___|__||___._||_____||_____||__|____|      |_____/|_____|____|_____|__|__|__|_____|__|__||____|___._||____|__||_____|__|__|
+                                                                                                                                                                                            
+      The next few sections will be dedicated to the red rabbit documentation, the sections will be disected by module, eg: (0x0001 is module search) it goes from there 
+      from the list above. Another example of how modules will be seperated is by the cloumn number in the chart above where Brute is the second module name, its section will 
+      be labeled 0x0002 - BRUTE -, please take your time going through the documentation ALOT of people often forget about documentation then come to the devs confused as to 
+      why some dont work, or how the script works and how to use it, so please, when i mean read it i mean READ IT CAREFULLY! 
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <div class="Paragraph_Starter">0x00023 Commands</div>
+    <div class="Base_Text">
+      total commands in red rabbit and their description, large menu
+
+      C = command
+      F = flag
+
+      Total options     -> 308 
+      Total utilities   -> 275
+      Total Files       -> 534
+      Total directories -> 294
+      Total modules     -> 143
+    <hr>
+    <div class="ascii_art">
+      ┌────┳────────────────────────┳────────────────────────────────────────────────────────────────────────────────────────┐
+      │ C  ┃ help verified          ┃ View all verified and working commands                                                 │
+      │ C  ┃ commands/h             ┃ View this help menu, sjowing general info                                              │
+      │ C  ┃ help flags             ┃ View all descriptions of flags                                                         │
+      │ C  ┃ help advanced          ┃ View all commands with advanced usages and examples                                    │
+      │ C  ┃ help commands          ┃ View all general commands and descriptions                                             │
+      │ C  ┃ help all               ┃ View all general commands and descriptions from config files                           │
+      │ C  ┃ help search            ┃ View all commands for the search module                                                │
+      │ C  ┃ help inject            ┃ View all commands for the stegonography module                                         │
+      │ C  ┃ help parse             ┃ View all commands for the file parsing module                                          │
+      │ C  ┃ help encode            ┃ View all commands for the text encoding module                                         │
+      │ C  ┃ help utils             ┃ View all commands for the utilities and etc modules                                    │
+      │ C  ┃ help brute             ┃ View all commands for the brute forcing modules                                        │
+      │ C  ┃ help dump              ┃ View all commands for the file dumping modules                                         │
+      │ C  ┃ help ping              ┃ View all commands for the network discovery modules                                    │
+      │ C  ┃ help sniff             ┃ View all commands for the network / 802.11 sniffing module                             │
+      │ C  ┃ help check             ┃ View all commands for the OSINT / verification modules                                 │
+      │ C  ┃ script settings        ┃ View all settings/flag values that was used                                            │
+      │ C  ┃ clear                  ┃ Clear terminal output                                                                  │
+      │ C  ┃ cls                    ┃ Clear terminal output                                                                  │
+      │ C  ┃ exit                   ┃ Exit the script                                                                        │
+      │ C  ┃ time                   ┃ Get script time                                                                        │
+      │ C  ┃ stalk mac              ┃ Trace the OUI of a single mac, only one mac can be checked at a time                   │
+      │ C  ┃ stalk oui              ┃ Trace the OUI of every single mac in a list of macs                                    │
+      │ C  ┃ stalk hosts            ┃ Trace all hosts on a network given the first 3 octets (10.0.0)                         │
+      │ C  ┃ stalk hosts2           ┃ Trace all hosts on a network given the first 2 octets (10.0.)                          │
+      │ C  ┃ make GET               ┃ make a GET request to a given URL and                                                  │
+      │ C  ┃ make POST              ┃ make a POST request with custom data to a given URL and output body                    │
+      │ C  ┃ make PUT               ┃ make a PUT request with custom data to a given URL and  output body                    │
+      │ C  ┃ search scan            ┃ Get all resolved hosts based on the first three octets of an IP  EX(0.0.0)             │
+      │ C  ┃ search head            ┃ Get the headers of a URL                                                               │
+      │ C  ┃ fetch titles           ┃ Get the direct title of a website                                                      │
+      │ C  ┃ fetch documents        ┃ Get all documents on the page (paths only)                                             │
+      │ C  ┃ fetch links            ┃ Get all links found in the HTML page                                                   │
+      │ C  ┃ fetch proxy4           ┃ Get a list of SOCKS4 proxys and save them to a file                                    │
+      │ C  ┃ fetch proxy5           ┃ Get a list of SOCKS5 proxys and save them to a file                                    │
+      │ C  ┃ fetch http             ┃ Get a list of HTTP proxys without SSL and save them to a file                          │
+      │ C  ┃ fetch httpssl          ┃ Get a list of HTTP proxys WITH SSL and save them to a file                             │
+      │ C  ┃ fetch https            ┃ Get a list of HTTPS proxys without SSL and save them to a file                         │
+      │ C  ┃ fetch httpsssl         ┃ Get a list of HTTPS proxys WITH SSL and save them to a file                            │
+      │ C  ┃ search waf             ┃ Get all status codes and status to tell if your XSS payload can bypass IDS's and IPS's │
+      │ C  ┃ search envf            ┃ Check if targets in a given host list has a .env endpoint to it                        │
+      │ C  ┃ search env             ┃ Check if a single target has a .env file located in the header                         │
+      │ C  ┃ search subdomains      ┃ Get all subdomains based on a subdomain list from a given domain using a DNS server    │
+      │ C  ┃ search redirect        ┃ Check if a target URL will redirect you via status code                                │
+      │ C  ┃ search port            ┃ Get all protocals, types, services, etc on a single port number ( offline )            │
+      │ C  ┃ search port l          ┃ Get all protocals, types, services, etc on a list of ports      ( offline )            │
+      │ C  ┃ search port live       ┃ Get all ports on a specified host (EX: 10.0.0.1)                                       │
+      │ C  ┃ search port llive      ┃ Get all active ports on a LIST of hosts (EX: Hostwordlist.txt)                         │
+      │ C  ┃ search port custom     ┃ Get all ports on a host using custom config file YAML config/scanconf/settings.yml     │
+      │ C  ┃ search ns              ┃ Get the name servers of a domain name                                                  │
+      │ C  ┃ search mx              ┃ Get all the MX records from a domain name                                              │
+      │ C  ┃ search endpoint        ┃ Get the endpoint of a URL                                                              │
+      │ C  ┃ search ip              ┃ Get all hostnames of an IP address                                                     │
+      │ C  ┃ search txt             ┃ Get all TXT records of a domain name                                                   │
+      │ C  ┃ search hostname        ┃ Get the hostname of an IP                                                              │
+      │ C  ┃ search cname           ┃ Get the CNAME records of a domain name                                                 │
+      │ C  ┃ search srv             ┃ Get the SRV of a domain name requires an example server like xmpp-server and a domain  │
+      │ C  ┃ search robots          ┃ Get the robots.txt from a given URL                                                    │
+      │ C  ┃ search urls            ┃ Get all URLS, IPAS, Domain names, and servers of a URL that is crawled                 │
+      │ C  ┃ search banner          ┃ Get the banner of a hostname by making a TCP dial                                      │
+      │ C  ┃ search server          ┃ Get the server of a domain name or URL                                                 │
+      │ C  ┃ search ipa             ┃ Get the IP Address of a URL                                                            │ 
+      │ C  ┃ search route           ┃ Get the route or run a traceroute scan on a domain/url/host                            │
+      │ C  ┃ search admin           ┃ Scan the URL for admin panels or admin access                                          │
+      │ C  ┃ search sqli            ┃ Scan the URL for SQL injection vulnerabilities                                         │
+      │ C  ┃ search lfi             ┃ Scan the URL for LFI vulnerabilities                                                   │
+      │ C  ┃ search phpbb           ┃ Scan the URL for the version of PHPBB                                                  │
+      │ C  ┃ search sig             ┃ Scan a unknown file to try and find its filetype                                       │
+      │ C  ┃ search filepath        ┃ Scan a filepath for a certian file                                                     │
+      │ C  ┃ search archive         ┃ Scan a JPG image for a archive file and try to unzip it                                │
+      │ C  ┃ search geo             ┃ Scan a JPG/JPEG file for a GEO location                                                │
+      │ C  ┃ search methods *       ┃ Scan through multiple request methods to see what a URL will accept                    │
+      │ C  ┃ search httpmethod *    ┃ Print out a list of every HTTP method used in search methods * to understand the number│ 
+      │ C  ┃ search knoxss custom   ┃ Test a URL for XSS vulnerabilities using the cofig/xssapi/api.yaml as an api setting   │ 
+      │ C  ┃ search xss knoxl       ┃ Test all urls in a list for xss vulnerabilities using the KNOXSS API                   │ 
+      │ C  ┃ search xss knoxss      ┃ Test a url for xss vulnerabilities using the KOXSS API                                 │ 
+      │ C  ┃ inject zip             ┃ Inject a ZIP file / Archive file into a JPG/JPEG image                                 │
+      │ C  ┃ inject gif             ┃ Inject a given payload into a GIF image                                                │
+      │ C  ┃ inject jpg             ┃ Inject a given payload into a JPG/JPEG image                                           │
+      │ C  ┃ inject png             ┃ Inject a given payload into a PNG image                                                │
+      │ C  ┃ inject bmp             ┃ Inject a given payload into a BMP image                                                │
+      │ C  ┃ inject webp            ┃ Inject a given payload into a WEBP image                                               │
+      │ C  ┃ inject payload         ┃ Inject a given payload into a URL to parse it into the headers                         │
+      │ C  ┃ inject payloadl        ┃ Inject a given payload into a URL from a list of URLS to parse payloads                │
+      │ C  ┃ inject payloadul       ┃ Inject a given payload list into a URL to parse it into the headers                    │
+      │ C  ┃ dump bootsec info      ┃ Dump your bootsec filename info                                                        │ 
+      │ C  ┃ dump file info         ┃ Dump normal file inforomation on a file                                                │
+      │ C  ┃ dump file info         ┃ Dump normal file inforomation on a file                                                │
+      │ C  ┃ dump file binary       ┃ Dump a given file into a hex/binary like output                                        │
+      │ C  ┃ dump pe info           ┃ Dump a PE/DLL file and get all of its general information and sections                 │
+      │ C  ┃ dump image metadata    ┃ Dump an image's metadata                                                               │
+      │ C  ┃ dump pcap dot11        ┃ Dump all BSSID's, SSID's, and macs in a DOT11 pcap file                                │
+      │ C  ┃ dump pcap ftp          ┃ Dump all found FTP username and passwords / credentials in a PCAP/CAP file             │
+      │ C  ┃ dump pcap ospf         ┃ Dump all found OSPF authentication bytes in a PCAP/CAP file                            │
+      │ C  ┃ dump pcap smtp         ┃ Dump all authentication/users/passwords in a normal SMTP PCAP/CAP file                 │
+      │ C  ┃ dump pcap smtppa       ┃ Dump all AUTH PLAIN logins made in a plain authentication SMTP PCAP/CAP file           │
+      │ C  ┃ dump pcap smtpe        ┃ Dump all email chats, users, and bodies in a SMTP PCAP/CAP file                        │
+      │ C  ┃ dump pcap sipa         ┃ Dump all users and passwords for SIP authentication found in a PCAP/CAP file           │
+      │ C  ┃ dump pcap sipok        ┃ Dump all +OK or OK responses in a SIP PCAP/CAP                                         │
+      │ C  ┃ dump pcap sipin        ┃ Dump all INVITES in a SIP PCAP/CAP file                                                │
+      │ C  ┃ dump pcap sipreg       ┃ Dump all Registers made in a SIP PCAP/CAP file                                         │
+      │ C  ┃ dump pcap sippg        ┃ Dump all POST and GET requests made in a SIP PCAP/CAP file                             │
+      │ C  ┃ dump pcap images       ┃ Dump all packets that have a HTTP layer in them, and download the images if one exists │
+      │ C  ┃ dump pcap imaplogn     ┃ Dump all IMAP logins made in a IMAP PCAP/CAP file                                      │
+      │ C  ┃ dump pcap custom       ┃ Dump your own custom filters in any PCAP file self parsing and custom output           │
+      │ C  ┃ dump pcap              ┃ Dump all packets in a PCAP/CAP file UNFORMATTED                                        │
+      │ C  ┃ ping udp               ┃ Send out UDP pakcets to ping all living hosts                                          │
+      │ C  ┃ ping tcp               ┃ Send out TCP packets to ping all living hosts                                          │
+      │ C  ┃ ping syn               ┃ Send out SYN packets to ping all living hosts                                          │
+      │ C  ┃ ping icmp              ┃ Send out ICMP packets to ping all living hosts                                         │
+      │ C  ┃ ping arp               ┃ Send out ARP packets to identify living hosts on all interfaces by mac ADDR            │
+      │ C  ┃ crack sha1 list        ┃ Brute force all SHA1 hashes in a list                                                  │
+      │ C  ┃ crack sha256 list      ┃ Brute force all SHA256 hashes in a list                                                │
+      │ C  ┃ crack md5 list         ┃ Brute force all MD5 hashes in a list                                                   │
+      │ C  ┃ crack sha1 single      ┃ Brute force a single SHA1 hash                                                         │
+      │ C  ┃ crack sha256 single    ┃ Brute force a single SHA256 hash                                                       │
+      │ C  ┃ crack md5 single       ┃ Brute force a single MD5 hashes                                                        │
+      │ C  ┃ encode md5             ┃ Encode a string in a MD5 hash                                                          │
+      │ C  ┃ encode sha1            ┃ Encode a string in a SHA1 hash                                                         │
+      │ C  ┃ encode sha256          ┃ Encode a string in a SHA256 hash                                                       │
+      │ C  ┃ encode sha512          ┃ Encode a string in a SHA512 hash                                                       │
+      │ C  ┃ encode base64          ┃ Encode a string in a BASE64 string                                                     │
+      │ C  ┃ encode base32          ┃ Encode a string in a BASE32 string                                                     │
+      │ C  ┃ encode md5  list       ┃ Convert all passwords in a wordlist MD5 hashes                                         │
+      │ C  ┃ encode sha1 list       ┃ Convert all passwords in a wordlist into SHA1 hashes                                   │
+      │ C  ┃ encode sha256 list     ┃ Convert all passwords in a wordlist into SHA256 hashes                                 │
+      │ C  ┃ encode sha512 list     ┃ Convert all passwords in a wordlist into SHA512 hashes                                 │
+      │ C  ┃ encode base64 list     ┃ Convert all passwords in a wordlist into base64 strings                                │
+      │ C  ┃ encode base32 list     ┃ Convert all passwords in a wordlist into base32 strings                                │
+      │ C  ┃ encode rot13           ┃ Encode a string in ROT13                                                               │
+      │ C  ┃ encode HMAC            ┃ Encode a string with a key in HMAC                                                     │
+      │ C  ┃ run RR6 GUI            ┃ Run the RR6 GUI for image injection, OUI tracing and more                              │
+      │ C  ┃ run RR6 scan gui       ┃ Run the RR6 scan GUI for network recon compiles all PING commands in a GUI             │
+      │ C  ┃ Brute SMTP             ┃ Brute force SMTP services and emails                                                   │
+      │ C  ┃ Brute SSH              ┃ Brute force SSH Servers and usernames                                                  │
+      │ C  ┃ Brute FTP              ┃ Brute force FTP servers and usernames                                                  │
+      │ C  ┃ Brute HTTPA            ┃ Brute force HTTP plain authentication                                                  │
+      │ C  ┃ Brute HTTP auth        ┃ Brute force HTTP authentication threaded option                                        │
+      │ C  ┃ Brute Telnet           ┃ Brute force TELNET servers using std auth                                              │ 
+      │ C  ┃ Brute Cpan             ┃ Brute force Cpanel servers using std auth                                              │
+      │ C  ┃ Brute psql             ┃ Brute force PostGreSQL servers using a wordlist                                        │ 
+      │ C  ┃ Brute mysql            ┃ Brute force MySQL servers using a wordlist                                             │ 
+      │ C  ┃ Brute mongo            ┃ Brute force Mongo servers using a wordlist                                             │
+      │ C  ┃ Brute ZIP              ┃ Brute force ZIP files with a given thread count, wordlist, and ZIP file                │ 
+      │ C  ┃ sniff interfaces       ┃ Scan for interfaces on the current machine                                             │
+      │ C  ┃ sniff iface info *     ┃ Scan for interfaces on the current machine and grab and output card info               │  
+      │ C  ┃ sniff iface info       ┃ Scan for all information on a certian interface on the current system                  │  
+      │ C  ┃ sniff interface ip     ┃ Scan for all information on a certian interface based on a given IP                    │  
+      │ C  ┃ sniff tcp              ┃ Sniff all incoming TCP packets that are picked up                                      │ 
+      │ C  ┃ sniff ip               ┃ Sniff all IP packets that are picked up                                                │ 
+      │ C  ┃ sniff dhcp             ┃ Sniff all DHCP packets that come through ( might be a buggy output fixing)             │ 
+      │ C  ┃ sniff application      ┃ Sniff all application like packets like Multicast Query Response                       │ 
+      │ C  ┃ sniff ethernet         ┃ Sniff all Ethernet packets that are picked up on a interface                           │
+      │ C  ┃ sniff ssid             ┃ Sniff all networks nearby by parsing dot11 beacon requests interface must be monitor   │
+      │ C  ┃ sniff probe            ┃ Sniff all data of a network by parsing all incoming dot11 probe requests on monitor    │
+      │ C  ┃ sniff 802raw           ┃ Sniff all dot11 packets, and all layers without formatting, meaning no tables          │
+      │ C  ┃ sniff discovery        ┃ Sniff all networks nearby and get info like RSSI, BSSID, OUI, MAC, SSID, etc info      │
+      │ C  ┃ check cpanel vuln      ┃ Check if the version of cpanel you are using is vulnerable                             │
+      │ C  ┃ check proton ip        ┃ Check if a IP address belongs to a proton mail IP server                               │
+      │ C  ┃ check IP               ┃ Check to look for general information of an IP, EG: Country, code                      │
+      │ C  ┃ check github user      ┃ Check to look for information on a github user, EG: Bio, Location etc                  │
+      │ C  ┃ check github star      ┃ Check to find all stargazers on a given users repo and info of gazers                  │
+      │ C  ┃ check github foll      ┃ Check to find all information on followers on a certian github user                    │
+      │ C  ┃ check github orgr      ┃ Check to find all organization repositories that are public                            │
+      │ C  ┃ check github usero     ┃ Check to find all organizations that the user is tied to by a git user                 │
+      │ C  ┃ check github usere     ┃ Check to find all user events based on a given github username                         │
+      │ C  ┃ check github orge      ┃ Check to find all organization events based on an organization name                    │
+      │ C  ┃ check github repos     ┃ Check to find all repos and repo information of a given github username                │
+      │ C  ┃ check proton email     ┃ Check if a email address belongs to a proton mail account                              │
+      │ C  ┃ check cloudflare ip    ┃ Check if a given IPv6 or IPv4 address belongs to the cloudflare CIDR maps              │
+      │ C  ┃ check cloudfront ip    ┃ Check if a given IPv6 or IPv4 address belongs to the cloudfront CIDRs                  │
+      │ C  ┃ check mcafe ip         ┃ Check if a given IPv6 or IPv4 address belongs to the Mcafe CIDRs                       │
+      │ C  ┃ check aws ip           ┃ Check if a given IPv6 or IPv4 address belongs to the AWS CIDRs                         │
+      │ C  ┃ check azure ip         ┃ Check if a IP address belongs to the azure cloud service and network prefix list       │
+      │ C  ┃ check myip             ┃ Check for your public IP address                                                       │
+      │ C  ┃ check number           ┃ Check a number hash EX(+381-##-###-####) and try to get information                    │
+      │ C  ┃ check number us        ┃ Check a number code EX(320) and get city, state, currency etc                          │
+      │ C  ┃ check number be        ┃ Check a number hash EX(+32(2)###-##-##) and get city, country, country currency etc    │
+      │ C  ┃ trace number us        ┃ Check a US number for information and data                                             │
+      │ C  ┃ parse burp targets     ┃ Parse a list of urls and targets to produce a burp suite config file                   │
+      │ C  ┃ parse config           ┃ Parse the api database to see what API keys you have set in the config                 │
+      │ C  ┃ parse xmln host        ┃ Parse a NMAP XML file to find the scanned host                                         │
+      │ C  ┃ parse xmln service     ┃ Parse a NMAP XML file to find info on all ports and their services                     │
+      │ C  ┃ parse xmln ports       ┃ Parse a NMAP XML file to find all scanned ports and their state                        │
+      │ C  ┃ parse xmln hostn       ┃ Parse a NMAP XML file to find all hostnames in the scan                                │
+      │ C  ┃ parse xmln porti       ┃ Parse a NMAP XML file to find all ports and their information                          │
+      │ C  ┃ parse xmln runs        ┃ Parse a NMAP XML file to find the runtime and exit status of nmap                      │
+      │ C  ┃ parse xmln hosts       ┃ Parse a NMAP XML file to find all the scanned number of hosts                          │
+      │ C  ┃ parse xmln hosth       ┃ Parse a NMAP XML file to find all info in the host hint section                        │
+      │ C  ┃ parse xmln verbose     ┃ Parse a NMAP XML file to find settings for the verbose tag                             │
+      │ C  ┃ parse xmln debug       ┃ Parse a NMAP XML file to find settings for the debugging tag                           │
+      │ C  ┃ parse xmln times       ┃ Parse a NMAP XML file to find times of the script                                      │
+      │ C  ┃ parse xmln scaninf     ┃ Parse a NMAP XML file to find all scan information                                     │
+      │ C  ┃ parse xmln *           ┃ Parse a NMAP XML file and run all xmln options for output                              │
+      │ C  ┃ parse scope            ┃ Parse a burp scope json file to match with hosts in a url file EX(urls.txt)            │
+      │ C  ┃ parse data IP4         ┃ Parse through an entire file to find all IPv4 addresses used                           │
+      │ C  ┃ parse data IP6         ┃ Parse through an entire file to find all IPv6 addresses used                           │
+      │ C  ┃ parse data email       ┃ Parse through an entire file to find all email addresses used                          │
+      │ C  ┃ parse data mac         ┃ Parse through an entire file to find all MAC addresses used                            │
+      │ C  ┃ parse data custom      ┃ Parse through an entire file with a custom regex string to pillage data                │
+      │ C  ┃ utils ghosted          ┃ Run the ghosted OS shell for resetting, deleting drives, and getting host info         │
+      │ C  ┃ utils blocker l        ┃ Run the DNS blocker and block a list of hosts from making a connection to the node     │
+      │ C  ┃ utils blocker s        ┃ Run the DNS blocker and block a single host from making a connection to the node       │
+      │ C  ┃ utils blocker fix      ┃ Run the OS module to repair/reset the hosts file after writing large hosts to the file │
+      │ C  ┃ utils verify mac       ┃ Verify a MAC address with regex to test the macs quality for this script               │
+      │ C  ┃ utils verify email     ┃ Verify a Email address with regex to test the emails quality for this script           │
+      │ C  ┃ utils verify IP4       ┃ Verify a IPv4 address with regex to test the IP Addresses quality for this script      │
+      │ C  ┃ utils verify IP6       ┃ Verify a IPv6 address with regex to test the IP6 Addresses quality for this script     │
+      │ C  ┃ utils verify h:p       ┃ Verify a host and port with regex to test the host:port quality for this script        │
+      │ C  ┃ utils verify hostname  ┃ Verify a hostname address with regex to test the hosts quality for this script         │
+      │ C  ┃ utils gz uncompress    ┃ Uncompress a GZIP file or folder, this is experimental so watch out                    │
+      │ C  ┃ utils gen rjpg         ┃ Generate a random jpg image with random settings and configurations                    │
+      │ C  ┃ utils gen AES          ┃ Encrypt a string with a assigned or given AES key length must be 32                    │
+      │ C  ┃ utils dec AES          ┃ Decrypt a string or message in a filename with a given filename                        │
+      │ C  ┃ utils encf AES         ┃ Encrypt a given text file with a AES key or string of length 32                        │
+      │ C  ┃ utils decf AES         ┃ Decrypt a given text file with a AES key or string of length 32                        │
+      │ C  ┃ utils unzip            ┃ Unzip every file in a zipped file and output to a proper directory                     │
+      │ C  ┃ utils gen JPG          ┃ Generate a map / GPS image based on the geo location of a JPG image                    │
+      │ C  ┃ utils gen map          ┃ Generate a map / GPS image based on the LAT and LON of a input                         │
+      │ C  ┃ utils gen emailmail    ┃ Scrape a website for emails and parse it into a maltego like body report               │
+      │ C  ┃ utils gen linkmail     ┃ Scrape a website all links / hrefs and parse it into a maltego body                    │
+      │ C  ┃ utils gen xxe php      ┃ Generate a XXE Entity template based on a PHP command                                  │
+      │ C  ┃ utils gen xxe soap     ┃ Generate a XXE Entity template based on a SOAP XXE template and command                │
+      │ C  ┃ utils gen xxe base     ┃ Generate a XXE Entity template based on BASE64 Encoded data                            │
+      │ C  ┃ utils gen xxe inj      ┃ Generate a normal XXE template with a normal entity                                    │
+      │ C  ┃ utils gen xxe xinc     ┃ Generate a XXE Entity template based on XINC                                           │
+      │ C  ┃ utils deface htm       ┃ Deface all html files and htm files in a given directory or location                   │
+      │ C  ┃ utils test binary      ┃ Check if a binary file is vulnerable to any form of ENV vulnerabilities                │
+      │ C  ┃ utils msfsessions      ┃ Attempt to gather all of your MSF sessions by local and OS variables                   │
+      │ C  ┃ utils tor stat         ┃ Attempt to check if SOCKS5 is up and running or ready for use using a series of tests  │
+      │ C  ┃ utils tor get          ┃ Attempt to download a file from a url with the SOCKS5 proxy                            │
+      │ C  ┃ utils build gmapl      ┃ Build a google maps link with a lat (lattitude) and lon (longitude)                    │
+      │ C  ┃ ssh check              ┃ Check to see if a SSH server on a host is alive and attempt to make a connection       │
+      │ C  ┃ ssh auth               ┃ Check to see if a username and password will be authenticated through a SSH server     │
+      │ C  ┃ ssh auth key           ┃ Check to see if a ssh key will be authenticated with a username and password           │
+      │ C  ┃ ssh transfer           ┃ Attempt transfer a file to the ssh server                                              │
+      │ C  ┃ ssh exec               ┃ Execute a command over an ssh server with a simple login, user and pass required       │
+      │ C  ┃ ssh auth config        ┃ Attempt to login to a server with the settings in the SSH yaml file                    │
+      │ C  ┃ ssh dial config        ┃ Attempt to ping a server with the current settings in the ssh yaml file                │
+      │ C  ┃ ssh check config       ┃ Attempt to check the connection on a server with the settings in the SSH yaml file     │
+      │ C  ┃ ssh start shell        ┃ Get a SSH shell on a remote server using a private key and username                    │
+      │ C  ┃ db ping mongo          ┃ Attempt to ping a MongoDB database running on a remote server                          │
+      │ C  ┃ db ping mysql          ┃ Attempt to ping a MySQL   database running on a remote server                          │
+      │ C  ┃ db ping postgres       ┃ Attempt to ping a PostGreSQL database running on a remote server                       │
+      │ C  ┃ db ping mssql          ┃ Attempt to ping a MS-SQL database running on a remote server                           │
+      │ C  ┃ db auth mysql          ┃ Attempt to make an authentication sucess to a MySQL server using local database strings│
+      │ C  ┃ db auth postgres       ┃ Attempt to make an authentication sucess to a PostGreSQL server running locally        │
+      │ C  ┃ start http server      ┃ Start the local red rabbit user dashboard and coumentation server :5501                │
+      │ C  ┃ start listen bind      ┃ Start a bind shell on a given address and port to listen for connections               │
+      │ C  ┃ start listen tcp       ┃ Start a tcp shell on a given address and port to listen for connections                │
+      │ C  ┃ start ssh tunel        ┃ Start a SSH tunnel on a remote host, given local addr and port                         │
+      │ C  ┃ start def interface    ┃ Start the defualt interface based on OS detection as monitor mode                      │
+      │ C  ┃ start cus interface    ┃ Start a interface into monitor mode with a given interface name or addr                │
+      │ C  ┃ stop def interface     ┃ Stop a interface that may be in monitor mode using ip link                             │
+      │ C  ┃ stop def interface     ┃ Stop a interface that may be in monitor mode using ip link                             │
+      │ C  ┃ api layerus config     ┃ Use the apilayer API to lookup US numbers using the preset JSON configurations         │
+      │ C  ┃ api layerbe config     ┃ Use the apilayer API to lookup BE/Belgium numbers using the preset JSON configurations │
+      │ C  ┃ api whoisxml config    ┃ Use the WHOIS XML API to lookup a website, using the preset JSON configurations        │
+      │ C  ┃ api layerus            ┃ Use the apilayer API to lookup US numbers                                              │
+      │ C  ┃ api layerbe            ┃ Use the apilayer API to lookup BE/Belgium numbers                                      │
+      │ C  ┃ api whoisxml           ┃ Use the WHOIS XML API to lookup a website                                              │
+      │ C  ┃ api grab config        ┃ grab all custom placed data in the API/configuration/api_keys.json file                │
+      │ C  ┃ engine ogoogle         ┃ Scrape google for infromation given a search query                                     │
+      │ C  ┃ engine otwitter        ┃ Scrape google for information on a given twitter search query                          │
+      │ C  ┃ engine ofacebook       ┃ Scrape google for infromation on a given facebook search query                         │
+      │ C  ┃ engine olinkedin       ┃ Scrape google for infromation on a given linkedin search query                         │
+      │ C  ┃ engine tcve            ┃ Scrape a govenrment cyber security databases for info on a given cve using tor         │
+      │ C  ┃ engine cve             ┃ Scrape a govenrment cyber security databases for info on a given cve                   │
+      │ C  ┃ engine shodanh         ┃ Scrape shodan for information on a given hostname or query                             │
+      │ C  ┃ atk fuzz               ┃ Attempt to fuzz a network service or application to test its buffer limits             │
+      │ C  ┃ atk timestamp          ┃ Attempt to change the permissions of a given file or folder by ID                      │
+      │ C  ┃ atk permission         ┃ Attempt to change the timestamp on a given file or folder                              │
+      │ C  ┃ atk dnsspoof           ┃ Attempt to spoof and poison a given targets dns through ARP spoofing                   │
+      │ F  ┃ --he  bool             ┃ General help on flags and commands                                                     │
+      │ F  ┃ --hh  bool             ┃ General help on help commands                                                          │
+      │ F  ┃ --help bool            ┃ General help on flags                                                                  │
+      │ F  ┃ --ehelp bool           ┃ Advanced help on flags, commands, help commands, and some flag examples                │
+      │ F  ┃ --ph int               ┃ Specify image / pixel height when injecting and reconstructing images                  │
+      │ F  ┃ --pw int               ┃ Specify image / pixel width when injection and reconstructing images                   │
+      │ F  ┃ --jpgF string          ┃ Set a chunk to inject a JPG image with COM is the main chunk                           │
+      │ F  ┃ --reso string          ┃ Set a screen resolution Verticle|Landscape|> for output format                         │
+      │ F  ┃ --input string         ┃ Set a input file to be injected for stegonography / image injection                    │
+      │ F  ┃ --output string        ┃ Set a output file or output filename for image manipulation                            │
+      │ F  ┃ --offset string        ┃ Set a offset to be injected at for image injection / stegonography                     │
+      │ F  ┃ --payload string       ┃ Set the payload to be used for image injection and other tests                         │
+      │ F  ┃ --type string          ┃ Set the type of chunk to inject images at such as IEND                                 │
+      │ F  ┃ --key string           ┃ Set the encryption key for payloads (--ehelp for examples )                            │
+      │ F  ┃ --filepath string      ┃ Set the general filepath for any file that will be read or used                        │
+      │ F  ┃ --hashl string         ┃ Set the file of hashes to be used for hash cracking                                    │
+      │ F  ┃ --wordl string         ┃ Set the file of passwords to be used for brute forcing                                 │
+      │ F  ┃ --userl string         ┃ Set the file of usernames to be used for brute forcing                                 │
+      │ F  ┃ --workers int          ┃ Set the amount of go workers for brute force attacks                                   │
+      │ F  ┃ --interface string     ┃ Set the interface to use for network attacks and packet capture                        │
+      │ F  ┃ --targetm string       ┃ Set the target's mac address for arp poisoning                                         │
+      │ F  ┃ --targetip string      ┃ Set the target's ip address for arp poisoning                                          │
+      │ F  ┃ --gatemac string       ┃ Set the target's gateway mac address for arp poisoning                                 │
+      │ F  ┃ --CIDR / -z string     ┃ Set the CIDR to be used for host pinging, scanning, and more                           │
+      │ F  ┃ --passlen int          ┃ Set the length of a password string to be generated when making lists                  │
+      │ F  ┃ --target string        ┃ Set the target URL to be set for web attacks such as SQLI, XSS, etc                    │
+      │ F  ┃ --payloadl string      ┃ Set the file of payloads to be used for XSS, SQLI, Admin panel's etc..                 │
+      │ F  ┃ --XMLF string          ┃ Set the XML file for NMAP parsing, or other XML file parsing commands                  │
+      │ F  ┃ --JSONF string         ┃ Set the JSON file for commands that need to parse certian JSON files                   │
+      │ F  ┃ --PCAP  string         ┃ Set the PCAP file for parsing, this is not used as much as --filepath                  │ 
+      │ F  ┃ --SQ  / S  string      ┃ Set the Set the google search query or thing you would like to search for engines      │ 
+      │ F  ┃ --RPP / R  string      ┃ Set the amount of results per google page scraped for the engine module (Defualt = 10) │ 
+      │ F  ┃ --PTC / T  string      ┃ Set the amount of google pages to crawl for the engine module (Defualt = 1)            │ 
+      └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+    
+    </div>
+  </div>
+
+
+  </section>
+
+<!-- Settings and script -->
+
+  <script>let sidebar=document.querySelector(".sidebar");let sidebarBtn=document.querySelector(".sidebarBtn");sidebarBtn.onclick=function(){sidebar.classList.toggle("active"); 
+    if(sidebar.classList.contains("active")){sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");}else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");}
+    </script></body></html><style>@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap);*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+.sidebar{position:fixed;height:100%;width:240px;background:#000;transition:all .5s ease}.sidebar.active{width:60px}.sidebar .logo-details{height:80px;display:flex;align-items:center}
+.sidebar .logo-details i{font-size:28px;font-weight:500;color:#fff;min-width:60px;text-align:center}.sidebar .logo-details .logo_name{color:#fff;font-size:24px;font-weight:500}
+.sidebar .nav-links{margin-top:10px}.sidebar .nav-links li{position:relative;list-style:none;height:50px}.sidebar .nav-links li a{height:100%;width:100%;display:flex;align-items:
+center;text-decoration:none;transition:all .4s ease}.sidebar .nav-links li a.active{background:#00f}.sidebar .nav-links li a:hover{background:#00f}.sidebar 
+.nav-links li i{min-width:60px;text-align:center;font-size:18px;color:#fff}.sidebar .nav-links li a .links_name{color:#fff;font-size:15px;font-weight:400;white-space:nowrap}
+.sidebar .nav-links .log_out{position:absolute;bottom:0;width:100%}.home-section{position:relative;background:#f5f5f5;min-height:100vh;width:calc(100% - 240px);left:240px;
+transition:all .5s ease}.sidebar.active~.home-section{width:calc(100% - 60px);left:60px}.home-section nav{display:flex;justify-content:space-between;height:80px;background:#000;
+display:flex;align-items:center;position:fixed;width:calc(100% - 240px);left:240px;z-index:100;padding:0 20px;box-shadow:0 1px 1px #fff;transition:all .5s ease}.sidebar.active~
+.home-section nav{left:60px;width:calc(100% - 60px)}.home-section nav .sidebar-button{color:#fff;display:flex;align-items:center;font-size:24px;font-weight:500}nav 
+.sidebar-button i{font-size:35px;margin-right:10px}.home-section nav .search-box{position:relative;height:50px;max-width:550px;width:100%;margin:0 20px}nav .search-box 
+input{height:100%;width:100%;outline:0;background:#f5f6fa;border:2px solid #efeef1;border-radius:6px;font-size:18px;padding:0 15px}nav 
+.search-box .bx-search{position:absolute;height:40px;width:40px;background:#2697ff;right:5px;top:50%;transform:translateY(-50%);border-radius:4px;line-height:40px;text-align:
+center;color:#fff;font-size:22px;transition:all .4 ease}.home-section nav .profile-details{display:flex;align-items:center;background:#f5f6fa;border:2px solid #efeef1;
+border-radius:6px;height:50px;min-width:190px;padding:0 15px 0 2px}nav .profile-details img{height:40px;width:40px;border-radius:6px;object-fit:cover}nav .profile-details
+.admin_name{font-size:15px;font-weight:500;color:#333;margin:0 10px;white-space:nowrap}nav .profile-details i{font-size:25px;color:#333}.home-section .home-content{
+  position:relative;padding-top:104px}.home-content .overview-boxes{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:0 20px;margin-bottom:26px}
+  .overview-boxes .box{display:flex;align-items:center;justify-content:center;width:calc(100% / 4 - 15px);background:#fff;padding:15px 14px;border-radius:12px;
+  box-shadow:0 5px 10px rgba(0,0,0,.1)}.overview-boxes .box-topic{font-size:20px;font-weight:500}.home-content .box .number{display:inline-block;font-size:35px;margin-top:-6px;
+  font-weight:500}.home-content .box .indicator{display:flex;align-items:center}.home-content .box .indicator i{height:20px;width:20px;background:#8fdacb;line-height:20px;
+  text-align:center;border-radius:50%;color:#fff;font-size:20px;margin-right:5px}.box .indicator i.down{background:#e87d88}.home-content .box .indicator .text{font-size:12px}
+  .home-content .box .cart{display:inline-block;font-size:32px;height:50px;width:50px;background:#cce5ff;line-height:50px;text-align:center;color:#66b0ff;border-radius:12px;
+  margin:-15px 0 0 6px}.home-content .box .cart.two{color:#2bd47d;background:#c0f2d8}.home-content .box .cart.three{color:#ffc233;background:#ffe8b3}.home-content .box 
+  .cart.four{color:#e05260;background:#f7d4d7}.home-content .total-order{font-size:20px;font-weight:500}.home-content .sales-boxes{display:flex;justify-content:space-between}
+  .home-content .sales-boxes .recent-sales{width:65%;background:#fff;padding:20px 30px;margin:0 20px;border-radius:12px;box-shadow:0 5px 10px rgba(0,0,0,.1)}.home-content 
+  .sales-boxes .sales-details{display:flex;align-items:center;justify-content:space-between}.sales-boxes .box .title{font-size:24px;font-weight:500}.sales-boxes .sales-details 
+  li.topic{font-size:20px;font-weight:500}.sales-boxes .sales-details li{list-style:none;margin:8px 0}.sales-boxes .sales-details li a{font-size:18px;color:#000;font-size:400;
+  text-decoration:none}.sales-boxes .box .button{width:100%;display:flex;justify-content:flex-end}.sales-boxes .box .button a{color:#fff;background:#0a2558;padding:4px 12px;
+  font-size:15px;font-weight:400;border-radius:4px;text-decoration:none;transition:all .3s ease}.sales-boxes .box .button a:hover{background:#0d3073}.home-content .sales-boxes 
+  .top-sales{width:35%;background:#fff;padding:20px 30px;margin:0 20px 0 0;border-radius:12px;box-shadow:0 5px 10px rgba(0,0,0,.1)}.sales-boxes .top-sales li{display:flex;
+  align-items:center;justify-content:space-between;margin:10px 0}.sales-boxes .top-sales li a img{height:40px;width:40px;object-fit:cover;border-radius:12px;margin-right:10px;
+  background:#333}.sales-boxes .top-sales li a{display:flex;align-items:center;text-decoration:none}.price,.sales-boxes .top-sales li .product{font-size:17px;font-weight:400;
+  color:#333}@media (max-width:1240px){.sidebar{width:60px}.sidebar.active{width:220px}.home-section{width:calc(100% - 60px);left:60px}.sidebar.active~.home-section{left:220px;
+  width:calc(100% - 220px);overflow:hidden}.home-section nav{width:calc(100% - 60px);left:60px}.sidebar.active~.home-section nav{width:calc(100% - 220px);left:220px}}@media (
+    max-width:1150px){.home-content .sales-boxes{flex-direction:column}.home-content .sales-boxes .box{width:100%;overflow-x:scroll;margin-bottom:30px}.home-content .sales-boxes 
+    .top-sales{margin:0}}@media (max-width:1000px){.overview-boxes .box{width:calc(100% / 2 - 15px);margin-bottom:15px}}@media (max-width:700px){nav .profile-details .admin_name,nav 
+    .profile-details i,nav .sidebar-button .dashboard{display:none}.home-section nav .profile-details{height:50px;min-width:40px}.home-content .sales-boxes .sales-details{width:560px}}
+    @media (max-width:550px){.overview-boxes .box{width:100%;margin-bottom:15px}.sidebar.active~.home-section nav .profile-details{display:none}}@media (max-width:400px){
+      .sidebar{width:0}.sidebar.active{width:60px}.home-section{width:100%;left:0}.sidebar.active~.home-section{left:60px;width:calc(100% - 60px)}.home-section nav{width:100%;left:0}
+      .sidebar.active~.home-section nav{left:60px;width:calc(100% - 60px)}}.ascii_art{font-family:monospace;white-space:pre}.Paragraph_Starter{font-weight:700;color:#000;
+      font-size:40px}.Base_Text{font-weight:700;font-family:'Franklin Gothic Medium','Arial Narrow',Arial,sans-serif;font-style:italic;white-space:pre}.Section_font{color:#081d45;
+      font-size:medium;font-family:'Courier New',Courier,monospace;font-weight:100}</style>

@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> RR6 ADMIN DASHBOARD | Documentation Server LO </title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='fas fa-rabbit'></i>
+      <span class="logo_name">Red Rabbit</span>
+    </div>
+      <ul class="nav-links">
+          <li>
+          <a href="/server-index/new/indexes" class="active">
+            <i class='bx bx-ghost'></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.github.com/ArkAngeL43" class="inactive">
+            <i class='bx bxl-gitlab' ></i>
+            <span class="links_name">Github</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://discord.gg/fEWXZyEzSe" class="inactive">
+            <i class='bx bxl-discord' ></i>
+            <span class="links_name">Discord</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/new/indexes-errors" class="inactive">
+            <i class='bx bxs-error-alt'></i>
+            <span class="links_name">Error Documentation</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/old" class="inactive">
+            <i class='bx bxs-vial' ></i>
+            <span class="links_name">Old Documentation</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/new/indexes-flags" class="inactive">
+            <i class='bx bxs-flag-alt'></i>
+            <span class="links_name">Flags Documentation</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/new/indexes-about" class="inactive">
+            <i class='bx bx-cube'></i>
+            <span class="links_name">About</span>
+          </a>
+        </li>
+        
+        <li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+    </nav>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <div class="ascii_art">
+                               ______           __        ______         __     __     __ __          _____                                         __          __   __              
+                              |   __ \.-----.--|  |______|   __ \.---.-.|  |--.|  |--.|__|  |_ ______|     \.-----.----.--.--.--------.-----.-----.|  |_.---.-.|  |_|__|.-----.-----.
+                              |      <|  -__|  _  |______|      <|  _  ||  _  ||  _  ||  |   _|______|  --  |  _  |  __|  |  |        |  -__|     ||   _|  _  ||   _|  ||  _  |     |
+                              |___|__||_____|_____|      |___|__||___._||_____||_____||__|____|      |_____/|_____|____|_____|__|__|__|_____|__|__||____|___._||____|__||_____|__|__|
+                                                                                                                                                                                            
+      The next few sections will be dedicated to the red rabbit documentation, the sections will be disected by module, eg: (0x0001 is module search) it goes from there 
+      from the list above. Another example of how modules will be seperated is by the cloumn number in the chart above where Brute is the second module name, its section will 
+      be labeled 0x0002 - BRUTE -, please take your time going through the documentation ALOT of people often forget about documentation then come to the devs confused as to 
+      why some dont work, or how the script works and how to use it, so please, when i mean read it i mean READ IT CAREFULLY! 
+    </div>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <div class="Paragraph_Starter">0x0001 Search Module Overview and Documentation and interacting with DNS</div>
+    <div class="Base_Text">
+      <hr>
+      > Search scan 
+      <br>
+      <br>
+      This command will go through the mask of 255 to find all 
+      resolved hosts on a network address  going based on the very  first 3 octets of the IP 
+      or host address, an example would be using example.com whos IP is 93.184.216.34 
+      if you use 93.184.216 then it will add all numbers and scan them 
+      up to 255 here is an example of the following output using a simple auto 
+      generated / randomly picked web address
+      <div class=""></div>
+
+      <div class="ascii_art">
+        _____IP ADDR___________DOMAIN-LOCATION___________
+        23.61.61.32 	| a23-61-61-32.deploy.static.akamaitechnologies.com.	|
+        23.61.61.43 	| a23-61-61-43.deploy.static.akamaitechnologies.com.	|
+        23.61.61.73 	| a23-61-61-73.deploy.static.akamaitechnologies.com.	|
+        23.61.61.0 	| a23-61-61-0.deploy.static.akamaitechnologies.com.	|
+        23.61.61.40 	| a23-61-61-40.deploy.static.akamaitechnologies.com.	|
+        23.61.61.82 	| a23-61-61-82.deploy.static.akamaitechnologies.com.	|
+        23.61.61.55 	| a23-61-61-55.deploy.static.akamaitechnologies.com.	|
+        23.61.61.41 	| a23-61-61-41.deploy.static.akamaitechnologies.com.	|
+        23.61.61.37 	| a23-61-61-37.deploy.static.akamaitechnologies.com.	|
+        23.61.61.49 	| a23-61-61-49.deploy.static.akamaitechnologies.com.	|
+        23.61.61.39 	| a23-61-61-39.deploy.static.akamaitechnologies.com.	|
+        23.61.61.33 	| a23-61-61-33.deploy.static.akamaitechnologies.com.	|
+        23.61.61.50 	| a23-61-61-50.deploy.static.akamaitechnologies.com.	|
+        23.61.61.17 	| a23-61-61-17.deploy.static.akamaitechnologies.com.	|
+        23.61.61.83 	| a23-61-61-83.deploy.static.akamaitechnologies.com.	|
+        23.61.61.2 	| a23-61-61-2.deploy.static.akamaitechnologies.com.	|
+      
+      </div>
+      <hr>
+
+      > search subdomains 
+      <br>
+
+      This command simply takes a domain name wordlist, domain name, and a DNS server and will
+      go through the wordlist to parse the domain with the domain name and use the DNS server 
+      to find all active / correct Domain names attached to that server, an example would be using 
+      and will find the IP address of that subdomain for the example we will be using the domain
+      example.com as a tagret.
+      NOTE: if the domain is lrger and has a way larger array of subdomains and owns hundreds of sides
+      then the list and output table will be way larger and way longer
+
+      <div class="ascii_art">
+                                                                                      
+        ________DOMAIN NAME______________IP ADDRESS______________
+        www.example.com                        | 93.184.216.34
+        fs1.example.com                        | 131.107.0.123
+        mail2.example.com                      | 131.107.115.215
+        mac2.example.com                       | 20.112.52.29       
+
+      </div>
+      <hr>
+      > search head
+
+      This command makes a request to a URL and retrives
+      all of the headers from the URL, the following 
+      is an output example using example.com as a subject 
+      to this test 
+
+      <div class="ascii_art">
+        Header -> |  Cache-Control |
+        | =====>   [max-age=604800] 
+       
+        Header -> |  Date |
+        | =====>   [Thu, 26 May 2022 20:19:33 GMT] 
+       
+        Header -> |  Expires |
+        | =====>   [Thu, 02 Jun 2022 20:19:33 GMT] 
+       
+        Header -> |  Server |
+        | =====>   [ECS (mic/9ABC)] 
+       
+        Header -> |  X-Cache |
+        | =====>   [HIT] 
+       
+        Header -> |  Age |
+        | =====>   [268700] 
+       
+        Header -> |  Etag |
+        | =====>   ["3147526947"] 
+       
+        Header -> |  Last-Modified |
+        | =====>   [Thu, 17 Oct 2019 07:18:26 GMT] 
+       
+        Header -> |  Vary |
+        | =====>   [Accept-Encoding] 
+       
+        Header -> |  Accept-Ranges |
+        | =====>   [bytes] 
+       
+        Header -> |  Content-Type |
+        | =====>   [text/html; charset=UTF-8]        
+
+      </div>
+      <br>
+      <hr>
+
+      > search redirect
+
+      This ommand will check if a URL redirects you, ofc this is done via response code 
+      not really secure all around however its something. There really is no further explanation 
+      behind this command or needed output since its a single output 
+
+      <br>
+      <hr>
+
+      > search ns
+      <br>
+
+
+      This command will grab all name servers to a domain name
+      example output is the following
+
+
+      <div class="ascii_art">
+        < Name Servers > |>  b.iana-servers.net.
+        < Name Servers > |>  a.iana-servers.net.      
+      </div>
+      <hr>
+      > search mx 
+      <br>
+
+      This command will check all MX records on a given DNS/Domain name
+
+      <div class="ascii_art">
+        < MX Host > |>  smtp.example.com.	< MX Preference > |> 10
+        < MX Host > |>  smtp.example.com.	< MX Preference > |> 10
+        < MX Host > |>  smtp.example.com.	< MX Preference > |> 10
+        < MX Host > |>  smtp.example.com.	< MX Preference > |> 10
+        < MX Host > |>  smtp.example.com.	< MX Preference > |> 10
+
+      </div>
+
+      <hr>
+      > search waf 
+
+      This command takes a XSS/SQLI or example payload and parses it to a URL 
+      then it will test it against a few IDS ( Intrusion Detection Systems ) via 
+      their URL, such as cloudflare other popular services, it will then output 
+      the results in a table like format, take the following payload as an example
+
+      script alert() script 
+
+      example output
+      <div class="ascii_art">
+        | Payload has been detected | < STAT > | Blocked | < Service > |  Cloudflare      | < Code > |  403  | 
+        | Payload has been detected | < STAT > | Blocked | < Service > |  Akamai         | < Code > |  403  | 
+        | Payload has been detected | < STAT > | Blocked | < Service > |  F5             | < Code > |  403  | 
+        | Payload has been detected | < STAT > | Blocked | < Service > |  CloudFront     | < Code > |  403  | 
+        | Payload has been detected | < STAT > | Blocked | < Service > |  Fortiweb       | < Code > |  403  | 
+        | Payload has been detected | < STAT > | Blocked | < Service > |  Imperva        | < Code > |  403  | 
+        | Payload has been detected | < STAT > | Blocked | < Service > |  Wordfence      | < Code > |  403  |        
+      </div>
+
+      <hr>
+      > search port, 
+
+      This command revolve's around port scanning, port checking, port mapping etc 
+      lets break this down. search port will go through a JSON and XML file and parse all 
+      data in both files, it will take a port as an input from the user and get all data of that port 
+      such as protocals, names, services, number, line, etc example output below
+
+      <div class="ascii_art">
+        |>> Port number        |  80    
+        |>> Port protocol      |  tcp    
+        |>> Port service       |  http    
+        |>> Port unauthorized? |      
+        |>> Port Description   |  {World Wide Web HTTP []}    
+     
+        |>> Port number        |  80    
+        |>> Port protocol      |  udp    
+        |>> Port service       |  http    
+        |>> Port unauthorized? |      
+        |>> Port Description   |  {World Wide Web HTTP []}    
+     
+        |>> Port number        |  80    
+        |>> Port protocol      |  tcp    
+        |>> Port service       |  www    
+        |>> Port unauthorized? |      
+        |>> Port Description   |  {World Wide Web HTTP []}    
+     
+        |>> Port number        |  80    
+        |>> Port protocol      |  udp    
+        |>> Port service       |  www    
+        |>> Port unauthorized? |      
+        |>> Port Description   |  {World Wide Web HTTP []}    
+     
+        |>> Port number        |  80    
+        |>> Port protocol      |  tcp    
+        |>> Port service       |  www-http    
+        |>> Port unauthorized? |      
+        |>> Port Description   |  {World Wide Web HTTP []}    
+     
+        |>> Port number        |  80    
+        |>> Port protocol      |  udp    
+        |>> Port service       |  www-http    
+        |>> Port unauthorized? |      
+        |>> Port Description   |  {World Wide Web HTTP []}    
+     
+        |>> Port number        |  80    
+        |>> Port protocol      |  sctp    
+        |>> Port service       |  http    
+        |>> Port unauthorized? |      
+        |>> Port Description   |  {HTTP []}  
+      </div>
+      <hr>
+      
+      > search port l 
+
+      This command will parse through two files, one that is JSON and the other which is XML
+      the command will take a wordlist of ports and output the name, service, service name,
+      protocal, port name, port number, and port description for each port in that list 
+
+      such as the following output 
+
+      <div class="ascii_art">
+        |>> Port number        |  80    
+        |>> Port protocol      |  sctp    
+        |>> Port service       |  http    
+        |>> Port unauthorized? |      
+        |>> Port Description   |  {HTTP []}   
+
+        |>> Port number        |  22    
+        |>> Port protocol      |  tcp    
+        |>> Port service       |  ssh    
+        |>> Port unauthorized? |      
+        |>> Port Description   |  {The Secure Shell (SSH) Protocol []}    
+     
+        |>> Port number        |  22    
+        |>> Port protocol      |  udp    
+        |>> Port service       |  ssh    
+        |>> Port unauthorized? |      
+        |>> Port Description   |  {The Secure Shell (SSH) Protocol []}    
+
+        |>> Port number        |  8080    
+        |>> Port protocol      |  tcp    
+        |>> Port service       |  http-alt    
+        |>> Port unauthorized? |      
+        |>> Port Description   |  {HTTP Alternate (see port 80) []}    
+          
+      </div>
+
+      <hr>
+      > search port live
+
+      Search port live will basically just be a normal scanner with a NMAP like touchb to it
+      this scanner will combine a normal port scanner with port search together for every 
+      port it finds that is active on the host it will find all port data and information 
+
+      <div class="ascii_art">
+        80  
+        :   
+        :   
+          |>> Port number        |  80    
+          |>> Port protocol      |  tcp    
+          |>> Port service       |  http    
+          |>> Port unauthorized? |      
+          |>> Port Description   |  {World Wide Web HTTP []}    
+       
+        :  443  
+        :   
+        :   
+          |>> Port number        |  443    
+          |>> Port protocol      |  tcp    
+          |>> Port service       |  https    
+          |>> Port unauthorized? |      
+          |>> Port Description   |  {http protocol over TLS/SSL []}    
+      </div>
+
+      <hr>
+      > search port llive 
+
+      This one can be a bit messy, this one combines all port searching methods.
+      simply it will take a list of hosts, parse through and scan each of them and 
+      for every port scanned on each host output information about the port here 
+      is an example of a mass scan on both hosts in a host file named hosts.txt
+
+      <div class="ascii_art">
+        ###############################################################################################
+######## HOST / PORT INFORMATION FOR HOSTNAME ->  10.0.0.1                         #
+ :  443  
+ :   
+ :   
+ :  80  
+ :   
+ :   
+   |>> Port number        |  443    
+   |>> Port protocol      |  tcp    
+   |>> Port service       |  https    
+   |>> Port unauthorized? |      
+   |>> Port Description   |  {http protocol over TLS/SSL []}    
+
+   |>> Port number        |  443    
+   |>> Port protocol      |  udp    
+   |>> Port service       |  https    
+   |>> Port unauthorized? |      
+   |>> Port Description   |  {http protocol over TLS/SSL []}    
+
+   |>> Port number        |  443    
+   |>> Port protocol      |  sctp    
+   |>> Port service       |  https    
+   |>> Port unauthorized? |      
+   |>> Port Description   |  {HTTPS []}    
+
+   |>> Port number        |  80    
+   |>> Port protocol      |  tcp    
+   |>> Port service       |  http    
+   |>> Port unauthorized? |      
+   |>> Port Description   |  {World Wide Web HTTP []}    
+
+
+  ###############################################################################################
+  ###############################################################################################
+  ######## HOST / PORT INFORMATION FOR HOSTNAME ->  example.com                      #
+  :  443  
+  :   
+  :   
+  |>> Port number        |  443    
+  |>> Port protocol      |  tcp    
+  |>> Port service       |  https    
+  |>> Port unauthorized? |      
+  |>> Port Description   |  {http protocol over TLS/SSL []}    
+
+  |>> Port number        |  443    
+  |>> Port protocol      |  udp    
+  |>> Port service       |  https    
+  |>> Port unauthorized? |      
+  |>> Port Description   |  {http protocol over TLS/SSL []}    
+
+  |>> Port number        |  443    
+  |>> Port protocol      |  sctp    
+  |>> Port service       |  https    
+  |>> Port unauthorized? |      
+  |>> Port Description   |  {HTTPS []}    
+    </div>
+  <hr>
+  > search port custom
+
+  this command wil use the configuration files in the following path 
+
+  RR6/config/scanconf
+
+
+  the configuration file for the port scanner will be named RR6/config/scanconf/settings.yaml
+  in this file you have a few options one to specify the hostname, the other to show where the 
+  port will start, and when the port scanner will end the scan, it can be anything from 1 -65535
+  using the command search port custom it will load the YAML file and initate the data with that 
+  settings file, then your scan will auto start without asking for user input, if you want to 
+  you can also use your own custom YAML file however it must have the following 
+
+  Example output
+  <div class="ascii_art">
+      [!] WARNING: USER: IF YOU CUSTOMIZED THE FOLLOWING FILE (config/scanconf/settings.yaml) THEN JUST HIT ENTER....
+      [+] Using standard config file -> (config/scanconf/settings.yaml)
+      [+] Setting -> Scanning      |  10.0.0.1
+      [+] Setting -> Scanning from |  1
+      [+] Setting -> Scanning to   |  65535
+      :  80  
+      :   
+       :   
+          |>> Port number        |  80    
+          |>> Port protocol      |  tcp    
+          |>> Port service       |  http    
+          |>> Port unauthorized? |      
+          |>> Port Description   |  {World Wide Web HTTP []}    
+  </div>
+  <hr>
+  > search endpoint 
+
+  This command is quite simple, it will grab the endpoint path of a given 
+  file of hosts or urls such as the following 
+
+  web.txt
+  
+  Example output
+  <div class="ascii_art">
+
+      Lookup Module: Looking up endpoints for host's ->  https://www.google.com 
+      Lookup Module: Looking up endpoints for host's ->  https://www.youtube.com 
+      Lookup Module: Looking up endpoints for host's ->  https://www.hulu.com 
+     /
+     /t/contact_us/
+     /t/terms
+     /t/privacy
+     /new
+     /c/Vitalicusmeme
+     /youtubei/v1/browse
+     /watch?v=PnKgygXPxm4
+     /youtubei/v1/playlist/create
+     /youtubei/v1/share/get_share_panel
+     /youtubei/v1/browse/edit_playlist
+  </div>
+
+  <hr>
+  > search ip
+
+  This command will lookup all records / hostnames of a given IP 
+  or hostname address IPv4 is the only address supported for this 
+  record lookup, example lookup
+
+  <div class="ascii_art">
+
+    < Hostnames > |>   tzmiaa-aa-in-f14.1e100.net.
+
+  </div> 
+  
+  <hr>
+  > search txt
+
+  This command will lookup all current and known 
+  text / TXT records of a given domain name or 
+  hostname 
+
+  example lookup
+
+  <div class="ascii_art">
+    < Record > |>  v=spf1 -all
+    < Record > |>  wgyf8z8cgvm2qmxpnbnldrcltvk4xqfn   
+  </div>
+
+  <hr>
+  > search hostname 
+
+  This command will lookup all given hostname addresses of 
+  a given host or IP address, Example lookup.
+
+  <div class="ascii_art">
+    < IPA > |>   2606:2800:220:1:248:1893:25c8:1946
+    < IPA > |>   93.184.216.34   
+  </div>
+
+  <hr>
+  > search cname
+
+  This command will lookup all CNAME's for a given 
+  domain name or web address 
+
+  example lookup
+  <div class="ascii_art">
+    CNAME ->  example.com
+  </div> 
+  <hr>
+  > search srv 
+
+  This command will attempt to retrieve all SRV's of a 
+  given domain name or hostname, this function takes 
+  two arguments, a domain name and a server type. for 
+  this example we will be using the domain example.com
+  and the server type of xmpp-server 
+
+  The lookup's output will give you the cname and of that cname 
+  the srvs of 
+    Target, srv port, srv priority, srv weight
+  <hr>
+  > Search robots 
+  
+  This command is quite simple, it will take the input of a url 
+  and attempt to find the robots.txt file, when it finds the robots 
+  .txt file it will copy and paste the response into a filename 
+  if the filename robots.txt already exists then you will get a random 
+  generated file with some weird name like Ansdfs903424.txt which will 
+  have the robots.txt in it, this is to prevent bugs and glitches in opening 
+  and closing files, example output 
+
+  <div class="ascii_art">
+    [+] Setting: Initilized variable -  https://www.google.com  As a url to scan
+    [  INFO: RESPONSE BODY CLOSED  ]
+    [  INFO: RESPONSE BODY CLOSED  ]
+    FILE PATH OF GENERATED FILE =>  /home/user/Desktop/RR6
+  </div>
+  <hr>
+  > search route 
+
+  Search route is a command that will use a standard 
+  traceroute to find all hops in order to reach the
+  domain name destination.
+
+  example output 
+
+  <div class="ascii_art">
+    IPA -> 10.0.0.1	| Time 7.09 	| Status 0	|Query Count 3
+    IPA -> 96.120.36.121	| Time 32.589 	| Status 0	|Query Count 3
+    IPA -> 24.153.65.185	| Time 30.383 	| Status 0	|Query Count 3
+    IPA -> 96.108.23.205	| Time 29.846 	| Status 0	|Query Count 3
+    IPA -> 68.85.127.81	        | Time 46.661 	| Status 0	|Query Count 3
+    IPA -> 68.86.165.161	| Time 50.633 	| Status 0	|Query Count 3
+    IPA -> 96.110.5.141	        | Time 42.367 	| Status 0	|Query Count 3
+    IPA -> 96.110.45.77	        | Time 31.498 	| Status 0	|Query Count 3
+    IPA -> 96.110.33.158	| Time 33.032 	| Status 0	|Query Count 3
+    IPA -> 23.30.207.18  	| Time 32.176 	| Status 0	|Query Count 3
+    IPA -> 152.195.88.141	| Time 30.959 	| Status 0	|Query Count 3
+    IPA -> 93.184.216.34	| Time 27.25 	| Status 0	|Query Count 3
+    IPA -> 93.184.216.34	| Time 37.419 	| Status 0	|Query Count 3
+  </div>
+  <hr> 
+  > search urls 
+
+  This command is a simple one but has alot of functions in it.
+  Simply all this does is take a URL as an input and will crawl 
+  then return all data and information on every URL it is able 
+  to find within that target URL, the following data is required 
+
+  Standard URL 
+  domain name 
+  http url 
+
+  example output is the following
+  
+  <div class="ascii_art">
+      Net Lookup:Response Status  ->  200 OK
+      Net Lookup: Content-Type     ->  text/html; charset=ISO-8859-1
+      Net Lookup: Scheme        --->  https
+      Net Lookup: Path in URL   --->  
+      Net Lookup: Query Strings --->  
+      Net Lookup: Fragments     --->        
+      RR6: URL Found ->  https://play.google.com/?hl=en&tab=w8
+      RR6: Domain Name ->  google.com
+      RR6: server addr ->  [2607:f8b0:4008:801::200e 142.250.217.238]
+      RR6: Connected-Server ->  ESF
+      RR6: Response Status  ->  200 OK
+      ────────────────────────────────────────
+  </div>
+  <hr>
+  > search banner 
+
+  This command will attempt to get a banner of a given host, 
+  if it can not dial the host or find the banner or retrieve 
+  the banner from the hostname, then you will be returned to 
+  the console with no output 
+
+  <hr>
+  > search server 
+
+  This command will attempt to grab the server a URL is running on 
+
+  <div class="ascii_art">
+    [+] Server ->  ECS (mic/9B22)
+  </div>
+  <hr>
+  <div class="Paragraph_Starter">0x0001.5 interacting with vulnerable services and servers</div>
+
+  This next section basically shows off alot of the scanners, and extra utilities 
+  for web recon, web scanning, system scanning etc
+  <hr>
+  > search admin 
+
+  this command will read a wordlist of admin paths 
+  such as a custom one, and take a URL to search 
+  all admin paths of that URL that came back true.
+  Note this goes based off of a response code 
+  and is truly not the best to use since false 
+  positives may exist as a security measure on the 
+  host or server.
+
+  example output 
+  <div class="ascii_art">
+    Enter path to admin panel payload list or a payload list>examples2/admin.txt
+    -------------------------------------------------------------
+    RR6:  Web Module: Test -> [  1 ]  Has come back false
+    -------------------------------------------------------------
+    RR6:  Web Module: Test -> [  2 ]  Has come back false
+    -------------------------------------------------------------
+    RR6:  Web Module: Test -> [  3 ]  Has come back false
+    -------------------------------------------------------------
+  </div>
+  <hr>
+  > search sqli
+
+  this command will search for SQLI vulnerabilities 
+  in a URL or host based on the error syntax that it 
+  gets from the SQL server on the backend, if the error 
+  is any of the following in the list of code, then it will 
+  say positive and keep testing for more vulnerable errors.
+
+  example output
+  <div class="ascii_art">
+      RR6> SQLI Stat: Could not inject payload ->  id=1  Payload failed, testing next
+      RR6> SQLI Stat: Could not inject payload ->  id=1  Payload failed, testing next
+      RR6> SQLI Stat: Could not inject payload ->  id=1  Payload failed, testing next
+      RR6> SQLI Stat: Could not inject payload ->  id=1  Payload failed, testing next
+      RR6> SQLI Stat: Could not inject payload ->  '-'  Payload failed, testing next
+      RR6> SQLI Stat: Could not inject payload ->  '-'  Payload failed, testing next
+      RR6> SQLI Stat: Could not inject payload ->  '-'  Payload failed, testing next
+      RR6> SQLI Stat: Could not inject payload ->  '-'  Payload failed, testing next
+      RR6> SQLI Stat: Could not inject payload ->  ' '  Payload failed, testing next
+      RR6> SQLI Stat: Could not inject payload ->  ' '  Payload failed, testing next
+  </div>
+  <hr>
+  > search lfi 
+
+  This command is a simple LFI scanner, there really is no output 
+  or information to give on this utility other than that it uses 
+  NULL entries to detect RFI/LFI and is quite speedy.
+
+  <hr>
+  > search sig 
+
+  search sig will attempt to find the filetype 
+  of an unknown file based on hex signatures and binary 
+  signatures. Sometimes this tool can glitch if the byte 
+  code in the file is super large, given it itterates over 
+  a list of hex values and byte values to test which one matches 
+  up to the files header 
+
+  example output 
+  <div class="ascii_art:">
+    Enter a Filepath or filename to be scanned> examples/stego/infile
+
+    [INFO] DATA: 19:14:51	101 Was possibly detected as -> TIF graphics
+    [INFO] DATA: 19:14:51	101 Was possibly detected as -> PNG file
+  </div>
+  <hr>
+  > search filepath 
+
+  this is a simple data pillage utility, meaning it will 
+  search a filepath or crawl a filepath for information 
+  based on the regex title given, this means the filepath 
+  you enter will be searched and " probbed " for images 
+  if the file is an image it will output it in a EXIF table 
+  take the following example as an output 
+
+  <div class="ascii_art">
+    [+] FOUND JPEG/JPG IMAGE ->   /home/arkangel/go/pkg/mod/github.com/rwcarlsen/goexif@v0.0.0-20190401172101-9e8deecbddbd/exif/sample1.jpg 
+
+
+    ┌─────────────╥───────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────┐
+    │ Data Number ║ Data                  │After DATA EXIF                                                                              │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║Orientation            │                                     Horizontal (normal)                                     │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║MaxApertureValue       │                                             2.8                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║GPSDateStamp           │                                         2003:11:23                                          │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ColorComponents        │                                              3                                              │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║GPSLongitudeRef        │                                            East                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║FocalLength35efl       │                             23.3 mm (35 mm equivalent: 35.0 mm)                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ResolutionUnit (1)     │                                           inches                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║FocalLength            │                                           23.3 mm                                           │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║Saturation             │                                           Normal                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║SubSecTimeDigitized    │                                             63                                              │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║LightSource            │                                           Unknown                                           │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║FileAccessDate         │                                  2022:05:14 19:05:12-04:00                                  │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║DisplayedUnitsX        │                                           inches                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║YCbCrSubSampling       │                                      YCbCr4:4:4 (1 1)                                       │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║FileName               │                                         sample1.jpg                                         │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║RelatedSoundFile       │                                                                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║YResolution (3)        │                                             256                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║GPSDateTime            │                                    2003:11:23 18:07:37Z                                     │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║SubSecTime             │                                             63                                              │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║SubSecModifyDate       │                                   2005:07:02 10:38:28.63                                    │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║URL_List               │                                                                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║FileModifyDate         │                                  2022:05:14 19:05:12-04:00                                  │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ImageSize              │                                           500x375                                           │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║GPSVersionID           │                                           2.2.0.0                                           │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║HasRealMergedData      │                                             Yes                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║DocumentID             │                 adobe:docid:photoshop:48361733-eaa2-11d9-a6e9-a8189497d9c2                  │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║GPSLatitudeRef         │                                            North                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ExposureTime           │                                            1/125                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ExifImageWidth         │                                             500                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║CompressedBitsPerPixel │                                              4                                              │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║XResolution (1)        │                                             256                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║GPSLongitude           │                                    116 deg 23' 27.00" E                                     │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ResolutionUnit         │                                           inches                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║GainControl            │                                         Low gain up                                         │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║WhiteBalance           │                                            Auto                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║SubSecDateTimeOriginal │                                   2003:11:23 18:07:37.63                                    │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║GPSLatitude (1)        │                                      39 deg 54' 56.00"                                      │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ShutterSpeed           │                                            1/125                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║MeteringMode           │                                            Spot                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║APP14Flags0            │                                           (none)                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║FNumber                │                                             4.5                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ExifToolVersion        │                                            12.30                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║SceneCaptureType       │                                          Standard                                           │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║SubSecTimeOriginal     │                                             63                                              │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║PrintStyle             │                                          Centered                                           │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║GPSLongitude (1)       │                                     116 deg 23' 27.00"                                      │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ScaleFactor35efl       │                                             1.5                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║IPTCDigest             │                              00000000000000000000000000000000                               │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║SubjectDistanceRange   │                                           Unknown                                           │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║XResolution (3)        │                                             256                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║CreateDate             │                                     2003:11:23 18:07:37                                     │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ExifByteOrder          │                                  Little-endian (Intel, II)                                  │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║GlobalAngle            │                                             30                                              │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ThumbnailOffset        │                                            1118                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║Contrast               │                                             Low                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ExposureCompensation   │                                              0                                              │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║DCTEncodeVersion       │                                             100                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║YResolution (1)        │                                             256                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║FOV                    │                                          54.4 deg                                           │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║Directory              │/home/arkangel/go/pkg/mod/github.com/rwcarlsen/goexif@v0.0.0-20190401172101-9e8deecbddbd/exif│
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║PhotoshopFormat        │                                          Standard                                           │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║FlashpixVersion        │                                            0100                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║FileSource             │                                       Digital Camera                                        │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║Model                  │                                          NIKON D2H                                          │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║JFIFVersion            │                                            1.02                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║SlicesGroupName        │                                           gg_gps                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║Make                   │                                      NIKON CORPORATION                                      │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║MIMEType               │                                         image/jpeg                                          │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║XResolution (2)        │                                             72                                              │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ModifyDate             │                                     2005:07:02 10:38:28                                     │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║BitsPerSample          │                                              8                                              │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║XMPToolkit             │                             XMP toolkit 2.8.2-33, framework 1.5                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║CopyrightFlag          │                                            False                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║PrintScale             │                                              1                                              │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ExifVersion            │                                            0220                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ThumbnailImage         │                                   SCALAR(0x55629acb95e0)                                    │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║CircleOfConfusion      │                                          0.020 mm                                           │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ExifImageHeight        │                                             375                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║SensingMethod          │                                     One-chip color area                                     │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║PrintPosition          │                                             0 0                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║DigitalZoomRatio       │                                              1                                              │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║FileTypeExtension      │                                             jpg                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║FileInodeChangeDate    │                                  2022:05:14 19:05:12-04:00                                  │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ProgressiveScans       │                                           3 Scans                                           │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ExposureProgram        │                                    Aperture-priority AE                                     │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║UserComment            │                                taken at basilica of chinese                                 │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║GlobalAltitude         │                                             30                                              │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║FileType               │                                            JPEG                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║PhotoshopQuality       │                                              8                                              │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║CFAPattern             │                                   [Green,Blue][Red,Green]                                   │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║Compression            │                                      JPEG (old-style)                                       │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║HyperfocalDistance     │                                           6.04 m                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║XResolution            │                                             256                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║Flash                  │                                          No Flash                                           │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║PhotoshopThumbnail     │                                   SCALAR(0x55629ab806d8)                                    │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ThumbnailLength        │                                            4034                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║FocalLengthIn35mmFormat│                                            35 mm                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║YResolution (2)        │                                             72                                              │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║GPSPosition            │                          39 deg 54' 56.00" N, 116 deg 23' 27.00" E                          │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║DateTimeOriginal       │                                     2003:11:23 18:07:37                                     │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║SceneType              │                                    Directly photographed                                    │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ImageWidth             │                                             500                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║GPSLatitude            │                                     39 deg 54' 56.00" N                                     │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ResolutionUnit (2)     │                                           inches                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║FilePermissions        │                                         -r--r--r--                                          │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║APP14Flags1            │                                           (none)                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ReaderName             │                                     Adobe Photoshop 7.0                                     │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║Sharpness              │                                           Normal                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║Megapixels             │                                            0.188                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║WriterName             │                                       Adobe Photoshop                                       │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║GPSTimeStamp           │                                          18:07:37                                           │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ColorTransform         │                                            YCbCr                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║FileSize               │                                           79 KiB                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║SubSecCreateDate       │                                   2003:11:23 18:07:37.63                                    │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ImageHeight            │                                             375                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║DisplayedUnitsY        │                                           inches                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║CustomRendered         │                                           Normal                                            │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║NumSlices              │                                              1                                              │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ExposureMode           │                                            Auto                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║YResolution            │                                             256                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║Aperture               │                                             4.5                                             │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║About                  │                          uuid:5f5d2d26-eaa2-11d9-a6e9-a8189497d9c2                          │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║Software               │                                      Opanda PowerExif                                       │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║EncodingProcess        │                                Baseline DCT, Huffman coding                                 │
+    ├─────────────╫───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
+    │1            ║ColorSpace             │                                        Uncalibrated                                         │
+    └─────────────╨───────────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────┘
+
+    some tables will not be this large, others will, depends on the structure of the image and what it has as a base 
+    structure 
+    <div>
+  <hr>
+  > search archive 
+
+  search archive is a command that takes a image as an input 
+  then searches the input for a certian byte sig or in other 
+  terms that byte sig is a hex signature for ZIP files / ARCHIVE 
+  files, if the file is found in the image it will extract the file 
+  and its information in a new directory. NOTE: this command is better 
+  using the following flags 
+
+  -i="path/to/image"
+  --filepath="the/output/file/of/the/archives/contents"
+  -o="the/output/file/of/the/archives/contents"
+
+  this helps the tools alot better interact with the enviroment
+
+
+  this is also a bit buggy where the output does not 
+  exactly want to format into its own files, so it is 
+  suggested if the archive is big and has ALOT of files in it to dsignate
+  everything to a certian empty file
+
+
+  example output 
+  <div class="ascii_art">
+
+┌─────────────╥───────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Data Number ║ Data              │After DATA EXIF                                                                                                              │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║ImageSize          │                                                           604x492                                                           │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║YResolution        │                                                              1                                                              │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║ExifToolVersion    │                                                            12.30                                                            │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║ImageHeight        │                                                             492                                                             │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║FileAccessDate     │                                                  2022:05:21 22:37:55-04:00                                                  │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║FileName           │CTF_2022_LULLLLLLLLLLLLLLLLLLLLLLLLZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ_CATCH_ME_IF_YOU_CAN.jpg│
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║Megapixels         │                                                            0.297                                                            │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║FilePermissions    │                                                         -rw-r--r--                                                          │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║ImageWidth         │                                                             604                                                             │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║FileSize           │                                                           3.5 MiB                                                           │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║MIMEType           │                                                         image/jpeg                                                          │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║JFIFVersion        │                                                            1.01                                                             │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║EncodingProcess    │                                                Baseline DCT, Huffman coding                                                 │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║ColorComponents    │                                                              1                                                              │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║Directory          │                                                   /home/arkangel/Desktop                                                    │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║FileModifyDate     │                                                  2022:05:21 22:37:55-04:00                                                  │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║XResolution        │                                                              1                                                              │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║BitsPerSample      │                                                              8                                                              │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║ResolutionUnit     │                                                            None                                                             │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║FileInodeChangeDate│                                                  2022:05:22 20:43:14-04:00                                                  │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║FileTypeExtension  │                                                             jpg                                                             │
+├─────────────╫───────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│1            ║FileType           │                                                            JPEG                                                             │
+└─────────────╨───────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+
+2022/05/26 19:27:18 Found zip signature at byte 14250.
+2022/05/26 19:27:18 Found zip signature at byte 1207237.
+2022/05/26 19:27:18 Found zip signature at byte 2458409.
+2022/05/26 19:27:18 Found zip signature at byte 3619092.
+2022/05/26 19:27:18 Found zip signature at byte 3619314.
+2022/05/26 19:27:18 Found zip signature at byte 3619537.
+  </div>
+  <hr>
+  > search geo 
+
+  this command takes the input or path using the flag -i of an image 
+  the image MUST be a JPG image, and yes there are byte checkers to 
+  ensure that the file is JPG and not just named JPG to hide it, but 
+  it will take the` image and search for the geolocation / GPS tags 
+  and attempt to generate a map link of google, generate a GPS image 
+  then pass onto output the lat and lon of the image GPS cords, this 
+  again is outputted into an image, but it depends on if the user 
+  allows GPS perms on their device when taking images.
+
+  there is no example output here for a reason, note there are some 
+  issues with this. Sometimes in EXIF tools like geoexif it can detect 
+  a false EOF of the image, this happens alot in forensics even from tools 
+  i have built to inject them, so the following error is what to expect if you 
+  get an EOF
+
+  <div class="ascii_art">
+    [!] Error: Fatal:  DEBUG: ERR: FATAL: during running the decode function for EXIF EOF 
+    panic: runtime error: invalid memory address or nil pointer dereference
+    [signal SIGSEGV: segmentation violation code=0x1 addr=0x8 pc=0x83abc0]
+    
+    goroutine 1 [running]:
+    github.com/rwcarlsen/goexif/exif.(*Exif).LatLong(0x0)    
+  </div>
+  <hr>
+  > search methods *
+
+  Search methods is a command that will ask for a URL 
+  and will put every one of the following requests into 
+  the url. then output what it found and what request worked 
+  and what request didnt.
+
+  METHOD NUMBER | 1 | -> PUT
+  METHOD NUMBER | 2 | -> GET
+  METHOD NUMBER | 3 | -> CONNECT
+  METHOD NUMBER | 4 | -> POST
+  METHOD NUMBER | 5 | -> DELETE
+  METHOD NUMBER | 6 | -> TRACE
+  METHOD NUMBER | 7 | -> OPTIONS
+  METHOD NUMBER | 8 | -> PATCH
+  
+  Example output
+  <div class="ascii_art">
+    ----METHOD----#----STATUS----#----BODY SIZE----#
+    >   	 1  	 200 OK  	 1256
+    >   	 2  	 200 OK  	 1256
+    >   	 3  	 405 Method Not Allowed  	 0
+    >   	 4  	 200 OK  	 1256
+    >   	 5  	 400 Bad Request  	 1256
+    >   	 6  	 200 OK  	 0
+    >   	 7  	 405 Method Not Allowed  	 1256
+    >   	 8  	 405 Method Not Allowed  	 1256
+  </div>
+  <hr>
+  > search httpmethods *
+
+  this command is to help you understand the method numbers 
+  in the above command, the following output is from the above 
+  command 
+
+  <div class="ascii_art">
+    METHOD NUMBER | 1 | -> PUT
+    METHOD NUMBER | 2 | -> GET
+    METHOD NUMBER | 3 | -> CONNECT
+    METHOD NUMBER | 4 | -> POST
+    METHOD NUMBER | 5 | -> DELETE
+    METHOD NUMBER | 6 | -> TRACE
+    METHOD NUMBER | 7 | -> OPTIONS
+    METHOD NUMBER | 8 | -> PATCH
+  </div>
+  <hr>
+  > search knoxss custom 
+
+  this command will use the custom API key file in the filepath 
+
+  config/xssapi/api.yaml 
+
+  to scan a URL for XSS vulnerabilities, note this api key set in the 
+  config file when you install red rabbit is NOT the actuall api key 
+  you will need to manually use and input your own KNO-XSS API key 
+  in the config file, and in other instances specify the API key
+
+  <hr>
+  > search xss knoxl 
+
+  use the KNO-XSS api to search all URL's in a given list 
+  of hostnames like urls.txt and find if any of them 
+  are vulnerable 
+  >>> NO OUTPUT 
+
+  <hr>
+  > search xss knoxss 
+
+  use the KNO-XSS API to search if a URL 
+  is vulnerable to XSS, YOU MUST use your 
+  own api key for this, if you dont then 
+  the current API key will not work and 
+  the command becomes unuseable 
+
+  >>> NO OUTPUT 
+  <hr>
+  > search phpbb 
+
+  This command will test a URL running PHPBB and test 
+  if the version the server is running is vulnerable or not 
+  this is quite simple and no output is needed to be explained
+  for now this stays blank
+
+  
+
+  </section>
+
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
+
+</body>
+</html>
+<style>
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap);*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+.sidebar{position:fixed;height:100%;width:240px;background:#000;transition:all .5s ease}.sidebar.active{width:60px}.sidebar .logo-details{height:80px;display:flex;align-items:center}
+.sidebar .logo-details i{font-size:28px;font-weight:500;color:#fff;min-width:60px;text-align:center}.sidebar .logo-details .logo_name{color:#fff;font-size:24px;font-weight:500}
+.sidebar .nav-links{margin-top:10px}.sidebar .nav-links li{position:relative;list-style:none;height:50px}.sidebar .nav-links li a{height:100%;width:100%;display:flex;align-items:
+center;text-decoration:none;transition:all .4s ease}.sidebar .nav-links li a.active{background:#00f}.sidebar .nav-links li a:hover{background:#00f}.sidebar 
+.nav-links li i{min-width:60px;text-align:center;font-size:18px;color:#fff}.sidebar .nav-links li a .links_name{color:#fff;font-size:15px;font-weight:400;white-space:nowrap}
+.sidebar .nav-links .log_out{position:absolute;bottom:0;width:100%}.home-section{position:relative;background:#f5f5f5;min-height:100vh;width:calc(100% - 240px);left:240px;
+transition:all .5s ease}.sidebar.active~.home-section{width:calc(100% - 60px);left:60px}.home-section nav{display:flex;justify-content:space-between;height:80px;background:#000;
+display:flex;align-items:center;position:fixed;width:calc(100% - 240px);left:240px;z-index:100;padding:0 20px;box-shadow:0 1px 1px #fff;transition:all .5s ease}.sidebar.active~
+.home-section nav{left:60px;width:calc(100% - 60px)}.home-section nav .sidebar-button{color:#fff;display:flex;align-items:center;font-size:24px;font-weight:500}nav 
+.sidebar-button i{font-size:35px;margin-right:10px}.home-section nav .search-box{position:relative;height:50px;max-width:550px;width:100%;margin:0 20px}nav .search-box 
+input{height:100%;width:100%;outline:0;background:#f5f6fa;border:2px solid #efeef1;border-radius:6px;font-size:18px;padding:0 15px}nav 
+.search-box .bx-search{position:absolute;height:40px;width:40px;background:#2697ff;right:5px;top:50%;transform:translateY(-50%);border-radius:4px;line-height:40px;text-align:
+center;color:#fff;font-size:22px;transition:all .4 ease}.home-section nav .profile-details{display:flex;align-items:center;background:#f5f6fa;border:2px solid #efeef1;
+border-radius:6px;height:50px;min-width:190px;padding:0 15px 0 2px}nav .profile-details img{height:40px;width:40px;border-radius:6px;object-fit:cover}nav .profile-details
+.admin_name{font-size:15px;font-weight:500;color:#333;margin:0 10px;white-space:nowrap}nav .profile-details i{font-size:25px;color:#333}.home-section .home-content{
+  position:relative;padding-top:104px}.home-content .overview-boxes{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:0 20px;margin-bottom:26px}
+  .overview-boxes .box{display:flex;align-items:center;justify-content:center;width:calc(100% / 4 - 15px);background:#fff;padding:15px 14px;border-radius:12px;
+  box-shadow:0 5px 10px rgba(0,0,0,.1)}.overview-boxes .box-topic{font-size:20px;font-weight:500}.home-content .box .number{display:inline-block;font-size:35px;margin-top:-6px;
+  font-weight:500}.home-content .box .indicator{display:flex;align-items:center}.home-content .box .indicator i{height:20px;width:20px;background:#8fdacb;line-height:20px;
+  text-align:center;border-radius:50%;color:#fff;font-size:20px;margin-right:5px}.box .indicator i.down{background:#e87d88}.home-content .box .indicator .text{font-size:12px}
+  .home-content .box .cart{display:inline-block;font-size:32px;height:50px;width:50px;background:#cce5ff;line-height:50px;text-align:center;color:#66b0ff;border-radius:12px;
+  margin:-15px 0 0 6px}.home-content .box .cart.two{color:#2bd47d;background:#c0f2d8}.home-content .box .cart.three{color:#ffc233;background:#ffe8b3}.home-content .box 
+  .cart.four{color:#e05260;background:#f7d4d7}.home-content .total-order{font-size:20px;font-weight:500}.home-content .sales-boxes{display:flex;justify-content:space-between}
+  .home-content .sales-boxes .recent-sales{width:65%;background:#fff;padding:20px 30px;margin:0 20px;border-radius:12px;box-shadow:0 5px 10px rgba(0,0,0,.1)}.home-content 
+  .sales-boxes .sales-details{display:flex;align-items:center;justify-content:space-between}.sales-boxes .box .title{font-size:24px;font-weight:500}.sales-boxes .sales-details 
+  li.topic{font-size:20px;font-weight:500}.sales-boxes .sales-details li{list-style:none;margin:8px 0}.sales-boxes .sales-details li a{font-size:18px;color:#000;font-size:400;
+  text-decoration:none}.sales-boxes .box .button{width:100%;display:flex;justify-content:flex-end}.sales-boxes .box .button a{color:#fff;background:#0a2558;padding:4px 12px;
+  font-size:15px;font-weight:400;border-radius:4px;text-decoration:none;transition:all .3s ease}.sales-boxes .box .button a:hover{background:#0d3073}.home-content .sales-boxes 
+  .top-sales{width:35%;background:#fff;padding:20px 30px;margin:0 20px 0 0;border-radius:12px;box-shadow:0 5px 10px rgba(0,0,0,.1)}.sales-boxes .top-sales li{display:flex;
+  align-items:center;justify-content:space-between;margin:10px 0}.sales-boxes .top-sales li a img{height:40px;width:40px;object-fit:cover;border-radius:12px;margin-right:10px;
+  background:#333}.sales-boxes .top-sales li a{display:flex;align-items:center;text-decoration:none}.price,.sales-boxes .top-sales li .product{font-size:17px;font-weight:400;
+  color:#333}@media (max-width:1240px){.sidebar{width:60px}.sidebar.active{width:220px}.home-section{width:calc(100% - 60px);left:60px}.sidebar.active~.home-section{left:220px;
+  width:calc(100% - 220px);overflow:hidden}.home-section nav{width:calc(100% - 60px);left:60px}.sidebar.active~.home-section nav{width:calc(100% - 220px);left:220px}}@media (
+    max-width:1150px){.home-content .sales-boxes{flex-direction:column}.home-content .sales-boxes .box{width:100%;overflow-x:scroll;margin-bottom:30px}.home-content .sales-boxes 
+    .top-sales{margin:0}}@media (max-width:1000px){.overview-boxes .box{width:calc(100% / 2 - 15px);margin-bottom:15px}}@media (max-width:700px){nav .profile-details .admin_name,nav 
+    .profile-details i,nav .sidebar-button .dashboard{display:none}.home-section nav .profile-details{height:50px;min-width:40px}.home-content .sales-boxes .sales-details{width:560px}}
+    @media (max-width:550px){.overview-boxes .box{width:100%;margin-bottom:15px}.sidebar.active~.home-section nav .profile-details{display:none}}@media (max-width:400px){
+      .sidebar{width:0}.sidebar.active{width:60px}.home-section{width:100%;left:0}.sidebar.active~.home-section{left:60px;width:calc(100% - 60px)}.home-section nav{width:100%;left:0}
+      .sidebar.active~.home-section nav{left:60px;width:calc(100% - 60px)}}.ascii_art{font-family:monospace;white-space:pre}.Paragraph_Starter{font-weight:700;color:#000;
+      font-size:40px}.Base_Text{font-weight:700;font-family:'Franklin Gothic Medium','Arial Narrow',Arial,sans-serif;font-style:italic;white-space:pre}.Section_font{color:#081d45;
+      font-size:medium;font-family:'Courier New',Courier,monospace;font-weight:100}
+</style>

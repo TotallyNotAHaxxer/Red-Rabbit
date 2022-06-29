@@ -1,0 +1,122 @@
+                                                                                            
+                  /""-._
+                  .      '-,
+                  :         '',
+                  ;      *     '.
+                  ' *         () '.
+                   \               \
+                    \      _.---.._ '.  
+                     :  .' _.--''-''  \ ,'                        ______           __        ______         __     __     __ __   
+       .._            '/.'             . ;                       |   __ \.-----.--|  |______|   __ \.---.-.|  |--.|  |--.|__|  |_ 
+        ; `-.          ,     no         \'                       |      <|  -__|  _  |______|      <|  _  ||  _  ||  _  ||  |   _|
+         ;   `,         ;    F         ._\                       |___|__||_____|_____|      |___|__||___._||_____||_____||__|____|
+          ;    \     _,-'    L           ''--._                                     
+           :    \_,-'        A                 '-._              Next generation Offensive Security Framework For Advanced Hackers
+            \ ,-'            G          .          '-._                             Powered by Fortran, Go, and Perl
+           .'         __.-''; detected  \...,__       '.        If you are at the help menu you must not have made a correct flag input
+          .'      _,-'       \              \   ''--.,__ '\     or you have triggered a command or flag to pop this menu, Offical RR6 Help menu
+         /   _,--' ;          \             ;           "^.}    Designed to help make your understanding of the ether shark project easy 
+        ;_,-' )     \  )\      )            ;                   and simple
+             /       \/  \_.,-'             ;
+            /                              ;     _____________________
+         ,-'  _,-'''-.    ,-.,            ;      [ Scare Sec Hacker's] Aka: The legacy hackers
+      ,-' _.-'        \  /    |/'-._...--'
+     :--``             )/
+............................................................................................................................................
+Flags:
+    --ph               | String   | Set a pixel height for GIF Injection 
+    --pw               | String   | Set a pixel width  for GIF Injection
+    --jpgc     / -p    | String   | Set a location chunk for JPG injection 
+    --input    / -i    | String   | Set a input filename
+    --output   / -o    | String   | Set a output filename
+    --suppress / -s    | Bool     | Suppress hex output for metadata miners
+    --offset           | String   | Set a location offset to inject data into a PNG image with
+    --payload          | String   | Set a payload to inject into images or files
+    --type             | String   | Set a chunk to inject at in a PNG image
+    --filepath         | String   | Set a filepath for file parsing, logging, dumping etc
+    --rrh              | String   | Spawn a flag help menu
+    --help / -h        | Bool     | Run this menu
+    --reso             | String   | Set a screen rotation for output <Verticle|Landscape|>
+    --hasl             | String   | Set a hashlist for brute forcing or hash matching modules
+    --userl            | String   | Set a username list for brute forcing modules
+    --wordl            | String   | Set a wordlist for brute forcing modules 
+    --workers          | Integer  | Set a number of workers for brute forcing modules
+    --packet           | String   | Specify the packet type to sniff for network sniffing -> ICMP, tcp, eth, ip, dhcmp, application, dot11 are the only formats supported
+    --interface        | String   | Specify the interface to use for network modules
+    --targetm          | String   | Set a target mac address for arp poisoning
+    --targetip         | String   | Set a target IP address for arp poisoning
+    --gatemac          | String   | Set a targets gateway mac for arp poisoning
+    --CIDR / -z        | String   | Set a network range to scan hosts on
+    --passlen          | String   | Set a password length for password generation
+    --perm             | String   | Set premission number for premission stomping
+
+Inline Commands:
+    (Note) This tool can be complicated to learn, that is the point, this tool is to make you
+    use your brain and figure it out, so a side note before getting to use this tool. It will be wack
+    the commands and setting types and functions will be called weirdly and if an error occures 
+    will get some sort of dev code, refer to devc.pod for more information 
+
+    Inline commands > These will be the commands you can use when inside the Red Rabbit 
+    Terminal, Most of these that involve digital forensics or stegonography will need flags 
+    same as filepath pillaging and brute forcing or hash matching
+
+
+Help Commands:
+    This will be a list of all commands for various help menus
+
+    Commands:
+        help flags [json]    | Will load a flag help menu with description
+        help commands [json] | Will load a commands menu with description
+        help all [json]      | Will load help flags and help commands file output
+        help verified [json] | Will load verified and working commands that were tested
+        help advanced        | Will load this menu
+
+
+Script Commands ( no description ):
+        	Command   | # 2   | -> help flags    [json]
+            Command   | # 3   | -> help commands [json]
+            Command   | # 4   | -> clear
+            Command   | # 5   | -> cls
+            Command   | # 6   | -> exit
+            Command   | # 7   | -> time
+            Command   | # 8   | -> search nameserver
+            Command   | # 9   | -> search mx
+            Command   | # 10  | -> search ip
+            Command   | # 11  | -> search host
+            Command   | # 12  | -> search srv
+            Command   | # 13  | -> search cname
+            Command   | # 14  | -> search head
+            Command   | # 15  | -> search txt
+            Command   | # 16  | -> search robots
+            Command   | # 17  | -> search all
+            Command   | # 18  | -> traceroute domain
+            Command   | # 19  | -> ping icmp
+            Command   | # 20  | -> ping udp
+            Command   | # 21  | -> ping tcp
+            Command   | # 22  | -> ping syn
+            Command   | # 23  | -> run scan gui
+            Command   | # 24  | -> run RR6P gui
+            Command   | # 25  | -> search interfaces
+            Command   | # 27  | -> extract archive
+            Command   | # 28  | -> search sig
+            Command   | # 29  | -> search filepath
+            Command   | # 30  | -> inject zip
+            Command   | # 31  | -> hex dump loaded file
+            Command   | # 32  | -> dump file info
+            Command   | # 33  | -> dump metadata
+            Command   | # 34  | -> dump bootsec info
+            Command   | # 35  | -> stomp permissions
+            Command   | # 36  | -> search geo
+            Command   | # 37  | -> inject data
+            Command   | # 38  | -> dump metadata
+            Command   | # 39  | -> inject JPG
+            Command   | # 40  | -> inject WEBP
+            Command   | # 41  | -> inject GIF
+            Command   | # 42  | -> dump pcap
+            Command   | # 43  | -> dump pcap dot11
+            Command   | # 44  | -> dump pcap ftp
+            Command   | # 45  | -> dump pcap ospf
+
+
+
+        

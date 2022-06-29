@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> RR6 ADMIN DASHBOARD | Documentation Server LO </title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='fas fa-rabbit'></i>
+      <span class="logo_name">Red Rabbit</span>
+    </div>
+      <ul class="nav-links">
+          <li>
+          <a href="/server-index/new/indexes" class="active">
+            <i class='bx bx-ghost'></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.github.com/ArkAngeL43" class="inactive">
+            <i class='bx bxl-gitlab' ></i>
+            <span class="links_name">Github</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://discord.gg/fEWXZyEzSe" class="inactive">
+            <i class='bx bxl-discord' ></i>
+            <span class="links_name">Discord</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/new/indexes-errors" class="inactive">
+            <i class='bx bxs-error-alt'></i>
+            <span class="links_name">Error Documentation</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/old" class="inactive">
+            <i class='bx bxs-vial' ></i>
+            <span class="links_name">Old Documentation</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/new/indexes-flags" class="inactive">
+            <i class='bx bxs-flag-alt'></i>
+            <span class="links_name">Flags Documentation</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/new/indexes-about" class="inactive">
+            <i class='bx bx-cube'></i>
+            <span class="links_name">About</span>
+          </a>
+        </li>
+        
+        <li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <div class="ascii_art">
+                               ______           __        ______         __     __     __ __          _____                                         __          __   __              
+                              |   __ \.-----.--|  |______|   __ \.---.-.|  |--.|  |--.|__|  |_ ______|     \.-----.----.--.--.--------.-----.-----.|  |_.---.-.|  |_|__|.-----.-----.
+                              |      <|  -__|  _  |______|      <|  _  ||  _  ||  _  ||  |   _|______|  --  |  _  |  __|  |  |        |  -__|     ||   _|  _  ||   _|  ||  _  |     |
+                              |___|__||_____|_____|      |___|__||___._||_____||_____||__|____|      |_____/|_____|____|_____|__|__|__|_____|__|__||____|___._||____|__||_____|__|__|
+                                                                                                                                                                                            
+      The next few sections will be dedicated to the red rabbit documentation, the sections will be disected by module, eg: (0x0001 is module search) it goes from there 
+      from the list above. Another example of how modules will be seperated is by the cloumn number in the chart above where Brute is the second module name, its section will 
+      be labeled 0x0002 - BRUTE -, please take your time going through the documentation ALOT of people often forget about documentation then come to the devs confused as to 
+      why some dont work, or how the script works and how to use it, so please, when i mean read it i mean READ IT CAREFULLY! 
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <div class="Paragraph_Starter">0x103 - Extra utilities </div>
+    <div class="Base_Text">
+        This section explains every thing that was not a major module, eg atk, or certian newer commands
+    <hr>
+    <h1 style="color: red;">A breif intro as to how the red rabbit terminal works </h1>
+
+
+    I did not want to go over this or bother making this a section in other 
+    command like sections so why not do it here. Red rabbit works alot like 
+    metasploit in terms of running options, it has a module, each module has its 
+    own utility, say the module search right. The search module stays static but its 
+    subroutines dont `search mx` changes at mx `search head` changes at head. Take the 
+    following tree as an example of how modules work 
+
+    <div class="ascii_art">
+    | - engine 
+      |> engine ogoogle
+      |> engine otwitter
+      |> engine ofacebook
+      |> engine olinkedin
+      |> engine cve
+      |> engine tcve
+      |> engine shodanh
+    </div>
+    so do note, all options that you input whatever the first thing you type 
+    to run that module is going to be the module name, a way to shorten the giant 
+    ass command list is to type `help module_name` example as `help inject` will output 
+    all information and commands under the module inject in a organized and fit manner
+    <hr>
+    <h1 style="color: red;">> Section API, this section will talk about all API commands </h1>
+
+    <h3 style="color: blue;">- api layerus config </h3>
+
+    as I have mentioned here before every command ending in config, conf, setting, or custom 
+    is a customized command, where data is read from a file, a yaml file, a json file, or some 
+    other file. the API layerus config command uses a file in the directory `API/configuration`
+    named api_keys.json, this json file is structured like the following 
+
+    <div class="ascii_art">
+      {
+        "API_Keys": {
+            "WHOIS_KEY": "Your www.whoisxmlapi.com API key here",
+            "WHOIS_USR": "your whois_username here",
+            "WHOIS_PAS": "your whois_password here",
+            "APILA_KEY": "your api layer key here"
+        }
+    }
+    </div>
+    for the api layerus config command you will need to input your API layer API key in the 
+    APILA_KEY section of the json file. once done then you can run the command 
+
+    this command traces and gets all information on a US phone number, this is not just API layer 
+    being used but also red rabbits custom offline databases for matches take the following example 
+    as a number19644520897
+
+    <div class="ascii_art">
+      [!] Example: Format must be as follows +xxxxxxxxxxx EX -> +19644520897 
+      Enter a number      > +19644520897
+      [!] Example: format must be xxx example is as follows -> 334
+
+      Enter the dial code > 964
+      |-| Using ->  http://apilayer.net/api/validate?access_key=lG3PGw5SnGQHchzcfaLEDmZOMBwdMr3Z&number=+19644520897&country_code=&format=1
+      Cache-Control [no-cache]
+      Content-Type [application/json; Charset=UTF-8]
+      Access-Control-Allow-Methods [GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS]
+      Access-Control-Allow-Origin [*]
+      X-Blocked-At-Loadbalancer [1]
+      |+|  Phone information -> Valid                     :   false
+      |+|  Phone information -> Number                    :   644-520-897
+      |+|  Phone information -> Local Format              :   664
+      |+|  Phone information -> World Format              :   +19644520897
+      |+|  Phone information -> Country Code              :   US
+      |+|  Phone information -> Country Prefix            :   USA
+      |+|  Phone information -> Location                  :   Some random city
+      |+|  Phone information -> Carrier                   :   some random carrier
+      |+|  Phone information -> Line type                 :   LAN
+      |+|  Phone Information -> Country code to prefix    :   some country code
+      |+|  Phone Information -> Country code to name      :   some country name
+      |+|  Phone Information -> Country code to currency  :   some country currency
+      |+|  Phone Information -> Country ISO2 to ISO3      :   some ISO3
+      |+|  Phone Information -> Country ISO3 to capital   :   some capital
+    </div>
+    
+    <h3 style="color: blue;">- api layerbe config </h3>
+
+    this is the same as above but just uses red rabbits belgium database for finding 
+    extra information such as country codes, country name, city name etc 
+
+    <h3 style="color: blue;">- api layerus</h3>
+
+    this is the same thing as the api layerus config but you manually input 
+    your API key 
+
+    <h3 style="color: blue;">- api layerbe</h3>
+
+    same command as api layerbe config but the key is manually inputted by the user 
+
+    <h3 style="color: blue;">- api whoisx config </h3>
+
+    whois xml is a pretty big whois api, and with red rabbits intensly generated types 
+    and responses it is able to get a good amount of information from it using the api,
+    this command works as any other config command above, the api key will be stored in 
+    the file `api_keys.json` in the filepath `API/configuration`, your api key will be put in 
+    the JSON field labled `WHOIS_KEY` however you will also need your username and password 
+    which go in the fields `WHOIS_PAS` and `WHOIS_USR` where `WHOIS_USR` is your whoisxml username 
+    and `WHOIS_PAS` is the field for your whoisxml password. 
+
+    when thats all set run the command and you input a website or domain name you will get the following 
+    output 
+
+    <div class="ascii_art">
+            ---------------[ Contact and Administration ] ---------------------
+            [+] Contact Email         :   -> abusecomplaints@markmonitor.com
+            [+] Organization          :   -> Google LLC
+            [+] Country Name          :   -> UNITED STATES
+            [+] Country Code          :   -> US
+            [+] State                 :   -> CA
+            [+] Contact Country       :   -> UNITED STATES
+            [+] Contact Organiz       :   -> Google LLC
+            [+] Contact State         :   -> CA
+
+            ---------------[ Dates, Times, and Registration ] ---------------------
+            [+] Created Date          :   -> 1997-09-15T07:00:00+0000
+            [+] Created Date normal   :   -> 1997-09-15 07:00:00 UTC
+            [+] Audit Created Date    :   -> 2022-06-27 11:01:45 UTC
+            [+] Audit Updated Date    :   -> 2022-06-27 11:01:45 UTC
+            [+] Expires Date          :   -> 2028-09-13T07:00:00+0000
+            [+] Expires Date normal   :   -> 2028-09-13 07:00:00 UTC
+            [+] Updated Date          :   -> 2019-09-09T15:39:04+0000
+            [+] Registry Date Create  :   -> 1997-09-15 04:00:00 UTC
+            [+]    Registry Date Create  :     ->  9051 
+
+            ---------------[ Whois Record | Registry Information ] ---------------------
+            [+] Registry Date Create  :   -> google.com
+            [+] Registry Date Create  :   -> google.com
+            [+] Domain NS Hostnames  ->  
+            [+] Registry Data Status           :   -> clientDeleteProhibited clientTransferProhibited clientUpdateProhibited serverDeleteProhibited serverTransferProhibited serverUpdateProhibited
+            [+]    Registry Date Create           :     ->  251 
+            [+] Registry Data Header           :   -> 
+            [+] Registry Data Footer           :   -> 
+            [+] Registry Data audit create     :   -> 2022-06-27 11:01:44 UTC
+            [+] Registry Data audit update     :   -> 2022-06-27 11:01:44 UTC
+            [+] Registry Data registrar Name   :   -> MarkMonitor Inc.
+            [+] Registry Data registrar IANAID :   -> 292
+            [+] Registry Data registrar Create :   -> 1997-09-15 04:00:00 UTC
+            [+] Registry Data registrar Update :   -> 2019-09-09 15:39:04 UTC
+            [+] Registry Data Expires Date     :   -> 2028-09-14 04:00:00 UTC
+            [+] Registry Data WHOIS server     :   -> whois.markmonitor.com
+    </div>
+    <br>
+    <h3 style="color: blue;">- api whoisxml </h3>
+
+    same thing as above but without the api key being in a config file, rather just 
+    manually inputting the key yourself each time
+    
+    <h3 style="color: blue;">- api grab config</h3>
+
+    this config will simply locate and pull all API keys from all configuration files 
+    used for api's or other settings in red rabbit.
+
+    <hr>
+    <h1 style="color: red;">Engine</h1>
+
+    > This section will talk about all commands in the engine module. 
+    The engnine module utilizes google to scrape for certian information 
+    from a given search query. the engine module can be set with flags such 
+    as using the --SQ option to set a search query, the --RPP option to set 
+    the reuslts per page, and the --PTC to name the amount of pages to crawl 
+    of google for your information. an example using the flags would be 
+
+    sudo go run main.go --SQ="inurl:index.php?id=1" --RPP=10 --PTC=1
+    
+
+    example usage of the enguine would be if you search for user1234 as a 
+    search query you will get the following output.
+    
+
+    <div class="ascii_art">
+      [TAG] > people -> 	|+| -> https://twitter.com/user1234
+      [TAG] > people -> 	|+| -> https://twitter.com/user1234
+      [TAG] > people -> 	|+| -> https://twitter.com/usern0u
+      [TAG] > people -> 	|+| -> https://twitter.com/user1234
+      [TAG] > people -> 	|+| -> https://twitter.com/usern0u
+      [TAG] > people -> 	|+| -> https://mobile.twitter.com/gabsvel
+      [TAG] > people -> 	|+| -> https://twitter.com/user1234
+      [TAG] > people -> 	|+| -> https://twitter.com/usern0u
+      [TAG] > people -> 	|+| -> https://mobile.twitter.com/gabsvel
+      [TAG] > people -> 	|+| -> https://mobile.twitter.com/usembswaziland
+      [TAG] > people -> 	|+| -> https://twitter.com/user1234
+      [TAG] > people -> 	|+| -> https://twitter.com/usern0u
+      [TAG] > people -> 	|+| -> https://mobile.twitter.com/gabsvel
+      [TAG] > people -> 	|+| -> https://mobile.twitter.com/usembswaziland
+      [TAG] > people -> 	|+| -> https://mobile.twitter.com/kun_trev
+      [TAG] > people -> 	|+| -> https://twitter.com/user1234
+      [TAG] > people -> 	|+| -> https://twitter.com/usern0u
+      [TAG] > people -> 	|+| -> https://mobile.twitter.com/gabsvel
+      [TAG] > people -> 	|+| -> https://mobile.twitter.com/usembswaziland
+      [TAG] > people -> 	|+| -> https://mobile.twitter.com/kun_trev
+    </div>
+
+    <h3 style="color: blue;">- engine ogoogle</h3>
+
+    this command will search for just google related results.
+    if it has any other information or link that is not google 
+    related then it will skip it and not append it. Sometimes it will 
+    grab information from other sources but its a small amount mainly 
+    the engine will generalize all targets around a google link.
+
+    say you search for a website like the following inurl:"index.php?id=1"
+
+    you will get something like the following output 
+
+    <div class="ascii_art">
+      [TAG] > RAW -  -> 	|+| -> https://marine.rutgers.edu/po/index.php%3Fid%3D1
+      [TAG] > RAW -  -> 	|+| -> https://support.google.com/webmasters/answer/7489871%3Fhl%3Den
+      [TAG] > RAW -  -> 	|+| -> https://login-db.onl/index-php-id-1-login-30589
+      [TAG] > RAW -  -> 	|+| -> http://www.cacert.org/index.php%3Fid%3D1
+      [TAG] > RAW -  -> 	|+| -> https://www.basisforliveart.com/index.php%3Fid%3D1
+      [TAG] > RAW -  -> 	|+| -> http://www.harkavagrant.com/index.php%3Fid%3D1
+      [TAG] > RAW -  -> 	|+| -> https://support.helpspot.com/index.php%3Fpg%3Dkb.page%26id%3D282
+      [TAG] > RAW -  -> 	|+| -> http://helischrotter.de/24/inurl-index.php-id%3D1
+      [TAG] > RAW -  -> 	|+| -> https://support.google.com/websearch%3Fp%3Dws_settings_location%26hl%3Den
+      [TAG] > RAW -  -> 	|+| -> http://www.vizzed.com/play/inurl%2520index.php%2520id%3D1
+      [TAG] > RAW -  -> 	|+| -> http://www.dynamicdrive.com/forums/showthread.php%3F45397-In-a-website-that-ALL-webpages-are-of-index-php-id-1-index-php-id-2-index-php-id-3
+      [TAG] > RAW -  -> 	|+| -> https://stackoverflow.com/questions/53474045/difference-between-index-phpid-1-and-index-php-id-1
+    </div>
+
+    <h3 style="color: blue;">- engine otwitter</h3>
+
+    This command does the same thing as the other one 
+    but will specify links ONLY to twitter links or links 
+    found from the third or second position away from a 
+    twitter searched query, so if you search for something 
+    like a username you will get mostly twitter links with 
+    just that username or people who have a account tied 
+    to that username 
+
+    <h3 style="color: blue;">- engine ofacebook</h3>
+
+    This command does the same thing as the one above 
+    but will specify links ONLY to facebook links or links 
+    found from the third or second position away from a 
+    facebook searched query, so if you search for something 
+    like a username you will get mostly facebook links with 
+    just that username or people who have a account tied 
+    to that username 
+
+    <h3 style="color: blue;">- engine olinkedin</h3>
+
+    This command does the same thing as the one above 
+    but will specify links ONLY to linkedin links or links 
+    found from the third or second position away from a 
+    linkedin searched query, so if you search for something 
+    like a username you will get mostly linkedin links with 
+    just that username or people who have a account tied 
+    to that username 
+
+    <h3 style="color: blue;">- engine shodanh</h3>
+
+    This command will search shodan using a API key 
+    to search for information on a host, say you have 
+    a host of 1.1.1.1 to search you would use this engine 
+    option to show information on that hostname or of all 
+    results that engine pulled in search for that query or 
+    hostname.
+
+    <h3 style="color: blue;">- engine cve</h3>
+
+    This command also uses the google engine but instead 
+    of searching google for information it will search a CVE 
+    database for information, such as a CVE's name, date, moded date,
+    Description, information, articles, or other relevant data to teach 
+    you about certian CVE's. You can search by date or name of the CVE 
+
+    and example is `shop`
+
+    <div class="ascii_art">
+      |+| CVE Name    	> {CVE MITRE 4.0 {CVE-2022-31101 security-advisories@github.com} {[{[{en CWE-89}]}]} {[{https://github.com/PrestaShop/blockwishlist/security/advisories/GHSA-2jx3-5j9v-prpp https://github.com/PrestaShop/blockwishlist/security/advisories/GHSA-2jx3-5j9v-prpp CONFIRM []} {https://github.com/PrestaShop/blockwishlist/commit/b3ec4b85af5fd73f74d55390b226d221298ca084 https://github.com/PrestaShop/blockwishlist/commit/b3ec4b85af5fd73f74d55390b226d221298ca084 MISC []}]} {[{en prestashop/blockwishlist is a prestashop extension which adds a block containing the customer's wishlists. In affected versions an authenticated customer can perform SQL injection. This issue is fixed in version 2.1.1. Users are advised to upgrade. There are no known workarounds for this issue.}]}}
+
+      |+| Last Modded 	> 2022-06-27T23:15Z
+
+      |+| Published   	> 2022-06-27T23:15Z
+
+      |+| Data type   	> CVE
+
+      |+| Data format 	> MITRE
+
+      |+| Description 	> {[{en prestashop/blockwishlist is a prestashop extension which adds a block containing the customer's wishlists. In affected versions an authenticated customer can perform SQL injection. This issue is fixed in version 2.1.1. Users are advised to upgrade. There are no known workarounds for this issue.}]}
+
+      |+| CVE impact  	> {{{          0 } 0 0} {{        0}  0 0 false false false false false}}
+
+      =============================================================================================================
+      =============================================================================================================
+      |+| CVE Name    	> {CVE MITRE 4.0 {CVE-2022-31057 security-advisories@github.com} {[{[{en CWE-79}]}]} {[{https://docs.shopware.com/en/shopware-5-en/security-updates/security-update-06-2022 https://docs.shopware.com/en/shopware-5-en/security-updates/security-update-06-2022 MISC []} {https://github.com/shopware/shopware/security/advisories/GHSA-q754-vwc4-p6qj https://github.com/shopware/shopware/security/advisories/GHSA-q754-vwc4-p6qj CONFIRM []} {https://packagist.org/packages/shopware/shopware https://packagist.org/packages/shopware/shopware MISC []} {https://github.com/shopware/shopware/commit/3e025a0a3e123f4108082645b1ced6fb548f7b6f https://github.com/shopware/shopware/commit/3e025a0a3e123f4108082645b1ced6fb548f7b6f MISC []}]} {[{en Shopware is an open source e-commerce software made in Germany. Versions of Shopware 5 prior to version 5.7.12 are subject to an authenticated Stored XSS in Administration. Users are advised to upgrade. There are no known workarounds for this issue.}]}}
+
+      |+| Last Modded 	> 2022-06-27T20:15Z
+
+      |+| Published   	> 2022-06-27T20:15Z
+
+      |+| Data type   	> CVE
+
+      |+| Data format 	> MITRE
+
+      |+| Description 	> {[{en Shopware is an open source e-commerce software made in Germany. Versions of Shopware 5 prior to version 5.7.12 are subject to an authenticated Stored XSS in Administration. Users are advised to upgrade. There are no known workarounds for this issue.}]}
+
+      |+| CVE impact  	> {{{          0 } 0 0} {{        0}  0 0 false false false false false}}
+    </div>
+
+    there is another option and that is simple to use tor to reach the database 
+    thats holds the CVE information, this option is `engine tcve` simply just using 
+    a proxy to reach and pull data from the database.
+
+    <h1 style="color: red;">Stalk</h1>
+
+    This is the section which will talk about two options in the stalk module
+
+    <h3 style="color: blue;">- stalk hosts and stalk hosts2</h3>
+
+    both are relative to each other, the only difference is the brute forcing 
+    method, so stalk hosts is a subset which will allow the user to set 3 or 2 
+    octets or a network address. stalk hosts will allow the user to input 3 octets
+    and example is (172.217.2) and you will brute force all possible ranges and network 
+    addresses that match anf youll get something like the following using that example
+    
+    <div class="ascii_art">
+      |+| 	 172.217.2.136 	 yyz08s14-in-f136.1e100.net.,mia09s18-in-f8.1e100.net.,qro04s02-in-f8.1e100.net. 
+      |+| 	 172.217.2.124 	 iad23s72-in-f28.1e100.net.,yyz10s05-in-f28.1e100.net. 
+      |+| 	 172.217.2.209 	 mia09s02-in-f17.1e100.net.,iad23s23-in-f209.1e100.net. 
+      |+| 	 172.217.2.205 	 iad23s23-in-f205.1e100.net.,mia09s02-in-f13.1e100.net. 
+      |+| 	 172.217.2.206 	 iad23s23-in-f206.1e100.net.,mia09s02-in-f14.1e100.net. 
+      |+| 	 172.217.2.208 	 mia09s02-in-f16.1e100.net.,iad23s23-in-f208.1e100.net. 
+      |+| 	 172.217.2.140 	 mia09s18-in-f12.1e100.net.,qro04s02-in-f12.1e100.net.,yyz08s14-in-f140.1e100.net. 
+    </div>
+
+    the second one stalk hosts2 again does the same but you can instead of input 
+    (172.217.2) you can do (172.217) and it will brute force all possible combinations 
+    until it finds a server like the following output 
+
+    <div class="ascii_art">
+      |+| 	 172.217.3.58 	 	 iad23s57-in-f26.1e100.net.
+      |+| 	 172.217.3.239 	 	 lax32s01-in-f15.1e100.net.
+      |+| 	 172.217.3.239 	 	 atl14s79-in-f15.1e100.net.
+      |+| 	 172.217.1.180 	 	 iad39s04-in-f20.1e100.net.
+      |+| 	 172.217.1.180 	 	 yyz10s04-in-f20.1e100.net.
+      |+| 	 172.217.2.6 	 	 lga15s45-in-f6.1e100.net.
+    </div>
+
+    <hr>
+    <h1 style="color: red;">Proxy downloading</h1>
+    <!--
+      │ C  ┃ fetch proxy4       ┃ Get a list of SOCKS4 proxys and save them to a file                     │
+      │ C  ┃ fetch proxy5       ┃ Get a list of SOCKS5 proxys and save them to a file                     │
+      │ C  ┃ fetch http         ┃ Get a list of HTTP proxys without SSL and save them to a file           │
+      │ C  ┃ fetch httpssl      ┃ Get a list of HTTP proxys WITH SSL and save them to a file              │
+      │ C  ┃ fetch https        ┃ Get a list of HTTPS proxys without SSL and save them to a file          │
+      │ C  ┃ fetch httpsssl     ┃ Get a list of HTTPS proxys WITH SSL and save them to a file             │
+    -->
+    > fetch proxy4, fetch proxy5 
+
+    both of these commands do the same thing.
+
+    what they do is download proxies and save them to 
+    a output file you specified wether it was from using the 
+    -o flag or by manually typing it when the program asks for it.
+    however the difference is proxy4 will fetch all proxies it can 
+    for SOCKS4, proxy5 will fetch all proxies for SOCKS5
+
+    > fetch http/https/httpssl/httpsssl
+
+    like the one above all of these are similar,
+    specify an output file and it will download and 
+    save proxies to that given file. fetch http/https 
+    commands will fetch all proxies relating to a http/https 
+    like address, there are options to also use SSL for the proxy 
+    grabbing list. fetch htpssl and httpsssl will grab proxies 
+    of either http or https and make sure they are specified to 
+    just SSL, anything without SSL will not be added to the list.
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+</div>
+
+
+  </section>
+
+<!-- Settings and script -->
+<style>
+  /* Googlefont Poppins CDN Link */
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap);*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+.sidebar{position:fixed;height:100%;width:240px;background:#000;transition:all .5s ease}.sidebar.active{width:60px}.sidebar .logo-details{height:80px;display:flex;align-items:center}
+.sidebar .logo-details i{font-size:28px;font-weight:500;color:#fff;min-width:60px;text-align:center}.sidebar .logo-details .logo_name{color:#fff;font-size:24px;font-weight:500}
+.sidebar .nav-links{margin-top:10px}.sidebar .nav-links li{position:relative;list-style:none;height:50px}.sidebar .nav-links li a{height:100%;width:100%;display:flex;align-items:
+center;text-decoration:none;transition:all .4s ease}.sidebar .nav-links li a.active{background:#00f}.sidebar .nav-links li a:hover{background:#00f}.sidebar 
+.nav-links li i{min-width:60px;text-align:center;font-size:18px;color:#fff}.sidebar .nav-links li a .links_name{color:#fff;font-size:15px;font-weight:400;white-space:nowrap}
+.sidebar .nav-links .log_out{position:absolute;bottom:0;width:100%}.home-section{position:relative;background:#f5f5f5;min-height:100vh;width:calc(100% - 240px);left:240px;
+transition:all .5s ease}.sidebar.active~.home-section{width:calc(100% - 60px);left:60px}.home-section nav{display:flex;justify-content:space-between;height:80px;background:#000;
+display:flex;align-items:center;position:fixed;width:calc(100% - 240px);left:240px;z-index:100;padding:0 20px;box-shadow:0 1px 1px #fff;transition:all .5s ease}.sidebar.active~
+.home-section nav{left:60px;width:calc(100% - 60px)}.home-section nav .sidebar-button{color:#fff;display:flex;align-items:center;font-size:24px;font-weight:500}nav 
+.sidebar-button i{font-size:35px;margin-right:10px}.home-section nav .search-box{position:relative;height:50px;max-width:550px;width:100%;margin:0 20px}nav .search-box 
+input{height:100%;width:100%;outline:0;background:#f5f6fa;border:2px solid #efeef1;border-radius:6px;font-size:18px;padding:0 15px}nav 
+.search-box .bx-search{position:absolute;height:40px;width:40px;background:#2697ff;right:5px;top:50%;transform:translateY(-50%);border-radius:4px;line-height:40px;text-align:
+center;color:#fff;font-size:22px;transition:all .4 ease}.home-section nav .profile-details{display:flex;align-items:center;background:#f5f6fa;border:2px solid #efeef1;
+border-radius:6px;height:50px;min-width:190px;padding:0 15px 0 2px}nav .profile-details img{height:40px;width:40px;border-radius:6px;object-fit:cover}nav .profile-details
+.admin_name{font-size:15px;font-weight:500;color:#333;margin:0 10px;white-space:nowrap}nav .profile-details i{font-size:25px;color:#333}.home-section .home-content{
+  position:relative;padding-top:104px}.home-content .overview-boxes{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:0 20px;margin-bottom:26px}
+  .overview-boxes .box{display:flex;align-items:center;justify-content:center;width:calc(100% / 4 - 15px);background:#fff;padding:15px 14px;border-radius:12px;
+  box-shadow:0 5px 10px rgba(0,0,0,.1)}.overview-boxes .box-topic{font-size:20px;font-weight:500}.home-content .box .number{display:inline-block;font-size:35px;margin-top:-6px;
+  font-weight:500}.home-content .box .indicator{display:flex;align-items:center}.home-content .box .indicator i{height:20px;width:20px;background:#8fdacb;line-height:20px;
+  text-align:center;border-radius:50%;color:#fff;font-size:20px;margin-right:5px}.box .indicator i.down{background:#e87d88}.home-content .box .indicator .text{font-size:12px}
+  .home-content .box .cart{display:inline-block;font-size:32px;height:50px;width:50px;background:#cce5ff;line-height:50px;text-align:center;color:#66b0ff;border-radius:12px;
+  margin:-15px 0 0 6px}.home-content .box .cart.two{color:#2bd47d;background:#c0f2d8}.home-content .box .cart.three{color:#ffc233;background:#ffe8b3}.home-content .box 
+  .cart.four{color:#e05260;background:#f7d4d7}.home-content .total-order{font-size:20px;font-weight:500}.home-content .sales-boxes{display:flex;justify-content:space-between}
+  .home-content .sales-boxes .recent-sales{width:65%;background:#fff;padding:20px 30px;margin:0 20px;border-radius:12px;box-shadow:0 5px 10px rgba(0,0,0,.1)}.home-content 
+  .sales-boxes .sales-details{display:flex;align-items:center;justify-content:space-between}.sales-boxes .box .title{font-size:24px;font-weight:500}.sales-boxes .sales-details 
+  li.topic{font-size:20px;font-weight:500}.sales-boxes .sales-details li{list-style:none;margin:8px 0}.sales-boxes .sales-details li a{font-size:18px;color:#000;font-size:400;
+  text-decoration:none}.sales-boxes .box .button{width:100%;display:flex;justify-content:flex-end}.sales-boxes .box .button a{color:#fff;background:#0a2558;padding:4px 12px;
+  font-size:15px;font-weight:400;border-radius:4px;text-decoration:none;transition:all .3s ease}.sales-boxes .box .button a:hover{background:#0d3073}.home-content .sales-boxes 
+  .top-sales{width:35%;background:#fff;padding:20px 30px;margin:0 20px 0 0;border-radius:12px;box-shadow:0 5px 10px rgba(0,0,0,.1)}.sales-boxes .top-sales li{display:flex;
+  align-items:center;justify-content:space-between;margin:10px 0}.sales-boxes .top-sales li a img{height:40px;width:40px;object-fit:cover;border-radius:12px;margin-right:10px;
+  background:#333}.sales-boxes .top-sales li a{display:flex;align-items:center;text-decoration:none}.price,.sales-boxes .top-sales li .product{font-size:17px;font-weight:400;
+  color:#333}@media (max-width:1240px){.sidebar{width:60px}.sidebar.active{width:220px}.home-section{width:calc(100% - 60px);left:60px}.sidebar.active~.home-section{left:220px;
+  width:calc(100% - 220px);overflow:hidden}.home-section nav{width:calc(100% - 60px);left:60px}.sidebar.active~.home-section nav{width:calc(100% - 220px);left:220px}}@media (
+    max-width:1150px){.home-content .sales-boxes{flex-direction:column}.home-content .sales-boxes .box{width:100%;overflow-x:scroll;margin-bottom:30px}.home-content .sales-boxes 
+    .top-sales{margin:0}}@media (max-width:1000px){.overview-boxes .box{width:calc(100% / 2 - 15px);margin-bottom:15px}}@media (max-width:700px){nav .profile-details .admin_name,nav 
+    .profile-details i,nav .sidebar-button .dashboard{display:none}.home-section nav .profile-details{height:50px;min-width:40px}.home-content .sales-boxes .sales-details{width:560px}}
+    @media (max-width:550px){.overview-boxes .box{width:100%;margin-bottom:15px}.sidebar.active~.home-section nav .profile-details{display:none}}@media (max-width:400px){
+      .sidebar{width:0}.sidebar.active{width:60px}.home-section{width:100%;left:0}.sidebar.active~.home-section{left:60px;width:calc(100% - 60px)}.home-section nav{width:100%;left:0}
+      .sidebar.active~.home-section nav{left:60px;width:calc(100% - 60px)}}.ascii_art{font-family:monospace;white-space:pre}.Paragraph_Starter{font-weight:700;color:#000;
+      font-size:40px}.Base_Text{font-weight:700;font-family:'Franklin Gothic Medium','Arial Narrow',Arial,sans-serif;font-style:italic;white-space:pre}.Section_font{color:#081d45;
+      font-size:medium;font-family:'Courier New',Courier,monospace;font-weight:100}
+</style>

@@ -1,0 +1,13 @@
+  ┌────┳────────────────────┳─────────────────────────────────────────────────────────────────────────┐
+  │ C  ┃ Brute SMTP         ┃ Brute force SMTP services and emails                                    │
+  │ C  ┃ Brute SSH          ┃ Brute force SSH Servers and usernames                                   │
+  │ C  ┃ Brute FTP          ┃ Brute force FTP servers and usernames                                   │
+  │ C  ┃ Brute HTTPA        ┃ Brute force HTTP plain authentication                                   │
+  │ C  ┃ Brute Telnet       ┃ Brute force TELNET servers using std auth                               │ 
+  │ C  ┃ Brute Cpan         ┃ Brute force Cpanel servers using std auth                               │ 
+  │ C  ┃ Brute psql         ┃ Brute force PostGreSQL servers using a wordlist                         │ 
+  │ C  ┃ Brute mysql        ┃ Brute force MySQL servers using a wordlist                              │ 
+  │ C  ┃ Brute mongo        ┃ Brute force Mongo servers using a wordlist                              │ 
+  │ C  ┃ Brute ZIP          ┃ Brute force ZIP files with a given thread count, wordlist, and ZIP file │ 
+  │ C  ┃ Brute HTTP auth    ┃ Brute force HTTP authentication threaded option                         │
+  └───────────────────────────────────────────────────────────────────────────────────────────────────┘

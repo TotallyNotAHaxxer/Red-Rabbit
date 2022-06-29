@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> RR6 ADMIN DASHBOARD | Documentation Server LO </title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='fas fa-rabbit'></i>
+      <span class="logo_name">Red Rabbit</span>
+    </div>
+      <ul class="nav-links">
+          <li>
+          <a href="/server-index/new/indexes" class="active">
+            <i class='bx bx-ghost'></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.github.com/ArkAngeL43" class="inactive">
+            <i class='bx bxl-gitlab' ></i>
+            <span class="links_name">Github</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://discord.gg/fEWXZyEzSe" class="inactive">
+            <i class='bx bxl-discord' ></i>
+            <span class="links_name">Discord</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/new/indexes-errors" class="inactive">
+            <i class='bx bxs-error-alt'></i>
+            <span class="links_name">Error Documentation</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/old" class="inactive">
+            <i class='bx bxs-vial' ></i>
+            <span class="links_name">Old Documentation</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/new/indexes-flags" class="inactive">
+            <i class='bx bxs-flag-alt'></i>
+            <span class="links_name">Flags Documentation</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/new/indexes-about" class="inactive">
+            <i class='bx bx-cube'></i>
+            <span class="links_name">About</span>
+          </a>
+        </li>
+        
+        <li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <div class="ascii_art">
+                               ______           __        ______         __     __     __ __          _____                                         __          __   __              
+                              |   __ \.-----.--|  |______|   __ \.---.-.|  |--.|  |--.|__|  |_ ______|     \.-----.----.--.--.--------.-----.-----.|  |_.---.-.|  |_|__|.-----.-----.
+                              |      <|  -__|  _  |______|      <|  _  ||  _  ||  _  ||  |   _|______|  --  |  _  |  __|  |  |        |  -__|     ||   _|  _  ||   _|  ||  _  |     |
+                              |___|__||_____|_____|      |___|__||___._||_____||_____||__|____|      |_____/|_____|____|_____|__|__|__|_____|__|__||____|___._||____|__||_____|__|__|
+                                                                                                                                                                                            
+      The next few sections will be dedicated to the red rabbit documentation, the sections will be disected by module, eg: (0x0001 is module search) it goes from there 
+      from the list above. Another example of how modules will be seperated is by the cloumn number in the chart above where Brute is the second module name, its section will 
+      be labeled 0x0002 - BRUTE -, please take your time going through the documentation ALOT of people often forget about documentation then come to the devs confused as to 
+      why some dont work, or how the script works and how to use it, so please, when i mean read it i mean READ IT CAREFULLY! 
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <div class="Paragraph_Starter">0x0008 Interacting with files, elements, and utilities for file checking</div>
+    <div class="Base_Text">
+        Section 0x0008 will be talking about the dumping section as well as some extra utilities 
+        that is used to find files on web servers and dump them. Alot of this will revolve around 
+        dumping pcap files and trying to find certian data in files.
+    <hr>
+    > dump pe info
+
+    This is a simple PE file information dumper 
+    to find things like premissions, filename, 
+    file size, magic bytes of start sections,
+    offsets of certian locations, COFF headers, 
+    etc information that can be used for things like 
+    PROC/DLL injection in the further future.
+
+    example output (in this example i am using the file bootres.DLL
+    from the windows 10 OS in the following folder / location 
+    examples/win10/windows10-boot-config-and-res-dll-inspection-example/bootres.dll)
+
+    <div class="ascii_art">
+        File name             | bootres.dll
+        Size in bytes         | 92472
+        Permissions           | -rw-r--r--
+        Last modified         |  2020-11-18 15:01:26 -0500 EST
+        Is Directory          |  false
+        System interface type |  *syscall.Stat_t
+        System info           | &{Dev:66307 Ino:37487374 Nlink:1 Mode:33188 Uid:1001 Gid:1003 X__pad0:0 Rdev:0 Size:92472 Blksize:4096 
+            Blocks:184 Atim:{Sec:1652569049 Nsec:712236000} Mtim:{Sec:1605729686 Nsec:0} Ctim:{Sec:1652569049 Nsec:712236299} X__unused:[0 0 0]}
+        
+         |>**********************************************************************<|
+         |>>> Discovered section BASIC SECTION START INFO                         |
+         |>**********************************************************************<|
+         |>>> +  Magic Byte       | MZ
+         |>>> +  LFANEW Value     |PE
+         |>**********************************************************************<|
+         |>>> Discovered section COFF File Header                                 |
+         |>**********************************************************************<|
+         |>>> +  Machine Architecture        |0x8664
+         |>>> +  Number of Sections          |0x2
+         |>>> +  Size of Optional Header     |0xf0
+         |************************************************************************|
+         |>**********************************************************************<|
+         |>>> Discovered section offsets                                          |
+         |>**********************************************************************<|
+         |>>> + Number of Sections Field Offset   |0xae
+         |>>> + Section Table Offset              |0x1a0
+         |*************************************************************************|
+         |---------------------------------------------------------
+         |>>> Discovered Section - Optional Headers
+         |********************************************************************************************
+         |>>> + Entry Point                | 0x0
+         |>>> + Image Base                 | 0x0
+         |>>> + Size of image              | 0x0
+         |>>> + Section alignment          | 0x0
+         |>>> + File attachment            | 0x0
+         |>>> + File Characteristics       | 0x2022
+         |>>> + Size of headers            | 0x0
+         |>>> + Checksum                   | 0x0
+         |>>> + Machine                    | 0x8664
+         |>>> + Subsystem                  | 0x0
+         |>>> + DLL Characteristics        | 0x0
+         |********************************************************************************************
+         |---------------------------------------------------------------------
+         |>>> Discovered Section .rdata
+         | 
+         |**********************************************************************
+         |>>> + Section Characteristics              | 0x40000040
+         |>>> + Section Virtual Size                 | 0xb0
+         |>>> + Section Virtual Offset               | 0x1000
+         |>>> + Section Raw Size                     | 0x200
+         |>>> + Section Raw Offset to Data           |0x200
+         |>>> + Section Append Offset (Next Section) | 0x400
+         |---------------------------------------------------------------------
+    </div>
+    <hr>
+    > dump image metadata 
+
+    Dump image metadata will output a simple table 
+    from an image it asks you for, if you do not 
+    specify the flag -i it will simply prompt you 
+    for a direct filepath to an image or file to dump
+
+    the following example is of a table that is outputted 
+    upon running and testing the function on the filename
+    examples2/ss.jpg
+
+    <div class="ascii_art">
+        ┌─────────────╥───────────────────┬────────────────────────────┐
+        │ Data Number ║ Data              │After DATA EXIF             │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║FilePermissions    │         -rw-r--r--         │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║FileTypeExtension  │             jpg            │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║ImageSize          │           604x492          │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║FileInodeChangeDate│  2022:05:21 14:41:36-04:00 │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║FileSize           │           14 KiB           │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║Megapixels         │            0.297           │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║FileModifyDate     │  2022:05:21 14:40:17-04:00 │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║ImageHeight        │             492            │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║YResolution        │              1             │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║EncodingProcess    │Baseline DCT, Huffman coding│
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║Directory          │          examples2         │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║ExifToolVersion    │            12.30           │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║XResolution        │              1             │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║ResolutionUnit     │            None            │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║ColorComponents    │              1             │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║BitsPerSample      │              8             │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║FileAccessDate     │  2022:05:21 14:40:17-04:00 │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║JFIFVersion        │            1.01            │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║FileType           │            JPEG            │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║MIMEType           │         image/jpeg         │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║ImageWidth         │             604            │
+        ├─────────────╫───────────────────┼────────────────────────────┤
+        │1            ║FileName           │           ss.jpg           │
+        └─────────────╨───────────────────┴────────────────────────────┘
+    </div>
+    <hr>
+    > dump file binary
+
+    this utility is simply to just check 
+    if a certian payload or item was injected 
+    properly, i left this here for really anyone 
+    to use to see if something that was tampered 
+    with in a file was supposed to be there. this 
+    tool simply dumps a file into hex data, take 
+    the following output of the image in the filepath 
+
+    examples/stego/injected.png as an example to 
+    what this tool shows you 
+
+    example output 
+
+    <div class="ascii_art">
+        00000090  f1 89 13 8d 84 90 b2 b2  32 8e e3 ae b8 e2 8a 9e  |........2.......|
+        000000a0  9e 9e d3 a7 4f 2b 8a 32  6b d6 ac 23 47 8e b0 6a  |....O+.2k..#G..j|
+        000000b0  5e af 57 96 65 bf df 9f  88 c7 e7 ce 9d fb f1 c7  |^.W.e...........|
+        000000c0  1f 5f 7f fd f5 92 24 99  86 31 c1 46 32 91 08 04  |._....$..1.F2...|
+        000000d0  02 a1 50 08 5b 66 3c 1e  1f 8d bb 2e 11 b2 ec 78  |..P.[f<........x|
+        000000e0  fd f5 d7 6f bc f1 c6 8a  8a 8a 48 24 f2 e7 3f ff  |...o......hel.?.|
+        000000f0  79 de bc 79 e9 7d bc 34  06 7d ac 62 70 e7 43 10  |o..y.world.4.}..|
+    </div>
+
+    if you look closely you can see in the hex hello world was an injected 
+    message / payload in the IEND chunk / EOF of the PNG image
+    <hr>
+    > dump file info 
+
+    Command dumps general information 
+    on a filepath or file, using the 
+    following example filepath we can 
+    see the information we get from this function 
+
+    examples/stego/injected.png
+
+    <div class="ascii_art">
+        File name            | injected.png
+        Size in bytes        | 142142
+        Permissions          | -rw-r--r--
+        Last modified        |  2022-03-22 10:25:06 -0400 EDT
+        Is Directory         |  false
+        System interface type |  *syscall.Stat_t
+        System info           | &{Dev:66307 Ino:37487368 Nlink:1 Mode:33188 Uid:1001 Gid:1003 X__pad0:0 Rdev:0 Size:142142 Blksize:4096 Blocks:280 
+        Atim:{Sec:1652569049 Nsec:712236000} Mtim:{Sec:1647959106 Nsec:0} Ctim:{Sec:1652569049 Nsec:712236299} X__unused:[0 0 0]}
+    </div>
+    <hr>
+    > dump png meta
+
+    Now this one is a bit wackier than most,
+    for the most part this will dump PNG metadata 
+    such as the chunk, section, section offset, 
+    chunk offset, chunk name, chunk importance,
+    chunk CRC, chunk data etc. A weird thing i have 
+    found and experienced alot with this command is 
+    it will execute only once within one session, currently 
+    there is no known bug that is making this happen but 
+    its quite obvious there is a bug in there preventing it
+    from working a second time. Either way take the following 
+    example filepath as a target to test on
+
+    examples/stego/injected.png
+
+    <div class="ascii_art">
+        |>********************************************************************>|
+        |>>> Discovered/Found section and chunk number  1                      |
+        |>********************************************************************>|
+        |>>> +  Chunks Offset     |  8
+        |>>> +  Chunks Offset Sp  |  0x08 
+        |>>> +  Chunks Length     |  13
+        |>>> +  Chunks Type       |  IHDR
+        |>>> +  Chunks Importance |  Critical
+        |>>> +  Chunk CRC         |  31040f8b
+        |>>> +  Chunk Data        |  0x00000258000002580802000000
+        |----------------------------------------------------------------------|
+        |>********************************************************************>|
+        |>>> Discovered/Found section and chunk number  2                      |
+        |>********************************************************************>|
+        |>>> +  Chunks Offset     |  33
+        |>>> +  Chunks Offset Sp  |  0x21 
+        |>>> +  Chunks Length     |  32768
+        |>>> +  Chunks Type       |  IDAT
+        |>>> +  Chunks Importance |  Critical
+        |>>> +  Chunk CRC         |  99dac9bd
+        |>>> +  Chunk data        | To large to output, choosing not to output
+        |----------------------------------------------------------------------|
+    </div>
+    <hr>
+    > dump pcap dot11 
+
+    NOTE: for any of the pcap dumping 
+    you can use --filepath to specify 
+    a PCAP file or filepath to a PCAP 
+    file, all example PCAP files are 
+    in filepath examples/pcap
+
+
+    This command will ask the user for a PCAP file 
+    PCAPNG or PCAP, and will simply itterate over the 
+    pcap file to find certian 802.11 data such as 
+    BSSID's, SSID's and mac addresses from maybe say 
+    a previous attack you made on a network.
+
+    example output 
+
+    <div class="ascii_art">
+        BSSID |  1c:dd:lb:5f:fb:8a  | Flags ->  FROM-DS,MD,WEP 
+        BSSID |  1c:6c:7f:a6:c3:83  | Flags ->  FROM-DS,MD,WEP 
+        BSSID |  1c:dd:lb:5f:fb:8a  | Flags ->  FROM-DS,MD,WEP 
+        BSSID |  1c:6c:7f:a6:c3:89  | Flags ->  FROM-DS,MD,WEP 
+    </div>
+    <hr>
+    > dump pcap ftp 
+
+    NOTE: for any of the pcap dumping 
+    you can use --filepath to specify 
+    a PCAP file or filepath to a PCAP 
+    file, all example PCAP files are 
+    in filepath examples/pcap
+
+
+    This command will parse through a 
+    given PCAP file to find FTP credentials 
+    and search for byte responses like USER 
+    and PASS
+
+    example output using  -> examples2/Ftp.pcap
+
+    <div class="ascii_art">
+        [Ether-Shark] [FTP_Authentication] Found FTP Username 	|   23:11:25 	 | 
+        ---------------------------------------------------------------------------------------
+        | Destination -> 192.168.0.193
+        | Payload     -> USER csanders
+        
+        ---------------------------------------------------------------------------------------
+        
+        
+         PACKET: 69 bytes, wire length 69 cap length 69 @ 2006-12-16 12:24:40.504807 -0500 EST
+        - Layer 1 (14 bytes) = Ethernet	{Contents=[..14..] Payload=[..55..] SrcMAC=00:16:ce:6e:8b:24 DstMAC=00:15:f2:40:76:ef EthernetType=IPv4 Length=0}
+        - Layer 2 (20 bytes) = IPv4	{Contents=[..20..] Payload=[..35..] Version=4 IHL=5 TOS=0 Length=55 Id=42981 Flags=DF FragOffset=0 TTL=128 Protocol=TCP Checksum=53335 SrcIP=192.168.0.114 DstIP=192.168.0.193 Options=[] Padding=[]}
+        - Layer 3 (20 bytes) = TCP	{Contents=[..20..] Payload=[..15..] SrcPort=1137(trim) DstPort=21(ftp) Seq=3753095935 Ack=3334930784 DataOffset=5 FIN=false SYN=false RST=false PSH=true ACK=true URG=false ECE=false CWR=false NS=false Window=17394 Checksum=2712 Urgent=0 Options=[] Padding=[]}
+        - Layer 4 (15 bytes) = Payload	15 byte(s)
+        
+         [Ether-Shark] [FTP_Authentication] Found FTP Password 	|   23:11:25 	 | 
+        ---------------------------------------------------------------------------------------
+        | Destination -> 192.168.0.193
+        | Payload     -> PASS echo
+        
+        ---------------------------------------------------------------------------------------
+        
+        
+         PACKET: 65 bytes, wire length 65 cap length 65 @ 2006-12-16 12:24:40.507195 -0500 EST
+        - Layer 1 (14 bytes) = Ethernet	{Contents=[..14..] Payload=[..51..] SrcMAC=00:16:ce:6e:8b:24 DstMAC=00:15:f2:40:76:ef EthernetType=IPv4 Length=0}
+        - Layer 2 (20 bytes) = IPv4	{Contents=[..20..] Payload=[..31..] Version=4 IHL=5 TOS=0 Length=51 Id=42982 Flags=DF FragOffset=0 TTL=128 Protocol=TCP Checksum=53338 SrcIP=192.168.0.114 DstIP=192.168.0.193 Options=[] Padding=[]}
+        - Layer 3 (20 bytes) = TCP	{Contents=[..20..] Payload=[..11..] SrcPort=1137(trim) DstPort=21(ftp) Seq=3753095950 Ack=3334930821 DataOffset=5 FIN=false SYN=false RST=false PSH=true ACK=true URG=false ECE=false CWR=false NS=false Window=17357 Checksum=59755 Urgent=0 Options=[] Padding=[]}
+        - Layer 4 (11 bytes) = Payload	11 byte(s)        
+    </div>
+    <hr>
+    > dump pcap ospf
+
+
+    NOTE: for any of the pcap dumping 
+    you can use --filepath to specify 
+    a PCAP file or filepath to a PCAP 
+    file, all example PCAP files are 
+    in filepath examples/pcap
+
+    This command will attempt to find 
+    and dump all OSPF authentication keys
+    in a file, here is an example output 
+    of that dumping tool using the filepath 
+
+    -> examples/pcap/ospf-simple.cap
+
+    <div class="ascii_art">
+        |---------------------------------|
+        |        NEW BOX SESSION #1	      |
+        |                                 |
+        |>> OSPF Authentication           |-> 7163383553210712064
+        |>> OSPF Area ID                  |-> 1
+        |>> OSPF Authentication Type      |-> 1
+        |>> OSPF Checksum                 |-> 47608
+        |>> OSPF Packet Length            |-> 44
+        |>> OSPF Router ID                |-> 3232261889
+        |>> OSPF Version                  |-> 2
+        |>> OSPF Payload                  |-> []
+        |---------------------------------|
+        |        NEW BOX SESSION #2	      |
+        |                                 |
+        |>> OSPF Authentication           |-> 7163383553210712064
+        |>> OSPF Area ID                  |-> 1
+        |>> OSPF Authentication Type      |-> 1
+        |>> OSPF Checksum                 |-> 47608
+        |>> OSPF Packet Length            |-> 44
+        |>> OSPF Router ID                |-> 3232261889
+        |>> OSPF Version                  |-> 2
+        |>> OSPF Payload                  |-> []
+    </div>
+    <hr>
+    > dump pcap smtppa
+
+    NOTE: for any of the pcap dumping 
+    you can use --filepath to specify 
+    a PCAP file or filepath to a PCAP 
+    file, all example PCAP files are 
+    in filepath examples/pcap
+
+    This command will parse through 
+    a pcap or PCAPNG file and attempt 
+    to find all basic SMTP authentication
+    messages, the username and password
+    that is used in the payloads, then 
+    format them in a formal maner
+
+    example output using 
+
+    -> examples/pcap/smtp.pcap
+
+    <div class="ascii_art">
+        ------------------- TOP HEADER DATA ---------------------------
+        | Source      Address |>   74.53.140.153 
+        | Destination Address |>   10.10.1.4 
+        | Detected on packet# |>   9 
+        ------------------- BOTTOM HEADER INF --------------------------
+        |   Found Search Payload     |>   AUTH PLAIN 
+        |   Found Information Element|>   250-xc90.websitewelcome.com Hello GP [122.162.143.157]
+                                        250-SIZE 52428800
+                                        250-PIPELINING
+                                        250-AUTH PLAIN LOGIN
+                                        250-STARTTLS
+                                        250 HELP
+    </div>
+    <hr>
+    > dump pcap smtpe
+
+
+    NOTE: for any of the pcap dumping 
+    you can use --filepath to specify 
+    a PCAP file or filepath to a PCAP 
+    file, all example PCAP files are 
+    in filepath examples/pcap
+
+
+    This command will do the same as the one above 
+    but instead of searching for plaina authentication
+    from a SSH server it will search for emails, chats, 
+    usernames, and bodies that may include sensative information 
+    in the responses, note some of this may be messed up and not 
+    such a formatted output but that is due to the =non snip function 
+    in the code.
+
+    using example -> examples/pcap/smtp.pcap
+
+    <div class="ascii_art">
+        ------------------- TOP HEADER DATA ---------------------------
+        | Source      Address |>   10.10.1.4 
+        | Destination Address |>   74.53.140.153 
+        | Detected on packet# |>   18 
+        ------------------- BOTTOM HEADER INF --------------------------
+        |   Found Search Payload     |>   RCPT TO 
+        |   Found Information Element|>   RCPT TO: raj_deol2002in@yahoo.co.in>
+        
+        ------------------- TOP HEADER DATA ---------------------------
+        | Source      Address |>   10.10.1.4 
+        | Destination Address |>   74.53.140.153 
+        | Detected on packet# |>   16 
+        ------------------- BOTTOM HEADER INF --------------------------
+        |   Found Search Payload     |>   MAIL FROM 
+        |   Found Information Element|>   MAIL FROM: gurpartap@patriots.in>
+    </div>
+    <hr>
+    > dump pcap sipa
+
+    NOTE: for any of the pcap dumping 
+    you can use --filepath to specify 
+    a PCAP file or filepath to a PCAP 
+    file, all example PCAP files are 
+    in filepath examples/pcap
+
+    command root -> dump pcap SIP authentication
+
+    this command will parse through a PCAP or 
+    PCAPNG file and find all SIP authentication
+    messages and payloads that may have the PARAM 
+    USER | PASS | or OK+
+
+    using example -> examples/pcap/SIP CALL.pcap
+
+    <div class="ascii_art">
+        [ >>>>> ] Username 
+        ------------------- TOP HEADER DATA ---------------------------
+        | Source      Address |>   200.57.7.205 
+        | Destination Address |>   216.136.173.10 
+        | Detected on packet# |>   1619 
+        ------------------- BOTTOM HEADER INF --------------------------
+        |   Found Search Payload     |>   USER 
+        |   Found Information Element|>   USER ecortones
+        ###########################################################
+        [ >>>>> ] Password 
+        ------------------- TOP HEADER DATA ---------------------------
+        | Source      Address |>   200.57.7.205 
+        | Destination Address |>   216.136.173.10 
+        | Detected on packet# |>   1629 
+        ------------------- BOTTOM HEADER INF --------------------------
+        |   Found Search Payload     |>   PASS 
+        |   Found Information Element|>   PASS cortone$
+    </div>
+    <hr>
+    > dump pcap sipok
+
+    NOTE: for any of the pcap dumping 
+    you can use --filepath to specify 
+    a PCAP file or filepath to a PCAP 
+    file, all example PCAP files are 
+    in filepath examples/pcap
+
+    command root -> dump pcap SIP OK message 
+
+    this command will parse through a PCAP or 
+    PCAPNG file and try to find all SIP OK 
+    or SIP OK+ authentication messages and 
+    format them to a specific need
+
+    using example -> examples/pcap/SIP CALL.pcap
+
+    <div class="ascii_art">
+        ------------------- TOP HEADER DATA ---------------------------
+        | Source      Address |>   216.136.173.10 
+        | Destination Address |>   200.57.7.205 
+        | Detected on packet# |>   1618 
+        ------------------- BOTTOM HEADER INF --------------------------
+        |   Found Search Payload     |>   +OK 
+        |   Found Information Element|>   +OK hello from popgate(2.27.5)
+        
+        ------------------- TOP HEADER DATA ---------------------------
+        | Source      Address |>   216.136.173.10 
+        | Destination Address |>   200.57.7.205 
+        | Detected on packet# |>   1628 
+        ------------------- BOTTOM HEADER INF --------------------------
+        |   Found Search Payload     |>   +OK 
+        |   Found Information Element|>   +OK password required.
+        
+        ------------------- TOP HEADER DATA ---------------------------
+        | Source      Address |>   216.136.173.10 
+        | Destination Address |>   200.57.7.205 
+        | Detected on packet# |>   1687 
+        ------------------- BOTTOM HEADER INF --------------------------
+        |   Found Search Payload     |>   +OK 
+        |   Found Information Element|>   +OK maildrop ready, 0 messages (0 octets) (0 262144000)           
+    </div>
+    <hr>
+    > dump pcap sipin 
+
+    NOTE: for any of the pcap dumping 
+    you can use --filepath to specify 
+    a PCAP file or filepath to a PCAP 
+    file, all example PCAP files are 
+    in filepath examples/pcap
+
+    command root -> dump pcap SIP OK INVITE MESSAGES 
+
+    This command will parse through a PCAP or 
+    PCAPNG file and try to find all SIP INVITE 
+    messages in a payload that were sucessful and
+    were authenticated properly
+
+    using example -> examples/pcap/SIP CALL.pcap
+
+    <div class="ascii_art">
+                                                                                       
+    ------------------- TOP HEADER DATA ---------------------------
+    | Source      Address |>   200.57.7.195 
+    | Destination Address |>   200.57.7.204 
+    | Detected on packet# |>   1 
+    ------------------- BOTTOM HEADER INF --------------------------
+    |   Found Search Payload     |>   INVITE 
+    |   Found Information Element|>   INVITE sip:francisco@bestel.com:55060 SIP/2.0
+    Via: SIP/2.0/UDP 200.57.7.195;branch=z9hG4bKff9b46fb055c0521cc24024da96cd290
+    Via: SIP/2.0/UDP 200.57.7.195:55061;branch=z9hG4bK291d90e31a47b225bd0ddff4353e9cc0
+    From: sip:200.57.7.195:55061;user=phone>;tag=GR52RWG346-34
+    To: "francisco@bestel.com" sip:francisco@bestel.com:55060>
+    Call-ID: 12013223@200.57.7.195
+    CSeq: 1 INVITE
+    Contact: sip:200.57.7.195:5060>
+    Content-Type: application/sdp
+    Content-Length:   229
+
+    
+    ------------------- TOP HEADER DATA ---------------------------
+    | Source      Address |>   200.57.7.204 
+    | Destination Address |>   200.57.7.195 
+    | Detected on packet# |>   2 
+    ------------------- BOTTOM HEADER INF --------------------------
+    |   Found Search Payload     |>   INVITE 
+    |   Found Information Element|>   SIP/2.0 100 Trying
+    Via: SIP/2.0/UDP 200.57.7.195;branch=z9hG4bKff9b46fb055c0521cc24024da96cd290
+    Via: SIP/2.0/UDP 200.57.7.195:55061;branch=z9hG4bK291d90e31a47b225bd0ddff4353e9cc0
+    From: sip:200.57.7.195:55061;user=phone>;tag=GR52RWG346-34
+    To: "francisco@bestel.com" sip:francisco@bestel.com:55060>;tag=298852044
+    Contact: sip:francisco@200.57.7.204:5061>
+    Call-ID: 12013223@200.57.7.195
+    CSeq: 1 INVITE
+    Server: X-Lite release 1103m
+    Content-Length: 0
+    </div>
+    <hr>
+    > dump pcap sipreg 
+
+    NOTE: for any of the pcap dumping 
+    you can use --filepath to specify 
+    a PCAP file or filepath to a PCAP 
+    file, all example PCAP files are 
+    in filepath examples/pcap
+
+    command root -> dump pcap SIP REGISTER
+
+    this command will parse through a PCAP or a 
+    PCAPNG file and attempt to find all possible 
+    REGISTER requests made to the host within 
+    the packets payload body using standard parsing 
+
+    NO EXAMPLE OUTPUT
+
+    <hr>
+    > dump pcap sippg
+
+    NOTE: for any of the pcap dumping 
+    you can use --filepath to specify 
+    a PCAP file or filepath to a PCAP 
+    file, all example PCAP files are 
+    in filepath examples/pcap
+
+    command root -> dump pcap SIP POST GET 
+
+    this command will simply parse through a PCAP or 
+    CAP/PCAPNG file and attempt to find every POST and GET 
+    request made within an IMAP packet response body.
+
+    using example -> examples/pcap/SIP CALL.pcap
+    
+    <div class="ascii_art">
+        ------------------- TOP HEADER DATA ---------------------------
+        | Source      Address |>   200.57.7.204 
+        | Destination Address |>   200.57.7.194 
+        | Detected on packet# |>   4264 
+        ------------------- BOTTOM HEADER INF --------------------------
+        |   Found Search Payload     |>   POST 
+        |   Found Information Element|>   POST /cems/applets/serviceRouter HTTP/1.1
+       cookie: JSESSIONID=1s6ylq2znjyi5
+       Cache-Control: no-cache
+       Pragma: no-cache
+       User-Agent: Mozilla/4.0 (Windows XP 5.1) Java/1.4.2_03
+       Host: 200.57.7.194
+       Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+       Connection: keep-alive
+       Content-Type: application/x-www-form-urlencoded
+       Content-Length: 160
+       
+        
+        ------------------- TOP HEADER DATA ---------------------------
+        | Source      Address |>   200.57.7.204 
+        | Destination Address |>   200.57.7.194 
+        | Detected on packet# |>   40 
+        ------------------- BOTTOM HEADER INF --------------------------
+        |   Found Search Payload     |>   GET 
+        |   Found Information Element|>   GET /cems/META-INF/services/javax.xml.parsers.SAXParserFactory HTTP/1.1
+       cookie: JSESSIONID=1s6ylq2znjyi5
+       User-Agent: Mozilla/4.0 (Windows XP 5.1) Java/1.4.2_03
+       Host: 200.57.7.194
+       Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+       Connection: keep-alive
+    </div>
+    <hr>
+    > dump pcap imaplogn 
+
+    NOTE: for any of the pcap dumping 
+    you can use --filepath to specify 
+    a PCAP file or filepath to a PCAP 
+    file, all example PCAP files are 
+    in filepath examples/pcap
+
+    command root -> dump pcap IMAP login and auth
+
+    This command parses through a given PCAP/CAP/PCAPNG 
+    file and attempts to find a username and passwords 
+    as well as authentication attmepts made to the IMAP 
+    server 
+
+    using example -> examples/pcap/'IMAP - Login (Plaintext) 1.pcap'
+
+    <div class="ascii_art">
+        ------------------- TOP HEADER DATA ---------------------------
+        | Source      Address |>   131.151.37.122 
+        | Destination Address |>   131.151.32.21 
+        | Detected on packet# |>   7 
+        ------------------- BOTTOM HEADER INF --------------------------
+        |   Found Search Payload     |>   LOGIN 
+        |   Found Information Element|>   * CAPABILITY IMAP4 IMAP4rev1 IDLE LITERAL+ LOGIN-REFERRALS MAILBOX-REFERRALS NAMESPACE AUTH=NTLM
+       a0000 OK CAPABILITY completed.
+        
+        ------------------- TOP HEADER DATA ---------------------------
+        | Source      Address |>   131.151.32.21 
+        | Destination Address |>   131.151.37.122 
+        | Detected on packet# |>   8 
+        ------------------- BOTTOM HEADER INF --------------------------
+        |   Found Search Payload     |>   LOGIN 
+        |   Found Information Element|>   a0001 LOGIN "neulingern" "XXXXXX"
+        
+        ------------------- TOP HEADER DATA ---------------------------
+        | Source      Address |>   131.151.37.122 
+        | Destination Address |>   131.151.32.21 
+        | Detected on packet# |>   9 
+        ------------------- BOTTOM HEADER INF --------------------------
+        |   Found Search Payload     |>   LOGIN 
+        |   Found Information Element|>   a0001 OK LOGIN completed.       
+    </div>
+    <hr>
+    > dump pcap custom 
+
+    This command might confuse some people with its wacky output.
+    SO this command is intended to give the user full control 
+    over what THEY want to search in the file, not automated 
+    and not pre chosen, so here we are given some pre set 
+    choices and examples of filters we use 
+
+    <div class="ascii_art">
+        SMTP DEFUALT PARAMS
+
+[RCPT TO MAIL FROM USER AUTH]
+--------------------------
+SMTP PLAIN AUTH DEFUALT PARAMS
+
+[AUTH PLAIN MAIL FROM RCPT TO HELO 250]
+--------------------------
+HTTP PARAMATERS
+
+[GET POST HTTP/1.1 Authorization Unauthorized]
+--------------------------
+HTTP IMAGE DEFUALT PARAMS
+
+[GIF IMG JPG JPEG ]
+--------------------------
+IMAP PLAIN TEXT DEFUALT PARAMS
+
+[LOGIN]
+--------------------------
+
+ SIP Paramaters
+[+OK PASS USER POST GET INVITE REGISTER]
+
+
+    </div>
+
+    say we have the following PCAP file 
+
+    example -> examples/pcap/HTTP - Basic Authentication.pcap
+
+    and we want to find all authorized users or 
+    successful authorization messages that happened 
+    when making requests, we can simply type Authentication
+    and it will output all fields found with the authentication
+    field and payload
+
+    <div class="ascii_art">
+        ------------------- TOP HEADER DATA ---------------------------
+        | Source      Address |>   192.254.189.169 
+        | Destination Address |>   192.168.0.4 
+        | Detected on packet# |>   575 
+        ------------------- BOTTOM HEADER INF --------------------------
+        |   Found Search Payload     |>   Authentication 
+        |   Found Information Element|>   HTTP/1.1 200 OK
+            Date: Tue, 15 Oct 2013 13:35:04 GMT
+            Server: Apache
+            Expires: Mon, 26 Jul 1997 05:00:00 GMT
+            Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+            Pragma: no-cache
+            Keep-Alive: timeout=5, max=75
+            Connection: Keep-Alive
+            Transfer-Encoding: chunked
+            Content-Type: text/html
+            
+            4239
+            !DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+            html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+            head>
+            meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+            title>HTTP Password Information - Success - BrowserSpy.dk/title>
+            meta name="description" content="Congratulation! Your browser supports HTTP Basic Authentication. Below are listed what you provided as login information." />
+            meta name="keywords" content="success,password,http,basic,authentication,protection" />
+            link rel="icon" href="http://browserspy.dk/favicon.ico" type="image/x-icon" />
+            link rel="shortcut icon" href="http://browserspy.dk/favicon.ico" type="image/x-icon" />
+            link rel="stylesheet" type="text/css" media="all" href="http://browserspy.dk/theme/reset.css" />
+            ink rel="stylesheet" type="text/css" media="all" href="http://browserspy.dk/theme/default.css" />
+            script type="text/javascript" src="http://browserspy.dk/js/jquery.js">/script>
+            script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang 
+    </div>
+    
+    NOTE: This is a very wacky output sometimes depending 
+    on the field and the custom payload to be found can be 
+    really weird and really large, but not be snipped as stated 
+    before, there is no current function to snip large output 
+    cause some people would like to have the larger outputs for 
+    more information that was parsed or found, the further development 
+    goes on the more you will be able to as a user customize via YAML 
+    files or even terminal based input about how the output is set
+
+    
+
+</div>
+  </section>
+
+<!-- Settings and script -->
+
+  <script>let sidebar=document.querySelector(".sidebar");let sidebarBtn=document.querySelector(".sidebarBtn");sidebarBtn.onclick=function(){sidebar.classList.toggle("active"); 
+    if(sidebar.classList.contains("active")){sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");}else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");}
+    </script></body></html><style>@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap);*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+.sidebar{position:fixed;height:100%;width:240px;background:#000;transition:all .5s ease}.sidebar.active{width:60px}.sidebar .logo-details{height:80px;display:flex;align-items:center}
+.sidebar .logo-details i{font-size:28px;font-weight:500;color:#fff;min-width:60px;text-align:center}.sidebar .logo-details .logo_name{color:#fff;font-size:24px;font-weight:500}
+.sidebar .nav-links{margin-top:10px}.sidebar .nav-links li{position:relative;list-style:none;height:50px}.sidebar .nav-links li a{height:100%;width:100%;display:flex;align-items:
+center;text-decoration:none;transition:all .4s ease}.sidebar .nav-links li a.active{background:#00f}.sidebar .nav-links li a:hover{background:#00f}.sidebar 
+.nav-links li i{min-width:60px;text-align:center;font-size:18px;color:#fff}.sidebar .nav-links li a .links_name{color:#fff;font-size:15px;font-weight:400;white-space:nowrap}
+.sidebar .nav-links .log_out{position:absolute;bottom:0;width:100%}.home-section{position:relative;background:#f5f5f5;min-height:100vh;width:calc(100% - 240px);left:240px;
+transition:all .5s ease}.sidebar.active~.home-section{width:calc(100% - 60px);left:60px}.home-section nav{display:flex;justify-content:space-between;height:80px;background:#000;
+display:flex;align-items:center;position:fixed;width:calc(100% - 240px);left:240px;z-index:100;padding:0 20px;box-shadow:0 1px 1px #fff;transition:all .5s ease}.sidebar.active~
+.home-section nav{left:60px;width:calc(100% - 60px)}.home-section nav .sidebar-button{color:#fff;display:flex;align-items:center;font-size:24px;font-weight:500}nav 
+.sidebar-button i{font-size:35px;margin-right:10px}.home-section nav .search-box{position:relative;height:50px;max-width:550px;width:100%;margin:0 20px}nav .search-box 
+input{height:100%;width:100%;outline:0;background:#f5f6fa;border:2px solid #efeef1;border-radius:6px;font-size:18px;padding:0 15px}nav 
+.search-box .bx-search{position:absolute;height:40px;width:40px;background:#2697ff;right:5px;top:50%;transform:translateY(-50%);border-radius:4px;line-height:40px;text-align:
+center;color:#fff;font-size:22px;transition:all .4 ease}.home-section nav .profile-details{display:flex;align-items:center;background:#f5f6fa;border:2px solid #efeef1;
+border-radius:6px;height:50px;min-width:190px;padding:0 15px 0 2px}nav .profile-details img{height:40px;width:40px;border-radius:6px;object-fit:cover}nav .profile-details
+.admin_name{font-size:15px;font-weight:500;color:#333;margin:0 10px;white-space:nowrap}nav .profile-details i{font-size:25px;color:#333}.home-section .home-content{
+  position:relative;padding-top:104px}.home-content .overview-boxes{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:0 20px;margin-bottom:26px}
+  .overview-boxes .box{display:flex;align-items:center;justify-content:center;width:calc(100% / 4 - 15px);background:#fff;padding:15px 14px;border-radius:12px;
+  box-shadow:0 5px 10px rgba(0,0,0,.1)}.overview-boxes .box-topic{font-size:20px;font-weight:500}.home-content .box .number{display:inline-block;font-size:35px;margin-top:-6px;
+  font-weight:500}.home-content .box .indicator{display:flex;align-items:center}.home-content .box .indicator i{height:20px;width:20px;background:#8fdacb;line-height:20px;
+  text-align:center;border-radius:50%;color:#fff;font-size:20px;margin-right:5px}.box .indicator i.down{background:#e87d88}.home-content .box .indicator .text{font-size:12px}
+  .home-content .box .cart{display:inline-block;font-size:32px;height:50px;width:50px;background:#cce5ff;line-height:50px;text-align:center;color:#66b0ff;border-radius:12px;
+  margin:-15px 0 0 6px}.home-content .box .cart.two{color:#2bd47d;background:#c0f2d8}.home-content .box .cart.three{color:#ffc233;background:#ffe8b3}.home-content .box 
+  .cart.four{color:#e05260;background:#f7d4d7}.home-content .total-order{font-size:20px;font-weight:500}.home-content .sales-boxes{display:flex;justify-content:space-between}
+  .home-content .sales-boxes .recent-sales{width:65%;background:#fff;padding:20px 30px;margin:0 20px;border-radius:12px;box-shadow:0 5px 10px rgba(0,0,0,.1)}.home-content 
+  .sales-boxes .sales-details{display:flex;align-items:center;justify-content:space-between}.sales-boxes .box .title{font-size:24px;font-weight:500}.sales-boxes .sales-details 
+  li.topic{font-size:20px;font-weight:500}.sales-boxes .sales-details li{list-style:none;margin:8px 0}.sales-boxes .sales-details li a{font-size:18px;color:#000;font-size:400;
+  text-decoration:none}.sales-boxes .box .button{width:100%;display:flex;justify-content:flex-end}.sales-boxes .box .button a{color:#fff;background:#0a2558;padding:4px 12px;
+  font-size:15px;font-weight:400;border-radius:4px;text-decoration:none;transition:all .3s ease}.sales-boxes .box .button a:hover{background:#0d3073}.home-content .sales-boxes 
+  .top-sales{width:35%;background:#fff;padding:20px 30px;margin:0 20px 0 0;border-radius:12px;box-shadow:0 5px 10px rgba(0,0,0,.1)}.sales-boxes .top-sales li{display:flex;
+  align-items:center;justify-content:space-between;margin:10px 0}.sales-boxes .top-sales li a img{height:40px;width:40px;object-fit:cover;border-radius:12px;margin-right:10px;
+  background:#333}.sales-boxes .top-sales li a{display:flex;align-items:center;text-decoration:none}.price,.sales-boxes .top-sales li .product{font-size:17px;font-weight:400;
+  color:#333}@media (max-width:1240px){.sidebar{width:60px}.sidebar.active{width:220px}.home-section{width:calc(100% - 60px);left:60px}.sidebar.active~.home-section{left:220px;
+  width:calc(100% - 220px);overflow:hidden}.home-section nav{width:calc(100% - 60px);left:60px}.sidebar.active~.home-section nav{width:calc(100% - 220px);left:220px}}@media (
+    max-width:1150px){.home-content .sales-boxes{flex-direction:column}.home-content .sales-boxes .box{width:100%;overflow-x:scroll;margin-bottom:30px}.home-content .sales-boxes 
+    .top-sales{margin:0}}@media (max-width:1000px){.overview-boxes .box{width:calc(100% / 2 - 15px);margin-bottom:15px}}@media (max-width:700px){nav .profile-details .admin_name,nav 
+    .profile-details i,nav .sidebar-button .dashboard{display:none}.home-section nav .profile-details{height:50px;min-width:40px}.home-content .sales-boxes .sales-details{width:560px}}
+    @media (max-width:550px){.overview-boxes .box{width:100%;margin-bottom:15px}.sidebar.active~.home-section nav .profile-details{display:none}}@media (max-width:400px){
+      .sidebar{width:0}.sidebar.active{width:60px}.home-section{width:100%;left:0}.sidebar.active~.home-section{left:60px;width:calc(100% - 60px)}.home-section nav{width:100%;left:0}
+      .sidebar.active~.home-section nav{left:60px;width:calc(100% - 60px)}}.ascii_art{font-family:monospace;white-space:pre}.Paragraph_Starter{font-weight:700;color:#000;
+      font-size:40px}.Base_Text{font-weight:700;font-family:'Franklin Gothic Medium','Arial Narrow',Arial,sans-serif;font-style:italic;white-space:pre}.Section_font{color:#081d45;
+      font-size:medium;font-family:'Courier New',Courier,monospace;font-weight:100}</style>

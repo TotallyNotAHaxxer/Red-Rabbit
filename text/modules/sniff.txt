@@ -1,0 +1,14 @@
+  ┌────┳────────────────────┳─────────────────────────────────────────────────────────────────────────┐
+  │ C  ┃ sniff interfaces   ┃ Scan for interfaces on the current machine                              │ 
+  │ C  ┃ sniff iface info * ┃ Scan for interfaces on the current machine and grab and output card info│ 
+  │ C  ┃ sniff iface info   ┃ Scan for all information on a certian interface on the current system   │ 
+  │ C  ┃ sniff tcp          ┃ Sniff all incoming TCP packets that are picked up                       │ 
+  │ C  ┃ sniff ip           ┃ Sniff all IP packets that are picked up                                 │ 
+  │ C  ┃ sniff dhcp         ┃ Sniff all DHCP packets that come through                                │ 
+  │ C  ┃ sniff application  ┃ Sniff all application like packets like Multicast Query Response        │ 
+  │ C  ┃ sniff ethernet     ┃ Sniff all Ethernet packets that are picked up on a interface            │
+  │ C  ┃ sniff ssid         ┃ Sniff all networks nearby by parsing dot11 beacon requests              │
+  │ C  ┃ sniff probe        ┃ Sniff all data of a network by parsing all incoming dot11 probe requests│
+  │ C  ┃ sniff 802raw       ┃ Sniff all dot11 packets, and all layers without formatting              │
+  │ C  ┃ sniff discovery    ┃ Sniff all networks nearby and get info like RSSI, BSSID, OUI, MAC, SSID │
+  └───────────────────────────────────────────────────────────────────────────────────────────────────┘

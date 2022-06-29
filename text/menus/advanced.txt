@@ -1,0 +1,265 @@
+[ You used option EHELP, the following below is how to use ]
+[ Red Rabbits flags, and how they work in terms of console ]
+
+  ┌────┳────────────────────┳─────────────────────────────────────────────────────────────────────────┐
+  │ F  ┃ --he  bool         ┃ General help on flags and commands                                      │
+  │ F  ┃ --hh  bool         ┃ General help on help commands                                           │
+  │ F  ┃ --help bool        ┃ General help on flags                                                   │
+  │ F  ┃ --ehelp bool       ┃ Advanced help on flags, commands, help commands, and some flag examples │
+  │ F  ┃ --ph int           ┃ Specify image / pixel height when injecting and reconstructing images   │
+  │ F  ┃ --pw int           ┃ Specify image / pixel width when injection and reconstructing images    │
+  │ F  ┃ --jpgF string      ┃ Set a chunk to inject a JPG image with COM is the main chunk            │
+  │ F  ┃ --reso string      ┃ Set a screen resolution <Verticle|Landscape|> for output format         │
+  │ F  ┃ --input string     ┃ Set a input file to be injected for stegonography / image injection     │
+  │ F  ┃ --output string    ┃ Set a output file or output filename for image manipulation             │
+  │ F  ┃ --offset string    ┃ Set a offset to be injected at for image injection / stegonography      │
+  │ F  ┃ --payload string   ┃ Set the payload to be used for image injection and other tests          │
+  │ F  ┃ --type string      ┃ Set the type of chunk to inject images at such as IEND                  │
+  │ F  ┃ --key string       ┃ Set the encryption key for payloads (--ehelp for examples )             │
+  │ F  ┃ --filepath string  ┃ Set the general filepath for any file that will be read or used         │
+  │ F  ┃ --hashl string     ┃ Set the file of hashes to be used for hash cracking                     │
+  │ F  ┃ --wordl string     ┃ Set the file of passwords to be used for brute forcing                  │
+  │ F  ┃ --userl string     ┃ Set the file of usernames to be used for brute forcing                  │
+  │ F  ┃ --workers int      ┃ Set the amount of go workers for brute force attacks                    │
+  │ F  ┃ --interface string ┃ Set the interface to use for network attacks and packet capture         │
+  │ F  ┃ --targetm string   ┃ Set the target's mac address for arp poisoning                          │
+  │ F  ┃ --targetip string  ┃ Set the target's ip address for arp poisoning                           │
+  │ F  ┃ --gatemac string   ┃ Set the target's gateway mac address for arp poisoning                  │
+  │ F  ┃ --CIDR / -z string ┃ Set the CIDR to be used for host pinging, scanning, and more            │
+  │ F  ┃ --passlen int      ┃ Set the length of a password string to be generated when making lists   │
+  │ F  ┃ --target string    ┃ Set the target URL to be set for web attacks such as SQLI, XSS, etc     │
+  │ F  ┃ --payloadl string  ┃ Set the file of payloads to be used for XSS, SQLI, Admin panel's etc..  │
+  │ F  ┃ --XMLF string      ┃ Set the XML file for NMAP parsing, or other XML file parsing commands   │
+  │ F  ┃ --JSONF string     ┃ Set the JSON file for commands that need to parse certian JSON files    │
+  │ F  ┃ --PCAP  string     ┃ Set the PCAP file for parsing, this is not used as much as --filepath   │  
+  │ F  ┃ --SQ  / S  string  ┃ Set the Set the google search query or thing you would like to search   │ 
+  │ F  ┃ --RPP / R  string  ┃ Set the amount of results per google page scraped for the engine module │ 
+  │ F  ┃ --PTC / T  string  ┃ Set the amount of google pages to crawl for the engine module           │ 
+
+
+
+--he, --hh, --help, --ehelp 
+
+are all the same just in different formats and as you are about to figure 
+out, --ehelp trys to touch on every flag and its usage properly 
+
+
+
+[Flag 1]
+    - --PTC / -T
+
+    This flag is used for the engine module, a module that uses google 
+    to search for information. if you want to specify the amount of google
+    pages the engine module will scrape, then you use this flag with a number 
+    say `--PTC=10` means it will scrape 10 pages and return all data found on 
+    those 10 pages, -T is another way of specifying --PTC
+
+
+[Flag 2]
+    -> --RPP / -R 
+
+    This flag is also used for the engine module, it allows you to specify 
+    the amounts of ResultsPerPage (RPP), specify this with a number only 
+    strings or words are not allowed, an example of this usage would be 
+
+    `sudo go run . --RPP=1`
+
+[Flag 3]
+    -> --SQ / -S
+
+    This flag like flags 1 and 2 are used for the engine module as well, 
+    this flag allows you to specify a certian seach query and have the 
+    engine search for all information and links relevating twards that 
+    search query. an example usage would be 
+
+    `sudo go run . --SQ="inurl:index.php?id=1"`
+
+[Flag 4]
+    -> --PCAP 
+
+    Flag broken, out of order 
+
+[Flag 5]
+    -> --JSONF
+
+    Flag broken, out of order
+
+[Flag 6]
+    -> --XMLF
+
+    This flag allows you to specify a XML file that needs to be parsed
+    the really only option that uses this will be the nmap xmln parsers 
+    which will use this flag alot, it will help you in the long run.
+
+    `sudo go run . --XMLF="examples/xml/nmap2.xml"`
+
+[Flag 7]
+    -> --payloadl 
+
+    This flag interacts with alot of list / payload list 
+    based commands, things like SQL fuzzing, HTTP fuzzing,
+    Admin scanning, file scanning, etc. Any option that asks 
+    for a payload list will use this like the XMLF option this 
+    will be used ALOT throughout red rabbit.
+
+    Example usage 
+
+    `sudo go run . --payloadl="payloads/admin.txt"`
+
+[Flag 8]
+    -> --Target 
+
+    This flag is quite unused however if you are planning to use 
+    options and modules like the search module or fetch module this 
+    flag will help you, example usage is 
+
+    `sudo go run . --target="someurl.com"`
+
+
+[Flag 9]
+    -> --passlen 
+
+    This flag allows you to set a password length or better yet 
+    string length / char length for generating password lists for 
+    brute forcing attacks
+
+[Flag 10]
+    -> --CIDR / z
+
+    This flag allows you to set a given CIDR or network range to scan for 
+    using the ping and scan modules, if you want to scan a host range from 
+
+    `10.0.0.1/24` 
+
+    you will specify that in the flag like so 
+
+    `sudo go run -z="10.0.0.1/24"`
+    `sudo go run --CIDR="10.0.0.1/24"`
+
+[Flag 11, 12, and 13]
+    -> --gatemac, --targetip, --targetm
+
+    All three of these flags must be used together since they are 
+    used in only one option and that is the atk dnsspoof, the first option 
+    --gatemac needs a gateway mac address as an argument, the --targetip is 
+    the ip of the target you want to run the attack on, the targetm is the MAC Address 
+    of the target you want to run the attack on.
+
+    example usage 
+
+    `sudo go run . --gatemac="ff:ff:ff:ff:ff:ff", --targetip="0.0.0.0", --targetm="ff:ff:ff:ff:ff:ff"`
+
+[Flag 14]
+    -> --interface 
+
+    This flag allows you to specify a interface to sniff devices / packets from 
+    a given interface and listen in for certian information using the sniffing 
+    module. 
+
+    its example usage is `sudo go run . --interface="wlp5s0"`
+
+[Flag 15]
+    -> --workers
+
+    This flag allows you to specify the amount of workers on brute 
+    forcing routine or other commands and modules that may start heavy 
+    processes, and require workers to run. 
+
+    example usage -> `sudo go run . --workers=200`
+
+[Flag 16, 17, 18]
+    -> 
+        | --hashl
+        | --wordl
+        | --userl
+    
+    All these flags operate the same but are used for different modules.
+    for flag `--hashl` you will need to specify a file of hashes something 
+    like hashes.txt which is used in the hash cracking module of red rabbit.
+    for flag `--wordl` you will need to specify a file of passes something 
+    like passes.txt which is used in the brute forcing module of red rabbit.
+    for flag `--userl` you will need to specify a file of userns something 
+    like useres.txt which is used in the USER search module of red rabbit
+
+[Flag 19]
+    -> --filepath 
+
+    --filepath is a flag used alot, this flag allows you to specify a 
+    directory to search with, directory to test, or directory to a filename 
+    for something like pcap parsing, digital forensics, filepath dumping, file 
+    forensics, file stalkers and much more among that list.
+
+    example usage -> `sudo go run . --filepath="some/dir/to/a/file/file.txt"`
+
+[Flag 20, 21, 22, 23, 24, 25, 26, 27, 28]
+    -> Flags 
+        => --key
+        => --type
+        => --payload 
+        => --offset 
+        => --output / o
+        => --input / i
+        => --decode 
+        => --encode
+
+    These flags can all be combined to do certian things, all flags asides --input,
+    and --output can only be used in the inject PNG options, this is what these flags 
+    can be used for.
+
+    --output / -o   ~> Specify an output of the injected image 
+    --input / -i    ~> Specify an input image you want to inject data into
+
+    Advanced side 
+
+    {Decoding a payload}
+
+    if you want to decode a payload that you will inject into the image you will 
+    need to use the `--decode` flag with the --key flag. the --key flag is required 
+    for this option to run, simply due to the fact that the flag --key will specify 
+    the key to the payload you are trying to decode its example usage is 
+
+    `sudo go run main.go --input="image.png" --output="infected.png" --decode --key="someXORKey"`
+
+    {Encoding a payload}
+
+    if you want to encode a payload that you will inject into the image 
+    you will need to use the `--encode` flag along with the `--key` flag.
+    if you dont know now the `--key` flag is a NEEDED flag for the image 
+    injection to start with the encode option, the data must NOT be NIL 
+    or empty, if the data is empty it will exit. the key flag specifies
+    the XOR key you will use to inject and encode the payload that you 
+    will inject into the image. Example usage --
+
+    `sudo go run main.go --input="image.png" --output="infected.png" --encode --key="someXORKey"`
+
+    {Specifying a offset, data chunk, and payload}
+
+    In order to properly inject the png image with the program and module in red rabbit 
+    you will need to specify a few main things, as we discussed above a input and output image, 
+    but we will also need to specify a data chunk and offset of that data chunk to inject at. 
+    if you do not know the offset you want to inject at you can always use red rabbit to dump all 
+    offsets and chunk locations using option `dump png meta`. if you have the information you can use 
+    the flag `--offset` to specify an offset location, and `--type` to specify a type / chunk type to 
+    inject at. in the path examples/stego there is a file named `injected.png` there is a chunk i want to 
+    inject which is the IDAT chunk, it is at offset 0x21, if we want to inject this image we can use 
+    the flags  we just talked about to specify where we want to inject it but what about data to inject. 
+    well if you want  to specify data to inject just use the `--payload` flag to do so as is 
+    the following example down below.
+
+    `sudo go run . 
+        --input="examples/stego/injected.png" 
+        --output="infected_again.png" 
+        --type="IDAT" 
+        --payload="hello world" 
+        --offset="0x21"`
+
+
+[Flag 29]
+    -> --reso
+
+    Reso stands for resolution, for user customization if you have a specific liking for small or 
+    large output you can use the --reso flag to specify your monitors display rotation 
+    (Landscape/Verticle) are the only formats allowed right now. For a more slimmer build / 
+    output use `--reso="Verticle"` for a larger more space wide output use `--reso="Landscape"` or 
+    for a certian banner design like the shark use  `--reso="shark"`, finally if you want no banner or 
+    large space taken up specify `--reso="none"` which will output and clear the screen without an option.

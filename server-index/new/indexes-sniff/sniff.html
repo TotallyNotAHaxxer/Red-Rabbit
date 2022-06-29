@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> RR6 ADMIN DASHBOARD | Documentation Server LO </title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='fas fa-rabbit'></i>
+      <span class="logo_name">Red Rabbit</span>
+    </div>
+      <ul class="nav-links">
+          <li>
+          <a href="/server-index/new/indexes" class="active">
+            <i class='bx bx-ghost'></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.github.com/ArkAngeL43" class="inactive">
+            <i class='bx bxl-gitlab' ></i>
+            <span class="links_name">Github</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://discord.gg/fEWXZyEzSe" class="inactive">
+            <i class='bx bxl-discord' ></i>
+            <span class="links_name">Discord</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/new/indexes-errors" class="inactive">
+            <i class='bx bxs-error-alt'></i>
+            <span class="links_name">Error Documentation</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/old" class="inactive">
+            <i class='bx bxs-vial' ></i>
+            <span class="links_name">Old Documentation</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/new/indexes-flags" class="inactive">
+            <i class='bx bxs-flag-alt'></i>
+            <span class="links_name">Flags Documentation</span>
+          </a>
+        </li>
+        <li>
+          <a href="/server-index/new/indexes-about" class="inactive">
+            <i class='bx bx-cube'></i>
+            <span class="links_name">About</span>
+          </a>
+        </li>
+        
+        <li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <div class="ascii_art">
+                               ______           __        ______         __     __     __ __          _____                                         __          __   __              
+                              |   __ \.-----.--|  |______|   __ \.---.-.|  |--.|  |--.|__|  |_ ______|     \.-----.----.--.--.--------.-----.-----.|  |_.---.-.|  |_|__|.-----.-----.
+                              |      <|  -__|  _  |______|      <|  _  ||  _  ||  _  ||  |   _|______|  --  |  _  |  __|  |  |        |  -__|     ||   _|  _  ||   _|  ||  _  |     |
+                              |___|__||_____|_____|      |___|__||___._||_____||_____||__|____|      |_____/|_____|____|_____|__|__|__|_____|__|__||____|___._||____|__||_____|__|__|
+                                                                                                                                                                                            
+      The next few sections will be dedicated to the red rabbit documentation, the sections will be disected by module, eg: (0x0001 is module search) it goes from there 
+      from the list above. Another example of how modules will be seperated is by the cloumn number in the chart above where Brute is the second module name, its section will 
+      be labeled 0x0002 - BRUTE -, please take your time going through the documentation ALOT of people often forget about documentation then come to the devs confused as to 
+      why some dont work, or how the script works and how to use it, so please, when i mean read it i mean READ IT CAREFULLY! 
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <div class="Paragraph_Starter">0x0007 802.11 utilities, sniffing networks, and running ping / host utilities</div>
+    <div class="Base_Text">
+      this section mainly will be talking about the 802.11 scripts in red rabbit 
+      which involes alot of sniffing, and system recon for interfaces and addresses 
+      and running the ping section, i decided to include the ping section here 
+      cause alot of it revolves around 802.11 recon.
+
+      <<<<<<<<<<<<<< SECTION IS UNFINISHED
+      <hr>
+      > sniff interfaces 
+
+      this is a simple command, it will just 
+      grab all your interfaces on your system 
+      and output them to the terminal, giving you 
+      the interface name, and the address name 
+      this is going to be used later on in ping arp 
+      not that you will have to manually input the 
+      range and address but this shows what the arp 
+      utiltity will see and use in a sense of host 
+      discovery.
+
+      example output 
+
+      <div class="ascii_art">
+          RR6> Net Module: Found Device  |   lo          | Addr: 127.0.0.1/8
+          RR6> Net Module: Found Device  |   lo          | Addr: ::1/128
+          RR6> Net Module: Found Device  |   enp5s0      | Addr: 10.0.0.213/24
+          RR6> Net Module: Found Device  |   enp5s0      | Addr: 10.0.0.214/24
+          RR6> Net Module: Found Device  |   enp5s0      | Addr: 2601:589:8
+          RR6> Net Module: Found Device  |   enp5s0      | Addr: 2601:589:8
+          RR6> Net Module: Found Device  |   enp5s0      | Addr: 2601:589
+          RR6> Net Module: Found Device  |   enp5s0      | Addr: fe80::3e2
+          RR6> Net Module: Found Device  |   enp10s0     | Addr: 10.0
+          RR6> Net Module: Found Device  |   enp10s0     | Addr: 10.
+          RR6> Net Module: Found Device  |   enp10s0     | Addr: 2601:589:8001
+          RR6> Net Module: Found Device  |   enp10s0     | Addr: 2601:589:800
+          RR6> Net Module: Found Device  |   enp10s0     | Addr: fe80::de1d:
+          RR6> Net Module: Found Device  |   wlan0       | Addr: 0.0.0.0/24
+          RR6> Net Module: Found Device  |   wlan0       | Addr: 0.0.0.0/24
+          RR6> Net Module: Found Device  |   wlan0       | Addr: 2601:589
+          RR6> Net Module: Found Device  |   wlan0       | Addr: 2601:589:8
+          RR6> Net Module: Found Device  |   wlan0       | Addr: 2601:589:8001:b
+          RR6> Net Module: Found Device  |   wlan0       | Addr: 2601:589:8001:
+          RR6> Net Module: Found Device  |   wlan0       | Addr: fe80::d
+      </div>
+
+      this is a formatted and pre generated output to protect the 
+      device information and beta users info.
+      <hr>
+      > sniff iface info
+
+      This command does exactly what it is named 
+      it will ask the user to input a device name 
+      such as wlan0 and then grab all information 
+      on that device like the following output 
+
+      <div class="ascii_art">
+        ********************************************
+        * All information for interface [ wlan0 ] *
+        ********************************************
+         INTERFACE > | wlan0 | < INTERFACE DATA > | UP|BROADCAST|MULTICAST |  < MTU > | 0000 | 
+                ETHERNET ADDRESS -> ff:ff:ff:ff:ff
+
+         NET TYPE > ip+net 
+                 NETWORK >                                     |  0.0.0.0   
+                         NETWORK ADDRESS >                     |  0.0.0.21   
+                                 NETWORK MASK >                |  ff000000   
+                                         NETWORK SCOPE >       |  global unicast  
+      </div>
+
+      it will do this for every range on the address or 
+      network type it can find on that named interface 
+      <hr>
+      > sniff iface info * 
+
+      as i have specified in this documentation server 
+      before the `*` in red rabbit usually means all like 
+      in SQL when you specify a query like `SELECT * FROM dbname`
+      that means that this command will do the same as above but 
+      for every interface it finds on the system it will output information 
+      based on that interface it found 
+
+      example output 
+
+      <div class="ascii_art">
+        ********************************************
+        * All information for interface [ lo ] *
+        ********************************************
+         INTERFACE > | lo | INTERFACE DATA > | UP|LOOPBACK |   MTU > | 65536 | 
+
+         NET TYPE > ip+net 
+                NETWORK >                                      |  127.0.0.0   
+                        NETWORK ADDRESS >                      |  127.0.0.1   
+                                 NETWORK MASK >                |  ff000000   
+                                         NETWORK SCOPE >       |  loopback  
+
+         NET TYPE > ip+net 
+                 NETWORK >                                     |  ::1   
+                         NETWORK ADDRESS >                     |  ::1   
+                                 NETWORK MASK >                |  nil>   
+                                         NETWORK SCOPE >       |  loopback  
+
+        ********************************************
+        * All information for interface [ enp5s0 ] *
+        ********************************************
+         INTERFACE > | enp5s0 |  INTERFACE DATA > | UP|BROADCAST|MULTICAST |   MTU > | 1500 | 
+                ETHERNET ADDRESS -> 88:c9:b3:b0:5f:bc
+
+         NET TYPE > ip+net 
+                 NETWORK >                                     |  10.0.0.0   
+                         NETWORK ADDRESS >                     |  10.0.0.213   
+                                 NETWORK MASK >                |  ff000000   
+                                         NETWORK SCOPE >       |  global unicast  
+      </div>
+      > sniff tcp
+
+      command allows you to view and sniff all incoming TCP 
+      packets, the following information is given about the packet 
+
+      packet layers 
+      packet decoded layers 
+      source mac 
+      source address 
+      recieving address
+      [etc...]
+
+      you can like all packets customize the 
+      BPF (Berkly Packet Filter) here is an example 
+      output of the settings 
+
+      <div class="ascii_art">
+        Enter an interface to use >>>> enp5s0
+        [+] Init Setting: {Interface} -> enp5s0
+        [-] Would you like to use a BPF (Berkly Packet Filter) (y/n)>>>> y
+        Enter a filter ex (tcp and port 80):>>>> tcp and port 80
+      </div>
+      <hr>
+      > sniff d
+
+      Command will allow you to view and sniff all incoming 
+      IP layered packets coming through on a given interface
+
+      <hr>
+
+      > sniff dhcp
+
+      Command allows you to sniff all DHCP packets of all possible
+      types of DHCP packets, there is no specification yet for this 
+      however it will tell you which version the packet or DHCP request is 
+      its base layer, its payload, its mac, its src mac, its dst mac, its 
+      src IP, dst IP, packet time etc 
+
+      <div class="ascii_art">
+        ____________________________________________NEW DHCP PACKET_____________________________________________________________
+        | Packet (DHCP) Packet Number         |->   12502
+        | Packet (DHCP) Base Layer            |->  {32:ff:ff:ff:ff:ff�Sc52��� }
+        | Packet (DHCP) Client HW Address     |->   ff:ff:ff:ff:ff:ff
+        | Packet (DHCP) Client OUI HW Addr    |->   No manufacturer found
+        | Packet (DHCP) Client OUI HW Addr    |->   
+        | Packet (DHCP) Client IP Address     |->   0.0.0.0
+        | Packet (DHCP) Your Client IPA       |->   0.0.0.0
+        | Packet (DHCP) Hardware Length       |->   6
+        | Packet (DHCP) Hardware Options      |->   0
+        | Packet (DHCP) Hardware Type         |->   Ethernet
+        | Packet (DHCP) Next Server IP        |->   0.0.0.0
+        | Packet (DHCP) Operation             |->   Request
+        | Packet (DHCP) Options               |->   [Option(MessageType:Discover), Option(RequestIP:192.168.1.1)]
+        | Packet (DHCP) Relay Agent IP        |->   0.0.0.0
+        | Packet (DHCP) Secs                  |->   0
+        | Packet (DHCP) Server name           |->  
+        | Packet (DHCP) XID                   |->   0
+        | Packet (DHCP) Contents              |->  fF:ff:ff:ff:ff:ff�Sc52���
+        | Packet (DHCP) Files                 |->  
+        | Packet (DHCP) Flags                 |->   0
+        | Packet (Layer)                      |->  Ethernet
+        | Packet (Layer)                      |->  IPv4
+        | Packet (Layer)                      |->  UDP
+        | Packet (Layer)                      |->  DHCPv4
+        | User Information                    |->  Packet output disabled not outputting packet
+      </div>
+
+      <hr>
+
+      > sniff application
+
+      This command will allow you to sniff any and all application 
+      layered packets that come across on your interface. This setting 
+      can become very VERY messy in terms of output and most text yet 
+      has had functions in it to decode this despite some of it still 
+      being visible and somewhat readable. Here is an example using that option
+
+      <div class="ascii_art">
+        ---------------------------------------------- NEW PACKET (IPA Version 6) ----------------------------------------------------------
+        | Packet (IP Version 6) Version         |->   6
+        | Packet (IP Version 6) Traffic Class   |->   0
+        | Packet (IP Version 6) Source IPA      |->   ffff::ffff:ffff:ffff:7168
+        | Packet (IP Version 6) Destination IPA |->   ff02::fb
+        | Packet (IP Version 6) Next Header     |->   UDP
+        | Packet (IP Version 6) Length          |->   367
+        | Packet (IP Version 6) Hop Limit       |->   1
+        | Packet (IP Version 6) Hop by Hop      |->  nil
+        | Packet (IP Version 6) Flow Label      |->   319831
+        � Packet (IP Version 6) Base Layer      |->  {`�Wo����Èqh�� ��o�
+        _oculusal_sp_tcplocal
+                              �8imperialfffffff::DESKTOP-5A972DI
+                                                              _oculusal_sp_tcplocalimperialffffff::DESKTOP-fffff
+                                                                                                                _oculusal_sp_tcplocal!x�|DESKTOP-5fff2DIlocal�g�DESKTOP-fffffDIloca
+      </div>
+
+      a bit wack but it is still useable
+
+      <hr>
+
+      > sniff ethernet 
+
+      Sniffing ethernet will sniff all ethernet headed packets coming in 
+      on your interface, like all other packet capture options you are allowed 
+      to sniff via filter. use the following example as output 
+
+      <div class="ascii_art">
+        | Packet Source Mac       |->  ff:ff:ff:ff:ff:ff
+        | Packet Destination Mac  |->  ff:ff:ff:ff:ff:ff
+        | Packet Ether Type       |->  IPv4
+        | Packet Length           |->  0
+        | Packet (Layer)          |->  Ethernet
+        | Packet (Layer)          |->  IPv4
+        | Packet (Layer)          |->  UDP
+        | Packet (Layer)          |->  Payload
+        | User Information        |->  Packet output disabled not outputting packet
+      </div>
+
+      <hr>
+
+      > sniff ssid
+
+      this is apart of the 802.11 networking and parsing modules for red rabbit. 
+      In order to properly run this module or any of the following commands 
+
+      [sniff ssid, sniff probe, sniff 802raw, sniff discovery]
+
+      then your interface will need to be in monitor, to do that use the
+
+      start cus interface.
+
+      this command opens a table on a given wifi card like the following 
+
+      `wlan0mon`
+
+
+    </div>
+
+  </section>
+\<style>
+  /* Googlefont Poppins CDN Link */
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap);*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+.sidebar{position:fixed;height:100%;width:240px;background:#000;transition:all .5s ease}.sidebar.active{width:60px}.sidebar .logo-details{height:80px;display:flex;align-items:center}
+.sidebar .logo-details i{font-size:28px;font-weight:500;color:#fff;min-width:60px;text-align:center}.sidebar .logo-details .logo_name{color:#fff;font-size:24px;font-weight:500}
+.sidebar .nav-links{margin-top:10px}.sidebar .nav-links li{position:relative;list-style:none;height:50px}.sidebar .nav-links li a{height:100%;width:100%;display:flex;align-items:
+center;text-decoration:none;transition:all .4s ease}.sidebar .nav-links li a.active{background:#00f}.sidebar .nav-links li a:hover{background:#00f}.sidebar 
+.nav-links li i{min-width:60px;text-align:center;font-size:18px;color:#fff}.sidebar .nav-links li a .links_name{color:#fff;font-size:15px;font-weight:400;white-space:nowrap}
+.sidebar .nav-links .log_out{position:absolute;bottom:0;width:100%}.home-section{position:relative;background:#f5f5f5;min-height:100vh;width:calc(100% - 240px);left:240px;
+transition:all .5s ease}.sidebar.active~.home-section{width:calc(100% - 60px);left:60px}.home-section nav{display:flex;justify-content:space-between;height:80px;background:#000;
+display:flex;align-items:center;position:fixed;width:calc(100% - 240px);left:240px;z-index:100;padding:0 20px;box-shadow:0 1px 1px #fff;transition:all .5s ease}.sidebar.active~
+.home-section nav{left:60px;width:calc(100% - 60px)}.home-section nav .sidebar-button{color:#fff;display:flex;align-items:center;font-size:24px;font-weight:500}nav 
+.sidebar-button i{font-size:35px;margin-right:10px}.home-section nav .search-box{position:relative;height:50px;max-width:550px;width:100%;margin:0 20px}nav .search-box 
+input{height:100%;width:100%;outline:0;background:#f5f6fa;border:2px solid #efeef1;border-radius:6px;font-size:18px;padding:0 15px}nav 
+.search-box .bx-search{position:absolute;height:40px;width:40px;background:#2697ff;right:5px;top:50%;transform:translateY(-50%);border-radius:4px;line-height:40px;text-align:
+center;color:#fff;font-size:22px;transition:all .4 ease}.home-section nav .profile-details{display:flex;align-items:center;background:#f5f6fa;border:2px solid #efeef1;
+border-radius:6px;height:50px;min-width:190px;padding:0 15px 0 2px}nav .profile-details img{height:40px;width:40px;border-radius:6px;object-fit:cover}nav .profile-details
+.admin_name{font-size:15px;font-weight:500;color:#333;margin:0 10px;white-space:nowrap}nav .profile-details i{font-size:25px;color:#333}.home-section .home-content{
+  position:relative;padding-top:104px}.home-content .overview-boxes{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:0 20px;margin-bottom:26px}
+  .overview-boxes .box{display:flex;align-items:center;justify-content:center;width:calc(100% / 4 - 15px);background:#fff;padding:15px 14px;border-radius:12px;
+  box-shadow:0 5px 10px rgba(0,0,0,.1)}.overview-boxes .box-topic{font-size:20px;font-weight:500}.home-content .box .number{display:inline-block;font-size:35px;margin-top:-6px;
+  font-weight:500}.home-content .box .indicator{display:flex;align-items:center}.home-content .box .indicator i{height:20px;width:20px;background:#8fdacb;line-height:20px;
+  text-align:center;border-radius:50%;color:#fff;font-size:20px;margin-right:5px}.box .indicator i.down{background:#e87d88}.home-content .box .indicator .text{font-size:12px}
+  .home-content .box .cart{display:inline-block;font-size:32px;height:50px;width:50px;background:#cce5ff;line-height:50px;text-align:center;color:#66b0ff;border-radius:12px;
+  margin:-15px 0 0 6px}.home-content .box .cart.two{color:#2bd47d;background:#c0f2d8}.home-content .box .cart.three{color:#ffc233;background:#ffe8b3}.home-content .box 
+  .cart.four{color:#e05260;background:#f7d4d7}.home-content .total-order{font-size:20px;font-weight:500}.home-content .sales-boxes{display:flex;justify-content:space-between}
+  .home-content .sales-boxes .recent-sales{width:65%;background:#fff;padding:20px 30px;margin:0 20px;border-radius:12px;box-shadow:0 5px 10px rgba(0,0,0,.1)}.home-content 
+  .sales-boxes .sales-details{display:flex;align-items:center;justify-content:space-between}.sales-boxes .box .title{font-size:24px;font-weight:500}.sales-boxes .sales-details 
+  li.topic{font-size:20px;font-weight:500}.sales-boxes .sales-details li{list-style:none;margin:8px 0}.sales-boxes .sales-details li a{font-size:18px;color:#000;font-size:400;
+  text-decoration:none}.sales-boxes .box .button{width:100%;display:flex;justify-content:flex-end}.sales-boxes .box .button a{color:#fff;background:#0a2558;padding:4px 12px;
+  font-size:15px;font-weight:400;border-radius:4px;text-decoration:none;transition:all .3s ease}.sales-boxes .box .button a:hover{background:#0d3073}.home-content .sales-boxes 
+  .top-sales{width:35%;background:#fff;padding:20px 30px;margin:0 20px 0 0;border-radius:12px;box-shadow:0 5px 10px rgba(0,0,0,.1)}.sales-boxes .top-sales li{display:flex;
+  align-items:center;justify-content:space-between;margin:10px 0}.sales-boxes .top-sales li a img{height:40px;width:40px;object-fit:cover;border-radius:12px;margin-right:10px;
+  background:#333}.sales-boxes .top-sales li a{display:flex;align-items:center;text-decoration:none}.price,.sales-boxes .top-sales li .product{font-size:17px;font-weight:400;
+  color:#333}@media (max-width:1240px){.sidebar{width:60px}.sidebar.active{width:220px}.home-section{width:calc(100% - 60px);left:60px}.sidebar.active~.home-section{left:220px;
+  width:calc(100% - 220px);overflow:hidden}.home-section nav{width:calc(100% - 60px);left:60px}.sidebar.active~.home-section nav{width:calc(100% - 220px);left:220px}}@media (
+    max-width:1150px){.home-content .sales-boxes{flex-direction:column}.home-content .sales-boxes .box{width:100%;overflow-x:scroll;margin-bottom:30px}.home-content .sales-boxes 
+    .top-sales{margin:0}}@media (max-width:1000px){.overview-boxes .box{width:calc(100% / 2 - 15px);margin-bottom:15px}}@media (max-width:700px){nav .profile-details .admin_name,nav 
+    .profile-details i,nav .sidebar-button .dashboard{display:none}.home-section nav .profile-details{height:50px;min-width:40px}.home-content .sales-boxes .sales-details{width:560px}}
+    @media (max-width:550px){.overview-boxes .box{width:100%;margin-bottom:15px}.sidebar.active~.home-section nav .profile-details{display:none}}@media (max-width:400px){
+      .sidebar{width:0}.sidebar.active{width:60px}.home-section{width:100%;left:0}.sidebar.active~.home-section{left:60px;width:calc(100% - 60px)}.home-section nav{width:100%;left:0}
+      .sidebar.active~.home-section nav{left:60px;width:calc(100% - 60px)}}.ascii_art{font-family:monospace;white-space:pre}.Paragraph_Starter{font-weight:700;color:#000;
+      font-size:40px}.Base_Text{font-weight:700;font-family:'Franklin Gothic Medium','Arial Narrow',Arial,sans-serif;font-style:italic;white-space:pre}.Section_font{color:#081d45;
+      font-size:medium;font-family:'Courier New',Courier,monospace;font-weight:100}
+</style>

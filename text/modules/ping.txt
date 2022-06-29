@@ -1,0 +1,7 @@
+  ┌────┳────────────────────┳─────────────────────────────────────────────────────────────────────────┐
+  │ C  ┃ ping udp           ┃ Send out UDP pakcets to ping all living hosts                           │
+  │ C  ┃ ping tcp           ┃ Send out TCP packets to ping all living hosts                           │
+  │ C  ┃ ping syn           ┃ Send out SYN packets to ping all living hosts                           │
+  │ C  ┃ ping icmp          ┃ Send out ICMP packets to ping all living hosts                          │
+  │ C  ┃ ping arp           ┃ Send out ARP packets to identify living hosts by MAC and IP             │
+  └───────────────────────────────────────────────────────────────────────────────────────────────────┘

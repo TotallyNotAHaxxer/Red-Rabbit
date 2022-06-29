@@ -1,0 +1,42 @@
+  ┌────┳────────────────────┳─────────────────────────────────────────────────────────────────────────┐
+  │ C  ┃ utils blocker l    ┃ Run the DNS blocker and block a list of hosts from making a connection  │
+  │ C  ┃ utils blocker s    ┃ Run the DNS blocker and block a single host from making a connection    │
+  │ C  ┃ utils blocker fix  ┃ Run the OS module to repair/reset the hosts file after writing to file  │
+  │ C  ┃ utils verify mac   ┃ Verify a MAC address with regex to test the macs quality                │
+  │ C  ┃ utils verify email ┃ Verify a Email address with regex to test the emails quality            │
+  │ C  ┃ utils verify IP4   ┃ Verify a IPv4 address with regex to test the IP Addresses quality       │
+  │ C  ┃ utils verify IP6   ┃ Verify a IPv6 address with regex to test the IP6 Addresses quality      │
+  │ C  ┃ utils verify h:p   ┃ Verify a host and port with regex to test the host:port quality         │
+  │ C  ┃ utils verify host  ┃ Verify a hostname address with regex to test the hosts quality          │
+  │ C  ┃ utils gz uncompress┃ Uncompress a GZIP file or folder, this is experimental so watch out     │
+  │ C  ┃ utils unzip        ┃ Unzip every file in a zipped file and output to a proper directory      │
+  │ C  ┃ utils gen rjpg     ┃ Generate a random jpg image with random settings and configurations     │
+  │ C  ┃ utils gen JPG      ┃ Generate a map / GPS image based on the geo location of a JPG image     │
+  │ C  ┃ utils gen map      ┃ Generate a map / GPS image based on the LAT and LON of a input          │
+  │ C  ┃ utils gen emailmail┃ Scrape a website for emails and parse it into a maltego like body report│
+  │ C  ┃ utils gen linkmail ┃ Scrape a website all links / hrefs and parse it into a maltego body     │
+  │ C  ┃ utils build gmapl  ┃ Build a google maps link with a lat (lattitude) and lon (longitude)     │
+  │ C  ┃ ssh check          ┃ Check to see if a SSH server on a host is alive                         │
+  │ C  ┃ ssh transfer       ┃ Attempt transfer a file to the ssh server                               │
+  │ C  ┃ ssh auth           ┃ Check to see if a username and password will be authenticated           │
+  │ C  ┃ ssh auth key       ┃ Check to see if a ssh key will be authenticated with a user and pass    │
+  │ C  ┃ ssh exec           ┃ Execute a command over an ssh server with a simple login, user and pass │
+  │ C  ┃ ssh auth config    ┃ Attempt to login to a server with the settings in the SSH yaml file     │
+  │ C  ┃ ssh dial config    ┃ Attempt to ping a server with the current settings in the ssh yaml file │
+  │ C  ┃ ssh check config   ┃ Attempt to check the connection on a server with the config YAML file   │
+  │ C  ┃ ssh start shell    ┃ Get a SSH shell on a remote server using a private key and username     │
+  │ C  ┃ db ping mongo      ┃ Attempt to ping a MongoDB database running on a remote server           │
+  │ C  ┃ db ping mysql      ┃ Attempt to ping a MySQL   database running on a remote server           │
+  │ C  ┃ db ping postgres   ┃ Attempt to ping a PostGreSQL database running on a remote server        │
+  │ C  ┃ db ping mssql      ┃ Attempt to ping a MS-SQL database running on a remote server            │
+  │ C  ┃ db auth mysql      ┃ Attempt to auth a password and user on a local mysql sql server         │
+  │ C  ┃ db auth postgres   ┃ Attempt to auth a password and user on a local postgre sql server       │
+  │ C  ┃ utils gen xxe php  ┃ Generate a XXE Entity template based on a PHP command                   │
+  │ C  ┃ utils gen xxe soap ┃ Generate a XXE Entity template based on a SOAP XXE template and command │
+  │ C  ┃ utils gen xxe base ┃ Generate a XXE Entity template based on BASE64 Encoded data             │
+  │ C  ┃ utils gen xxe inj  ┃ Generate a normal XXE template with a normal entity                     │
+  │ C  ┃ utils gen xxe xinc ┃ Generate a XXE Entity template based on XINC                            │
+  │ C  ┃ utils deface htm   ┃ Deface all html files and htm files in a given directory or location    │
+  │ C  ┃ utils test binary  ┃ Check if a binary file is vulnerable to any form of ENV vulnerabilities │
+  │ C  ┃ utils msfsessions  ┃ Attempt to gather all of your MSF sessions by local and OS variables    │
+  └───────────────────────────────────────────────────────────────────────────────────────────────────┘

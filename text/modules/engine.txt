@@ -1,0 +1,9 @@
+   ┌────┳────────────────────┳─────────────────────────────────────────────────────────────────────────┐
+   │ C  ┃ engine ogoogle     ┃ Scrape google for infromation given a search query                      │
+   │ C  ┃ engine otwitter    ┃ Scrape google for information on a given twitter search query           │
+   │ C  ┃ engine ofacebook   ┃ Scrape google for infromation on a given facebook search query          │
+   │ C  ┃ engine olinkedin   ┃ Scrape google for infromation on a given linkedin search query          │
+   │ C  ┃ engine tcve        ┃ Scrape a govenrment cyber security databases for info on a cve with tor │
+   │ C  ┃ engine cve         ┃ Scrape a govenrment cyber security databases for info on a given cve    │
+   │ C  ┃ engine shodanh     ┃ Scrape shodan for information on a given hostname or query              │
+   └───────────────────────────────────────────────────────────────────────────────────────────────────┘

@@ -1,0 +1,7 @@
+ ┌────┳────────────────────┳─────────────────────────────────────────────────────────────────────────┐
+ │ C  ┃ h                  ┃ Get all commands for the terminal                                       │
+ │ C  ┃ commands           ┃ Get all commands for the terminal                                       │
+ │ C  ┃ help verified      ┃ Get all commands for the terminal that were verified as tested          │
+ │ C  ┃ help all           ┃ Load all json files for the commnads ( this is not a good one )         │
+ │ C  ┃ help advanced      ┃ Get advanced help of all flags and their usages, inline and help cmds   │
+ │ C  ┃ load examples      ┃ Load all example files you can use for testing the tools and experiments│
