@@ -98,6 +98,7 @@ and the system information tab
 
 Red rabbit is a pretty easy to use script it comes with many utilities and is written in a variety of languages such as Go, C, and C++. With the use of these languages along with utilitity ideas comes some flags, configuration and even settings for the script to run other files and modules properly without fail which in this section we will be talking about the script and using it. There are a few ways to work with red rabbit, configuration files, flags, and raw input.
 
+
 > Flags 
 
 I wont be specifying every flag in this script because thats for the interface and documentation server to handel. If you need help with flags you can use --help, --hh to view other flags and options. There are some flags i will go over and one of them helps control input and output for the users screen, say you have a verticle monitor you can use `--reso=""` to specify wether your screen is verticle you would use `--reso="verticle"`the output when you specify a vertical setting will minimalize the terminal banner, the output, and even some really large output. here is an example of the banner when its specified as verticle or landscape 
