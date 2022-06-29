@@ -1,0 +1,1 @@
+const char BNNR[16] = "text/banner.txt";
