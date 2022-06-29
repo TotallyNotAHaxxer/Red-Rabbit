@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Red-Rabbit
+Comment=Master of none, hacking and digital forensics tool
+Encoding=UTF-8
+Exec=sh -c "RR;${SHELL:-bash}"
+Icon=Download.jpg
+StartupNotify=false
+Terminal=true
+Type=Application
+Categories=04-web-Application-analysis;
+X-Kali-Package=Red-Rabbit
+Name[C]=Red-Rabbit

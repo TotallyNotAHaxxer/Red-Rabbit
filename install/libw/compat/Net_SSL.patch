@@ -1,0 +1,11 @@
+--- Crypt-SSLeay-0.51/lib/Net/SSL.orig	Fri Dec 26 14:53:24 2003
++++ Crypt-SSLeay-0.51/lib/Net/SSL.pm	Fri Dec 26 11:26:35 2003
+@@ -337,7 +337,7 @@
+     my $realm = "";
+     my $length = 0;
+     my $line = "<noline>";
+-    my $lwp_object = $self->get_lwp_object;
++    my $lwp_object; # = $self->get_lwp_object;
+ 
+     my $iaddr = gethostbyname($host);
+     $iaddr || die("can't resolve proxy server name: $host, $!");

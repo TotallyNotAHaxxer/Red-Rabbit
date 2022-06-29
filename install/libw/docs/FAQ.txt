@@ -1,0 +1,89 @@
+Libwhisker 2.4 FAQ
+-------------------------------------------------------------------------
+
+Why does libwhisker exist when there's already LWP?
+
+	LWP is a great package, but thre are still many areas within it that it
+	expects/forces you to follow the HTTP protocol.  It imposes restrictions
+	on what you can do, and this can be problematic if you are trying to
+	create vulnerability exploit proof of concepts or HTTP fuzzers...two
+	types of applications which traditionally *break* the protocol on 
+	purpose.  Libwhisker was designed to give the application as much freedom
+	as possible to do what they want, even if that means breaking the HTTP
+	protocol to the point of not working.  This is libwhisker's "no rules"
+	approach.
+
+
+What SSL libraries do you support?
+
+	Net::SSLeay and Net::SSL (a component of the Crypt::SSLeay package).
+
+
+Which is the preferred SSL library?
+
+	Net::SSLeay is the preferred library, but there are still issues with
+	both Net::SSL/Crypt::SSLeay and Net::SSLeay.  See the KNOWNBUGS file.
+	SSL keep-alive support is only currently available with Net::SSLeay.
+
+
+How come you don't support IO::Socket::SSL for SSL support?
+
+	IO::Socket:SSL, in its current state, uses Net::SSLeay under the hood.
+	So if IO::Socket::SSL is installed, so will be Net::SSLeay.  Thus we
+	skip the overhead of dealing with IO::Socket::SSL and just go directly
+	to Net::SSLeay.
+
+
+How can I speed up my SSL connections?
+
+	If you're using Net::SSLeay, you can set $LW2::LW_SSL_KEEPALIVE=1 in
+	order to enable HTTP keep-alives and connection reuse of SSL connections.
+	If you are operating in a trusted environment, you can also set the
+	{whisker}->{ssl_ciphers} value to a list of weak yet fast(er) ciphers.
+	However, in doing so, you are compromising the security and integrity
+	of the SSL connection.  An example cipher list value of some of the
+	faster (and insecure) ciphers would be:
+	"NULL:RC4-MD5:RC2-MD5:IDEA-CBC-MD5:RC4-SHA:EXPORT:!DES:!3DES"
+	This list starts off with the no-encryption 'NULL' ciphers, then goes
+	through MD5 (which is faster than SHA) variants, falls back to a SHA
+	variant, and uses any exportable cipher as a worst case scenario while
+	completely disallowing DES and 3DES (which are horribly slow).
+
+
+Why does libwhisker contain replacements for modules which are a part of
+the core perl suite?
+
+	The primary reason is my original goal of using libwhisker on systems
+	which did not have a full perl distribution installed; rather, you can
+	copy over just the perl executable and immediately required modules and
+	ran everything out of the current directory.  This was meant to support
+	pen-testers and other folks who may have access to a system, but the
+	system doesn't contain perl and they do not have sufficient privileges
+	to install perl.  The secondary reason has to do with the variances of
+	what is considered to be the core perl distribution across all the
+	different OS versions of the past 10+ years.  Just because a module is
+	considered a part of the perl core distribution in 5.8.0 doesn't mean
+	it existed in 5.004.  I've tried to always maintain compatibility with
+	older versions of perl.  The last time I tested, libwhisker functioned
+	without errors on 5.004.  Unfortunately, where were too many bugs and
+	caveats in 5.003 to make it easy to support.
+
+
+Are your pure-perl implementations of MD4, MD5, and DES/NTLM slow?
+
+	'Slow' is a relative term.  Libwhisker's various pure-perl 
+	implementations are slow compared to their locally compiled binary
+	counterparts; however, that's to be expected, and that's also why
+	libwhisker attempts to use the external module versions before
+	resorting to its internal pure-perl version as a worst case scenario.
+	That said, my benchmarks have shown that libwhisker's pure-perl
+	implementations are faster than other pure-perl implemenations found
+	in CPAN.  I've spent considerably amount of time hand-optimizing the
+	code in libwhisker to perform as fast as possible; libwhisker also
+	generates and compiles all the code at runtime in order to optimize
+	out all loops and function calls, which makes a significant reduction
+	in overhead.  Sure, the code is not clean and doesn't follow quaint
+	programming style practices, but it works as expected and really 
+	should never have to be revisited.  And quite frankly, that's kind of
+	the norm when it comes to optimized crypto algorithms.
+

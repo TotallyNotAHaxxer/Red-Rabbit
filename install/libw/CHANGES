@@ -1,0 +1,651 @@
+--- changes per libwhisker release -------------------------------------
+
+[] libwhisker 2.5
+
+- LibWhisker is now licensed under the 'simplied' (2 clause) BSD license.
+
+- Added the {whisker}->{allow_short_reads} option, which will return success
+if some body data is read but it is less than the server-advertised content
+length.  Thanks to Dave Lodge for the suggestion.
+
+- Thomas Reinke pointed out that cookie_parse() was lowercasing cookie 
+names, which causes problems if the server is being case-sensitive with
+cookie names.
+
+- Fixed a documentation typo for uri_absolute().  Thanks to Sullo for
+pointing it out.
+
+- A bug in http_fixup_request() would append a port to the Host header even
+if there was already one.  Thanks to Sullo for reporting it.
+
+- Francisco Amato recommended two new anti-IDS modes that involve using
+0x0d and 0x0b as request separator/spacers.  IDS modes 'A' and 'B' were 
+added, respectively.
+
+----------------------------------------------------------------------------
+
+[] libwhisker 2.4
+
+- Minor code change to utils_delete_lowercase_key(), but it doesn't change
+the functionality.  Mostly just performance.
+
+- Modifications to Makefile.pl.  I have become a big fan of the three
+argument open() variant, but that's not backwards compatible with older
+perl versions.  So I switched everything back to the two argument version.
+
+- More modifications to Makefile.pl, having to do with backwards 
+compatibility with older perl versions.
+
+- Major overhaul to utils_request_clone().  Basically changed it to fully
+copy the source request elements into the destination request, while
+deep copying embedded arrays and such.  This is different behavior than
+previous, where utils_request_clone() would only copy a few specific
+values from the source to the destination.  After thinking about it for
+quite a while, I decided the previous functionality was not very useful
+and had shortcomings.  The current change in functionality only affects
+people who set unique values in the destination request *prior* to
+cloning.  Under the old functionality, the unique values could be carried
+over.  Under the new version, they will be clobbered/deleted to match the
+source request.
+
+- POD docs for utils_array_shuffle() was wrong; the function takes \@array
+as a parameter, not @array.
+
+- Added new option: {whisker}->{save_raw_chunks}.  When set to a value of
+1, the raw chunked data, including chunk sizes, will be saved to
+{whisker}->{data}.  Normally libwhisker interprets the chunk sizes and
+stitches just the raw data together on your behalf; use this option if
+you just want the raw chunked server response.
+
+- Added new option: {whisker}->{hide_chunked_responses}.  By default,
+when libwhisker gets a chunked response, it will interpret the chunks into
+the final output; however, the original 'Transfer-Encoding: chunked'
+header is left and the Content-Length header is not set.  If you set
+the {hide_chunked_responses} option to 1, libwhisker will cleanup the
+response so that it resembles a regular non-chunked response...namely,
+libwhisker deletes the Transfer-Encoding header and adds an appropriate
+Content-Length header.  Thus the fact that the server used chunk
+encoding is completely normalized out and hidden from the application.
+
+- Changes to _http_do_request_ex() and http_read_body() in order to
+account for the above two new options.
+
+- http_construct_headers() incorrectly included empty headers if a
+header name was found in {whisker}->{header_order} but was not actually
+set.
+
+- http_do_request() wasn't correctly returning the value returned by
+http_do_request_ex(), so {whisker}->{invalid_protocol_return_value}
+wasn't actually being honored.  All fixed now.
+
+- If the server didn't return a Connection header, then http_do_request_ex
+looked into the request for a Connection header; when doing so, it
+assumed only one header would exist, and it would explicitly be named
+'Connection'.  This has been changed to use utils_find_lowercase_key()
+and to account for the possibility that multiple connection header values
+might be defined (in which case, it uses the first one).
+
+- SSL requests silently went through and failed if an SSL library wasn't
+available; now stream_new() should return an error.
+
+- Added ssl_is_available() function for an official way to check to see
+if SSL is installed.  No more relying on $LW_SSL_LIB global variable!
+
+- This is a preemptive notice that $LW_SSL_LIB might be going away, and
+that you should no longer use it!  Use the new ssl_is_installed() instead.
+
+- Changed how optional modules are loaded.  MIME::Base64 and MD5 are only
+loaded when you try to use a related function; they are no longer loaded
+automatically every time you use LW2.  This helps speed up load time, but
+the first call to md5() or [encode|decode]_base64() will have a small lag
+while the module is initially loaded.  If you anticipate needing these
+functions and can't tolerate the initial latency of the first call, you 
+should call them ahead of time with empty/test data in order to force the 
+module load before it comes time to use them in latency-critical operations.
+Note that other libwhisker functions operate in the same manner--the 
+internal pure-perl MD5, MD4, and DES/NTLM crypto code suffers latency upon
+the very first function call because the code has to be compiled before 
+use.
+
+- The %LW2::AVAILABLE hash has been depreciated, since it was redundant
+with Perl's normal global symbol table.  You can get the same information
+by checking for the module's $VERSION variable.
+
+- A major overhaul was made in the underlying stream/network communication
+code.  Non-blocking connects() on Windows has been implemented, which
+should speed up error conditions and enforce timeouts on Windows platforms.
+Sockets are left in non-blocking state for normal TCP connections; they are
+put back into blocking more for everything else.  Thus the stream code had 
+to be updated to account for EWOULDBLOCK non-blocking conditions.
+
+- $LW_NONBLOCK_CONNECT is now 1/enabled by default.  If you want to turn 
+off non-blocking connects, set this to 0.  If Libwhisker encounters errors
+during nonblocking connect operations, it will still degrade to regular
+(blocking) connections (with an eval+alarm wrapper).
+
+- While not a change to the code itself, I just want to officially note
+that I am no longer testing Libwhisker2 on platforms other than Windows
+and Linux.  I just don't have the time to account for more OSes. This 
+has been unofficial for quite a while; every so often, I would do a sanity
+check by running Libwhisker2 on various platforms (IRIX, Tru64, Solaris, 
+etc.) and checking that most things were compatible. I have downsized my 
+lab and purged those platforms, so I no longer have the ability to test 
+them.  I am still willing to support them, if someone else will run 
+Libwhisker on them and send me bug reports. :)
+
+- A new $LW2::_SSL_LIBRARY variable was added, for internal purposes only.
+Use ssl_is_available(), as I make no guarantees that $_SSL_LIBRARY will
+stick around.
+
+- Blocking connects had an error, due to the use of a return in an eval
+block.  The end result was that failed connect() attempts were being
+treated as successful, and then failing later down the line when the
+HTTP request write failed.  Since the error appeared to happen during
+the write, and not during the connect, the default retry value was
+kicking in and the process was repeating a second time, making it a double-
+whammy.  This would only occur on systems where libwhisker downgraded
+to a blocking connect, and a connection attempt was made to a closed
+or non-existing host/port combo.
+
+- It kind of goes without saying, but I'm going to say it anyways: 
+functions and variables beginning with '_' (underscore) are internal only
+and can be subject to change without notice or backwards compatibility.
+In short, you should not be using them; if you feel a certain internal
+function/variable is vital to your application and there is no way to
+achieve the functionality with other official libwhisker resources, please
+email me and we will come up with a way to resolve it.
+
+- The stream code wasn't updating the connect count ("syns"), which was
+causing {whisker}->{stats_syns} to always be zero.
+
+- Net::SSLeay SSL sockets are now closed with the SSL_shutdown function,
+which is more courteous than just closing the raw TCP connection.  This
+allows for the SSL close notify alerts to be sent.
+
+- SSL keep-alive support has been added!  It is currently only supported
+with Net::SSLeay, and is disabled by default.  If you wish to enable it,
+you need to set $LW::LW_SSL_KEEPALIVE=1.  This results in a drastic
+performance increase if you are making multiple requests to the same SSL
+server, and the server supports keep-alive connections (i.e. HTTP 1.1).
+This isn't enabled by default because I haven't been able to thoroughly
+test it against a large number of different SSL server implementations.
+And obviously keep-alive support only matters if you and the server use the
+proper HTTP headers to indicate the connection should be kept alive...
+
+- http_do_request() had a small change in order to make sure ssl_save_info
+was always honored with the new SSL keep-alive feature.
+
+- http_do_request[_ex]() had a string case comparision bug in handling
+keep-alives when the server didn't respond with an official connection
+header.  The result was that connections were not kept-alive, even though
+they could have been.
+
+- http_do_request[_ex]() used a non-robust method to locate Connection
+headers in determining whether or not to close the connection.  It's been
+changed to use utils_find_lowercase_key().  The close code was also
+refactored to take into account some other close situations.
+
+- dump()/_dumpd() was modified to no longer escape NULLs (\x00) as "\0",
+since that is a kludge shorthand which can backfire if numbers follow
+it.
+
+- dump()/_dump() didn't print out hash entries which had an empty key.
+
+- perltidy was used on all the src/ files.  It was about that time...using
+multiple different text editors on multiple different platforms has resulted
+in a whitespace mess.
+
+- There is now a libwhisker2 test harness!  Well, the beginnings of one,
+anyways.  Essentially this your standard fare of tests to ensure the 
+library functions are operating as expected, and that no regression errors 
+creep into the mix.  The new test/ directory houses the test harness and 
+associated files.  Included with the test harness is testserver.pl, a
+testcase web server which can be used to feed premade HTTP response
+testcases or create ad-hoc testcase responses based on URL designations.
+
+- uri_split() didn't set {whisker}->{ssl}=0 when splitting a non-HTTPS URL
+into a request hash that previously had SSL enabled.
+
+- Lots of POD documentation clarifications, additions, and updates.
+
+- Modified uri_absolute() to not add the port (":443") into the URL for
+HTTPS URLs (because it's redundant).
+
+- Modified uri_normalize() to now preserve any URL parameters and fragments,
+so things like "http://server/a/b/../p?foo" will now come out as
+"http://server/a/p?foo", while "http://server/a/b/../p?foo=/../" will also
+correctly come out as "http://server/a/p?foo=/../" and not "http://server/a/"
+
+- uri_strip_path_parameters() was not correctly returning any trailing
+slashes.  This was actually caused by Perl's split(), which ignores
+trailing elements if no 3rd parameter limit is defined.  Supposedly using
+a -1 for the limit fixes this in more recent Perls, but I'm not sure how
+backwards-compatible this is to older Perls.  If split() behaves differently
+in this respect, I likely will create a run-time test to determine the
+available split behavior and act accordingly.
+
+- uri_parse_parameters() incorrectly took a shortcut and returned an empty
+parameter set if there was as single name parameter without a value.
+
+- uri_parse_parameters() had a little bit of refactoring, in order to use
+uri_unescape() rather than internally duplicating the same functionality.
+
+- uri_escape() didn't escape the #, /, or \ characters (which have special 
+meaning to web browsers).  I also added the @ and ; characters to the list 
+to always escape, since they could have special meaning depending on where 
+they are used (username or password embedded into the URL, path parameter, 
+etc.).  Better safe than sorry (and it doesn't hurt anything to encode
+them, other than wasting an extra two bytes per character).
+
+- utils_lowercase_keys() had an improper test to determine if the key
+needed lower-casing (it looked for tr/A-Z//c rather than tr/A-Z//).
+
+- utils_find_lowercase_keys() (and utils_find_key()) were modified to
+account for times when two unique normal keys result in the same lowercase
+name.  Previously, libwhisker just returned value(s) associated with the
+first key that matches.  Now the function gathers all values of all possible
+matches, and returns a value/array based on the final super-set.
+
+- utils_getline() and utils_getline_crlf() were modified to use \x0d\x0a
+instead of \r\n, in order to be more portable.
+
+- Added 'my' to limit the scope of the $POS internal position variables used
+by utils_getline() and utils_getline_crlf().
+
+- _stream_buffer_read() used len() instead of length().
+
+- http_req2line() incorrectly added {uri_user} if {uri_password} was set,
+resulting in a string which looked like "user:user" rather than "user:pass"
+
+- Major overhaul to http_fixup_request() to make it more robust, and to 
+clean out any lingering values which may conflict with having a RFC-
+compliant request.  http_fixup_request() will now forcibly make the request 
+HTTP compliant as much as possible.
+
+- Changes to all the various cookie functions, in order to accomodate the
+default domain and URL of a cookie and otherwise be RFC 2109 compliant.  All
+of the information regarding how Libwhisker handles cookies is now available
+in the new docs/cookies.txt file.  All changes are backwards compatible with
+previous 2.4 formats and functionality, with a single exception: cookie
+domains in the form of 'http://server.com/' are no longer accepted (they were
+never legal, and I'm not sure why I implemented that superfluous parsing to
+begin with).  Also, the 'expires' cookie value is now always undefined.
+
+- cookie_write() didn't ignore the 'secure' restriction when $override was
+true.
+
+- Added cookie_get_names() function, so you can get the names for use with
+cookie_get() without having to access the raw $jar structure (which should
+be an undefined object that shouldn't be used directly).
+
+- Added cookie_get_valid_names() function, which gives you the list of
+cookies which qualify as valid for the specified domain and url.
+
+- Modified cookie_set() to delete the given cookie name if the cookie value
+is empty or undefined.
+
+- Added utils_carp() and utils_croak(), which act like the respective 
+functions in the Carp module (except not quite as configurable/flexible).
+
+- Changed all internal use of die() and warn() to use the new utils_carp()
+and utils_croak() functions.
+
+- Added time_mktime(), which is similar to the mktime function in the POSIX
+module or the TimeLocal module.  Namely it converts a set of values (such
+as those returned by localtime/gmtime) back to a single seconds value.
+
+- Added time_gmtolocal() which converts a GMT seconds value to a local
+timezone value.
+
+- Tweak the internal _http_get*() functions to not enter an infinite loop
+when reading from a partially filled buffer stream.
+
+- The internal _http_getall() function didn't clear stream->{bufin},
+which is technically wrong but never caused a problem since _http_getall()
+was only used in situations where we read until EOF and then close the
+stream (and thus never use {bufin} again).
+
+- http_construct_headers() did not print out all values of a multi-value
+header if the header_order explicitly only printed out some (but not all)
+of the values; the remaining values were ignored.
+
+- Changed how the max_size parameter of the internal _http_getall()
+function is handled.  Since it's an internal function, you shouldn't be
+using it anyway. :)
+
+- http_read_body() now clears {whisker}->{data} for all code paths, which 
+it should have been doing but only did some of the time; caused a bug when 
+the length parameter == 0.
+
+- http_read_body() how shortcuts out if the supplied length parameter is
+negative.
+
+- The max_size calculations when handling chunked bodies for
+http_read_body() were off, causing all kinds of read problems when a
+max_size was specified in the request.  Note that when you specify a max_size,
+you run the risk of interrupting the chunk processing, which means the
+connection has to be closed and you lose any keep-alive advantages.
+
+- Just a quick note that http_read_body() doesn't quite honor {max_size}
+if {save_raw_chunks} is enabled.  Only the size of the actual data value is
+computed against the max_size limit; the extra bytes comprising the chunk
+values, as well as any trailing headers, are not calculated against the
+max_size value.  This might change in the future, but I feel this is an
+acceptable caveat for now.
+
+- Change to decode_unicode() in order to get rid of a Perl warning
+involving pack().
+
+- http_reset() was modified to forcibly clear the internal http host cache.
+
+- Turns out Net::SSL die()'s during connection attempts if they don't
+succeed, and libwhisker wasn't trapping the die().  Basically just wrapped
+the connect in an eval{}.
+
+- Sprinkled in some missing binmode()'s to appease the spawn of Gates.
+
+- http_do_request_ex() incorrectly set {whisker}->{http_message} instead
+of {message} when dealing with HTTP/0.9 requests.
+
+- There was a call to Net::SSLeay::ctrl() which was causing occasional
+errors.  The code was introduced way back in Libwhisker 1.5 for SSL
+session resuming, and has been carried through since then.  It's now
+been removed.
+
+- Added the {whisker}->{shortcut_on_404} option, which causes http_do_request
+to *NOT* read the response body content and instead return (although all
+headers are read and returned like normal; just the body content is skipped).
+This can be a useful speed improvement for CGI scanners built on
+Libwhisker, since a 404 normally indicates the file isn't found, and there's
+no point on reading the body content.  (Ultimately it's essentially the
+same outcome as a HEAD requestr; but in this case, it's like a HEAD request
+for 404's & a GET request for everything else, without having to make two
+different requests to get the body content for non-404 responses).
+
+- Sprinkled in some more error checking for Net::SSLeay functions.
+Apparently not all functions return the error value; it has to be checked for
+separately.
+
+- The Net::SSLeay stream had a bug when used to connect via a proxy,
+resulting in a malformed CONNECT request.
+
+- Auth_brute_force() was incorrectly calling auth_set_header() instead of
+auth_set().
+
+----------------------------------------------------------------------------
+
+[] libwhisker 2.3
+
+- utils_find_key() had a bug which caused lowercase comparisions (which
+is fine for utils_find_lowercase_key(), but not utils_find_key())
+
+- http_req2line() didn't take SSL into account when {include_host_in_uri}
+was set
+
+- David Maciejak pointed out that there was no way to use {whisker}->
+{bind_socket} to bind a specific address but not a port (i.e. you were
+always required to specify a port).  So I added the '*' option to
+{whisker}->{bind_port}, which will attempt to find a valid port to bind
+to.
+
+- The default behavior of {whisker}->{bind_socket} has been changed to use
+'*' as the value of {whisker}->{bind_port} if {bind_port} is not explicitly
+set.  The prior behavior was to use port 14011 if {bind_port} was not set.
+
+- Added some error checking on the {whisker}->{bind_socket} values in
+_stream_socket_alloc().
+
+- Added a new buffer stream type.  Basically, if you define {whisker}->
+{buffer_stream}, you get a stream which acts much like an echo server.
+First it starts out empty.  Then, whatever you write to it, is turned 
+around and available when you read from it.  This functionality is only
+useful for those using the low-level stream abstractions in situations 
+where you want to stuff dynamic data into a stream and then pass it to a 
+function which reads from the stream.
+
+- Changed the stream key generation order around a bit.  Prior to this
+version, SSL streams trumped file streams...which is incorrect.  The
+new order of priority is: buffer, file, SSL, UDP, TCP.
+
+- Added http_resp2line() function, which is the compliment to
+http_req2line().
+
+- Added utils_flatten_lwhash() function, which takes a %request or 
+%response hash and recreates the approximate HTTP request/response text.
+
+- The {whisker}->{data_sock} option turned out to not be exactly ideal,
+since the stream wrapper might have buffered some of the socket data.  So
+now when you set {whisker}->{data_sock}, you get {whisker}->{data_sock}
+(the old, not recommended way) and a newer {whisker}->{data_stream} response 
+item.  This is only for people who don't want libwhisker to read the body
+of an HTTP response, and would rather have direct access to the 
+stream/socket to read it themselves.
+
+- Antonio "s4tan" Parata pointed out that uri_get_dir() returned the
+original URI when the URI didn't have a directory (i.e. "index.html").  This
+is obviously incorrect, as "index.html" would not be the directory.  For the
+cases where no '/' is found in the URI, the return value will now be an empty
+string.
+
+- Uber at hush.com pointed out a bug in crawl() when {use_params} is enabled.
+Essentially a shortcut was taken prematurely, before the use_params
+processing occurred.
+
+- Dave King found a bug in _stream_is_valid(), due to my incorrect use of
+'last' in a 'do/while' block (which is NOT an actual loop!).
+
+- Uber at hush.com found that http_fixup_request() was setting 
+Content-Encoding, rather than Content-Type, on POST requests.  I'm amazed
+and embarrassed that I never noticed this before, especially by the fact that
+many servers still accept the bunk Content-Encoding and lack of Content-Type
+as valid.
+
+----------------------------------------------------------------------------
+
+[] libwhisker 2.2
+
+- Sullo pointed out that the api_demo.pl script uses save_ssl_info, rather
+than ssl_save_info.  As it turns out, api_demo.pl was horribly out of date.
+It's been given an overhaul using the new libwhisker 2.x programming
+semantics.
+
+- Sullo also pointed out that ssl_save_info wasn't working.  This was 
+because _http_do_request_ex() was erasing the ssl data previously set by
+http_do_request().
+
+- Added 'use_referrers' crawl() config option, which is enabled by default.
+This causes the crawler to send appropriate HTTP referrers for all crawled
+links.
+
+- Changed some internals of crawl() to keep the url_queue inside the
+crawl object, which makes it accessible to the source callback function.
+
+- Added 'install_lw1' option to Makefile to automatically install the LW(1)
+compatibility bridge file (which emulates Libwhisker 1.x, letting Libwhisker
+version 1.x programs use the Libwhisker 2.x library transparently).
+
+- Added cookie_new_jar() function, to handling creating new jars (which are
+still hashes at this point, but you should still use the function).
+
+- More documentation updates.
+
+- http_fixup_request() now forces the correct POST data length, and does some
+extra checks to make sure leftover POST headers from previous requests are
+dealt with.
+  
+- Added utils_delete_lowercase_key() function for deleting hash keys without
+worrying about the capitalization.
+
+- Small change to http_read_headers() to reset the match position pointer.
+
+- sgt_b made me realize the need for a utils_find_key() function, which is
+similar to utils_find_lowercase_key() but is case-sensitive.  Sure, a quick
+hash lookup would find the key too, but utils_find_key() has the added bonus
+of dereferencing anonymous arrays of multiple header values, if encountered.
+
+- Dave King's query on handling form data returned from forms_read() led me
+to creating a forms_walkthrough.txt document and the form_demo.pl scripts.
+
+- Found a bug in the _forms_parse_callback() (used internally by forms_read())
+which caused it to mishandle textareas.  The html_find_tags() function
+already does the work of finding the closing </textarea> tag, so 
+_forms_parse_callback() doesn't need to do it.  The HTML parser must do it
+this way, since tags within a <textarea></textarea> are not to be parsed.
+
+- Bug in uri_parse_parameters(), which took a shortcut exit if a '&'
+wasn't found.  The shortcut should actually be triggered on a '='.
+
+- Bug in html_find_tags() which caused non-value attributes to be saved
+with a empty string value.  Now non-value attributes are saved with an
+undef value.
+
+- For some reason an extra empty element was being introduced into
+hash during forms_write().  I've traced it and can't figure out where
+it's coming from.  In the meantime, I've added a check to make sure
+any empty elements don't show up in the output.
+
+- Mathieu Dessus pointed out a bug where the older anti_ids() function was
+still being called, rather than the renamed encode_anti_ids().  You still
+use {whisker}->{anti_ids} to set the values though...
+
+----------------------------------------------------------------------------
+
+[] libwhisker 2.1
+
+- Sullo pointed out that $LW_HAS_SSL has disappeared.  Forgot to document 
+that.  Use $LW_SSL_LIB instead.
+
+- Changed a (len!=0) to (len>0) check in the chunk decoder, to be more
+robust.
+
+- added html_link_extractor() function, which uses code already present in
+the crawl module.
+
+- The regex was a bit broken in encode_uri_randomhex().  Pointed out by
+John McDonald.
+
+- John also found a typo in encode_anti_ids(), causing it to call the
+non-existant function encode_randomase().
+
+- New Makefile.pl build environment.
+
+- Bug in forms_read() and _forms_callback() which prevented the proper
+storage of multiple forms.
+
+----------------------------------------------------------------------------
+
+[] libwhisker 2.0
+
+- Libwhisker 2.0 is officially dubbed LW2.  Below are the incompatible
+changes from libwhisker 1.x.  There were lots of general changes, but
+only the non-backwards-compatible ones are documented.
+
+- Following were renamed:
+	{whisker}->{req_spacer*}	=> {whisker}->{http_space*}
+	{whisker}->{http_ver}		=> {whisker}->{version}
+	{whisker}->{http_protocol}	=> {whisker]->{protocol}
+	{whisker}->{uri_param}		=> {whisker}->{parameters}
+	{whisker}->{recv_header_order}	=> {whisker}->{header_order}
+	{whisker}->{http_resp_message}	=> {whisker}->{message}
+	{whisker}->{INITIAL_MAGIC}	=> {whisker}->{MAGIC}
+	{whisker}->{sockstate}		=> {whisker}->{socket_state}
+	utils_lowercase_(hashkeys|headers) => utils_lowercase_keys
+	utils_split_uri			=> uri_split
+	utils_join_uri			=> uri_join
+	utils_normalize_uri		=> uri_normalize
+	utils_absolute_uri		=> uri_absolute
+	utils_get_dir			=> uri_get_dir
+	utils_unidecode_uri		=> decode_unicode
+	anti_ids			=> encode_anti_ids
+	bruteurl			=> utils_bruteurl
+	auth_set_header			=> auth_set
+	encode_str2uri			=> encode_uri_hex
+	encode_str2ruri			=> encode_uri_randomhex
+	dumper				=> dump
+	dumper_writefile		=> dump_writefile
+
+- Following are now depreciated (along with their functionality):
+	{whisker}->{method_postfix}
+	{whisker}->{http_req_trailer}
+	{whisker}->{queue_md5}		(use {request_fingerprint})
+	{whisker}->{http_resp}		(use {code})
+	{whisker}->{retry_errors}
+	{whisker}->{ids_session_splice}
+	do_auth				(use auth_set)
+	upload_file
+	download_file			(use get_page_to_file)
+	md5_perl			(use md5)
+	md4_perl			(use md4)
+	(en|de)code_base64_perl		(use (en|de)code_base64)
+	crawl_get_config
+	crawl_set_config
+
+- {whisker}->{parameters} will not be included if it's an empty string
+
+- {whisker}->{normalize_incoming_headers} now changes AA-Bb-cc-dD to
+Aa-Bb-Cc-Dd, instead of the prior AA-Bb-Cc-DD.
+
+- Invalid HTTP response error message does not include invalid response
+(but it's still in {whisker}->{data})
+
+- IDS session splicing is depreciated.  Most IDSes do stream reassembly
+anyways, so this is not a big loss.  The depreciation is due to 
+limitations of the current stream implementation.  It will reappear in
+future versions.
+
+- cookie_* now operates independantly of the actual set-cookie header.
+http_do_request now has internal magic, so that all cookies are saved
+and processed regardless of header capitalization, normalization,
+and duplication (including the default ignore_duplicate_headers).
+
+- Lots of the global variables were changed/renamed or removed.  See
+globals.pl for details.
+
+- Crawl was completely rebuilt to be more object-ish (the use of so
+many global variables made it hard to have multiple crawl sessions
+going at once).  If you were using crawl(), then you will need to
+review the new way of calling crawl() and accessing related data.
+All the crawl data structures (and locations) were changed, as were
+the format for configuring the crawler and callbacks.
+
+- Dumper() returns undef on error, instead of the string 'ERROR'.
+
+- html_find_tags() takes a few more optional parameters.  Using
+a tag map can lead to speed increases by reducing the amount of
+times the callback function is actually called.
+
+- The libwhisker 1.x series did not properly generate forms structures
+(via forms_read()).  It was corrected, but the generated structure, while
+now accurate per documention, is not backwards-compatible.
+
+- Authorization is now handled via auth_set(), and not merely by the
+presence of the Authorization header.  Also, the internal 
+{whisker}->{ntlm_*} keys relating to NTLM authentication have been deleted.
+You shouldn't have been using them anyway. :)
+
+- Socket timeout values are read from {whisker}->{timeout}, and are 
+saved per stream.  The global $TIMEOUT variable no longer exists.
+
+- HTML rewriting via html_find_tags() is now done by calling
+html_find_tags_rewrite() within our callback function.  The return value
+of the callback is ignored (and thus not required, unlike LW1.x).
+
+- auth_set() will now call http_reset() whenever any NTLM-based authentication
+is used.  This is because NTLM is a connection-based authentication, and
+thus all connections need to start from scratch when NTLM is enabled.
+
+- The ETag header is now normalized to ETag, and not Etag.
+
+- All new POD documentation, which follows the more standard format for use with pod2man.
+
+- utils_find_lowercase_keys() will now dereference multi-value entries and
+return a full array if it is called in array context.
+
+- A bug in Crypt::SSLeay (Net::SSL) 0.51 (and probably prior) causes it to
+puke when it is used in proxy mode.  Hopefully it will be fixed in future
+versions.
+
+- Turns out the Net::SSLeay implementation of MD5 was returning bad hashes
+(it truncated them at the first NULL byte).  Use of Net::SSLeay::md5 has
+been discontinued permanently.
+

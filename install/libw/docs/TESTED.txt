@@ -1,0 +1,28 @@
+Libwhisker 2.4
+-----------------------------------------------------------------
+The following platforms have been tested and found to be working
+as expected (with exceptions noted below).  All platforms were
+tested for both native HTTP as well as SSL support through
+Net::SSL and Net::SSLeay.  Tests include ability to make non-blocking
+connections with appropriate timeouts and SSL keep-alive support via
+Net::SSLeay.  Unless otherwise indicated, the platform supports both
+SSL libraries and all functionality as expected.  Note that exceptions
+are specific to the Perl version and platform indicated.
+
+
+Windows 2000 w/ Cygwin Perl 5.8.7   [4]
+Windows 2000 w/ ActiveState Perl 5.8.7 build 815   [1] [3]
+Windows XP w/ ActiveState Perl 5.8.6 build 811   [2]
+Debian Linux w/ Perl 5.8.4
+Linux w/ Perl 5.6.2
+Linux w/ Perl 5.00504 	[1]
+Linux w/ Perl 5.00405 	[1]
+Mac OSX w/ Perl 5.8.6
+
+
+Exceptions:
+
+[1] - Net::SSL does not honor timeout for nonblocking connections
+[2] - Net::SSLeay and Net::SSL do not honor timeout for nonblocking connections
+[3] - Net::SSL not tested on this platform + version
+[4] - Net::SSLeay found to not work correctly on this platform + version
