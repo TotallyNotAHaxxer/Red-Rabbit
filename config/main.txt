@@ -1,0 +1,666 @@
+.:
+config
+examples
+go.mod
+go.sum
+gui-conf
+gui-multi.pl
+install
+libwhisker2-2.5
+main.go
+main.txt
+Makefile
+Makefile.pl
+modg
+modules
+payloads
+r6.pl
+rr6-structure
+sub
+tests
+text
+todo.txt
+word.txt
+
+./config:
+be.json
+cmd.txt
+dev.json
+fileconfig.txt
+flags.json
+oui.txt
+parser.go
+phone-code.json
+sets.json
+verified.json
+
+./examples:
+hash
+injection
+miners
+osint
+other
+pcap
+port-scanning
+sql
+stego
+win10
+
+./examples/hash:
+MD5.txt
+sha256.txt
+
+./examples/injection:
+sql.txt
+
+./examples/miners:
+
+./examples/osint:
+
+./examples/other:
+arp.txt
+hashes.txt
+hosts.txt
+macs.txt
+
+./examples/pcap:
+aaa.pcap
+ARP - Broadcast.pcap
+ARP - Broadcast.pcapng
+Asterisk_ZFONE_XLITE.pcap
+dot11.pcapng
+DTMFsipinfo.pcap
+FAX-Call-t38-CA-TDM-SIP-FB-1.pcap
+Ftp.pcap
+Ftp.pcapng
+h223-over-rtp.cap
+h263-over-rtp.pcap
+HTTP - Basic Authentication.pcap
+HTTP - Basic Authentication.pcapng
+HTTP - Digest Authentication.pcap
+HTTP - Digest Authentication.pcapng
+HTTP - Digest-MD5.pcap
+HTTP - Digest-MD5.pcapng
+HTTP - JPG Download.pcap
+HTTP - JPG Download.pcapng
+HTTP - NTLM GSSAPI.pcap
+HTTP - NTLM GSSAPI.pcapng
+HTTP - NTLM.pcap
+HTTP - NTLM.pcapng
+HTTP - PDF file download.pcap
+HTTP - PDF file download.pcapng
+HTTP - Small File.pcap
+HTTP - Small File.pcapng
+IMAP - Authenticate CRAM-MD5.cap
+IMAP - Authenticate CRAM-MD5.pcapng
+IMAP - Authenticate Digest-MD5.pcap
+IMAP - Authenticate Digest-MD5.pcapng
+IMAP - Authenticate Plain (Base64).pcap
+IMAP - Authenticate Plain (Base64).pcapng
+IMAP - Authenticate XYMPKI.pcap
+IMAP - Authenticate XYMPKI.pcapng
+IMAP - Login (Plaintext) 1.pcap
+IMAP - Login (Plaintext) 1.pcapng
+IMAP - Login (Plaintext) 2.pcap
+IMAP - Login (Plaintext) 2.pcapng
+IMAP - Login (Plaintext) 3.pcap
+IMAP - Login (Plaintext) 3.pcapng
+Kerberos-816.pcap
+Kerberos-816.pcapng
+Kerberos - v5 TCP.pcap
+Kerberos - v5 TCP.pcapng
+Kerberos v5 UDP 2.pcap
+Kerberos v5 UDP 2.pcapng
+Kerberos v5 - UDP 3.pcap
+Kerberos v5 - UDP 3.pcapng
+Kerberos - v5 UDP.pcap
+Kerberos - v5 UDP.pcapng
+MagicJack+_short_call.pcap
+metasploit-sip-invite-spoof.pcap
+only_sip_sdp_rtp.pcap
+ospf-md5_key-1234.pcap
+ospf-simple.cap
+ospf simple password authentication.cap
+OSPF_with_MD5_auth.cap
+POP3.pcap
+POP3.pcapng
+SIP CALL.pcap
+SIP_DTMF2.pcap
+sip-rtp-dvi4.pcap
+sip-rtp-g711.pcap
+sip-rtp-g722.pcap
+sip-rtp-g726.pcap
+sip-rtp-g729a.pcap
+sip-rtp-gsm.pcap
+sip-rtp-ilbc.pcap
+sip-rtp-l16.pcap
+sip-rtp-lpc.pcap
+sip-rtp_only.pcap
+sip-rtp-opus.pcap
+sip-rtp-speex.pcap
+SMB - NTLM cifs_SessionSetupAndX_NTLM_Plain.pcap
+SMB - NTLM cifs_SessionSetupAndX_NTLM_Plain.pcapng
+SMB - NTLMSSP Single Session (Windows 10).pcap
+SMB - NTLMSSP Single Session (Windows 10).pcapng
+SMB - NTLMSSP (smb3 aes 128 ccm).pcap
+SMB - NTLMSSP (smb3 aes 128 ccm).pcapng
+SMB - NTLMSSP (Windows 10).pcap
+SMB - NTLMSSP (Windows 10).pcapng
+SMTP - Auth Cram MD5.pcap
+SMTP - Auth Cram MD5.pcapng
+SMTP - Auth Login.pcapng
+SMTP - Auth Plain.pcap
+SMTP - Auth Plain.pcapng
+smtp-login.pcap
+smtp.pcap
+TCP - 5 Packets.pcap
+TCP - 5 Packets.pcapng
+TCP - File Downloads.pcap
+TCP - File Downloads.pcapng
+TCP - Network.pcap
+TCP - Network.pcapng
+TCP - Tcpreplay.pcap
+TCP - Tcpreplay.pcapng
+Telnet - Char Mode2.pcap
+Telnet - Char Mode2.pcapng
+Telnet - Char Mode.pcap
+Telnet - Char Mode.pcapng
+Telnet - Line Mode.pcap
+Telnet - Line Mode.pcapng
+Telnet.pcap
+Telnet.pcapng
+udp_1_packet.pcap
+udp_1_packet.pcapng
+
+./examples/port-scanning:
+
+./examples/sql:
+main.sql
+
+./examples/stego:
+download.jpeg
+example.pdf
+geo.png
+injected.png
+LOLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL.gif
+LOLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL.gif
+main.gif
+main.jpg
+main.webp
+
+./examples/win10:
+windows10-boot-config-and-res-dll-inspection-example
+
+./examples/win10/windows10-boot-config-and-res-dll-inspection-example:
+bootres.dll
+
+./gui-conf:
+nyan.gif
+
+./install:
+libw.tar.gz
+test
+
+./install/test:
+libw
+
+./install/test/libw:
+CHANGES
+compat
+DISTRIBUTION
+docs
+KNOWNBUGS
+LICENSE
+Makefile
+Makefile.pl
+README
+scripts
+src
+t
+
+./install/test/libw/compat:
+lw.pm
+Net_SSL.patch
+
+./install/test/libw/docs:
+cookies.txt
+crawler.txt
+evil.htm
+FAQ.txt
+forms_walkthrough.txt
+logo-builton.gif
+logo-name.gif
+logo-plain.gif
+TESTED.txt
+whisker_hash.txt
+
+./install/test/libw/scripts:
+api_demo.pl
+crawl_demo.pl
+form_demo1.pl
+form_demo2.pl
+prox.pl
+simple_demo.pl
+
+./install/test/libw/src:
+auth.pl
+cookie.pl
+crawl.pl
+dump.pl
+encode.pl
+footer.pod
+forms.pl
+globals.pl_
+header.pod
+html.pl
+http.pl
+mdx.pl
+multipart.pl
+ntlm.pl
+simple.pl
+streams.pl
+time.pl
+uri.pl
+utils.pl
+_xml.pl
+
+./install/test/libw/t:
+100cont1.case
+100cont2.case
+100cont3.case
+basic1.case
+basic2.case
+basic3.case
+basic4.case
+chunk1.case
+chunk1raw.case
+connecttest.pl
+cookie1.case
+cookie2.case
+corner1.case
+corner2.case
+crawllinks.case
+evil.htm
+forms.htm
+general.case
+general-keepalive.case
+md5.pl
+retry.case
+spacer.case
+test.pl
+testserver.pl
+
+./libwhisker2-2.5:
+CHANGES
+compat
+DISTRIBUTION
+docs
+KNOWNBUGS
+LICENSE
+Makefile
+Makefile.pl
+README
+scripts
+src
+t
+
+./libwhisker2-2.5/compat:
+lw.pm
+Net_SSL.patch
+
+./libwhisker2-2.5/docs:
+cookies.txt
+crawler.txt
+evil.htm
+FAQ.txt
+forms_walkthrough.txt
+logo-builton.gif
+logo-name.gif
+logo-plain.gif
+TESTED.txt
+whisker_hash.txt
+
+./libwhisker2-2.5/scripts:
+api_demo.pl
+crawl_demo.pl
+form_demo1.pl
+form_demo2.pl
+prox.pl
+simple_demo.pl
+
+./libwhisker2-2.5/src:
+auth.pl
+cookie.pl
+crawl.pl
+dump.pl
+encode.pl
+footer.pod
+forms.pl
+globals.pl_
+header.pod
+html.pl
+http.pl
+mdx.pl
+multipart.pl
+ntlm.pl
+simple.pl
+streams.pl
+time.pl
+uri.pl
+utils.pl
+_xml.pl
+
+./libwhisker2-2.5/t:
+100cont1.case
+100cont2.case
+100cont3.case
+basic1.case
+basic2.case
+basic3.case
+basic4.case
+chunk1.case
+chunk1raw.case
+connecttest.pl
+cookie1.case
+cookie2.case
+corner1.case
+corner2.case
+crawllinks.case
+evil.htm
+forms.htm
+general.case
+general-keepalive.case
+md5.pl
+retry.case
+spacer.case
+test.pl
+testserver.pl
+
+./modg:
+colors
+constants
+copt
+dependant-sub
+devt
+exec
+files
+helpers
+imj
+json
+notes
+regex
+requests
+scripts
+sig
+sub
+switch
+system-runscript
+types
+warnings
+workers
+
+./modg/colors:
+color.go
+
+./modg/constants:
+const.go
+
+./modg/copt:
+copt.go
+
+./modg/dependant-sub:
+macs.go
+readit
+
+./modg/devt:
+devt.go
+readit.txt
+
+./modg/exec:
+exec.go
+
+./modg/files:
+file.go
+
+./modg/helpers:
+help.go
+id-gen
+
+./modg/helpers/id-gen:
+id.go
+
+./modg/imj:
+imgvars.go
+
+./modg/json:
+json.go
+
+./modg/notes:
+notes.go
+
+./modg/regex:
+
+./modg/requests:
+req.go
+
+./modg/scripts:
+brute-forcing
+database
+db-const
+file-forensics
+hashing
+IEEE-802.11
+lookup
+ntest
+parsing
+steg-osint
+vulnscans
+windows
+
+./modg/scripts/brute-forcing:
+brute.go
+errors
+readers
+
+./modg/scripts/brute-forcing/errors:
+denied.go
+
+./modg/scripts/brute-forcing/readers:
+read.go
+
+./modg/scripts/database:
+db.go
+
+./modg/scripts/db-const:
+const.go
+
+./modg/scripts/file-forensics:
+lookup-files.go
+
+./modg/scripts/hashing:
+hashatk
+hashgen
+
+./modg/scripts/hashing/hashatk:
+hashatk.go
+
+./modg/scripts/hashing/hashgen:
+gen.go
+
+./modg/scripts/IEEE-802.11:
+pcap_parsing
+system-con
+
+./modg/scripts/IEEE-802.11/pcap_parsing:
+parser.go
+
+./modg/scripts/IEEE-802.11/system-con:
+interfaces.go
+
+./modg/scripts/lookup:
+lookup.go
+
+./modg/scripts/ntest:
+ntest.go
+
+./modg/scripts/parsing:
+parser.go
+
+./modg/scripts/steg-osint:
+steg.go
+
+./modg/scripts/vulnscans:
+vulns.go
+
+./modg/scripts/windows:
+pe
+
+./modg/scripts/windows/pe:
+parse.go
+
+./modg/sig:
+sig.go
+
+./modg/sub:
+strings.go
+
+./modg/switch:
+case.go
+casev
+errc
+scanners
+
+./modg/switch/casev:
+case-vars.go
+
+./modg/switch/errc:
+err_case.go
+
+./modg/switch/scanners:
+SCAN_IO.go
+
+./modg/system-runscript:
+system.go
+
+./modg/types:
+type.go
+
+./modg/warnings:
+warn.go
+
+./modg/workers:
+workers.go
+
+./modules:
+go-main
+install-files
+perl
+ruby
+
+./modules/go-main:
+0x0001
+
+./modules/go-main/0x0001:
+lib
+steg-err
+utils
+
+./modules/go-main/0x0001/lib:
+commands.go
+
+./modules/go-main/0x0001/steg-err:
+err.go
+
+./modules/go-main/0x0001/utils:
+encoders.go
+reader.go
+writer.go
+
+./modules/install-files:
+libs
+
+./modules/install-files/libs:
+libw
+
+./modules/perl:
+files
+mod
+pod
+
+./modules/perl/files:
+gui-scan.pl
+sql.pl
+stego.pl
+
+./modules/perl/mod:
+BRUTE.pm
+OFSL.pm
+oui.txt
+TABLE.pm
+users.txt
+
+./modules/perl/pod:
+ipath.pod
+main-all.pod
+notes.pod
+OFS.pod
+table.pod
+tests.pod
+type.pod
+
+./modules/ruby:
+color.rb
+fake-ap.rb
+file_parser.rb
+fixme
+ftp.rb
+net.rb
+shod.rb
+
+./modules/ruby/fixme:
+command-console.rb
+module_parser.rb
+
+./payloads:
+admin.txt
+SQL.txt
+
+./rr6-structure:
+struct
+
+./sub:
+config-files.txt
+filenames.txt
+
+./tests:
+arp.go
+dev
+ex.pl
+go.mod
+go.sum
+sig
+
+./tests/dev:
+dev.go
+
+./tests/sig:
+shodan.go
+
+./text:
+banners
+help
+menus
+
+./text/banners:
+rr6.txt
+screen-logo-small.txt
+shark.txt
+team-logo.txt
+
+./text/help:
+advance.txt
+commands-flags.txt
+
+./text/menus:
+landscape_menu.txt
+verticle_menu.txt

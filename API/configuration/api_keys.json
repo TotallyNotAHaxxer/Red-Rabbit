@@ -1,0 +1,8 @@
+{
+    "API_Keys": {
+        "WHOIS_KEY": "Your www.whoisxmlapi.com API key here",
+        "WHOIS_USR": "Your whoisxml username",
+        "WHOIS_PAS": "Your whoisxml password",
+        "APILA_KEY": "your api layer key here"
+    }
+}

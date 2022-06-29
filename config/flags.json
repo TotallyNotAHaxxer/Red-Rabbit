@@ -1,0 +1,124 @@
+{
+    "Flags": [
+        {
+            "Flag": "--he",
+            "Description": "View all flags and examples with help commands"
+        },
+        {
+            "Flag": "--help",
+            "Description": "View all flags and their descriptions"
+        },
+        {
+            "Flag": "--ehelp",
+            "Description": "View all flags and examples"
+        },
+        {
+            "Flag": "--jpgF",
+            "Description": "Set a chunk to inject a JPG image at for JPG stego"
+        },
+        {
+            "Flag": "--reso",
+            "Description": "Format output of red rabbit such as its menus, options, lists, and banners"
+        },
+        {
+            "Flag": "--input / -i",
+            "Description": "Input file for image injection and other types"
+        },
+        {
+            "Flag": "--output / -o",
+            "Description": "Set an output file for image injection, proxy grabbing and more"
+        },
+        {
+            "Flag": "--offset",
+            "Description": "Set a PNG Injection point / offset to inject data at"
+        },
+        {
+            "Flag": "--payload",
+            "Description": "Specify a payload to inject into images, view, and use"
+        },
+        {
+            "Flag": "--type",
+            "Description": "Set the type of chunk to inject images at such as IEND"
+        },
+        {
+            "Flag": "--key",
+            "Description": "Set the encryption key for payloads (--ehelp for examples )"
+        },
+        {
+            "Flag": "--filepath",
+            "Description": "Set the general filepath for any file that will be read or used"
+        },
+        {
+            "Flag": "--hashl",
+            "Description": "Set the file of hashes to be used for hash cracking"
+        },
+        {
+            "Flag": "--wordl",
+            "Description": "Set the file of passwords to be used for brute forcing"
+        },
+        {
+            "Flag": "--userl",
+            "Description": "Set the file of usernames to be used for brute forcing"
+        },
+        {
+            "Flag": "--workers",
+            "Description": "Set the amount of go workers for brute force attacks"
+        },
+        {
+            "Flag": "--interface",
+            "Description": "Set the interface to use for network attacks and packet capture "
+        },
+        {
+            "Flag": "--targetm string",
+            "Description": "Set the target's mac address for arp poisoning"
+        },
+        {
+            "Flag": "--targetip",
+            "Description": "Set the target's ip address for arp poisoning"
+        },
+        {
+            "Flag": "--gatemac",
+            "Description": "Set the target's gateway mac address for arp poisoning"
+        },
+        {
+            "Flag": "--CIDR / z",
+            "Description": "Set the CIDR to be used for host pinging, scanning, and more"
+        },
+        {
+            "Flag": "--passlen",
+            "Description": "Set the length of a password string to be generated when making lists"
+        },
+        {
+            "Flag": "--target",
+            "Description": "Set the target URL to be set for web attacks such as SQLI, XSS, etc "
+        },
+        {
+            "Flag": "--payloadl",
+            "Description": "Set the file of payloads to be used for XSS, SQLI, Admin panel's etc.."
+        },
+        {
+            "Flag": "--XMLF",
+            "Description": "Set the XML file for NMAP parsing, or other XML file parsing commands"
+        },
+        {
+            "Flag": "--JSONF",
+            "Description": "Set the JSON file for commands that need to parse certian JSON files"
+        },
+        {
+            "Flag": "--PCAP ",
+            "Description": "Set the PCAP file for parsing, this is not used as much as --filepath"
+        },
+        {
+            "Flag": "--SQ  / S",
+            "Description": "Set the google search query or thing you would like to search for engines"
+        },
+        {
+            "Flag": "--RPP / R ",
+            "Description": "Set the amount of results per google page scraped for the engine module (Defualt = 10)"
+        },
+        {
+            "Flag": "--PTC / T ",
+            "Description": "Set the amount of google pages to crawl for the engine module (Defualt = 1)"
+        }
+    ]
+}

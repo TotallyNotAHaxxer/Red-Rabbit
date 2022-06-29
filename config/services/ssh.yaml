@@ -1,0 +1,6 @@
+SSH_SESSION_SETTINGS:
+  Username: "username"
+  Password: "password"
+  Private_Key_File: "filepath/to/private/key/file"
+  Port: "ssh port"
+  Host: "ssh host"

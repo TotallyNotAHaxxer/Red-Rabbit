@@ -1,0 +1,255 @@
+
+{
+    "Completed and Active Commands": [
+        {
+            "Command": "help flags    [json]"
+        },
+        {
+            "Command": "help commands [json]"
+        },
+        {
+            "Command": "clear"
+        },
+        {
+            "Command": "cls"
+        },
+        {
+            "Command": "exit"
+        },
+        {
+            "Command": "time"
+        },
+        {
+            "Command": "search nameserver"
+        },
+        {
+            "Command": "search mx"
+        },
+        {
+            "Command": "search ip"
+        },
+        {
+            "Command": "search host"
+        },
+        {
+            "Command": "search srv"
+        },
+        {
+            "Command": "search cname"
+        },
+        {
+            "Command": "search head"
+        },
+        {
+            "Command": "search txt"
+        },
+        {
+            "Command": "search robots"
+        },
+        {
+            "Command": "search all"
+        },
+        {
+            "Command": "search route"
+        },
+        {
+            "Command": "search banner"
+        },
+        {
+            "Command": "search ipa"
+        },
+        {
+            "Command": "search server"
+        },
+        {
+            "Command": "search admin"
+        },
+        {
+            "Command": "search sqli"
+        },
+        {
+            "Command": "search lfi"
+        },
+        {
+            "Command": "search urls"
+        },
+        {
+            "Command": "ping icmp"
+        },
+        {
+            "Command": "ping udp"
+        },
+        {
+            "Command": "ping tcp"
+        },
+        {
+            "Command": "ping syn"
+        },
+        {
+            "Command": "run scan gui"
+        },
+        {
+            "Command": "run RR6P gui"
+        },
+        {
+            "Command": "search interfaces"
+        },
+        {
+            "Command": "extract archive"
+        },
+        {
+            "Command": "search sig"
+        },
+        {
+            "Command": "search endpoint"
+        },
+        {
+            "Command": "search filepath"
+        },
+        {
+            "Command": "parse hosts noport"
+        },
+        {
+            "Command": "inject zip"
+        },
+        {
+            "Command": "hex dump loaded file"
+        },
+        {
+            "cCommand": "dump pe exe"
+        },
+        {
+            "Command": "dump file info"
+        },
+        {
+            "Command": "dump image metadata"
+        },
+        {
+            "Command": "dump png metadata"
+        },
+        {
+            "Command": "dump bootsec info"
+        },
+        {
+            "Command": "stomp permissions"
+        },
+        {
+            "Command": "search geo"
+        },
+        {
+            "Command": "inject data"
+        },
+        {
+            "Command": "inject JPG"
+        },
+        {
+            "Command": "inject WEBP"
+        },
+        {
+            "Command": "inject GIF"
+        },
+        {
+            "Command": "dump pcap"
+        },
+        {
+            "Command": "dump pcap dot11"
+        },
+        {
+            "Command": "dump pcap ftp"
+        },
+        {
+            "Command": "dump pcap ospf"
+        },
+        {
+            "Command": "dump pcap plaina smtp"
+
+        },
+        {
+            "Command": "dump pcap smtp emails"
+
+        },
+        {
+            "Command": "dump pcap smtp chats"
+
+        },
+        {
+            "Command": "dump pcap sip auth"
+
+        },
+        {
+            "Command": "dump pcap sip ok"
+
+        },
+        {
+            "Command": "dump pcap sip invite"
+
+        },
+        {
+            "Command": "dump pcap sip register"
+
+        },
+        {
+            "Command": "dump pcap sip POSTGET"
+
+        },
+        {
+            "Command": "dump pcap custom"
+        },
+        {
+            "Command": "stalk mac"
+        },
+        {
+            "Command": "stalk oui"
+        },
+        {
+            "Command": "crack md5 list"
+        },
+        {
+            "Command": "crack md5 single"
+        },
+        {
+            "Command": "crack sha1 list"
+        },
+        {
+            "Command": "crack sha1 single"
+        },
+        {
+            "Command": "crack sha256 list"
+        },
+        {
+            "Command": "crack sha256 single"
+        },
+        {
+            "Command": "generate wordlist"
+         },
+        {
+            "Command": "encode md5"
+        },
+        {
+            "Command": "encode sha1"
+        },
+        {
+            "Command": "encode sha256"
+        },
+        {
+            "Command": "encode sha224"
+        },
+        {
+            "Command": "encode base64"
+        },
+        {
+            "Command": "encode base32"
+        },
+        {
+            "Command": "encode rot13"
+        },
+        {
+            "Command": "encode HMAC"
+        },
+        {
+            "Command": ""
+        }
+
+
+    ]
+}

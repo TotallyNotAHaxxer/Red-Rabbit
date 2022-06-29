@@ -1,0 +1,70 @@
+
+{
+    "Commands": [
+      {
+        "command": "inject JPG",
+        "Category": "Stegonography ",
+        "desc": "Will inject Javascript code into a JPG file, if the file is blank it will create a file with the injected code"
+      },
+      {
+        "command": "inject GIF",
+        "Category": "Stegonography ",
+        "desc": "Will inject Javascript code into a GIF file, if the file is blank it will create a file with the injected code"
+      },
+      {
+        "command": "inject WEBP",
+        "Category": "Stegonography ",
+        "desc": "Will inject Javascript code into a WEBP file, if the file is blank it will create a file with the injected code"
+      },
+      {
+        "command": "dump metadata",
+        "Category": "Stegonography ",
+        "desc": "Will grab all metadata of a PNG image, you need to use the flag -i for this `go run main.go -i image/path`"
+      },
+      {
+        "command": "inject data",
+        "Category": "Stegonography ",
+        "desc": "Will use a inline script to inject data into PNG files at a specific offset and image "
+      },
+      {
+        "command": "inject zip",
+        "Category": "Stegonography ",
+        "desc": "Will inject an archive file into a image, you will need -i and --filepath to specify the image and zip location"
+      },
+      {
+        "command": "search geo",
+        "Category": "Stegonography ",
+        "desc": "Will grab the GPS data or attempt to trace the GPS data of JPG/JPEG image formats use the -i flag for this"
+      },
+      {
+        "command": "search sig",
+        "Category": "Stegonography ",
+        "desc": "Will attempt to go through a list of byte signitures to find the type of a unknown file"
+      },
+      {
+        "command": "extract archive",
+        "Category": "Stegonography ",
+        "desc": "Will attempt to extract and unzip a ZIP/Archive file from a JPG/JPEG image format"
+      },
+      {
+        "command": "search nameserver",
+        "Category": "Web Recon",
+        "desc": "Will attempt to grab the nameservers of a given domain"
+      },
+      {
+        "command": "search mx",
+        "Category": "Web Recon",
+        "desc": "Will attempt to grab the MX records of a given domain"
+      },
+      {
+        "command": "search ip",
+        "Category": "Web Recon",
+        "desc": "Will attempt to grab all of the IP addresses of a domain name"
+      },
+      {
+        "command": "search nameserver",
+        "Category": "Web Recon",
+        "desc": "Will attempt to grab the domain names of a IP address"
+      }
+    ]
+  }
