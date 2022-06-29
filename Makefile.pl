@@ -40,6 +40,9 @@ for (1..1961) {
     print " $dotdotdotdotdotdotdotdotdotdot";
 }
 print "\n";
+system("chmod +x ./modules/web/bin/AMD64/server_amd64");
+system("chmod +x ./modules/web/bin/ARM32/server_arm32");
+system("chmod +x ./modules/web/bin/ARM64/server_arm64");
 sleep(2);
 my $SCRIPT_VERSION               = "V 1.0";
 my $SCRIPT_NAME                  = "Red Rabbit";
