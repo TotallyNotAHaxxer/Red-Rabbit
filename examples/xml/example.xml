@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+<user type="admin">
+<name>Elliot</name>
+<social>
+<facebook>https://facebook.com</facebook>
+<twitter>https://twitter.com</twitter>
+<youtube>https://youtube.com</youtube>
+</social>
+</user>
+<user type="reader">
+<name>Fraser</name>
+<social>
+<facebook>https://facebook.com</facebook>
+<twitter>https://twitter.com</twitter>
+<youtube>https://youtube.com</youtube>
+</social>
+</user>
+</users>

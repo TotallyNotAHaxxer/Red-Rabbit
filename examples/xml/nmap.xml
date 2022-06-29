@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Mon May  9 12:10:19 2022 as: nmap -T4 -A -p 1-1000 -oX - scanme.nmap.org -->
+<nmaprun scanner="nmap" args="nmap -T4 -A -p 1-1000 -oX - scanme.nmap.org" start="1652112619" startstr="Mon May  9 12:10:19 2022" version="7.92" xmloutputversion="1.05">
+   <scaninfo type="connect" protocol="tcp" numservices="1000" services="1-1000" />
+   <verbose level="0" />
+   <debugging level="0" />
+   <hosthint>
+      <status state="up" reason="unknown-response" reason_ttl="0" />
+      <address addr="45.33.32.156" addrtype="ipv4" />
+      <hostnames>
+         <hostname name="scanme.nmap.org" type="user" />
+      </hostnames>
+   </hosthint>
+   <host starttime="1652112619" endtime="1652112645">
+      <status state="up" reason="conn-refused" reason_ttl="0" />
+      <address addr="45.33.32.156" addrtype="ipv4" />
+      <hostnames>
+         <hostname name="scanme.nmap.org" type="user" />
+         <hostname name="scanme.nmap.org" type="PTR" />
+      </hostnames>
+      <ports>
+         <extraports state="closed" count="991">
+            <extrareasons reason="conn-refused" count="991" proto="tcp" ports="1-21,23-24,26-79,81-134,140-444,446-1000" />
+         </extraports>
+         <port protocol="tcp" portid="22">
+            <state state="open" reason="syn-ack" reason_ttl="0" />
+            <service name="ssh" product="OpenSSH" version="6.6.1p1 Ubuntu 2ubuntu2.13" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10">
+               <cpe>cpe:/a:openbsd:openssh:6.6.1p1</cpe>
+               <cpe>cpe:/o:linux:linux_kernel</cpe>
+            </service>
+            <script id="ssh-hostkey" output="&#xA;  1024 ac:00:a0:1a:82:ff:cc:55:99:dc:67:2b:34:97:6b:75 (DSA)&#xA;  2048 20:3d:2d:44:62:2a:b0:5a:9d:b5:b3:05:14:c2:a6:b2 (RSA)&#xA;  256 96:02:bb:5e:57:54:1c:4e:45:2f:56:4c:4a:24:b2:57 (ECDSA)&#xA;  256 33:fa:91:0f:e0:e1:7b:1f:6d:05:a2:b0:f1:54:41:56 (ED25519)">
+               <table>
+                  <elem key="key">AAAAB3NzaC1kc3MAAACBAOe8o59vFWZGaBmGPVeJBObEfi1AR8yEUYC/Ufkku3sKhGF7wM2m2ujIeZDK5vqeC0S5EN2xYo6FshCP4FQRYeTxD17nNO4PhwW65qAjDRRU0uHFfSAh5wk+vt4yQztOE++sTd1G9OBLzA8HO99qDmCAxb3zw+GQDEgPjzgyzGZ3AAAAFQCBmE1vROP8IaPkUmhM5xLFta/xHwAAAIEA3EwRfaeOPLL7TKDgGX67Lbkf9UtdlpCdC4doMjGgsznYMwWH6a7Lj3vi4/KmeZZdix6FMdFqq+2vrfT1DRqx0RS0XYdGxnkgS+2g333WYCrUkDCn6RPUWR/1TgGMPHCj7LWCa1ZwJwLWS2KX288Pa2gLOWuhZm2VYKSQx6NEDOIAAACBANxIfprSdBdbo4Ezrh6/X6HSvrhjtZ7MouStWaE714ByO5bS2coM9CyaCwYyrE5qzYiyIfb+1BG3O5nVdDuN95sQ/0bAdBKlkqLFvFqFjVbETF0ri3v97w6MpUawfF75ouDrQ4xdaUOLLEWTso6VFJcM6Jg9bDl0FA0uLZUSDEHL</elem>
+                  <elem key="fingerprint">ac00a01a82ffcc5599dc672b34976b75</elem>
+                  <elem key="type">ssh-dss</elem>
+                  <elem key="bits">1024</elem>
+               </table>
+               <table>
+                  <elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQC6afooTZ9mVUGFNEhkMoRR1Btzu64XXwElhCsHw/zVlIx/HXylNbb9+11dm2VgJQ21pxkWDs+L6+EbYyDnvRURTrMTgHL0xseB0EkNqexs9hYZSiqtMx4jtGNtHvsMxZnbxvVUk2dasWvtBkn8J5JagSbzWTQo4hjKMOI1SUlXtiKxAs2F8wiq2EdSuKw/KNk8GfIp1TA+8ccGeAtnsVptTJ4D/8MhAWsROkQzOowQvnBBz2/8ecEvoMScaf+kDfNQowK3gENtSSOqYw9JLOza6YJBPL/aYuQQ0nJ74Rr5vL44aNIlrGI9jJc2x0bV7BeNA5kVuXsmhyfWbbkB8yGd</elem>
+                  <elem key="fingerprint">203d2d44622ab05a9db5b30514c2a6b2</elem>
+                  <elem key="type">ssh-rsa</elem>
+                  <elem key="bits">2048</elem>
+               </table>
+               <table>
+                  <elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMD46g67x6yWNjjQJnXhiz/TskHrqQ0uPcOspFrIYW382uOGzmWDZCFV8FbFwQyH90u+j0Qr1SGNAxBZMhOQ8pc=</elem>
+                  <elem key="fingerprint">9602bb5e57541c4e452f564c4a24b257</elem>
+                  <elem key="type">ecdsa-sha2-nistp256</elem>
+                  <elem key="bits">256</elem>
+               </table>
+               <table>
+                  <elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAILzVjfIyIHfXyRd8jVBaVT8Yvk/UvHh5Afvho8sGciG7</elem>
+                  <elem key="fingerprint">33fa910fe0e17b1f6d05a2b0f1544156</elem>
+                  <elem key="type">ssh-ed25519</elem>
+                  <elem key="bits">256</elem>
+               </table>
+            </script>
+         </port>
+         <port protocol="tcp" portid="25">
+            <state state="filtered" reason="no-response" reason_ttl="0" />
+            <service name="smtp" method="table" conf="3" />
+         </port>
+         <port protocol="tcp" portid="80">
+            <state state="open" reason="syn-ack" reason_ttl="0" />
+            <service name="http" product="Apache httpd" version="2.4.7" extrainfo="(Ubuntu)" method="probed" conf="10">
+               <cpe>cpe:/a:apache:http_server:2.4.7</cpe>
+            </service>
+            <script id="http-favicon" output="Nmap Project" />
+            <script id="http-title" output="Go ahead and ScanMe!">
+               <elem key="title">Go ahead and ScanMe!</elem>
+            </script>
+            <script id="http-server-header" output="Apache/2.4.7 (Ubuntu)">
+               <elem>Apache/2.4.7 (Ubuntu)</elem>
+            </script>
+         </port>
+         <port protocol="tcp" portid="135">
+            <state state="filtered" reason="no-response" reason_ttl="0" />
+            <service name="msrpc" method="table" conf="3" />
+         </port>
+         <port protocol="tcp" portid="136">
+            <state state="filtered" reason="no-response" reason_ttl="0" />
+            <service name="profile" method="table" conf="3" />
+         </port>
+         <port protocol="tcp" portid="137">
+            <state state="filtered" reason="no-response" reason_ttl="0" />
+            <service name="netbios-ns" method="table" conf="3" />
+         </port>
+         <port protocol="tcp" portid="138">
+            <state state="filtered" reason="no-response" reason_ttl="0" />
+            <service name="netbios-dgm" method="table" conf="3" />
+         </port>
+         <port protocol="tcp" portid="139">
+            <state state="filtered" reason="no-response" reason_ttl="0" />
+            <service name="netbios-ssn" method="table" conf="3" />
+         </port>
+         <port protocol="tcp" portid="445">
+            <state state="filtered" reason="no-response" reason_ttl="0" />
+            <service name="microsoft-ds" method="table" conf="3" />
+         </port>
+      </ports>
+      <times srtt="85861" rttvar="1556" to="100000" />
+   </host>
+   <runstats>
+      <finished time="1652112645" timestr="Mon May  9 12:10:45 2022" summary="Nmap done at Mon May  9 12:10:45 2022; 1 IP address (1 host up) scanned in 26.87 seconds" elapsed="26.87" exit="success" />
+      <hosts up="1" down="0" total="1" />
+   </runstats>
+</nmaprun>
