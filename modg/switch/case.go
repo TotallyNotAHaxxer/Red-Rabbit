@@ -1456,7 +1456,7 @@ func M_TTY(command string, flags_rr6 *opc.RR6_options) {
 			a := sio("Enter an SSH Host> \033[39m\033[49m", v.BLKHB)
 			b := sio("Enter an SSH User> \033[39m\033[49m", v.BLKHB)
 			c := sio("Enter a Wordlist > \033[39m\033[49m", v.BLKHB)
-			p := sio("Enter a SSH Port > \033[39m\033[49m", v.BBLK)
+			p := sio("\033[31mEnter a SSH Port > \033[39m\033[49m", v.BBLK)
 			brutes.Brute_SSH_(b, c, a, p)
 		} else {
 			a := sio("Enter an SSH Host> \033[39m", v.BLKHB)
