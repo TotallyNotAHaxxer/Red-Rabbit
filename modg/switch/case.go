@@ -98,6 +98,8 @@ import (
 	GIT_Utils "main/modules/go-main/remoded/git"
 	web3point0utils "main/modules/go-main/remoded/infector"
 	xml_utils "main/modules/go-main/xml"
+	IO_Settings "main/modules/io-config"
+
 	SQL "main/modules/services/sql"
 	"net"
 	"os"
@@ -271,30 +273,10 @@ func Get_Proxy(url string, flags_rr6 *opc.RR6_options) {
 	}
 }
 
-// case test function parser
-/*
-
-This is for testing only, in version 6.2 i plain to optimize this to types and json files and
-
-databases which will be checked for commands pointed to its function like the following map
-
-map[string]string{
-	"command1": "function1"
-}
-
-map will be used to parse commands with their functions, if command1 is found function1 will be ran
-
-
-
-*/
 func M_TTY(command string, flags_rr6 *opc.RR6_options) {
-	/*
-		if command != "" {
-			if IO_Settings.Open("config/io/IO-Settings.yaml") {
-				SSB(flags_rr6.Screen_rotation)
-			}
-		}
-	*/
+	if IO_Settings.Open("config/io/IO-Settings.yaml") {
+		SSB(flags_rr6.Screen_rotation)
+	}
 	switch command {
 	case "help start":
 		f, x := os.Open("text/modules/start.txt")
@@ -307,8 +289,6 @@ func M_TTY(command string, flags_rr6 *opc.RR6_options) {
 				fmt.Println(v.HIGH_BLUE, scanner.Text())
 			}
 		}
-	case "total commands":
-		fmt.Println("208 commands YAY!")
 	case "settings":
 		fmt.Println(flags_rr6)
 	case "commands":
@@ -2375,6 +2355,7 @@ func M_TTY(command string, flags_rr6 *opc.RR6_options) {
 		} else {
 			Engine_OSINT.Caller(flags_rr6.Results_per_Page, flags_rr6.Pages_To_Crawl, flags_rr6.Search_Query, "twitter")
 		}
+		os.Exit(0)
 	case "engine ofacebook":
 		if flags_rr6.Search_Query == "" {
 			Query := sio("Enter a search query > ", v.HIGH_BLUE)
@@ -2382,6 +2363,7 @@ func M_TTY(command string, flags_rr6 *opc.RR6_options) {
 		} else {
 			Engine_OSINT.Caller(flags_rr6.Results_per_Page, flags_rr6.Pages_To_Crawl, flags_rr6.Search_Query, "facebook")
 		}
+		os.Exit(0)
 	case "engine olinkedin":
 		if flags_rr6.Search_Query == "" {
 			Query := sio("Enter a search query > ", v.HIGH_BLUE)
@@ -2396,17 +2378,21 @@ func M_TTY(command string, flags_rr6 *opc.RR6_options) {
 		} else {
 			Engine_OSINT.Caller(flags_rr6.Results_per_Page, flags_rr6.Pages_To_Crawl, flags_rr6.Search_Query, "google")
 		}
+		os.Exit(0)
 	case "engine cve":
 		cve := sio("Enter a CVE Name or possible date> ", v.RET_RED)
 		Engine_CVE.Check_CVE(cve, false)
+		os.Exit(0)
 	case "engine tcve":
 		cve := sio("Enter a CVE Name or possible date> ", v.RET_RED)
 		Engine_CVE.Check_CVE(cve, true)
+		os.Exit(0)
 	case "engine shodanh":
 		host := sio("Enter a Hostname -> ", v.RET_RED)
 		skey := sio("Enter shodan API key -> ", v.RET_RED)
 		data, _ := Engine_Shodan.Host(host, skey)
 		fmt.Println(data)
+		os.Exit(0)
 
 	default:
 		fmt.Println("command does not exist")
