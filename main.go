@@ -14,7 +14,6 @@ import (
 	system "main/modg/system-runscript"
 	steglib "main/modules/go-main/0x0001/lib"
 	stegutils "main/modules/go-main/0x0001/utils"
-	IO_Settings "main/modules/io-config"
 	MODULES_AND_PATHNAMES_SIMPLE_TXT_DIG_LIV_NONEDIT_AUTO_TMPL_BASED_GENERATED_FILE "main/text/modules"
 
 	ec "main/modg/warnings"
@@ -165,19 +164,14 @@ func terminal(input_statement, color string) {
 			png.Run_Functions(false, r, &opc.RR6_options{}, true)
 			terminal("RR6> ", v.RED)
 		} else {
-			if IO_Settings.Open("config/io/IO-Settings.yaml") {
-				SSB(rr6f.Screen_rotation)
-			}
 			if val, ok := Module_help_names[t]; ok {
 				a := MODULES_AND_PATHNAMES_SIMPLE_TXT_DIG_LIV_NONEDIT_AUTO_TMPL_BASED_GENERATED_FILE.Return_File(val)
 				open_out(a, v.HIGH_BLUE)
 			}
 			uio.M_TTY(t, &rr6f)
-			terminal("RR6> ", v.RED)
 		}
 		if t != "" {
 			uio.M_TTY(t, &rr6f)
-			terminal("RR6> ", v.RED)
 		} else {
 			terminal("RR6> ", v.RED)
 		}
