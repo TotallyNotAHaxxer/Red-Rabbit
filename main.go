@@ -168,7 +168,6 @@ func terminal(input_statement, color string) {
 				a := MODULES_AND_PATHNAMES_SIMPLE_TXT_DIG_LIV_NONEDIT_AUTO_TMPL_BASED_GENERATED_FILE.Return_File(val)
 				open_out(a, v.HIGH_BLUE)
 			}
-			uio.M_TTY(t, &rr6f)
 		}
 		if t != "" {
 			uio.M_TTY(t, &rr6f)
