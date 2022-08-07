@@ -914,3 +914,8 @@ out, --ehelp trys to touch on every flag and its usage properly
     output use `--reso="Verticle"` for a larger more space wide output use `--reso="Landscape"` or 
     for a certian banner design like the shark use  `--reso="shark"`, finally if you want no banner or 
     large space taken up specify `--reso="none"` which will output and clear the screen without an option.
+
+
+<h3>Visitors :</h3>
+<br>
+<img src="https://profile-counter.glitch.me/ArkAngeL43/count.svg" alt="Visitors">
