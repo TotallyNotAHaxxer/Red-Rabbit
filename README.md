@@ -918,4 +918,4 @@ out, --ehelp trys to touch on every flag and its usage properly
 
 <h3>Visitors :</h3>
 <br>
-<img src="https://profile-counter.glitch.me/ArkAngeL43/count.svg" alt="Visitors">
+<img src="https://profile-counter.glitch.me/Red-Rabbit/count.svg" alt="Visitors">
