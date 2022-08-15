@@ -2,6 +2,10 @@
   <img align="center" width="400" height="91" src="git/red_rabbit_git.jfif">
 </p>
 
+# Current version
+
+Version 1.0 | UNSTABLE
+
 # What is red rabbit 
 
 The Red Rabbit project is a cyber security framework designed to touch on the most popular hacking and security topics today, such as digital fornsics, stegonography, network forensics, packet sniffing and forensics, brute forcing, hash cracking, file parsing, filepath pillaging, SSH/FTP/TELNET/SQL recon, web recon, web scanning, vulnerability recon, OSINT and much more among that list. With over 260+ utilities all built into red rabbit locally you should have just enough to help you in say a report, or gathering information on a target such as the hostnames, MX records, A records, even getting information such as mac information or phone number information. Red Rabbit really tries to impliment only the best features into its scripts and programs, adding things most frameworks today dont have, while also using raw pure source code to filter out response bodies, response types and even load configuration files 
