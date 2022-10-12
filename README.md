@@ -2,8 +2,6 @@
   <img align="center" width="400" height="91" src="git/red_rabbit_git.jfif">
 </p>
 
-![TOTAL](https://img.shields.io/github/downloads/ArkAngeL43/Red-Rabbit/total?color=blue&label=Total&style=plastic)
-
 
 # Current version
 
