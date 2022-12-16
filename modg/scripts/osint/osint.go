@@ -427,7 +427,7 @@ func Get_IP(ip string) {
 }
 
 func Trace_IP_Secondary_API(ip string) {
-	ink := "https://rest.db.ripe.net/search.json?query-string=73.205.242.99&flags=no-referenced&flags=no-irt&source=RIPE"
+	ink := "broken"
 
 	client := http.Client{}
 	req, x := http.NewRequest("GET", ink, nil)
