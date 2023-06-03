@@ -12,16 +12,7 @@ Developer Note: It sucks i had to declare this version as the unstable version o
 
 # When will the update be?
 
-Version 1.5 of red rabbit will be a full re design in terms of code base due to how unstable the project currently is, We plan to release this update as soon as possible so please stay tuned!
-
-
-# What is red rabbit 
-
-The Red Rabbit project is a cyber security framework designed to touch on the most popular hacking and security topics today, such as digital fornsics, stegonography, network forensics, packet sniffing and forensics, brute forcing, hash cracking, file parsing, filepath pillaging, SSH/FTP/TELNET/SQL recon, web recon, web scanning, vulnerability recon, OSINT and much more among that list. With over 260+ utilities all built into red rabbit locally you should have just enough to help you in say a report, or gathering information on a target such as the hostnames, MX records, A records, even getting information such as mac information or phone number information. Red Rabbit really tries to impliment only the best features into its scripts and programs, adding things most frameworks today dont have, while also using raw pure source code to filter out response bodies, response types and even load configuration files 
-
-# What crack head developed this 
-
-Noone but myself (ArkAngeL) this project was done without development teams, without paid producers, without people and communities contributing, and done alone. Which is why this framework is better than most tool based frameworks out there. Bored of automating tools like aircrack? Bored of constantly having people tell you their framework is legit when the code is hidden? well fucking no more! we dont do that here in fact we are the very opposite of every framework out there, we dont automate tools, we write them, we dont lie to people we speak truthfully to our users.
+Never. This program has been archived without directly being archived and will never be re written. 
 
 # Donations 
 
